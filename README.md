@@ -13,23 +13,23 @@ This learning platform offers several advantages over traditional learning metho
 
 * Time and Space Analysis
 * Data Structures
-  * Arrays
-  * Strings
-  * Linked Lists
-  * Stacks
-  * Queues
-  * Hash Tables
-  * Trees
-  * Heaps
+  * [Arrays](./array)
+  * [Strings](./string)
+  * [Linked Lists](./linkedlist)
+  * [Stacks](./stack)
+  * [Queues](./queue)
+  * [Hash Tables](./hashtable)
+  * [Trees](./tree)
+  * [Heaps](./heap)
 * Algorithms
-  * Recursion
-  * Divide and Conquer
-  * Bit Manipulation
+  * [Recursion](./recursion)
+  * [Divide and Conquer](dnc)
+  * [Bit Manipulation](./bit)
   * Sorting
-  * Backtracking
-  * Graphs
-  * Greedy Algorithms
-  * Dynamic Programming
+  * [Backtracking](./backtracking)
+  * [Graphs](./graph)
+  * [Greedy Algorithms](./greedy)
+  * [Dynamic Programming](./dp)
 
 # How to use
 
