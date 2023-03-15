@@ -12,7 +12,7 @@ func MaxSlidingWindow(numbers []int, k int) []int {
 		return output
 	}
 
-	pq := make(slidingWindow, k, k)
+	pq := make(slidingWindow, k)
 	i := 0
 	for i < k {
 		pq[i] = numbers[i]

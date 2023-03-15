@@ -1,9 +1,5 @@
 package graph
 
-type node struct {
-	val int
-}
-
 // IsDAG returns true if the given graph is a Directed Acyclic Graph (DAG)
 // A directed graph is acyclic if it contains no cycles
 func IsDAG(graph []*Vertex) bool {

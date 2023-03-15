@@ -14,23 +14,18 @@ func RunDBCommand(cmd string) string {
 	switch splitCmd[0] {
 	case `SET`:
 		set(splitCmd[1], splitCmd[2])
-		break
 	case `GET`:
 		return get(splitCmd[1])
 	case `EXISTS`:
 		return exists(splitCmd[1])
 	case `UNSET`:
 		unset(splitCmd[1])
-		break
 	case `BEGIN`:
 		begin()
-		break
 	case `ROLLBACK`:
 		rollback()
-		break
 	case `COMMIT`:
 		commit()
-		break
 	}
 	return ""
 }

@@ -41,11 +41,11 @@ func isValidQueenPlacement(row, col int, cols []int) bool {
 }
 
 func toPrettyChessboard(solutions chessboard, n int) []chessboard {
-	chessboards := make([]chessboard, len(solutions), len(solutions))
+	chessboards := make([]chessboard, len(solutions))
 	for i, row := range solutions {
-		chessBoard := make(chessboard, n, n)
+		chessBoard := make(chessboard, n)
 		for j, col := range row {
-			newRow := make([]int, n, n)
+			newRow := make([]int, n)
 			newRow[col] = queen
 			chessBoard[j] = newRow
 		}

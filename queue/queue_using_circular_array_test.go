@@ -68,23 +68,57 @@ func enqueueDequeueAndCheckValue(t *testing.T, queue *UsingCircularArray, testID
 
 func TestMultipleOperations(t *testing.T) {
 	queue := NewCircularQueue(3)
-	queue.enqueue(3)
-	queue.enqueue(2)
-	queue.enqueue(1)
-	queue.dequeue()
-	queue.dequeue()
-	queue.dequeue()
-	queue.enqueue(3)
-	queue.enqueue(2)
-	queue.enqueue(1)
-	queue.dequeue()
-	queue.dequeue()
-	queue.dequeue()
-	queue.enqueue(5)
-	queue.dequeue()
-	queue.enqueue(1)
-	queue.dequeue()
-	queue.enqueue(1)
+	if err := queue.enqueue(3); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if err := queue.enqueue(2); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if err := queue.enqueue(1); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if _, err := queue.dequeue(); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if _, err := queue.dequeue(); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if _, err := queue.dequeue(); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if err := queue.enqueue(3); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if err := queue.enqueue(2); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if err := queue.enqueue(1); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if _, err := queue.dequeue(); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if _, err := queue.dequeue(); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if _, err := queue.dequeue(); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if err := queue.enqueue(5); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if _, err := queue.dequeue(); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if err := queue.enqueue(1); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if _, err := queue.dequeue(); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
+	if err := queue.enqueue(1); err != nil {
+		t.Fatalf("Unexpected error: %s", err)
+	}
 	n, err := queue.dequeue()
 	if err != nil {
 		t.Fatalf("Failed dequing. Error %s", err)

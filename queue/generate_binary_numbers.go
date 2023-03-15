@@ -32,7 +32,7 @@ func GenerateBinaryNumbers(n int) ([]string, error) {
 func (q *stringQueue) len() int           { return len(q.data) }
 func (q *stringQueue) enqueue(val string) { q.data = append(q.data, val) }
 func (q *stringQueue) dequeue() (string, error) {
-	if len(q.data) == 0 {
+	if q.len() == 0 {
 		return "", errors.New("Queue is empty")
 	}
 	tmp := q.data[0]

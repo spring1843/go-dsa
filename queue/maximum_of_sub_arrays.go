@@ -5,11 +5,6 @@ import (
 	"errors"
 )
 
-// doubleEndedQueue is a queue that allows dequeue from both sides
-type doubleEndedQueue struct {
-	queue []int
-}
-
 // ErrQueueEmpty occurs when popping an empty stack
 var ErrQueueEmpty = errors.New("Empty queue")
 

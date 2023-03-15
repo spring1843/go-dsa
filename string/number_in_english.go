@@ -1,7 +1,6 @@
 package string
 
 import (
-	"math"
 	"strings"
 )
 
@@ -109,5 +108,5 @@ func howMany(num, level int) int {
 	if num < level {
 		return -1
 	}
-	return int(math.Floor(float64(num / level)))
+	return int(float64(num / level))
 }

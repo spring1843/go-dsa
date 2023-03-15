@@ -33,11 +33,7 @@ func IsExpressionBalanced(s string) bool {
 		}
 	}
 
-	if len(stack) != 0 {
-		return false // Some openers remain unclosed
-	}
-
-	return true
+	return len(stack) == 0
 }
 
 func push(a rune) {

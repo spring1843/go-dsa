@@ -16,7 +16,7 @@ type UsingCircularArray struct {
 
 // NewCircularQueue returns a fixed size circular queue
 func NewCircularQueue(size int) *UsingCircularArray {
-	circular := make([]int, size, size)
+	circular := make([]int, size)
 	for i := range circular {
 		circular[i] = emptyValue
 	}

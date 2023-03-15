@@ -5,8 +5,6 @@ import "errors"
 // VertexWithIngress is a Vertex with the count of vertices that connect to it
 type VertexWithIngress struct {
 	Vertex
-
-	ingress int
 }
 
 // ErrNotADAG occurs when a graph has a cycle and hence not a DAG where a DAW was expected

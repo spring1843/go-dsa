@@ -24,7 +24,10 @@ func TestMaxStack(t *testing.T) {
 		}
 
 		for i := 0; i < test.pop; i++ {
-			stack.Pop()
+			_, err := stack.Pop()
+			if err != nil {
+				t.Fatalf("unexpected error: %s", err)
+			}
 		}
 
 		got := stack.Max()

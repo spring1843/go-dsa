@@ -27,16 +27,12 @@ func EvaluatePostfixExpression(expression []string) (float64, error) {
 		switch element {
 		case "+":
 			result = op1 + op2
-			break
 		case "-":
 			result = op1 - op2
-			break
 		case "*":
 			result = op1 * op2
-			break
 		case "/":
 			result = op1 / op2
-			break
 		}
 		stack.push(result)
 	}
