@@ -2,10 +2,6 @@ package bit
 
 // Divide divides two numbers without using division or multiplication symbols
 func Divide(x, y int) int {
-	if y == 0 {
-		return 0
-	}
-
 	quotient := 0
 	power := uint64(32)
 	yPower := y << power

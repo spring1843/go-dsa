@@ -10,6 +10,7 @@ func TestRemoveInvalidParentheses(t *testing.T) {
 		input   string
 		outputs []string
 	}{
+		{"", []string{}},
 		{")(", []string{""}},
 		{")v(", []string{"v"}},
 		{"(v)", []string{"(v)"}},
