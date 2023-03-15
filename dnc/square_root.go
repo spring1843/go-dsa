@@ -1,7 +1,7 @@
 package dnc
 
-// SquareRoot binary search to find the square root of a number up to a percision point
-func SquareRoot(number, percision int) float64 {
+// SquareRoot binary search to find the square root of a number up to a precision point
+func SquareRoot(number, precision int) float64 {
 	start := 0
 	end := number
 	ans := 1.0
@@ -23,7 +23,7 @@ func SquareRoot(number, percision int) float64 {
 	}
 
 	increment := 0.1
-	for i := 0; i < percision; i++ {
+	for i := 0; i < precision; i++ {
 		for ans*ans <= float64(number) {
 			ans += increment
 		}

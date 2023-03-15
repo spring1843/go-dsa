@@ -1,3 +1,3 @@
 module github.com/spring1843/go-dsa
 
-go 1.17
+go 1.20

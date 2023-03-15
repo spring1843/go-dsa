@@ -19,7 +19,7 @@ func TestMaxOfKLengthSubArrays(t *testing.T) {
 	for i, test := range tests {
 		got, err := MaxOfKLengthSubArrays(test.list, test.k)
 		if err != nil {
-			t.Fatalf("Unexpected error occured. Error : %s", err)
+			t.Fatalf("Unexpected error occurred. Error : %s", err)
 		}
 		if !reflect.DeepEqual(got, test.maximums) {
 			t.Fatalf("Failed test #%d, Failed getting list of maximums. Want %#v got %#v", i, test.maximums, got)
