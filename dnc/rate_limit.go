@@ -22,34 +22,5 @@ func removeOldERateLimitEvents(now int64) {
 		return
 	}
 
-	lastIndex := indexOfFirstOldEvent(0, len(rateLimitEvents)-1, now-1)
-	if lastIndex > -1 {
-		rateLimitEvents = rateLimitEvents[:lastIndex]
-	}
-}
-
-func indexOfFirstOldEvent(start, end int, search int64) int {
-	if rateLimitEvents[start] == search {
-		return start
-	}
-
-	if start == end {
-		return -1
-	}
-
-	mid := start + (end-start)/2
-	if rateLimitEvents[mid] == search {
-		for i := mid; i > start; i-- {
-			if rateLimitEvents[i] != search {
-				return i + 1
-			}
-		}
-		return 0
-	}
-
-	if search < rateLimitEvents[mid] {
-		return indexOfFirstOldEvent(start, mid, search)
-	}
-
-	return indexOfFirstOldEvent(mid+1, end, search)
+	rateLimitEvents = []int64{}
 }
