@@ -14,15 +14,10 @@ jobs:
       - uses: actions/setup-go@v4
       - uses: golangci/golangci-lint-action@v3
       - run: go test -v -coverprofile=profile.cov ./...
-      - uses: shogo82148/actions-goveralls@v1
-        with:
-          path-to-profile: profile.cov
-  misspell:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code.
-        uses: actions/checkout@v2
       - uses: reviewdog/action-misspell@v1
         with:
           github_token: ${{ secrets.github_token }}
           locale: "US"
+      - uses: shogo82148/actions-goveralls@v1
+        with:
+          path-to-profile: profile.cov
