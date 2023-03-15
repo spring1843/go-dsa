@@ -24,7 +24,6 @@ func GenerateBinaryNumbers(n int) []string {
 	return output
 }
 
-func (q *stringQueue) len() int           { return len(q.data) }
 func (q *stringQueue) enqueue(val string) { q.data = append(q.data, val) }
 func (q *stringQueue) dequeue() string {
 	tmp := q.data[0]
