@@ -23,10 +23,7 @@ func TestGenerateBinaryNumbers(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		binaryNumbers, err := GenerateBinaryNumbers(test.n)
-		if err != nil {
-			t.Fatalf("Failed test case #%d. Unexpected error: %s", i, err)
-		}
+		binaryNumbers := GenerateBinaryNumbers(test.n)
 		got := binaryNumbers[len(binaryNumbers)-1]
 		if got != test.lastLine {
 			t.Fatalf("Failed test case #%d. Want %q got %q", i, test.lastLine, got)
