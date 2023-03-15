@@ -21,14 +21,10 @@ func (usingStacks *UsingStacks) enqueue(n int) {
 	usingStacks.stack1.push(n)
 }
 
-func (usingStacks *UsingStacks) dequeue() (int, error) {
+func (usingStacks *UsingStacks) dequeue() int {
 	if len(usingStacks.stack2.stack) == 0 {
 		for len(usingStacks.stack1.stack) != 0 {
-			n, err := usingStacks.stack1.pop()
-			if err != nil {
-				return 0, err
-			}
-			usingStacks.stack2.push(n)
+			usingStacks.stack2.push(usingStacks.stack1.pop())
 		}
 	}
 	return usingStacks.stack2.pop()
@@ -38,11 +34,11 @@ func (stack *Stack) push(element int) {
 	stack.stack = append(stack.stack, element)
 }
 
-func (stack *Stack) pop() (int, error) {
+func (stack *Stack) pop() int {
 	if len(stack.stack) == 0 {
-		return 0, ErrStackEmpty
+		return 0
 	}
 	tmp := stack.stack[len(stack.stack)-1]
 	stack.stack = stack.stack[:len(stack.stack)-1]
-	return tmp, nil
+	return tmp
 }

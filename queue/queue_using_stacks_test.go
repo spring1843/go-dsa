@@ -24,7 +24,7 @@ func TestQueueUsingStacks(t *testing.T) {
 		var n int
 		var err error
 		for j := 1; j <= test.dequeueTimes; j++ {
-			n, err = queue.dequeue()
+			n = queue.dequeue()
 			if !test.expectErr && err != nil {
 				t.Fatalf("Failed test case #%d. Did not expect an error. Error %s", i, err)
 			}
