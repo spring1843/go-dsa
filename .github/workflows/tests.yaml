@@ -16,7 +16,7 @@ jobs:
       - run: go test -v -coverprofile=profile.cov ./...
       - uses: shogo82148/actions-goveralls@v1
         with:
-          path-to-profile: coverage.out
+          path-to-profile: profile.cov
   misspell:
     runs-on: ubuntu-latest
     steps:
