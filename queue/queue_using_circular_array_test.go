@@ -44,7 +44,7 @@ func enqueueDequeueAndCheckValue(t *testing.T, queue *UsingCircularArray, testID
 	for _, n := range test.enqueue {
 		if err := queue.enqueue(n); err != nil {
 			if test.expectEnqueueErr {
-				t.Skipf("Skipping test case #%d. Expected error occured. Error %s", testID, err)
+				t.Skipf("Skipping test case #%d. Expected error occurred. Error %s", testID, err)
 			}
 			t.Fatalf("Failed test case #%d. Did not expect enqueuing error. Error %s", testID, err)
 		}
@@ -56,7 +56,7 @@ func enqueueDequeueAndCheckValue(t *testing.T, queue *UsingCircularArray, testID
 		n, err = queue.dequeue()
 		if err != nil {
 			if test.expectDequeueErr {
-				t.Skipf("Skipping test case #%d. Expected error occured. Error %s", testID, err)
+				t.Skipf("Skipping test case #%d. Expected error occurred. Error %s", testID, err)
 			}
 			t.Fatalf("Failed test case #%d. Did not expect dequeuing error. Error %s", testID, err)
 		}

@@ -1,11 +1,14 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/spring1843/go-dsa)](https://goreportcard.com/report/github.com/spring1843/go-dsa)
+[![GitHub License](https://img.shields.io/badge/License-Apache%202.0-ff69b4.svg)](https://github.com/aws/karpenter/blob/main/LICENSE)
+
 # Data Structures and Algorithms in Go
 
 The primary objective of this project is to offer a valuable learning and practicing resource for Data Structures and Algorithms in the Go programming language. The project aims to provide concise and executable materials for individuals seeking to develop their knowledge in this area.
 
 This learning platform offers several advantages over traditional learning methods such as books and videos:
-* As a dynamic resource, it continues to evolve and improve over time, providing learners with community reviewed and contributed content
+* It continues to evolve and improve over time, providing learners with community contributed and reviewed content
 * It is executable on various platforms, which minimizes the possibility of errors in the provided solutions
-* This project provides solutions for all problems with 100% test coverage to prove the accuracy of each solution.
+* It provides solutions for all problems with 100% test coverage to prove the accuracy of each solution
 * It allows learners to test their skills in their preferred programming environment, making it more convenient and flexible
 * It is freely available to anyone interested in enhancing their knowledge in the subject area.
 
