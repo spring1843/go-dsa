@@ -1,6 +1,8 @@
 [![tests](https://github.com/spring1843/go-dsa/actions/workflows/tests.yaml/badge.svg)](https://github.com/spring1843/go-dsa/actions/workflows/tests.yaml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/spring1843/go-dsa)](https://goreportcard.com/report/github.com/spring1843/go-dsa)
 [![GitHub License](https://img.shields.io/badge/License-Apache%202.0-ff69b4.svg)](https://github.com/aws/karpenter/blob/main/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/spring1843/go-dsa)](https://goreportcard.com/report/github.com/spring1843/go-dsa)
+[![Coverage Report](https://coveralls.io/repos/github/aws/karpenter/badge.svg?branch=main)](https://coveralls.io/github/spring1843/go-dsa?branch=main)
+
 
 # Data Structures and Algorithms in Go
 
