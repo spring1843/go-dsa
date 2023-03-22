@@ -1,5 +1,71 @@
 # Heap
 
+Heaps, also known as binary heaps or priority queues, function by retaining the minimum or maximum of the elements inserted into them. There are two types of heaps: minimum heaps and maximum heaps.
+
+A heap must satisfy two conditions:
+
+1. the structure property and the heap property. The structure property requires that the heap be a complete binary search [tree](../tree), where each level is filled left to right, and all levels except the bottom are full.
+2. The heap property requires that the children of a node be larger than the parent node in a min heap and smaller in a max heap, meaning that the root is the minimum in a min heap and the maximum in a max heap.
+
+As a result, if you add elements to the min or max heap and then pop them one by one, you will obtain a list that is sorted in ascending or descending order, respectively. This sorting technique is also an O(NLogN) algorithm known as heap sort. Although there are other sorting algorithms available, none of them are faster than O(NLogN).
+
+## Implementation
+
+The Go standard library includes an implementation of a heap in [container/heap](https://golang.org/pkg/container/heap/). Below is an example of a maximum heap implementation:
+
+```Go
+package main
+
+import (
+	"container/heap"
+	"fmt"
+)
+
+type maxHeap []int
+
+func main() {
+	h := new(maxHeap)
+	for i := 1; i <= 10; i++ {
+		heap.Push(h, i)
+	}
+	for i := 1; i <= 10; i++ {
+		fmt.Println(heap.Pop(h))
+	}
+
+}
+
+func (m maxHeap) Len() int            { return len(m) }
+func (m maxHeap) Less(i, j int) bool  { return m[i] > m[j] }
+func (m maxHeap) Swap(i, j int)       { m[i], m[j] = m[j], m[i] }
+func (m *maxHeap) Push(x interface{}) { *m = append(*m, x.(int)) }
+
+func (m *maxHeap) Pop() interface{} {
+	old := *m
+	tmp := old[len(old)-1]
+	*m = old[0 : len(old)-1]
+	return tmp
+}
+```
+
+To utilize a heap to store a particular type, certain methods such as len and less must be implemented for that type to conform to the heap interface. By default, the heap is a min heap, where each node is less than its children. However, the package provides the flexibility to define what "being less than" means. For instance, changing `m[i] > m[j]` to `m[i] < m[j]` would transform the heap into a minimum heap.
+
+In Go, the heap implementation is based on slices. The heap property is maintained such that the left child of the node at index `i` (where i is greater than or equal to 1) is always located at `2i`, and the right child is at `2i+1`. If the slice already contains elements before any pushing operation, the heap must be initialized using heap.Init(h Interface) to establish the order.
+
+## Complexity
+
+The time complexity of pushing and popping heap elements is O(LogN). On the other hand, initializing a heap, which involves pushing N elements, has a time complexity of O(NLogN).
+
+The insertion strategy entails percolating the new element up the heap until the correct location is identified. Similarly, the deletion strategy involves percolating down the heap.
+
+
+Pushing and Popping heap elements are all O(LogN) operations. The strategy for inserting is the new element is percolating up the heap until the correct location is found. similarly the strategy for deletion is to percolate down.
+
+## Application
+
+Heaps in the form of priority queues are used for scheduling in operating systems and job schedulers. They are also used in simulating and implementing scheduling and priority systems for capacity management in hospitals and businesses.
+
+Priority queues implemented as heaps are utilized in job scheduling, for example scheduling the execution of different processes in an operating systems. They are also employed in simulating and implementing priority and scheduling systems to manage capacity in hospitals and businesses.
+
 ## Rehearsal
 
 ### Kth Largest Element
