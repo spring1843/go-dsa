@@ -6,7 +6,7 @@
 Given a sorted set of integers like `{1,2,3,4,6}`, and a target int like `4` find its position in the set like `3`. [Solution](binary_search.go) [Test](binary_search_test.go)
 
 ### Square Root with Binary Search
-Given a number and percision, return the square root of the number using the binary search algorithm. [Solution](square_root.go) [Test](square_root_test.go)
+Given a number and precision, return the square root of the number using the binary search algorithm. [Solution](square_root.go) [Test](square_root_test.go)
 
 ### Rate Limit
 Given a number of allowed calls per second, write an IsAllowed function which returns false if the call should be rate limited and true if the call should be allowed (i.e. is within the range of allowed calls per second). [Solution](rate_limit.go) [Test](rate_limit_test.go)
