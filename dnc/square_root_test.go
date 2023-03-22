@@ -8,7 +8,7 @@ import (
 func TestSquareRoot(t *testing.T) {
 	var tests = []struct {
 		number    int
-		percision int
+		precision int
 		solution  float64
 	}{
 		{0, 0, 1},
@@ -26,7 +26,7 @@ func TestSquareRoot(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := SquareRoot(test.number, test.percision); !floatAlmostEquals(got, test.solution) {
+		if got := SquareRoot(test.number, test.precision); !floatAlmostEquals(got, test.solution) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.solution, got)
 		}
 	}
