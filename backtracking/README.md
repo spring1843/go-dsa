@@ -21,7 +21,7 @@ In addition, the space complexity of backtracking algorithms is typically not ef
 
 ## Application
 
-Backtracking is widely used to solve board games and is often employed by computers to select their next moves. Furthermore, the backtracking technique is also applied to graphs and trees through the use of Depth First Search [Depth First Search](../graph/graph#depth-first-search---dfs).
+Backtracking is widely used to solve board games and is often employed by computers to select their next moves. Furthermore, the backtracking technique is also applied to graphs and trees through the use of Depth First Search [Depth First Search](../graph/graph#depth-first-search---dfs). It also has applications in object detection in image processing.
 
 ## Rehearsal
 
@@ -39,7 +39,7 @@ Write a function that intakes a string of digits from 2 to 9 inclusive and retur
 
 ### Sudoku
 
-Given a partially filled 9x9 grid with integers from 1 to 9 representing a Sudoku board and 0 representing an empty slot that needs to be filled, write a function that solves the board such that the values in each row, column and each of the 9 3x3 sub-grids are unique. [Solution](sudoku.go), [Tests](sudoku_test.go)### Sudoku
+Given a partially filled 9x9 grid with integers from 1 to 9 representing a Sudoku board and 0 representing an empty slot that needs to be filled, write a function that solves the board such that the values in each row, column and each of the 9 3x3 sub-grids are unique. [Solution](sudoku.go), [Tests](sudoku_test.go)
 
 ### N Queens
 
