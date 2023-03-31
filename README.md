@@ -2,7 +2,7 @@
 [![GitHub License](https://img.shields.io/badge/License-Apache%202.0-ff69b4.svg)](https://github.com/aws/karpenter/blob/main/LICENSE)
 [![Go Report Card](https://goreportcard.com/badge/github.com/spring1843/go-dsa)](https://goreportcard.com/report/github.com/spring1843/go-dsa)
 [![Coverage Report](https://coveralls.io/repos/github/spring1843/go-dsa/badge.svg?branch=main)](https://coveralls.io/github/spring1843/go-dsa?branch=main)
-
+[![Go Reference](https://pkg.go.dev/badge/github.com/spring1843/go-dsa.svg)](https://pkg.go.dev/github.com/spring1843/go-dsa)
 
 # Data Structures and Algorithms in Go
 
@@ -31,7 +31,6 @@ This learning platform offers several advantages over traditional learning metho
   * [Recursion](./recursion)
   * [Divide and Conquer](dnc)
   * [Bit Manipulation](./bit)
-  * Sorting
   * [Backtracking](./backtracking)
   * [Graphs](./graph)
   * [Greedy Algorithms](./greedy)
