@@ -12,12 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v4
-      - uses: golangci/golangci-lint-action@v3
       - run: go test -v -coverprofile=profile.cov ./...
       - uses: reviewdog/action-misspell@v1
         with:
           github_token: ${{ secrets.github_token }}
           locale: "US"
+      - uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: shogo82148/actions-goveralls@v1
         with:
           path-to-profile: profile.cov
