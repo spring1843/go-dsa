@@ -9,9 +9,7 @@ The divide-and-conquer (DNC) paradigm is a common approach to solving problems (
 
 The binary search algorithm is a classic example of a Divide-and-Conquer algorithm that is commonly used to find a specific value in a sorted list or array. The search process begins by comparing the target value to the middle element of the list. If they are not equal, the half of the list where the target value cannot be present is eliminated. This process is repeated on the remaining half of the list until the target value is found or until there are no more elements to search. Binary search can be implemented iteratively or recursively, and both implementations are shown below.
 
-```
-// You can edit this code!
-// Click here and start typing.
+```Go
 package main
 
 import "fmt"
@@ -60,7 +58,7 @@ func binarySearchIterative(list []int, target int) int {
 
 A pre-implemented binary search function is available in Go which returns the index of the first element satisfying a given condition. This function eliminates the need to manually implement the binary search algorithm.
 
-```
+```Go
 package main
 
 import (

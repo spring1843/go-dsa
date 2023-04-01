@@ -29,37 +29,57 @@ Graphs are commonly represented using either an adjacency matrix or an adjacency
 * **Adjacency List**: More space efficient, suitable for graphs with fewer edges
 
 ```Go
-adjacencyMatrix := [][]int{
-    //    1  2  3  4  5
-    []int{0, 1, 1, 1, 0}, // 1
-    []int{0, 0, 1, 0, 1}, // 2
-    []int{0, 0, 0, 0, 1}, // 3
-    []int{0, 0, 1, 0, 1}, // 4
-    []int{0, 0, 0, 0, 0}, // 5
-}
+package main
 
-adjacencyList := [][]int{
-    []int{2, 3, 4},
-    []int{3, 5},
-    []int{5},
-    []int{3, 5},
-    []int{},
+import "fmt"
+
+func main() {
+	adjacencyMatrix := [][]int{
+		//    1  2  3  4  5
+		[]int{0, 1, 1, 1, 0}, // 1
+		[]int{0, 0, 1, 0, 1}, // 2
+		[]int{0, 0, 0, 0, 1}, // 3
+		[]int{0, 0, 1, 0, 1}, // 4
+		[]int{0, 0, 0, 0, 0}, // 5
+	}
+
+	adjacencyList := [][]int{
+		[]int{2, 3, 4},
+		[]int{3, 5},
+		[]int{5},
+		[]int{3, 5},
+		[]int{},
+	}
+
+	fmt.Println(adjacencyMatrix, adjacencyList)
 }
 ```
 
 One approach to make the graph more manageable is to store the adjacency list in each node and represent the graph as an array or slice of vertices.
 
 ```Go
+package main
+
+import "fmt"
+
 // Vertex is a vertex in a Graph that has a value and can be connected to more vertices
 type Vertex struct {
-    // Val is the value of the vertex
-    Val int
+	// Val is the value of the vertex
+	Val int
 
-    // The edges that this vertex is connected to
-    Edges []*Vertex
+	// The edges that this vertex is connected to
+	Edges []*Vertex
 }
 
 var graph []*Vertex
+
+func main() {
+	vertex := &Vertex{
+		Val: 1,
+	}
+	graph = append(graph, vertex)
+	fmt.Println(graph[0].Val) // Prints 1
+}
 ```
 
 ### Searching Graphs

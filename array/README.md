@@ -11,8 +11,15 @@ In the Go programming language, arrays are considered values rather than pointer
 In order to define an array in Go, it is necessary to specify the size of the array using a constant. By using constants in this manner, it is no longer necessary to utilize the make function in order to create the array.
 
 ```Go
-var nums1 [2]int
-nums2 := [3]int{1, 2, 3}
+package main
+
+import "fmt"
+
+func main() {
+	var nums1 [2]int
+	nums2 := [3]int{1, 2, 3}
+	fmt.Println(nums1, nums2) // Prints [0 0] [1 2 3]
+}
 ```
 
 Although arrays are fundamental data structures in Go, their constant size can make them inflexible and difficult to use in situations where a variable size is required. To address this issue, Go provides [slices](https://blog.golang.org/slices-intro) which are an abstraction of arrays that offer more convenient access to sequential data typically stored in arrays.
@@ -20,17 +27,31 @@ Although arrays are fundamental data structures in Go, their constant size can m
 Slices enable the addition of values using the `append` function, which allows for dynamic resizing of the slice. Additionally, selectors of the format [low:high] can be used to select or manipulate data in the slice. By utilizing slices instead of arrays, Go programmers gain a more flexible and powerful tool to manage their data structures.
 
 ```Go
-nums := []int{1, 2, 3}
-nums = append([]int{0}, nums...) // Add new element to the start
-nums = append(nums, 4)     // Add new element to the end
-nums = nums[:len(nums)-1] // Removes last element
+package main
+
+import "fmt"
+
+func main() {
+	nums := []int{1, 2, 3}
+	nums = append([]int{0}, nums...) // Add new element to the start
+	nums = append(nums, 4)           // Add new element to the end
+	nums = nums[:len(nums)-1]        // Removes last element
+	fmt.Println(nums)                // Prints [0 1 2 3]
+}
 ```
 
 The [make](https://golang.org/pkg/builtin/#make) function can be used to create a zeroed slice of a given length and capacity.
 
 ```Go
-nums2 := make([]int, 0,2) // len(nums2) = 0, cap(nums2) = 2
-nums2[0], nums2[1] = 0, 1
+package main
+
+import "fmt"
+
+func main() {
+	nums := make([]int, 2)
+	nums[0], nums[1] = 0, 1
+	fmt.Println(nums, len(nums), cap(nums)) // Prints [0 1] 2 2
+}
 ```
 
 Slice expressions in the form of input[low:high] can be used to manipulate slices or access their elements
