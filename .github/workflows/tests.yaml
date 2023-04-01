@@ -21,14 +21,6 @@ jobs:
       - uses: github/super-linter@v4
         env:
           VALIDATE_GO: false,
-          VALIDATE_BASH: true,
-          VALIDATE_SHELL_SHFMT: true,
-          VALIDATE_MARKDOWN: true,
-          VALIDATE_GITLEAKS: true,
-          VALIDATE_GITHUB_ACTIONS: true,
-          VALIDATE_YAML: true,
-          VALIDATE_NATURAL_LANGUAGE: true,
-
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: shogo82148/actions-goveralls@v1
