@@ -1,0 +1,3 @@
+run:
+  concurrency: 4
+  timeout: 5m
