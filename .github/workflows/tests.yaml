@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v4
+      - uses: golangci/golangci-lint-action@v3
       - run: go test -v -coverprofile=profile.cov ./...
       - uses: reviewdog/action-misspell@v1
         with:
@@ -19,6 +20,7 @@ jobs:
           locale: "US"
       - uses: github/super-linter@v4
         env:
+          VALIDATE_GO: false,
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: shogo82148/actions-goveralls@v1
