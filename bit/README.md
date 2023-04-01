@@ -8,8 +8,8 @@ Bit manipulation or bitwise operations refers to the process of manipulating ind
 
 AND	1100	OR	1100	XOR	1100	Negation	1100	L Shift	1100	R Shift	1100
 	1010		1010		1010
-	====		====		====		====			====			====
-	1000		1110		0110		0011			1000			0110
+	====		====		====			====		====		====
+	1000		1110		0110			0011		1000		0110
 ```
 
 # Implementation
