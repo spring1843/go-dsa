@@ -1,0 +1,17 @@
+{
+    "plugins": {
+        "@textlint/markdown": {
+            "extensions": [
+                ".mdx"
+            ]
+        }
+    },
+    "rules": {
+        "no-exclusive-tests": {
+            "severity": "error"
+        },
+        "no-test-skipped": {
+            "severity": "warning"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+linters-settings:
+  gosimple:
+    # configure options for gosimple linter
+    enabled: true
+    severity: warning
+    exclude-useless: true
+    allow-variadic-params: true
+  unused:
+    # configure options for unused linter
+    enabled: true
+    severity: warning
+    check-exported: true
+  deadcode:
+    # configure options for deadcode linter
+    enabled: true
+    severity: warning
+    exclude-tests: true
+    ignore-unexported: true
+  gocyclo:
+    # configure options for gocyclo linter
+    enabled: true
+    severity: warning
+    min-complexity: 15
