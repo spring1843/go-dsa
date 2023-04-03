@@ -29,6 +29,9 @@ Greedy algorithms can be applied to optimization problems where the aim is to op
 
 ## Rehearsal
 
+### Maximum Stock Profit
+Given a list of stock prices for a given stock over time like `{50, 10, 4, 100, 1, 101, 5, 10}` return the maximum profit that can be made by buying and selling a single unit of this stock. Like `101 - 1 = 100` [Solution](max_stock_profit.go), [Tests](max_stock_profit_test.go)
+
 ### Activity Selector
 
 Given a list of start and finish times for a few activities like `{1, 3, 0}` and `{4, 5, 6}` (first activity starts at 1 and ends at 4, second starts at 3 and ends at 5), return a maximal list of non-conflicting activities. [Solution](activity_selector.go), [Tests](activity_selector_test.go)
