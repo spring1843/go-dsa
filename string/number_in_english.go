@@ -47,7 +47,7 @@ var digits = map[int]string{
 	billion:  "Billion",
 }
 
-// NumberInEnglish returns how a given number would be read in English
+// NumberInEnglish returns how a given number would be read in English.
 func NumberInEnglish(num int) string {
 	output := ""
 	eachOutput := ""

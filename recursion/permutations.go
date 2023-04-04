@@ -1,6 +1,6 @@
 package recursion
 
-// Permutations returns all possible permutations of the given integers
+// Permutations returns all possible permutations of the given integers.
 func Permutations(numbers []int) [][]int {
 	var permutations [][]int
 	permutationsRecursive(numbers, 0, &permutations)

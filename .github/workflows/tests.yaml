@@ -27,7 +27,6 @@ jobs:
         with:
           github_token: ${{ secrets.github_token }}
           locale: "US"
-          ignore: "importas"
       - uses: shogo82148/actions-goveralls@v1
         with:
           path-to-profile: profile.cov

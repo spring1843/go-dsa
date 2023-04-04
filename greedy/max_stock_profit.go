@@ -1,7 +1,7 @@
 package greedy
 
 // MaxStockProfit returns the highest amount of profit that can be made by buying and selling
-// a stock, given a list of prices at different times
+// a stock, given a list of prices at different times.
 func MaxStockProfit(prices []int) int {
 	maxProfit := 0
 	if len(prices) <= 1 {

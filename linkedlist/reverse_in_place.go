@@ -1,6 +1,6 @@
 package linkedlist
 
-// ReverseLinkedList reverses a linked list in-place
+// ReverseLinkedList reverses a linked list in-place.
 func ReverseLinkedList(head *Node) *Node {
 	if head == nil || head.Next == nil {
 		return head

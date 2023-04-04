@@ -1,7 +1,7 @@
 package graph
 
 type (
-	// Vertex is a vertex in a Graph that has a value and can be connected to more vertices
+	// Vertex is a vertex in a Graph that has a value and can be connected to more vertices.
 	Vertex struct {
 		// Val is the value of the vertex
 		Val int
@@ -19,7 +19,7 @@ type (
 )
 
 // IterativeTraversal performs a BFS and DFS on the given graph and returns
-// the value of each vertex in the order it was visited
+// the value of each vertex in the order it was visited.
 func IterativeTraversal(graph []*Vertex) ([]int, []int) {
 	dfs := traverseAllNodes(new(stack), graph)
 	bfs := traverseAllNodes(new(queue), graph)

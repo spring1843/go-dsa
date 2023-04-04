@@ -1,6 +1,6 @@
 package bit
 
-// Divide divides two numbers without using division or multiplication symbols
+// Divide divides two numbers without using division or multiplication symbols.
 func Divide(x, y int) int {
 	quotient := 0
 	power := uint64(32)

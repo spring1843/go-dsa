@@ -1,6 +1,6 @@
 package recursion
 
-// PowerOf raises x to the power of n
+// PowerOf raises x to the power of n.
 func PowerOf(x, n int) int {
 	if n == 0 {
 		return 0

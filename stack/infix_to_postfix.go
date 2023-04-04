@@ -16,7 +16,7 @@ type operators struct {
 	stack []string
 }
 
-// InfixToPostfix converts an infix expression to a postfix one supporting the 4 basic arithmetic operations and parentheses
+// InfixToPostfix converts an infix expression to a postfix one supporting the 4 basic arithmetic operations and parentheses.
 func InfixToPostfix(infix []string) ([]string, error) {
 	output := []string{}
 	stack := new(operators)

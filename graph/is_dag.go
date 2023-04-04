@@ -1,7 +1,7 @@
 package graph
 
 // IsDAG returns true if the given graph is a Directed Acyclic Graph (DAG)
-// A directed graph is acyclic if it contains no cycles
+// A directed graph is acyclic if it contains no cycles.
 func IsDAG(graph []*Vertex) bool {
 	for i, vertex := range graph {
 		visited := make(map[*Vertex]struct{})

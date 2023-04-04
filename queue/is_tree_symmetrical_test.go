@@ -31,5 +31,4 @@ func TestIsTreeSymmetrical(t *testing.T) {
 			t.Fatalf("Failed test case #%d. Want %t got %t", i, test.isSymmetric, got)
 		}
 	}
-
 }

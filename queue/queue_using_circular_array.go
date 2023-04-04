@@ -6,7 +6,7 @@ import (
 
 const emptyValue = 0
 
-// UsingCircularArray is a queue that is made using a circular array
+// UsingCircularArray is a queue that is made using a circular array.
 type UsingCircularArray struct {
 	circular []int
 	size     int
@@ -14,7 +14,7 @@ type UsingCircularArray struct {
 	rear     int
 }
 
-// NewCircularQueue returns a fixed size circular queue
+// NewCircularQueue returns a fixed size circular queue.
 func NewCircularQueue(size int) *UsingCircularArray {
 	circular := make([]int, size)
 	for i := range circular {

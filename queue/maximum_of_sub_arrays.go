@@ -5,7 +5,7 @@ import (
 	"errors"
 )
 
-// ErrQueueEmpty occurs when popping an empty stack
+// ErrQueueEmpty occurs when popping an empty stack.
 var ErrQueueEmpty = errors.New("Empty queue")
 
 // MaxOfKLengthSubArrays takes a list of integers and returns

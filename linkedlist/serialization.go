@@ -7,7 +7,7 @@ import (
 
 const separator = `->`
 
-// Node is a link in a singly linked list that stores integers
+// Node is a link in a singly linked list that stores integers.
 type Node struct {
 	// Val is the value of the node
 	Val int
@@ -16,14 +16,14 @@ type Node struct {
 	Next *Node
 }
 
-// NewNode returns a new node
+// NewNode returns a new node.
 func NewNode(v int) *Node {
 	return &Node{
 		Val: v,
 	}
 }
 
-// Serialize returns a string representation of a given linked list
+// Serialize returns a string representation of a given linked list.
 func Serialize(node *Node) string {
 	if node == nil {
 		return ""
@@ -38,7 +38,7 @@ func Serialize(node *Node) string {
 	return strings.TrimSuffix(output, separator)
 }
 
-// Unserialize returns a linked list when given a string representation
+// Unserialize returns a linked list when given a string representation.
 func Unserialize(stringRepresentation string) *Node {
 	if stringRepresentation == "" {
 		return nil

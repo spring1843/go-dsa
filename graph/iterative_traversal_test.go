@@ -30,7 +30,7 @@ func TestIterativeTraversal(t *testing.T) {
 	}
 }
 
-// toGraph converts an adjacency formatted graph into a connected collection of graph vertices
+// toGraph converts an adjacency formatted graph into a connected collection of graph vertices.
 func toGraph(graph [][]int) []*Vertex {
 	graphMap := make(map[int]*Vertex)
 

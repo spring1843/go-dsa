@@ -14,7 +14,7 @@ const (
 
 // NetworkDelayTime returns the fastest times it will take for a message sent from k
 // to reach all nodes of the given graph of n vertices. The edges are given in the
-// form of {vertexSource, vertexDestination, vertexDelay}
+// form of {vertexSource, vertexDestination, vertexDelay}.
 func NetworkDelayTime(n, k int, edges [][]int) int {
 	var (
 		verticesMap, edgesHeap     = verticesAndEdges(edges, k)
@@ -56,7 +56,7 @@ func NetworkDelayTime(n, k int, edges [][]int) int {
 
 // verticesAndEdges takes edges, and returns
 // a map of vertex ID as keys and the outgoing edges in the [vertexDestination, cost] form
-// a minimum heap of edges in the [vertexDestination, cost]
+// a minimum heap of edges in the [vertexDestination, cost].
 func verticesAndEdges(edges [][]int, k int) (map[int][][2]int, edgeMinHeap) {
 	verticesMap := make(map[int][][2]int)
 	for _, vertex := range edges {

@@ -7,11 +7,11 @@ var (
 		'{': '}',
 	}
 
-	// stack retains the opener symbols e.g. [({
+	// stack retains the opener symbols e.g. [({.
 	stack []rune
 )
 
-// IsExpressionBalanced returns true if a given expression contains symbols like [](){} is balanced or not
+// IsExpressionBalanced returns true if a given expression contains symbols like [](){} is balanced or not.
 func IsExpressionBalanced(s string) bool {
 	stack = []rune{}
 	if s == "" {

@@ -2,7 +2,7 @@ package stack
 
 import "strconv"
 
-// EvaluatePostfixExpression evaluates an expression into a float64
+// EvaluatePostfixExpression evaluates an expression into a float64.
 func EvaluatePostfixExpression(expression []string) (float64, error) {
 	stack := new(evaluation)
 	for _, element := range expression {

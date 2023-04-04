@@ -3,7 +3,7 @@ package graph
 import "math"
 
 // CheapestFlights finds cheapest flights with up to k stops from vertexSource to vertexDestination given a collection of flights
-// and their costs
+// and their costs.
 func CheapestFlights(flights [][]int, cityCount, source, destination, maxStops int) int {
 	var (
 		min        = math.MaxInt64
