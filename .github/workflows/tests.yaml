@@ -20,7 +20,8 @@ jobs:
           USE_FIND_ALGORITHM: true
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JSCPD: false
-          MARKDOWN_CONFIG_FILE: .markdownlint.yaml
+          MARKDOWN_CONFIG_FILE: .markdownlint.yml
+          YAML_CONFIG_FILE: .yamllint.yml
       - run: go test -v -coverprofile=profile.cov ./...
       - uses: reviewdog/action-misspell@v1
         with:

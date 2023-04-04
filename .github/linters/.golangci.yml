@@ -66,5 +66,3 @@ linters:
     - tparallel
     - unconvert
     - usestdlibvars
-  fast: true
-  auto-fix: true
