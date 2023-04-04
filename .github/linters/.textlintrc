@@ -10,12 +10,6 @@
         }
     },
     "rules": {
-        "terminology": true,
-        "no-exclusive-tests": {
-            "severity": "error"
-        },
-        "no-test-skipped": {
-            "severity": "warning"
-        }
+        "terminology": true
     }
 }
