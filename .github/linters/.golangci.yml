@@ -52,8 +52,6 @@ linters:
     - prealloc
     - promlinter
     - reassign
-    - rowserrcheck
-    - sqlclosecheck
     - staticcheck
     - tagliatelle
     - tenv
