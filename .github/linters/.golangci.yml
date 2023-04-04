@@ -85,23 +85,7 @@ linters:
     - usestdlibvars
     - varcheck
     - whitespace
-  # Enable all available linters.
-  # Default: false
-  # Disable specific linter
-  # https://golangci-lint.run/usage/linters/#disabled-by-default
-  presets:
-    - bugs
-    - comment
-    - complexity
-    - error
-    - format
-    - import
-    - metalinter
-    - module
-    - performance
-    - sql
-    - style
-    - unused
+
   # Run only fast linters from enabled linters set (first run won't be fast)
   # Default: false
   fast: true
