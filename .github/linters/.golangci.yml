@@ -2,7 +2,7 @@ issues:
   exclude-rules:
     - path: /
       linters:
-        - typecheck
+        # - typecheck
         - nlreturn
         - gocritic
         - lll
