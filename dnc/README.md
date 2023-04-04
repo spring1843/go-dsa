@@ -1,4 +1,5 @@
 # Divide-and-Conquer
+
 The divide-and-conquer (DNC) paradigm is a common approach to solving problems [recursively](../recursion). It involves breaking down a problem into smaller and smaller sub-problems until a base case is reached, where the problem can be solved directly. The divide-and-conquer method consists of three steps:
 
 1. Divide: The problem is divided into smaller sub-problems, typically by partitioning the input data into two or more subsets.

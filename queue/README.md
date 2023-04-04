@@ -43,6 +43,7 @@ func dequeue() (int, error) {
 ```
 
 Here's a [linked list](../linkedlists) implementation with the same exact outcome.
+
 ```Go
 package main
 

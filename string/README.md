@@ -15,7 +15,6 @@ In Go strings are a data type. Behind the scene strings are a slice of bytes. Th
 
 When you iterate through a string in Go using the `range` keyword, every element becomes a [rune](https://blog.golang.org/strings#TOC_5.) which is the same as `int32`. If you are writing code that deals with characters it's often easier to define your function parameters and variables as rune. The following code shows how to iterate through a string.
 
-
 ```Go
 package main
 

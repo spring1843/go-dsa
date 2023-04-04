@@ -65,7 +65,7 @@ Given an integer like 321 return a reversed number using recursion where the sam
 Given a string like `abba` return true if it's a palindrome and false otherwise. [Solution](is_palindrome.go) [Test](is_palindrome_test.go)
 
 ### Climbing Stairs
- 
+
 Given n the number of steps, return in how many ways you can climb these stairs if you are only able to climb 1 or 2 steps at a time. [Solution](climbing_stairs.go) [Test](climbing_stairs_test.go)
 
 ### Exponentiation

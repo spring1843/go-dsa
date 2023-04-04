@@ -2,7 +2,6 @@
 
 A graph is a collection of vertices that are connected through directed or undirected edges. In an edge-weighted tree, each edge is assigned a value representing its cost or benefit. Graphs can be used to model various real-world scenarios, For example graph A in the below figure can represent university courses and their prerequisites, cities and their highways, followers in a social network, links on a website, and many more.
 
-
 ```ASCII
 [Figure 1] Graph Examples - Numbers , arrows, and numbers in brackets each respectively represent vertices, edges, and edge weights.
 

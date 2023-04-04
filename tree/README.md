@@ -8,7 +8,7 @@ Traversing a tree means visiting every node in a tree and performing some work o
 [Figure 1] Tree traversals - Full Binary Search Tree Example
 
      4			Traversal Name		Order 		        Example
-    / \			
+    / \
    /   \		In-Order                left,self,right		1,2,3,4,5,6,7
   2     6		Pre-Order,DFS		self,left,right		4,2,1,3,6,5,7
  / \   / \		Post-Order,BFS		left,right,self		1,3,2,5,7,6,4

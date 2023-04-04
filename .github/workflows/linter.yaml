@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:      
-         fetch-depth: 0
+        with:
+          fetch-depth: 0
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
