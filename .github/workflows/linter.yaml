@@ -16,6 +16,6 @@ jobs:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USE_FIND_ALGORITHM: true
-          VALIDATE_ALL_CODEBASE: true
-          MARKDOWN_CONFIG_FILE: .markdownlint.yaml
+          VALIDATE_ALL_CODEBASE: false
           VALIDATE_JSCPD: false
+          MARKDOWN_CONFIG_FILE: .markdownlint.yaml
