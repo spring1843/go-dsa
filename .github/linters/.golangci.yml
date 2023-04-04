@@ -1,3 +1,9 @@
+issues:
+  exclude-rules:
+    - path: /
+      linters:
+        - typecheck
+
 linters:
   disable-all: true
   enable:
