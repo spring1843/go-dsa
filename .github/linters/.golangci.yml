@@ -7,7 +7,6 @@ linters:
     - bodyclose
     - containedctx
     - contextcheck
-    - deadcode
     - decorder
     - depguard
     - dogsled
@@ -38,11 +37,9 @@ linters:
     - importas
     - ineffassign
     - interfacebloat
-    - interfacer
     - ireturn
     - loggercheck
     - maintidx
-    - maligned
     - misspell
     - nakedret
     - nestif
@@ -51,16 +48,13 @@ linters:
     - noctx
     - nolintlint
     - nonamedreturns
-    - nosnakecase
     - nosprintfhostport
     - prealloc
     - promlinter
     - reassign
     - rowserrcheck
-    - scopelint
     - sqlclosecheck
     - staticcheck
-    - structcheck
     - tagliatelle
     - tenv
     - testableexamples
@@ -68,6 +62,5 @@ linters:
     - unconvert
     - unused
     - usestdlibvars
-    - varcheck
   fast: true
-  auto-fix: false
+  auto-fix: true
