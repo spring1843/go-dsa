@@ -29,8 +29,6 @@ linters:
     - forbidigo
     - forcetypeassert
     - gci
-    - ginkgolinter
-    - gocheckcompilerdirectives
     - gochecknoinits
     - gocognit
     - goconst
@@ -58,7 +56,6 @@ linters:
     - maintidx
     - maligned
     - misspell
-    - musttag
     - nakedret
     - nestif
     - nilerr
