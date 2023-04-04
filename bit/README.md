@@ -45,7 +45,7 @@ func printBinary(n int) {
 
 ## Arithmetic by Shifting
 
-Left shifting can be viewed as a division operation by 2 raised to the power of a specified number, while right shifting can be viewed as a multiplication operation by 2 raised to the power of a specified number. For instance, a << b can be interpreted as dividing a by 2^b, and a >> b can be interpreted as multiplying a by 2^b.
+Left shifting can be viewed as a division operation by 2 raised to the power of a specified number, while right shifting can be viewed as a multiplication operation by 2 raised to the power of a specified number. For instance, a << b can be interpreted as multiplying a by 2^b, and a >> b can be interpreted as dividing a by 2^b.
 
 ```Go
 package main
