@@ -30,7 +30,7 @@ issues:
         - forcetypeassert # type assertion must be checked
         - golint # exported func NQueens returns unexported type []github.com/spring1843/go-dsa/backtracking.chessboard, which can be annoying to use
         - dupl # lines are duplicate
-        - wsl # declarations should never be cuddled/only one cuddle assignment allowed before if statement /if statements should only be cuddled with assignments used in the if statement itself
+        - wsl # declarations should never be cuddled / only one cuddle assignment allowed before if statement etc
 
 linters:
   enable-all: true
