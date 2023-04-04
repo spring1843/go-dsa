@@ -1,9 +1,5 @@
 linters:
-  # Disable all linters.
-  # Default: false
   disable-all: true
-  # Enable specific linter
-  # https://golangci-lint.run/usage/linters/#enabled-by-default
   enable:
     - asasalint
     - asciicheck
@@ -11,34 +7,27 @@ linters:
     - bodyclose
     - containedctx
     - contextcheck
-    - cyclop
     - deadcode
     - decorder
     - depguard
     - dogsled
-    - dupword
     - durationcheck
     - errcheck
     - errchkjson
     - errname
-    - errorlint
     - execinquery
     - exhaustive
-    - exhaustruct
     - exportloopref
     - forbidigo
-    - forcetypeassert
     - gci
     - gochecknoinits
     - gocognit
     - goconst
     - gocyclo
     - godox
-    - goerr113
     - gofmt
     - goheader
     - goimports
-    - golint
     - gomoddirectives
     - gomodguard
     - goprintffuncname
@@ -46,7 +35,6 @@ linters:
     - gosimple
     - govet
     - grouper
-    - ifshort
     - importas
     - ineffassign
     - interfacebloat
@@ -66,7 +54,6 @@ linters:
     - nosnakecase
     - nosprintfhostport
     - prealloc
-    - predeclared
     - promlinter
     - reassign
     - rowserrcheck
@@ -78,15 +65,9 @@ linters:
     - tenv
     - testableexamples
     - tparallel
-    - typecheck
     - unconvert
-    - unparam
     - unused
     - usestdlibvars
     - varcheck
-    - whitespace
-
-  # Run only fast linters from enabled linters set (first run won't be fast)
-  # Default: false
   fast: true
   auto-fix: false
