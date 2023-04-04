@@ -12,9 +12,9 @@ jobs:
           fetch-depth: 0
       - name: Set up Golang Super Linter
         uses: docker://ghcr.io/github/super-linter:v4
-        with:
-          env:
+        env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
           args: >
             --config .github/workflows/linters/.golangci.yml
             --json
