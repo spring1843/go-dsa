@@ -98,7 +98,7 @@ Bit manipulation operations are characterized by a constant time complexity of O
 
 Bit manipulation techniques are widely utilized in diverse fields of computing, such as cryptography, data compression, network protocols, and databases, to name a few. Each specific bitwise operation has it's own qualities that makes them useful in different scenarios.
 
-AND is used to extract specific bits or sets of bits from a larger number. For example, to check if a certain bit is set in a number, we can AND the number with a mask that has only that bit set to 1, and if the result is not 0, then that bit was set. Another application is to clear or reset certain bits in a number by ANDing with a mask that has those bits set to 0.
+AND is used to extract specific bit or set of bits from a larger number. For example, to check if a certain bit is set in a number, we can AND the number with a mask that has only that bit set to 1, and if the result is not 0, then that bit was set. Another application is to clear or reset certain bits in a number by ANDing with a mask that has those bits set to 0.
 
 OR can be useful in solving problems where we want to "set" or "turn on" certain bits in a binary number. For example, if we have a variable flags which is a binary number representing various options, we can set a particular flag by ORing the variable with a binary number where only the corresponding bit for that flag is 1. This will turn on the flag in the variable without affecting any other flags.
 
