@@ -1,0 +1,36 @@
+issues:
+  exclude-rules:
+    - path: /
+      linters:
+        # - typecheck
+        - nlreturn
+        - gocritic
+        - lll
+        - varnamelen # parameter name 'l2' is too short for the scope of its usage
+        - testpackage # package should be `string_test` instead of `string`
+        - gomnd # mnd: Magic number: 2, in <operation> detected
+        - wastedassign # assigned to what, but reassigned without using the value
+        - predeclared # package name string has same name as predeclared identifier
+        - gochecknoglobals # global variable
+        - wrapcheck # error returned from external package is unwrapped: sig: func strconv.ParseFloat(s string, bitSize int) (float64, error
+        - exhaustivestruct # eg.  left, right are missing in stringBinaryTreeNode
+        - exhaustruct # eg.  left, right are missing in stringBinaryTreeNode
+        - thelper # test helper function should start from t.Helper()
+        - errorlint #comparing with != will fail on wrapped errors.
+        - ifshort # variable 'times' is only used in the if-statement (string/number_in_english.go:76:2); consider using short syntax
+        - stylecheck # ST1005: error strings should not be capitalized
+        - makezero # append to slice `zeros` with non-zero initialized length
+        - goerr113 # do not define dynamic errors, use wrapped static errors instead
+        - cyclop # calculated cyclomatic complexity for function max is 10
+        - dupword # Duplicate words (returns) found
+        - paralleltest # eg. Function TestNumberOfIslands missing the call to method parallel
+        - revive # unexported-return: exported func NQueens returns unexported type []backtracking.chessboard, which can be annoying to use
+        - funlen # Function 'TestSudoku' is too long (107 > 60)
+        - unparam # `hasCycle` - `i` is unused
+        - forcetypeassert # type assertion must be checked
+        - golint # exported func NQueens returns unexported type []github.com/spring1843/go-dsa/backtracking.chessboard, which can be annoying to use
+        - dupl # lines are duplicate
+        - wsl # declarations should never be cuddled / only one cuddle assignment allowed before if statement etc
+
+linters:
+  enable-all: true
