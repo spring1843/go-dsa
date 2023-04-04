@@ -1,0 +1,10 @@
+default: true
+MD007:
+  indent: 4
+MD013:
+  line_length: 700
+MD040: false
+MD032: false
+MD022: false
+MD011: false
+no-hard-tabs: false
