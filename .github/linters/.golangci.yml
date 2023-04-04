@@ -64,7 +64,6 @@ linters:
     - testableexamples
     - tparallel
     - unconvert
-    - unused
     - usestdlibvars
   fast: true
   auto-fix: true
