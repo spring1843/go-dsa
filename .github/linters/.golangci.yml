@@ -3,6 +3,7 @@ issues:
     - path: /
       linters:
         - typecheck
+        - jscpd
 
 linters:
   disable-all: true
