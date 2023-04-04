@@ -6,7 +6,7 @@ import (
 )
 
 func TestEvaluateBinaryExpressionTree(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		tree   string
 		result float64
 	}{
@@ -25,7 +25,7 @@ func TestEvaluateBinaryExpressionTree(t *testing.T) {
 }
 
 func TestSerializeAndUnserializeStringBinaryTree(t *testing.T) {
-	var tests = []string{
+	tests := []string{
 		"",
 		"1",
 		"1,2,3",

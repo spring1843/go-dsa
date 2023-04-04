@@ -3,7 +3,7 @@ package tree
 import "testing"
 
 func TestSerializeAndUnserializeBinaryTree(t *testing.T) {
-	var tests = []string{
+	tests := []string{
 		"",
 		"1",
 		"1,2,3",

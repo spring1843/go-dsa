@@ -6,7 +6,7 @@ import (
 )
 
 func TestIterativeTraversal(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		graph    [][]int
 		bfs, dfs []int
 	}{

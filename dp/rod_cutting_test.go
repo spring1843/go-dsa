@@ -6,7 +6,7 @@ import (
 )
 
 func TestRodCutting(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		snacks   []int
 		n        int
 		solution int

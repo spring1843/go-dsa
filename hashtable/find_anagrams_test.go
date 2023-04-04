@@ -6,7 +6,7 @@ import (
 )
 
 func TestFindAnagrams(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		words    []string
 		anagrams [][]string
 	}{
