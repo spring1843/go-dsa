@@ -1,6 +1,7 @@
 # Recursion
 
 Recursion is a computational technique that implements a [divide and conquer](../dnc) approach to problem-solving by breaking down a complex problem into smaller sub-problems. It consists of two components:
+
 * one or more base cases that provide output for simple inputs
 * a recursive case that combines the outputs obtained from recursive function calls to generate a solution for the original problem.
 
