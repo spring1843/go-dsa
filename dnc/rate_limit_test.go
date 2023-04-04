@@ -7,7 +7,7 @@ import (
 )
 
 func TestRateLimiter(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		limitPerSecond  int
 		firstCallTimes  int
 		sleep           int

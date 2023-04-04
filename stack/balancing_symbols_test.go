@@ -3,7 +3,7 @@ package stack
 import "testing"
 
 func TestIsExpressionBalanced(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		expression string
 		isValid    bool
 	}{

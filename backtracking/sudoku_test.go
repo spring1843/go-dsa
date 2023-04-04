@@ -6,7 +6,7 @@ import (
 )
 
 func TestSudoku(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		board    [][]int
 		solution [][]int
 	}{

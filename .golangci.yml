@@ -4,9 +4,8 @@ issues:
       linters:
         - typecheck
         - jscpd
-        - gocritic
-        - gofumpt
-        - wsl
+        # - gocritic
+        # - gofumpt
 
 linters:
   enable-all: true

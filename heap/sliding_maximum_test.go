@@ -6,7 +6,7 @@ import (
 )
 
 func TestMaxSlidingWindow(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		numbers    []int
 		k          int
 		maxSliding []int

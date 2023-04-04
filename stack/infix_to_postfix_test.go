@@ -6,7 +6,7 @@ import (
 )
 
 func TestInfixToPostfix(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		infix     []string
 		expectErr bool
 		postfix   []string
