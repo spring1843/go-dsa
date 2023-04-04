@@ -5,7 +5,7 @@ import (
 )
 
 func TestBasicCalculator(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		expression string
 		expectErr  bool
 		outcome    float64

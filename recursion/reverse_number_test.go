@@ -5,7 +5,7 @@ import (
 )
 
 func TestReverseDigits(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		n, reversed int
 	}{
 		{0, 0},

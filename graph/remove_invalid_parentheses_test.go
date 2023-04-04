@@ -6,7 +6,7 @@ import (
 )
 
 func TestRemoveInvalidParentheses(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		input   string
 		outputs []string
 	}{

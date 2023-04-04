@@ -3,7 +3,7 @@ package queue
 import "testing"
 
 func TestQueueUsingStacks(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		enqueue                  []int
 		dequeueTimes             int
 		expectedLastDequeuedItem int

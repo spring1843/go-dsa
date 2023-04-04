@@ -40,7 +40,6 @@ func (m *medianKeeper) addNumber(num int) {
 func (m *medianKeeper) len() int {
 	return m.min.Len() + m.max.Len()
 }
-
 func (m *medianKeeper) median() float64 {
 	if m.len()&1 == 1 {
 		return float64((*m.max)[0])

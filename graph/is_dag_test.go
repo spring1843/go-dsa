@@ -3,7 +3,7 @@ package graph
 import "testing"
 
 func TestIsDAG(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		graph [][]int
 		isDAG bool
 	}{

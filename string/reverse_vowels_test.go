@@ -5,7 +5,7 @@ import (
 )
 
 func TestReverseVowels(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		word     string
 		reversed string
 	}{

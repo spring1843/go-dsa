@@ -6,7 +6,7 @@ import (
 )
 
 func TestMergeSort(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		list   []int
 		sorted []int
 	}{

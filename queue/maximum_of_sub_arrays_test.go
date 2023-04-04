@@ -6,7 +6,7 @@ import (
 )
 
 func TestMaxOfKLengthSubArrays(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		k        int
 		list     []int
 		maximums []int

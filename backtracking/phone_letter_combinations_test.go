@@ -7,7 +7,7 @@ import (
 )
 
 func TestPhoneLetterCombinations(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		digits       string
 		combinations []string
 	}{

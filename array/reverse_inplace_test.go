@@ -6,7 +6,7 @@ import (
 )
 
 func TestReverseInplace(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		list     []int
 		start    int
 		end      int

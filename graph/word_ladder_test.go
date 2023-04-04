@@ -3,7 +3,7 @@ package graph
 import "testing"
 
 func TestWordLadder(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		start, end         string
 		dic                []string
 		minTransformations int

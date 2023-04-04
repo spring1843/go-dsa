@@ -5,7 +5,7 @@ import (
 )
 
 func TestCheapestFlights(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		flight                                                 [][]int
 		cityCount, source, destination, maxStops, cheapestCost int
 	}{

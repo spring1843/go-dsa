@@ -3,7 +3,7 @@ package bit
 import "testing"
 
 func TestMiddleWithoutDivision(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		a, b, mid int
 	}{
 		{0, 0, 0},

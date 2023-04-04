@@ -14,7 +14,7 @@ type testCase struct {
 // then dequeues a number of times and finally checks the value from the last dequeue.
 // The same process then may be repeated for a second time with different values.
 func TestCircularQueue(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		size        int
 		firstRound  *testCase
 		secondRound *testCase

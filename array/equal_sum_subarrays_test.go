@@ -6,7 +6,7 @@ import (
 )
 
 func TestEqualSumSubArrays(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		list      []int
 		subArrays [][]int
 	}{

@@ -3,7 +3,7 @@ package hashtable
 import "testing"
 
 func TestCutBrickWall(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		cutPosition int
 		bricks      [][]int
 	}{

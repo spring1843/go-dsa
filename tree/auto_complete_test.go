@@ -6,7 +6,7 @@ import (
 )
 
 func TestAutoComplete(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		input       string
 		dict        []string
 		suggestions []string

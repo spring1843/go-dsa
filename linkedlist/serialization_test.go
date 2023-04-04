@@ -5,7 +5,7 @@ import (
 )
 
 func TestSerializeAndUnserializeLinkedList(t *testing.T) {
-	tests := []string{
+	var tests = []string{
 		"",
 		"1",
 		"1->2",

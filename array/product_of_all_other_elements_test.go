@@ -6,7 +6,7 @@ import (
 )
 
 func TestProductOfAllOtherElements(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		list     []int
 		products []int
 	}{

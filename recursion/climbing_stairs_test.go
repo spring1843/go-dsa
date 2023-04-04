@@ -5,7 +5,7 @@ import (
 )
 
 func TestClimbingStairs(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		n, ways int
 	}{
 		{0, 1},

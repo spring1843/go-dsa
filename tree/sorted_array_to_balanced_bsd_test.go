@@ -3,7 +3,7 @@ package tree
 import "testing"
 
 func TestBalancedBinarySearchTree(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		numbers []int
 		tree    string
 	}{

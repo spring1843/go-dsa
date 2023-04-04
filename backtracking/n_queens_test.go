@@ -6,7 +6,7 @@ import (
 )
 
 func TestNQueens(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		n         int
 		solutions []chessboard
 	}{

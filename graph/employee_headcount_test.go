@@ -5,7 +5,7 @@ import (
 )
 
 func TestEmployeeHeadCount(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		employeeData string
 		expectedErr  error
 		headCounts   map[int]int

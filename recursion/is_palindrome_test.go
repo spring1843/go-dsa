@@ -5,7 +5,7 @@ import (
 )
 
 func TestIsPalindrome(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		s            string
 		isPalindrome bool
 	}{

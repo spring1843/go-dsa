@@ -5,7 +5,7 @@ import (
 )
 
 func TestNumberOfIslands(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		grid        [][]int
 		islandCount int
 	}{

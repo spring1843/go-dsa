@@ -5,7 +5,7 @@ import (
 )
 
 func TestReadNumberInEnglish(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		number  int
 		english string
 	}{

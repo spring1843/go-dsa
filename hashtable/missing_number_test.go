@@ -3,7 +3,7 @@ package hashtable
 import "testing"
 
 func TestMissingNumber(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		numbers []int
 		missing int
 	}{

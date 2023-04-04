@@ -6,7 +6,7 @@ import (
 )
 
 func TestAddTwoNumbers(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		num1, num2, sum []int
 	}{
 		{[]int{1}, []int{}, []int{1}},

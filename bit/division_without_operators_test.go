@@ -3,7 +3,7 @@ package bit
 import "testing"
 
 func TestDivision(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		a, b int
 	}{
 		{0, 1},

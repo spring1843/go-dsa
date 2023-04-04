@@ -3,7 +3,7 @@ package linkedlist
 import "testing"
 
 func TestLRU(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		capacity int
 		puts     []int // n(i) element is key, n(i+1) element is value
 		gets     []int // n(i) element is the key to get, n(i+1) element is the expected value

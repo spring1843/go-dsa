@@ -12,7 +12,7 @@ var readmeGraphs = map[string][][]int{
 }
 
 func TestTopologicalSort(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		graph           [][]int
 		topologicalSort []int
 		expectedErr     error

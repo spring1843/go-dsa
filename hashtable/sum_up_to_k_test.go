@@ -6,7 +6,7 @@ import (
 )
 
 func TestSumUpToK(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		k                int
 		numbers, indices []int
 	}{

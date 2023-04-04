@@ -5,7 +5,7 @@ import (
 )
 
 func TestLongestSubstrings(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		input            string
 		longestSubstring string
 	}{

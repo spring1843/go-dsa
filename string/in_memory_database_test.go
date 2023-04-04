@@ -6,7 +6,7 @@ import (
 )
 
 func TestInMemoryDictionary(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		input, allOutputs string
 	}{
 		{"EXISTS A\nSET A 1\nGET A", "false 1"},

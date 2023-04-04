@@ -6,7 +6,7 @@ import (
 )
 
 func TestSquareRoot(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		number    int
 		precision int
 		solution  float64

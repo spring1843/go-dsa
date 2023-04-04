@@ -3,7 +3,7 @@ package graph
 import "testing"
 
 func TestNetworkDelayTime(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		edges              [][]int
 		n, k, shortestPath int
 	}{

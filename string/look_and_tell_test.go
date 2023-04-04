@@ -5,7 +5,7 @@ import (
 )
 
 func TestFindDuplicate(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		depth    int
 		lastLine string
 	}{

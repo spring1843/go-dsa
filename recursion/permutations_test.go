@@ -6,7 +6,7 @@ import (
 )
 
 func TestPermutations(t *testing.T) {
-	tests := []struct {
+	var tests = []struct {
 		input        []int
 		permutations [][]int
 	}{
