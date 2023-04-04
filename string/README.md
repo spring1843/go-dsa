@@ -51,7 +51,7 @@ Given a depth, return the output of look and tell an algorithm where each line r
 
 ### In Memory Database
 
-Write an in memory database that stores string key value pairs and supports SET, GET, EXISTS, and UNSET commands. It should also allow transactions with BEGIN, COMMIT and ROLLBACK commands. [Solution](in_memory_database.go), [Tests](in_memory_database_test.go)
+Write an in memory database that stores string key-value pairs and supports SET, GET, EXISTS, and UNSET commands. It should also allow transactions with BEGIN, COMMIT and ROLLBACK commands. [Solution](in_memory_database.go), [Tests](in_memory_database_test.go)
 
 ### Number in English
 

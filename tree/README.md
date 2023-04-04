@@ -88,4 +88,4 @@ Given a binary tree like _figure 1_, write three functions to traverse the tree 
 
 ### Implement Autocomplete
 
-Given a word like "car" and a dictionary like {"car","caravan","card","carpet","cap","ca"}, return auto complete suggestions where the given word is the prefix of a dictionary word like {"avan","d","pet"}. [Solution](auto_complete.go), [Test](auto_complete_test.go)
+Given a word like "car" and a dictionary like {"car","caravan","card","carpet","cap","ca"}, return autocomplete suggestions where the given word is the prefix of a dictionary word like {"avan","d","pet"}. [Solution](auto_complete.go), [Test](auto_complete_test.go)
