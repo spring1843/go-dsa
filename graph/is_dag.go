@@ -14,13 +14,13 @@ func IsDAG(graph []*Vertex) bool {
 }
 
 func hasCycle(vertex *Vertex, visited map[*Vertex]struct{}) bool {
-	for _, neighbour := range vertex.Edges {
-		if _, ok := visited[neighbour]; !ok {
-			visited[neighbour] = struct{}{}
-			if hasCycle(neighbour, visited) {
+	for _, neighbor := range vertex.Edges {
+		if _, ok := visited[neighbor]; !ok {
+			visited[neighbor] = struct{}{}
+			if hasCycle(neighbor, visited) {
 				return true
 			}
-			delete(visited, neighbour)
+			delete(visited, neighbor)
 		} else {
 			return true
 		}
