@@ -6,10 +6,10 @@ import (
 )
 
 // ErrQueueEmpty occurs when popping an empty stack
-var ErrQueueEmpty = errors.New("Empty queue")
+var ErrQueueEmpty = errors.New("empty queue")
 
 // MaxOfKLengthSubArrays takes a list of integers and returns
-// returns a list of the maximum of each subarray of length k.
+// a list of the maximum of each subarray of length k.
 func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error) {
 	output := []int{}
 	queue := list.New()

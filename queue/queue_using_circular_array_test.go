@@ -10,6 +10,34 @@ type testCase struct {
 	expectDequeueErr         bool
 }
 
+const (
+	operationTypeEnqueue = iota
+	operationTypeDequeue
+)
+
+var queueOperations = []struct {
+	operationType  int
+	operationValue int
+}{
+	{operationTypeEnqueue, 3},
+	{operationTypeEnqueue, 2},
+	{operationTypeEnqueue, 1},
+	{operationTypeDequeue, 0},
+	{operationTypeDequeue, 0},
+	{operationTypeDequeue, 0},
+	{operationTypeEnqueue, 3},
+	{operationTypeEnqueue, 2},
+	{operationTypeEnqueue, 1},
+	{operationTypeDequeue, 0},
+	{operationTypeDequeue, 0},
+	{operationTypeDequeue, 0},
+	{operationTypeEnqueue, 5},
+	{operationTypeDequeue, 0},
+	{operationTypeEnqueue, 1},
+	{operationTypeDequeue, 0},
+	{operationTypeEnqueue, 1},
+}
+
 // TestCircularQueue tests a queue by enqueues given items,
 // then dequeues a number of times and finally checks the value from the last dequeue.
 // The same process then may be repeated for a second time with different values
@@ -68,60 +96,22 @@ func enqueueDequeueAndCheckValue(t *testing.T, queue *UsingCircularArray, testID
 
 func TestMultipleOperations(t *testing.T) {
 	queue := NewCircularQueue(3)
-	if err := queue.enqueue(3); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
+	for i, queueOperation := range queueOperations {
+		switch queueOperation.operationType {
+		case operationTypeEnqueue:
+			if err := queue.enqueue(queueOperation.operationValue); err != nil {
+				t.Fatalf("operation #%d, unexpected error: %s", i, err)
+			}
+		case operationTypeDequeue:
+			if _, err := queue.dequeue(); err != nil {
+				t.Fatalf("operation #%d, unexpected error: %s", i, err)
+			}
+		}
 	}
-	if err := queue.enqueue(2); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if err := queue.enqueue(1); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if _, err := queue.dequeue(); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if _, err := queue.dequeue(); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if _, err := queue.dequeue(); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if err := queue.enqueue(3); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if err := queue.enqueue(2); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if err := queue.enqueue(1); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if _, err := queue.dequeue(); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if _, err := queue.dequeue(); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if _, err := queue.dequeue(); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if err := queue.enqueue(5); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if _, err := queue.dequeue(); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if err := queue.enqueue(1); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if _, err := queue.dequeue(); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
-	if err := queue.enqueue(1); err != nil {
-		t.Fatalf("Unexpected error: %s", err)
-	}
+
 	n, err := queue.dequeue()
 	if err != nil {
-		t.Fatalf("Failed dequing. Error %s", err)
+		t.Fatalf("Failed to dequeue. Error %s", err)
 	}
 
 	if n != 1 {

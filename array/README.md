@@ -57,11 +57,19 @@ func main() {
 Slice expressions in the form of input[low:high] can be used to manipulate slices or access their elements
 
 ```Go
-nums2 := nums[1:] // all elements from index 1 to the end
-nums2 = nums[:2] // all elements from index 0 to 2
-nums2 = nums[1:2] // the element from index 1 to 2
-nums2 = nums[:len(nums)-1] // drop last element
-nums2 = nums[1:] // drop first element
+package main
+
+import "fmt"
+
+func main() {
+	nums := []int{1, 2, 3, 4, 5, 6}
+	nums = nums[:len(nums)-1] // drop last element
+	nums = nums[1:]           // drop first element
+	nums = nums[1:]           // all elements from index 1 to the end
+	nums = nums[:2]           // all elements from index 0 to 2
+	nums = nums[1:2]          // the element from index 1 to 2
+	fmt.Println(nums)         // Prints [4]
+}
 ```
 
 ## Complexity
