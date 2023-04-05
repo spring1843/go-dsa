@@ -19,14 +19,16 @@ func ZeroSumTriplets(list []int) [][]int {
 			threeSum := n + list[l] + list[r]
 			if threeSum > 0 {
 				r--
-			} else if threeSum < 0 {
+				continue
+			}
+			if threeSum < 0 {
 				l++
-			} else {
-				output = append(output, []int{n, list[l], list[r]})
+				continue
+			}
+			output = append(output, []int{n, list[l], list[r]})
+			l++
+			for list[l] == list[l-1] && l < r {
 				l++
-				for list[l] == list[l-1] && l < r {
-					l++
-				}
 			}
 		}
 	}

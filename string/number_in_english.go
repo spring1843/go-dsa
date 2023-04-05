@@ -65,14 +65,13 @@ func NumberInEnglish(num int) string {
 	eachOutput = threeDigitWord(num)
 	output += eachOutput
 
-	output = strings.Replace(output, "  ", " ", -1)
+	output = strings.ReplaceAll(output, "  ", " ")
 	return strings.TrimSpace(output)
 }
 
 func outputIfLarger(num, unit int, word string) (int, string) {
 	output := ""
-	times := howMany(num, unit)
-	if times != -1 {
+	if times := howMany(num, unit); times != -1 {
 		output = threeDigitWord(times) + " " + word + " "
 		num -= times * unit
 	}
