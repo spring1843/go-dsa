@@ -8,13 +8,13 @@ import (
 func TestNQueens(t *testing.T) {
 	tests := []struct {
 		n         int
-		solutions []chessboard
+		solutions []Chessboard
 	}{
-		{0, []chessboard{}},
-		{1, []chessboard{{{queen}}}},
-		{2, []chessboard{}},
-		{3, []chessboard{}},
-		{4, []chessboard{{{empty, queen, empty, empty}, {empty, empty, empty, queen}, {queen, empty, empty, empty}, {empty, empty, queen, empty}}, {{empty, empty, queen, empty}, {queen, empty, empty, empty}, {empty, empty, empty, queen}, {empty, queen, empty, empty}}}},
+		{0, []Chessboard{}},
+		{1, []Chessboard{{{queen}}}},
+		{2, []Chessboard{}},
+		{3, []Chessboard{}},
+		{4, []Chessboard{{{empty, queen, empty, empty}, {empty, empty, empty, queen}, {queen, empty, empty, empty}, {empty, empty, queen, empty}}, {{empty, empty, queen, empty}, {queen, empty, empty, empty}, {empty, empty, empty, queen}, {empty, queen, empty, empty}}}},
 	}
 
 	for i, test := range tests {

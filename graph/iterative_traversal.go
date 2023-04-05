@@ -35,8 +35,8 @@ func traverseAllNodes(c container, graph []*Vertex) []int {
 
 	for c.Len() != 0 {
 		tmp := c.Pop()
-		for _, neighbour := range tmp.Edges {
-			c.Push(neighbour)
+		for _, neighbor := range tmp.Edges {
+			c.Push(neighbor)
 		}
 		if _, ok := visited[tmp]; !ok {
 			output = append(output, tmp.Val)

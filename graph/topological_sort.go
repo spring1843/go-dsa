@@ -7,8 +7,8 @@ type VertexWithIngress struct {
 	Vertex
 }
 
-// ErrNotADAG occurs when a graph has a cycle and hence not a DAG where a DAW was expected.
-var ErrNotADAG = errors.New("Not a DAG")
+// ErrNotADAG occurs when a graph has a cycle and hence not a DAG where a DAW was expected
+var ErrNotADAG = errors.New("not a DAG")
 
 // TopologicalSort takes a vertex of a DAG and returns the value of all its
 // connected vertices in topological order.
