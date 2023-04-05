@@ -19,7 +19,8 @@ type Node struct {
 // NewNode returns a new node
 func NewNode(v int) *Node {
 	return &Node{
-		Val: v,
+		Val:  v,
+		Next: nil,
 	}
 }
 

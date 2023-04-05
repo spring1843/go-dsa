@@ -26,7 +26,10 @@ func AddTwoNumbers(num1, num2 []int) []int {
 
 func equalizeLengths(num1, num2 []int) ([]int, []int) {
 	diff := int(math.Abs(float64(len(num2) - len(num1))))
-	zeros := make([]int, diff)
+	zeros := []int{}
+	for i := 0; i < diff; i++ {
+		zeros = append(zeros, 0)
+	}
 	if len(num2) > len(num1) {
 		num1 = append(zeros, num1...)
 	} else if len(num1) > len(num2) {
