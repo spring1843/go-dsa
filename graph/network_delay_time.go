@@ -17,9 +17,9 @@ const (
 // form of {vertexSource, vertexDestination, vertexDelay}.
 func NetworkDelayTime(n, k int, edges [][]int) int {
 	var (
-		verticesMap, edgesHeap     = verticesAndEdges(edges, k)
-		max                    int = math.MinInt64
-		cost                       = make(map[int]int)
+		verticesMap, edgesHeap = verticesAndEdges(edges, k)
+		max                    = math.MinInt64
+		cost                   = make(map[int]int)
 	)
 	cost[k] = 0
 	for len(edgesHeap) > 0 {

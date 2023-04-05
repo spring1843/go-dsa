@@ -5,16 +5,17 @@ const (
 	queen
 )
 
-type chessboard [][]int
+// Chessboard represents a chessboard
+type Chessboard [][]int
 
 // NQueens returns possible solutions to the n-queen puzzle in an n x n chessboard
-// where n queens are placed on the chessboard such that none attacks another.
-func NQueens(n int) []chessboard {
-	output := nQueensRecursive(0, n, make([]int, n), make(chessboard, 0))
+// where n queens are placed on the chessboard such that none attacks another
+func NQueens(n int) []Chessboard {
+	output := nQueensRecursive(0, n, make([]int, n), make(Chessboard, 0))
 	return toPrettyChessboard(output, n)
 }
 
-func nQueensRecursive(row, n int, cols []int, output chessboard) chessboard {
+func nQueensRecursive(row, n int, cols []int, output Chessboard) Chessboard {
 	if n == 0 {
 		return output
 	}
@@ -40,10 +41,10 @@ func isValidQueenPlacement(row, col int, cols []int) bool {
 	return true
 }
 
-func toPrettyChessboard(solutions chessboard, n int) []chessboard {
-	chessboards := make([]chessboard, len(solutions))
+func toPrettyChessboard(solutions Chessboard, n int) []Chessboard {
+	chessboards := make([]Chessboard, len(solutions))
 	for i, row := range solutions {
-		chessBoard := make(chessboard, n)
+		chessBoard := make(Chessboard, n)
 		for j, col := range row {
 			newRow := make([]int, n)
 			newRow[col] = queen
