@@ -24,6 +24,8 @@ func NewCircularQueue(size int) *UsingCircularArray {
 	return &UsingCircularArray{
 		circular: circular,
 		rear:     -1,
+		size:     0,
+		front:    0,
 	}
 }
 

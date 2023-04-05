@@ -2,7 +2,7 @@ package linkedlist
 
 // JoinTwoSortedLinkedLists merges two sorted linked lists into one
 func JoinTwoSortedLinkedLists(l1, l2 *Node) *Node {
-	head := &Node{}
+	head := &Node{Val: 0, Next: nil}
 	last := head
 	for l1 != nil && l2 != nil {
 		if l1.Val <= l2.Val {

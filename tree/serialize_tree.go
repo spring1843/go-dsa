@@ -67,7 +67,7 @@ func Unserialize(s string) *BinaryTreeNode {
 			nodes = append(nodes, nil)
 		} else {
 			Value, _ := strconv.Atoi(node)
-			nodes = append(nodes, &BinaryTreeNode{Val: Value})
+			nodes = append(nodes, &BinaryTreeNode{Val: Value, Left: nil, Right: nil})
 		}
 	}
 

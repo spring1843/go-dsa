@@ -16,7 +16,7 @@ var graph = make(map[string]*vertex)
 func WordLadder(start, end string, dic []string) int {
 	graph = make(map[string]*vertex)
 
-	graph[start] = &vertex{word: start}
+	graph[start] = &vertex{word: start, edges: nil, distance: 0}
 	for _, w := range dic {
 		graph[w] = &vertex{word: w}
 	}

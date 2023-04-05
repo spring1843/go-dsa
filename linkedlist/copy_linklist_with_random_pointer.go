@@ -18,7 +18,7 @@ func CopyLinkedListWithRandomPointer(head *RandomNode) *RandomNode {
 	}
 	cloneMap := map[*RandomNode]*RandomNode{}
 	for cur := head; cur != nil; cur = cur.Next {
-		cloneMap[cur] = &RandomNode{}
+		cloneMap[cur] = &RandomNode{Val: 0, Next: nil, Random: nil}
 	}
 	for k, v := range cloneMap {
 		v.Val = k.Val
