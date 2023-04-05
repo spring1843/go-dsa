@@ -2,7 +2,7 @@
 
 The concept of greedy algorithms involves choosing a naive solution and continuously refining it, rather than developing a sophisticated algorithm, by beginning with what appears to be an easy win. In this approach, a local optimum is chosen, and the aim is to build upon it to ultimately arrive at the global optimum.
 
-For example, consider someone kayaking to an island and discovering a treasure while a tsunami is imminent. To decide which pieces of treasure to take back, the greedy approach would involve selecting the most seemingly valuable items first, such as heavy pieces of gold or diamonds rather than small pieces of silver. However, this approach may result in a suboptimal solution if a valuable item, such as a small silver ring with significant archeological value that makes it the most valuable piece, is overlooked.
+For example, consider someone kayaking to an island and discovering a treasure while a tsunami is imminent. To decide which pieces of treasure to take back, the greedy approach would involve selecting the most seemingly valuable items first, such as heavy pieces of gold or diamonds rather than small pieces of silver. However, this approach may result in a suboptimal solution if a valuable item, such as a small silver ring with significant archeological value that makes it the most valuable piece, is overlooked. This is similar to the knapsack problem solved in the rehearsals.
 
 Therefore, greed and greedy algorithms may not always produce optimal solutions if the local optimum does not equal the global optimum. However, they can be useful for approximating solutions in cases where exact answers are not required.
 
@@ -35,3 +35,7 @@ Given a list of stock prices for a given stock over time like `{50, 10, 4, 100, 
 ### Activity Selector
 
 Given a list of start and finish times for a few activities like `{1, 3, 0}` and `{4, 5, 6}` (first activity starts at 1 and ends at 4, second starts at 3 and ends at 5), return a maximal list of non-conflicting activities. [Solution](activity_selector.go), [Tests](activity_selector_test.go)
+
+### Knapsack
+
+Given weight capacity of a knapsack like `5`, a list of divisible items (such as pieces of metal) with values and weights like `{Value: 6, Weight: 2}, {Value: 10, Weight: 2}, {Value: 12, Weight: 3}` return the maximum value of items that can be placed in the knapsack like `22`. [Solution](knapsack.go), [Tests](knapsack_test.go)
