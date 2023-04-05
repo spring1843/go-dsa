@@ -2,7 +2,7 @@ package graph
 
 import "errors"
 
-// VertexWithIngress is a Vertex with the count of vertices that connect to it
+// VertexWithIngress is a Vertex with the count of vertices that connect to it.
 type VertexWithIngress struct {
 	Vertex
 }

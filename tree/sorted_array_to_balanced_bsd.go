@@ -1,6 +1,6 @@
 package tree
 
-// BalancedBinarySearchTree takes a sorted list of numbers and returns a balanced binary search tree
+// BalancedBinarySearchTree takes a sorted list of numbers and returns a balanced binary search tree.
 func BalancedBinarySearchTree(sorted []int) *BinaryTreeNode {
 	if len(sorted) == 0 {
 		return nil

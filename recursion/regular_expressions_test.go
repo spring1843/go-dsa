@@ -5,7 +5,7 @@ import (
 )
 
 func TestRegularExpressions(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		input, pattern string
 		match          bool
 	}{

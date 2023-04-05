@@ -6,7 +6,7 @@ import (
 )
 
 func TestActivitySelector(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		start      []int
 		finish     []int
 		activities []int

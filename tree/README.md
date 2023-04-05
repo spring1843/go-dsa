@@ -8,7 +8,7 @@ Traversing a tree means visiting every node in a tree and performing some work o
 [Figure 1] Tree traversals - Full Binary Search Tree Example
 
      4			Traversal Name		Order 		        Example
-    / \			
+    / \
    /   \		In-Order                left,self,right		1,2,3,4,5,6,7
   2     6		Pre-Order,DFS		self,left,right		4,2,1,3,6,5,7
  / \   / \		Post-Order,BFS		left,right,self		1,3,2,5,7,6,4
@@ -88,4 +88,4 @@ Given a binary tree like _figure 1_, write three functions to traverse the tree 
 
 ### Implement Autocomplete
 
-Given a word like "car" and a dictionary like {"car","caravan","card","carpet","cap","ca"}, return auto complete suggestions where the given word is the prefix of a dictionary word like {"avan","d","pet"}. [Solution](auto_complete.go), [Test](auto_complete_test.go)
+Given a word like "car" and a dictionary like {"car","caravan","card","carpet","cap","ca"}, return autocomplete suggestions where the given word is the prefix of a dictionary word like {"avan","d","pet"}. [Solution](auto_complete.go), [Test](auto_complete_test.go)

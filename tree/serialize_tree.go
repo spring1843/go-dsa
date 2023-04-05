@@ -10,7 +10,7 @@ const (
 	nilNode   = "nil"
 )
 
-// BinaryTreeNode is a node in a Binary Tree of integers
+// BinaryTreeNode is a node in a Binary Tree of integers.
 type BinaryTreeNode struct {
 	// Val is an integer value of a node in a Binary Tree
 	Val int
@@ -22,7 +22,7 @@ type BinaryTreeNode struct {
 	Right *BinaryTreeNode
 }
 
-// Serialize serializes a given binary tree into a string
+// Serialize serializes a given binary tree into a string.
 func Serialize(root *BinaryTreeNode) string {
 	if root == nil {
 		return ""
@@ -54,7 +54,7 @@ func Serialize(root *BinaryTreeNode) string {
 	return result
 }
 
-// Unserialize unserializes a given string into a binary tree
+// Unserialize unserializes a given string into a binary tree.
 func Unserialize(s string) *BinaryTreeNode {
 	if s == "" {
 		return nil

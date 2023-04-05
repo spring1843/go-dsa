@@ -5,7 +5,7 @@ import (
 )
 
 func TestPowerOf(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		x, n, result int
 	}{
 		{1, 1, 1},

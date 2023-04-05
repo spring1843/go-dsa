@@ -12,7 +12,7 @@ var vowels = map[string]bool{
 	`u`: true,
 }
 
-// ReverseVowels reverses the order of vowels in a string
+// ReverseVowels reverses the order of vowels in a string.
 func ReverseVowels(str string) (string, error) {
 	stack = []string{}
 	reversed := ""

@@ -1,6 +1,6 @@
 package dnc
 
-// MergeSort sorts a list of integers using Merge Sort
+// MergeSort sorts a list of integers using Merge Sort.
 func MergeSort(list []int) []int {
 	if len(list) <= 1 {
 		return list

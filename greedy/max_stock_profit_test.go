@@ -3,7 +3,7 @@ package greedy
 import "testing"
 
 func TestMaxStockProfit(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		prices    []int
 		maxProfit int
 	}{

@@ -3,7 +3,7 @@ package hashtable
 import "math"
 
 // MaxPointsOnALine given a number of coordinates for points, returns the
-// maximum number of points that are on the same line
+// maximum number of points that are on the same line.
 func MaxPointsOnALine(points [][]int) int {
 	if len(points) <= 2 {
 		return len(points)

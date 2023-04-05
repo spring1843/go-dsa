@@ -7,7 +7,7 @@ import (
 )
 
 func TestIsTreeSymmetrical(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		tree        string
 		isSymmetric bool
 	}{
@@ -31,5 +31,4 @@ func TestIsTreeSymmetrical(t *testing.T) {
 			t.Fatalf("Failed test case #%d. Want %t got %t", i, test.isSymmetric, got)
 		}
 	}
-
 }

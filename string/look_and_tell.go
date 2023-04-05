@@ -5,7 +5,7 @@ import (
 )
 
 // LookAndTell outputs an array such that each element reads the previous
-// element the first element being "1"
+// element the first element being "1".
 func LookAndTell(depth int) []string {
 	output := []string{"1"}
 

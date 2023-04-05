@@ -5,7 +5,7 @@ import (
 )
 
 func TestOddlyRepeatedNumber(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		list          []int
 		oddlyRepeated int
 	}{
