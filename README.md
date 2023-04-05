@@ -20,7 +20,7 @@ This learning platform offers several advantages over traditional learning metho
 * Time and Space Analysis
 * Data Structures
   * [Arrays](./array)
-  * [Strings](./string)
+  * [Strings](./strings)
   * [Linked Lists](./linkedlist)
   * [Stacks](./stack)
   * [Queues](./queue)

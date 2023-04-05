@@ -1,4 +1,4 @@
-package string
+package strings
 
 // LongestDictionaryWordContainingKey returns the longest word in a dictionary
 // containing every letter of a key
