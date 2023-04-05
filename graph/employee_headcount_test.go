@@ -1,6 +1,7 @@
 package graph
 
 import (
+	"errors"
 	"testing"
 )
 
@@ -21,7 +22,7 @@ func TestEmployeeHeadCount(t *testing.T) {
 
 	for i, test := range tests {
 		headCounter, err := NewHeadCount(test.employeeData)
-		if err != test.expectedErr {
+		if !errors.Is(err, test.expectedErr) {
 			t.Errorf("Failed test case #%d. Unexpected error. Want %s got %s", i, test.expectedErr, err)
 		}
 

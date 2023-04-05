@@ -1,6 +1,7 @@
 package stack
 
 import (
+	"errors"
 	"testing"
 )
 
@@ -39,7 +40,7 @@ func TestMaxStack(t *testing.T) {
 
 func TestEmptyStackError(t *testing.T) {
 	stack := new(MaxStack)
-	if _, err := stack.Pop(); err != ErrEmptyStack {
+	if _, err := stack.Pop(); !errors.Is(err, ErrEmptyStack) {
 		t.Fatalf("Calling Pop on an empty stack did not result in empty stack error. Want %#v got %#v", ErrEmptyStack, err)
 	}
 }
