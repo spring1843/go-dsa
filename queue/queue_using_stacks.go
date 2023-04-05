@@ -3,7 +3,7 @@ package queue
 import "errors"
 
 // ErrStackEmpty occurs when popping an empty stack
-var ErrStackEmpty = errors.New("Empty stack")
+var ErrStackEmpty = errors.New("empty stack")
 
 type (
 	// UsingStacks is a queue that is made using two stacks

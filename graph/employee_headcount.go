@@ -2,6 +2,7 @@ package graph
 
 import (
 	"container/list"
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -46,7 +47,7 @@ func NewHeadCount(data string) (*HeadCounter, error) {
 		for _, item := range strings.Split(line, numberSeparator) {
 			n, err := strconv.Atoi(item)
 			if err != nil {
-				return nil, err
+				return nil, fmt.Errorf("failed converting integer to ASCII, %s", err)
 			}
 			broken = append(broken, n)
 		}
