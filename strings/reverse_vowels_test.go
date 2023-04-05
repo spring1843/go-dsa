@@ -1,4 +1,4 @@
-package string
+package strings
 
 import (
 	"testing"
