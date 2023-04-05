@@ -24,8 +24,8 @@ func LookAndTell(depth int) []string {
 }
 
 func tell(n string) string {
-	step, what := "", ""
-	count, until := 0, 0
+	var step, what string
+	var count, until int
 	for until < len(n) {
 		count, what, until = findHowMany(n, until)
 		step += strconv.Itoa(count) + what

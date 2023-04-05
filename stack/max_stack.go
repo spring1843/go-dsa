@@ -8,7 +8,7 @@ type MaxStack struct {
 }
 
 // ErrEmptyStack occurs when a trying to pop a stack that is empty
-var ErrEmptyStack = errors.New("Stack is empty")
+var ErrEmptyStack = errors.New("stack is empty")
 
 // Max returns the largest integer pushed into the stack
 func (maxStack *MaxStack) Max() int {

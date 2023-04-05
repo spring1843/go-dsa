@@ -49,8 +49,7 @@ var digits = map[int]string{
 
 // NumberInEnglish returns how a given number would be read in English
 func NumberInEnglish(num int) string {
-	output := ""
-	eachOutput := ""
+	var output, eachOutput string
 
 	if num == zero {
 		return "Zero"
@@ -82,20 +81,18 @@ func outputIfLarger(num, unit int, word string) (int, string) {
 
 func threeDigitWord(num int) string {
 	output := ""
-	hund := howMany(num, hundred)
 
-	if hund != -1 {
-		output += digits[hund] + " Hundred "
+	if hundreds := howMany(num, hundred); hundreds != -1 {
+		output += digits[hundreds] + " Hundred "
 
-		num -= hund * hundred
+		num -= hundreds * hundred
 	}
 
 	if v, ok := digits[num]; ok {
 		return output + v
 	}
 
-	tens := howMany(num, ten)
-	if tens != -1 {
+	if tens := howMany(num, ten); tens != -1 {
 		output += digits[tens*ten] + " "
 		num -= tens * ten
 	}
