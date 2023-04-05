@@ -1,10 +1,6 @@
 package queue
 
-import (
-	"errors"
-)
-
-const emptyValue = 0
+import "errors"
 
 // UsingCircularArray is a queue that is made using a circular array
 type UsingCircularArray struct {
@@ -13,6 +9,10 @@ type UsingCircularArray struct {
 	front    int
 	rear     int
 }
+
+const emptyValue = 0
+
+var ErrQueueAtMaxCapacity = errors.New("queue is at max capacity")
 
 // NewCircularQueue returns a fixed size circular queue
 func NewCircularQueue(size int) *UsingCircularArray {
@@ -29,7 +29,7 @@ func NewCircularQueue(size int) *UsingCircularArray {
 
 func (queue *UsingCircularArray) enqueue(n int) error {
 	if queue.isFull() {
-		return errors.New("Queue is at max capacity")
+		return ErrQueueAtMaxCapacity
 	}
 
 	queue.rear++
@@ -44,7 +44,7 @@ func (queue *UsingCircularArray) enqueue(n int) error {
 
 func (queue *UsingCircularArray) dequeue() (int, error) {
 	if queue.isEmpty() {
-		return -1, errors.New("Queue is empty")
+		return -1, ErrQueueEmpty
 	}
 	tmp := queue.circular[queue.front]
 	queue.circular[queue.front] = emptyValue
