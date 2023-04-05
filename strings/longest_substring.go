@@ -1,4 +1,4 @@
-package string
+package strings
 
 // LongestSubstringOfTwoChars returns the longest substring of two different characters in a string
 func LongestSubstringOfTwoChars(input string) string {

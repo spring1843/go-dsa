@@ -1,6 +1,9 @@
 package stack
 
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 // EvaluatePostfixExpression evaluates an expression into a float64
 func EvaluatePostfixExpression(expression []string) (float64, error) {
@@ -51,7 +54,7 @@ func (evaluation *evaluation) pop() (float64, error) {
 func (evaluation *evaluation) pushString(operand string) error {
 	f, err := strconv.ParseFloat(operand, 64)
 	if err != nil {
-		return err
+		return fmt.Errorf("failed converting from float to string, %s", err)
 	}
 	evaluation.push(f)
 	return nil

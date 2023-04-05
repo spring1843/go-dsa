@@ -29,7 +29,7 @@ func TestCopyLinkedListWithRandomPointer(t *testing.T) {
 		deepCopy := CopyLinkedListWithRandomPointer(list)
 
 		if list != nil {
-			list.Random = &RandomNode{Val: math.MinInt64}
+			list.Random = &RandomNode{Val: math.MinInt64, Next: nil}
 			if deepCopy.Random != nil && deepCopy.Random.Val == math.MinInt64 {
 				t.Fatal("Not a deep copy. Changing the value in the original list, changed the value in whats expected to be a deep copy")
 			}
@@ -93,7 +93,8 @@ func unserializeRandomNode(stringRepresentation string) *RandomNode {
 		last = cur
 		val := broken[i][0:strings.Index(broken[i], randomValueSeparator)]
 		cur = &RandomNode{
-			Val: atoi(val),
+			Val:  atoi(val),
+			Next: nil,
 		}
 		if last != nil {
 			cur.Next = last

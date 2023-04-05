@@ -1,16 +1,18 @@
-package string
+package strings
 
 import "errors"
 
-var stack []string
-
-var vowels = map[string]bool{
-	`a`: true,
-	`e`: true,
-	`o`: true,
-	`i`: true,
-	`u`: true,
-}
+var (
+	stack  []string
+	vowels = map[string]bool{
+		`a`: true,
+		`e`: true,
+		`o`: true,
+		`i`: true,
+		`u`: true,
+	}
+	ErrPopStack = errors.New("can not Pop on an empty stack")
+)
 
 // ReverseVowels reverses the order of vowels in a string
 func ReverseVowels(str string) (string, error) {
@@ -41,7 +43,7 @@ func push(v string) {
 
 func pop() (string, error) {
 	if len(stack) == 0 {
-		return "", errors.New("can not Pop on an empty stack")
+		return "", ErrPopStack
 	}
 	tmp := stack[len(stack)-1]
 	stack = stack[:len(stack)-1]

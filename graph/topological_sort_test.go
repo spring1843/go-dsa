@@ -1,6 +1,7 @@
 package graph
 
 import (
+	"errors"
 	"reflect"
 	"testing"
 )
@@ -34,7 +35,7 @@ func TestTopologicalSort(t *testing.T) {
 			if test.expectedErr == nil {
 				t.Fatalf("Failed test case #%d. Unexpected error. Error :%s", i, err)
 			}
-			if err != test.expectedErr {
+			if !errors.Is(err, test.expectedErr) {
 				t.Fatalf("Failed test case #%d. Unexpected error. Want %s, Got Error :%s", i, test.expectedErr, err)
 			}
 		}
