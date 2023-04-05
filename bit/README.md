@@ -45,7 +45,7 @@ func printBinary(n int) {
 
 ## Arithmetic by Shifting
 
-Left shifting can be viewed as a division operation by 2 raised to the power of a specified number, while right shifting can be viewed as a multiplication operation by 2 raised to the power of a specified number. For instance, a << b can be interpreted as multiplying a by 2^b, and a >> b can be interpreted as dividing a by 2^b.
+Left shifting can be viewed as a multiplication operation by 2 raised to the power of a specified number, while right shifting can be viewed as a division operation by 2 raised to the power of a specified number. For instance, a << b can be interpreted as multiplying a by 2^b, and a >> b can be interpreted as dividing a by 2^b.
 
 ```Go
 package main
@@ -116,9 +116,9 @@ Divide x by y, two integers without using the built-in `/` or `*` operators.  [S
 
 Given two integers min and max like `1` and `5`, return an integer like `3` that is in the middle of the two. [Solution](middle_without_division.go), [Tests](middle_without_division_test.go)
 
-### Addition without using any operators
+### Addition without using plus (+) or any other arithmetic operators
 
-Add x by y, two integers without using the built-in + or any other operators. [Solution](addition_without_operators.go), [Tests](addition_without_operators_test.go)
+Add x by y, two integers without using the built-in + or any other arithmetic operators. [Solution](addition_without_operators.go), [Tests](addition_without_operators_test.go)
 
 ### Maximum without if conditions
 
