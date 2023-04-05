@@ -7,7 +7,7 @@ type MaxStack struct {
 	stack1, stack2 []int
 }
 
-// ErrEmptyStack occurs when a trying to pop a stack that is empty
+// ErrEmptyStack occurs when a trying to pop a stack that is empty.
 var ErrEmptyStack = errors.New("stack is empty")
 
 // Max returns the largest integer pushed into the stack.
