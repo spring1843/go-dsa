@@ -2,11 +2,14 @@ issues:
   exclude-rules:
     - path: /
       linters:
+        - nosnakecase
+        - forcetypeassert
+        - ifshort
+        - scopelint
         - varnamelen
         - testpackage
         - gomnd
         - wsl
-        - lll
         - gochecknoglobals
         - cyclop
         - paralleltest
