@@ -8,6 +8,7 @@ issues:
         - ifshort
         - scopelint
         - varnamelen
+        - lll
         - testpackage
         - gomnd
         - wsl
