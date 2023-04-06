@@ -5,7 +5,7 @@ import (
 )
 
 func TestJumpGame(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		jumps          []int
 		canReachTheEnd bool
 	}{

@@ -6,7 +6,7 @@ import (
 )
 
 func TestScheduleEvents(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		events   []Event
 		schedule []Event
 	}{
