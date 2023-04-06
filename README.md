@@ -20,14 +20,14 @@ This learning platform offers several advantages over traditional learning metho
 
 * Time and Space Analysis
 * Data Structures
-  * [Arrays](./array)
-  * [Strings](./strings)
-  * [Linked Lists](./linkedlist)
-  * [Stacks](./stack)
-  * [Queues](./queue)
-  * [Hash Tables](./hashtable)
-  * [Trees](./tree)
-  * [Heaps](./heap)
+    * [Arrays](./array)
+    * [Strings](./strings)
+    * [Linked Lists](./linkedlist)
+    * [Stacks](./stack)
+    * [Queues](./queue)
+    * [Hash Tables](./hashtable)
+    * [Trees](./tree)
+    * [Heaps](./heap)
 * Algorithms
     * [Recursion](./recursion)
     * [Divide and Conquer](dnc)
