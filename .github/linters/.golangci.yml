@@ -3,33 +3,21 @@ issues:
     - path: /
       linters:
         - nlreturn
-        - gocritic
-        - lll
         - varnamelen
         - testpackage
         - gomnd
-        - wastedassign
-        - predeclared
+        - wsl
+        - lll
         - gochecknoglobals
-        - wrapcheck
+        - cyclop
+        - paralleltest
         - exhaustivestruct
         - exhaustruct
-        - thelper
-        - errorlint
-        - ifshort
-        - stylecheck
-        - makezero
-        - goerr113
-        - cyclop
-        - dupword
-        - paralleltest
-        - revive
-        - funlen
-        - unparam
-        - forcetypeassert
-        - golint
-        - dupl
         - wsl
+        - dupl
+        - errorlint
+        - goerr113
+        - forcetypeassert
 
 linters:
   enable-all: true
