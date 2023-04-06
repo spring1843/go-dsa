@@ -39,3 +39,7 @@ Given a list of start and finish times for a few activities like `{1, 3, 0}` and
 ### Knapsack
 
 Given weight capacity of a knapsack like `5`, a list of divisible items (such as pieces of metal) with values and weights like `{Value: 6, Weight: 2}, {Value: 10, Weight: 2}, {Value: 12, Weight: 3}` return the maximum value of items that can be placed in the knapsack like `22`. [Solution](knapsack.go), [Tests](knapsack_test.go)
+
+### Jump Game
+
+Given a list of integers that representing the maximum posit ions one can jump at any given position like `{1,2,4,2,1}` (at position 1 we can jump up to 1, at position 2 we can jump up to 2), return true if one can reach the last position of the list and false otherwise. [Solution](jump_game.go), [Tests](jump_game_test.go)
