@@ -1,7 +1,7 @@
 package array
 
 // EqualSubArrays given a list of integers returns two sub arrays that have
-// equal sums without changing the order of the items in the list
+// equal sums without changing the order of the items in the list.
 func EqualSubArrays(list []int) [][]int {
 	output := make([][]int, 0)
 	if len(list) < 2 {

@@ -3,7 +3,7 @@ package heap
 import "testing"
 
 func TestMedianInAStream(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		numbers []int
 		median  float64
 	}{

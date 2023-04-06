@@ -10,7 +10,7 @@ type (
 	priorityQueue []*linkedlist.Node
 )
 
-// MergeSortedLists merges multiple sorted singly linked lists into one
+// MergeSortedLists merges multiple sorted singly linked lists into one.
 func MergeSortedLists(lists []*linkedlist.Node) *linkedlist.Node {
 	pq := new(priorityQueue)
 

@@ -5,7 +5,7 @@ import (
 )
 
 func TestReverseLinkedList(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		list, reversed string
 	}{
 		{"", ""},

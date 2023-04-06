@@ -5,7 +5,7 @@ import (
 )
 
 func TestJoinTwoSortedLinkedLists(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		list1, list2, joined string
 	}{
 		{"", "", ""},

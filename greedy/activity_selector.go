@@ -1,6 +1,6 @@
 package greedy
 
-// ActivitySelector selects activities that don't overlap
+// ActivitySelector selects activities that don't overlap.
 func ActivitySelector(start, finish []int) []int {
 	if len(start) == 0 {
 		return []int{}

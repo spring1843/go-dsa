@@ -6,7 +6,7 @@ import (
 )
 
 func TestTraverseBinaryTree(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		tree          string
 		in, pre, post []int
 	}{

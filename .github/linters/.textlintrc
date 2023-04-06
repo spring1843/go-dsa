@@ -1,0 +1,15 @@
+{
+    "filters": {
+        "comments": true
+    },
+    "plugins": {
+        "@textlint/markdown": {
+            "extensions": [
+                ".mdx"
+            ]
+        }
+    },
+    "rules": {
+        "terminology": true
+    }
+}

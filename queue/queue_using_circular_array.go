@@ -2,7 +2,7 @@ package queue
 
 import "errors"
 
-// UsingCircularArray is a queue that is made using a circular array
+// UsingCircularArray is a queue that is made using a circular array.
 type UsingCircularArray struct {
 	circular []int
 	size     int
@@ -14,7 +14,7 @@ const emptyValue = 0
 
 var ErrQueueAtMaxCapacity = errors.New("queue is at max capacity")
 
-// NewCircularQueue returns a fixed size circular queue
+// NewCircularQueue returns a fixed size circular queue.
 func NewCircularQueue(size int) *UsingCircularArray {
 	circular := make([]int, size)
 	for i := range circular {

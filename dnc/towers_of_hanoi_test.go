@@ -6,7 +6,7 @@ import (
 )
 
 func TestTowerOfHanoi(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		n, start, end int
 		moves         [][2]int
 	}{

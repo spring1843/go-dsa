@@ -40,9 +40,9 @@ var queueOperations = []struct {
 
 // TestCircularQueue tests a queue by enqueues given items,
 // then dequeues a number of times and finally checks the value from the last dequeue.
-// The same process then may be repeated for a second time with different values
+// The same process then may be repeated for a second time with different values.
 func TestCircularQueue(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		size        int
 		firstRound  *testCase
 		secondRound *testCase

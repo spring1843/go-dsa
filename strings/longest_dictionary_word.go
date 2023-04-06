@@ -1,7 +1,7 @@
 package strings
 
 // LongestDictionaryWordContainingKey returns the longest word in a dictionary
-// containing every letter of a key
+// containing every letter of a key.
 func LongestDictionaryWordContainingKey(key string, dic []string) string {
 	keyNum := hash(key)
 	longest := ""
@@ -18,7 +18,7 @@ func LongestDictionaryWordContainingKey(key string, dic []string) string {
 }
 
 // hash turns a string into a number
-// the output for "abc", "acb", "cba" and etc... are all the same
+// the output for "abc", "acb", "cba" and etc... are all the same.
 func hash(s string) rune {
 	var res rune
 	for _, w := range s {

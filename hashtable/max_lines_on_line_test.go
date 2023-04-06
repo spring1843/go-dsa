@@ -3,7 +3,7 @@ package hashtable
 import "testing"
 
 func TestMaxPointsOnALine(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		points   [][]int
 		maxLines int
 	}{

@@ -5,7 +5,7 @@ import (
 )
 
 func TestKnapsack(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		items     []KnapsackItem
 		capacity  int
 		maxProfit int

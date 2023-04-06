@@ -2,12 +2,12 @@
 
 Dynamic Programming (DP) and [divide-and-conquer](../dnc) share a common strategy of breaking down a problem into smaller sub-problems. However, DP achieves superior algorithmic performance by solving each sub-problem only once and preemptively eliminating sub-problems that cannot contribute to optimal solutions. This approach enables DP to avoid the redundancy inherent in DNC and produce more efficient solutions.
 
-# Implementation
+## Implementation
 
 A Dynamic Programming (DP) approach to algorithms typically entails four steps:
 
 1. Characterizing an optimal solution
-2. Defining the value of an optimal solution through (recursion)[../recursion]
+2. Defining the value of an optimal solution through [recursion](../recursion)
 3. Computing the value of the optimal solution in a bottom-up manner
 4. Determining the optimal solution using the values computed in the previous steps.
 

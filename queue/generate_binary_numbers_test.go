@@ -5,7 +5,7 @@ import (
 )
 
 func TestGenerateBinaryNumbers(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		n        int
 		lastLine string
 	}{
