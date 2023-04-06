@@ -18,6 +18,7 @@ issues:
         - errorlint
         - goerr113
         - forcetypeassert
+        - dupword
 
 linters:
   enable-all: true
