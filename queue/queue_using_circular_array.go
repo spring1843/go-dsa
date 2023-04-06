@@ -14,7 +14,7 @@ const emptyValue = 0
 
 var ErrQueueAtMaxCapacity = errors.New("queue is at max capacity")
 
-// NewCircularQueue returns a fixed size circular queue
+// NewCircularQueue returns a fixed size circular queue.
 func NewCircularQueue(size int) *UsingCircularArray {
 	circular := make([]int, size)
 	for i := range circular {

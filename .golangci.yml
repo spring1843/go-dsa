@@ -3,6 +3,7 @@ issues:
     - path: /
       linters:
         - nlreturn
+        - wsl
         - gocritic
         - lll
         - varnamelen
