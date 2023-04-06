@@ -43,3 +43,7 @@ Given weight capacity of a knapsack like `5`, a list of divisible items (such as
 ### Jump Game
 
 Given a list of integers that representing the maximum posit ions one can jump at any given position like `{1,2,4,2,1}` (at position 1 we can jump up to 1, at position 2 we can jump up to 2), return true if one can reach the last position of the list and false otherwise. [Solution](jump_game.go), [Tests](jump_game_test.go)
+
+### Task Scheduling
+
+Given a list of named tasks with their start and end timing like `{A, 1, 3}, {B, 2, 3}, {C, 3, 4}` (Task A starts at 1 and ends at 3). return a schedule that includes as many events as possible like `{A 1 3}, {C 3 4}`. [Solution](task_scheduling.go), [Tests](task_scheduling_test.go)
