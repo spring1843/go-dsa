@@ -2,7 +2,6 @@ issues:
   exclude-rules:
     - path: /
       linters:
-        - nlreturn
         - varnamelen
         - testpackage
         - gomnd
@@ -11,13 +10,8 @@ issues:
         - gochecknoglobals
         - cyclop
         - paralleltest
-        - exhaustivestruct
-        - exhaustruct
         - wsl
         - dupl
-        - errorlint
-        - goerr113
-        - forcetypeassert
         - dupword
 
 linters:
