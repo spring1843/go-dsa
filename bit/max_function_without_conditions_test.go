@@ -3,7 +3,7 @@ package bit
 import "testing"
 
 func TestMax(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		a, b, max int
 	}{
 		{0, 1, 1},

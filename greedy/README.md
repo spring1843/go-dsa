@@ -6,7 +6,7 @@ For example, consider someone kayaking to an island and discovering a treasure w
 
 Therefore, greed and greedy algorithms may not always produce optimal solutions if the local optimum does not equal the global optimum. However, they can be useful for approximating solutions in cases where exact answers are not required.
 
-# Implementation
+## Implementation
 
 The process for developing a greedy algorithm can be structured into six steps.
 
@@ -30,6 +30,7 @@ Greedy algorithms can be applied to optimization problems where the aim is to op
 ## Rehearsal
 
 ### Maximum Stock Profit
+
 Given a list of stock prices for a given stock over time like `{50, 10, 4, 100, 1, 101, 5, 10}` return the maximum profit that can be made by buying and selling a single unit of this stock. Like `101 - 1 = 100` [Solution](max_stock_profit.go), [Tests](max_stock_profit_test.go)
 
 ### Activity Selector

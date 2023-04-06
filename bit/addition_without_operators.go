@@ -1,6 +1,6 @@
 package bit
 
-// Add adds to numbers without using any arithmetic operators
+// Add adds to numbers without using any arithmetic operators.
 func Add(x, y int) int {
 	for y != 0 {
 		sum := x ^ y

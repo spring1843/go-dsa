@@ -5,7 +5,7 @@ import (
 )
 
 func TestLongestDictionaryWordContainingKey(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		input                           string
 		dictionary                      []string
 		longestWordContainingCharacters string

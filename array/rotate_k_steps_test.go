@@ -6,7 +6,7 @@ import (
 )
 
 func TestRotateKSteps(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		list        []int
 		steps       int
 		rotatedList []int

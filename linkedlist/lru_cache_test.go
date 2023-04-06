@@ -3,15 +3,15 @@ package linkedlist
 import "testing"
 
 func TestLRU(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		capacity int
 		puts     []int // n(i) element is key, n(i+1) element is value
 		gets     []int // n(i) element is the key to get, n(i+1) element is the expected value
 	}{
-		//{1, []int{}, []int{1, -1}},
+		// {1, []int{}, []int{1, -1}},
 		{1, []int{2, 1, 1, 1, 2, 3, 4, 1}, []int{2, -1, 4, 1}},
-		//{2, []int{2, 1, 1, 1, 2, 3, 4, 1}, []int{1, -1, 2, 3, 4, 1}},
-		//{3, []int{2, 1, 1, 1, 2, 3, 4, 1}, []int{1, 1, 2, 3, 4, 1}},
+		// {2, []int{2, 1, 1, 1, 2, 3, 4, 1}, []int{1, -1, 2, 3, 4, 1}},
+		// {3, []int{2, 1, 1, 1, 2, 3, 4, 1}, []int{1, 1, 2, 3, 4, 1}},
 	}
 
 	for i, test := range tests {

@@ -2,7 +2,6 @@
 
 Bit manipulation or bitwise operations refers to the process of manipulating individual or groups of bits in a computer's memory using logical operations to solve a problem. CPUs with support for specialized bitwise instructions are designed to execute bit-level operations efficiently, including AND, OR, XOR, SHIFT, and other similar operations. As these instructions are implemented in hardware, they offer excellent performance and are widely used in high-performance computing applications.
 
-
 ```ASCII
 [Figure 1] Truth tables and illustration of bit manipulation operations
 
@@ -12,7 +11,7 @@ AND	1100	OR	1100	XOR	1100	Negation	1100	L Shift	1100	R Shift	1100
 	1000		1110		0110			0011		1000		0110
 ```
 
-# Implementation
+## Implementation
 
 Go provides below operators that can be used in bit manipulation:
 

@@ -1,6 +1,6 @@
 package recursion
 
-// IsPalindrome returns true if a given string is a Palindrome and false otherwise
+// IsPalindrome returns true if a given string is a Palindrome and false otherwise.
 func IsPalindrome(s string) bool {
 	if len(s) < 2 {
 		return true

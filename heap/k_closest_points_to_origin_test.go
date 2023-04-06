@@ -6,7 +6,7 @@ import (
 )
 
 func TestKClosestPointToOrigin(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		points     [][]int
 		k          int
 		kthClosest [][]int

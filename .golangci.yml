@@ -1,0 +1,35 @@
+issues:
+  exclude-rules:
+    - path: /
+      linters:
+        - nlreturn
+        - gocritic
+        - lll
+        - varnamelen
+        - testpackage
+        - gomnd
+        - wastedassign
+        - predeclared
+        - gochecknoglobals
+        - wrapcheck
+        - exhaustivestruct
+        - exhaustruct
+        - thelper
+        - errorlint
+        - ifshort
+        - stylecheck
+        - makezero
+        - goerr113
+        - cyclop
+        - dupword
+        - paralleltest
+        - revive
+        - funlen
+        - unparam
+        - forcetypeassert
+        - golint
+        - dupl
+        - wsl
+
+linters:
+  enable-all: true

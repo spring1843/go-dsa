@@ -71,4 +71,3 @@ Given a postfix expression like `1 2 3 + *`, calculate the expression e.g. `5`. 
 ### Basic Calculator
 
 Given an expression containing integers, parentheses and the four basic arithmetic operations like `1*2+3+4*5` calculate the expression into a numerical value like 25. [Solution](basic_calculator.go) [Test](basic_calculator_test.go)
-

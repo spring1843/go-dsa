@@ -1,7 +1,7 @@
 package recursion
 
 // ClimbingStairs returns in how many ways you can climb a stairs of n steps
-// if we can only climb 1 or 2 steps only at a time
+// if we can only climb 1 or 2 steps only at a time.
 func ClimbingStairs(n int) int {
 	return climbStairsRecursive(0, n)
 }

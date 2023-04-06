@@ -5,7 +5,7 @@ import (
 )
 
 func TestKthLargestElement(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		list       []int
 		k          int
 		kthLargest int

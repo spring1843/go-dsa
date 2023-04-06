@@ -7,7 +7,7 @@ import (
 )
 
 func TestMergeSortedLists(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		sortedLinkedLists []string
 		merged            string
 	}{

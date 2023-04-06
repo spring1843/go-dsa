@@ -4,7 +4,7 @@ import "sort"
 
 type sortRunes []rune
 
-// FindAnagrams returns a list of words that are anagrams of each other
+// FindAnagrams returns a list of words that are anagrams of each other.
 func FindAnagrams(words []string) [][]string {
 	anagrams := make(map[string][]string)
 	for _, word := range words {

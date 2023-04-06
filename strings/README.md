@@ -15,7 +15,6 @@ In Go strings are a data type. Behind the scene strings are a slice of bytes. Th
 
 When you iterate through a string in Go using the `range` keyword, every element becomes a [rune](https://blog.golang.org/strings#TOC_5.) which is the same as `int32`. If you are writing code that deals with characters it's often easier to define your function parameters and variables as rune. The following code shows how to iterate through a string.
 
-
 ```Go
 package main
 
@@ -52,7 +51,7 @@ Given a depth, return the output of look and tell an algorithm where each line r
 
 ### In Memory Database
 
-Write an in memory database that stores string key value pairs and supports SET, GET, EXISTS, and UNSET commands. It should also allow transactions with BEGIN, COMMIT and ROLLBACK commands. [Solution](in_memory_database.go), [Tests](in_memory_database_test.go)
+Write an in memory database that stores string key-value pairs and supports SET, GET, EXISTS, and UNSET commands. It should also allow transactions with BEGIN, COMMIT and ROLLBACK commands. [Solution](in_memory_database.go), [Tests](in_memory_database_test.go)
 
 ### Number in English
 

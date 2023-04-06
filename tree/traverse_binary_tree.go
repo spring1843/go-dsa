@@ -1,7 +1,7 @@
 package tree
 
 // TraverseBinaryTree performs in-order, pre-order, and post-order traversals on
-// an integer binary tree and adds each visited node into a slice of integers
+// an integer binary tree and adds each visited node into a slice of integers.
 func TraverseBinaryTree(root *BinaryTreeNode) ([]int, []int, []int) {
 	var (
 		in, pre, post = []int{}, []int{}, []int{}

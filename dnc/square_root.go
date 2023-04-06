@@ -1,6 +1,6 @@
 package dnc
 
-// SquareRoot binary search to find the square root of a number up to a precision point
+// SquareRoot binary search to find the square root of a number up to a precision point.
 func SquareRoot(number, precision int) float64 {
 	start := 0
 	end := number

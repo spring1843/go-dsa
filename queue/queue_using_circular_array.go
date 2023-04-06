@@ -2,7 +2,7 @@ package queue
 
 import "errors"
 
-// UsingCircularArray is a queue that is made using a circular array
+// UsingCircularArray is a queue that is made using a circular array.
 type UsingCircularArray struct {
 	circular []int
 	size     int
