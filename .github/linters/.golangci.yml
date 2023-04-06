@@ -3,6 +3,7 @@ issues:
     - path: /
       linters:
         - nosnakecase
+        - nlreturn
         - forcetypeassert
         - ifshort
         - scopelint
