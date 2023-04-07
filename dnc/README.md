@@ -98,7 +98,7 @@ Given a sorted set of integers like `{1,2,3,4,6}`, and a target int like `4` fin
 Given a number and precision, return the square root of the number using the binary search algorithm. [Solution](square_root.go) [Test](square_root_test.go)
 
 ### Rate Limit
-Given a number of allowed calls per second, write an IsAllowed function which returns false if the call should be rate limited and true if the call should be allowed (i.e. is within the range of allowed calls per second). [Solution](rate_limit.go) [Test](rate_limit_test.go)
+Given a number of allowed calls(requests) to the server per unit time, such as second, write an IsAllowed function which returns false if the call(request) should be rate limited and true if the call should be allowed (i.e. is within the range of allowed calls per second). [Solution](rate_limit.go) [Test](rate_limit_test.go)
 
 ### Towers of Hanoi
 Given n, number of disks, and start and end tower, return the moves it takes to move all disks from start to end tower. The disks are stacked on top of each other with the lightest being on top and heaviest being in the bottom. A heavier disk cannot be placed on a lighter disk. You can move one disk at a time. [Solution](towers_of_hanoi.go) [Test](towers_of_hanoi_test.go)
