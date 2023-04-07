@@ -7,11 +7,10 @@ on:
 permissions:
   contents: read
 jobs:
-  tests:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-go@v4
       - uses: github/super-linter@v4
         env:
           DEFAULT_BRANCH: main
@@ -21,11 +20,25 @@ jobs:
           VALIDATE_JSCPD: false
           MARKDOWN_CONFIG_FILE: .markdownlint.yml
           YAML_CONFIG_FILE: .yamllint.yml
-      - run: go test -v -coverprofile=profile.cov ./...
+          VALIDATE_GITLEAKS: false
+          LOG_LEVEL: WARN
       - uses: reviewdog/action-misspell@v1
         with:
           github_token: ${{ secrets.github_token }}
           locale: "US"
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v4
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/
+            ~/go/bin/
+          key: go-cache-${{ hashFiles('go.sum') }}
+      - run: go test -v -coverprofile=profile.cov ./...
       - uses: shogo82148/actions-goveralls@v1
         with:
           path-to-profile: profile.cov
