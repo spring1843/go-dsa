@@ -1,6 +1,6 @@
 # Heap
 
-Heaps, also known as binary heaps or priority queues, function by retaining the minimum or maximum of the elements inserted into them. There are two types of heaps: minimum heaps and maximum heaps.
+Heaps are tree data structures, function by retaining the minimum or maximum of the elements inserted into them. There are two types of heaps: minimum heaps and maximum heaps.
 
 A heap must satisfy two conditions:
 
