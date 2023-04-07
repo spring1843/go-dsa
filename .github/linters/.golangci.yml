@@ -1,0 +1,23 @@
+issues:
+  exclude-rules:
+    - path: /
+      linters:
+        - nosnakecase
+        - nlreturn
+        - forcetypeassert
+        - ifshort
+        - scopelint
+        - varnamelen
+        - lll
+        - testpackage
+        - gomnd
+        - wsl
+        - gochecknoglobals
+        - cyclop
+        - paralleltest
+        - wsl
+        - dupl
+        - dupword
+
+linters:
+  enable-all: true

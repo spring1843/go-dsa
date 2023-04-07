@@ -5,7 +5,7 @@ import (
 )
 
 func TestBinarySearch(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		sortedNumbers    []int
 		search, position int
 	}{

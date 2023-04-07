@@ -1,7 +1,7 @@
 package linkedlist
 
 // RandomNode is a singly linked list in which a node may be connected to a random node
-// in addition to the typical Next node
+// in addition to the typical Next node.
 type RandomNode struct {
 	// Val is the Value of the node
 	Val int
@@ -11,7 +11,7 @@ type RandomNode struct {
 	Random *RandomNode
 }
 
-// CopyLinkedListWithRandomPointer returns a deep copy of the given randomly connected linked list
+// CopyLinkedListWithRandomPointer returns a deep copy of the given randomly connected linked list.
 func CopyLinkedListWithRandomPointer(head *RandomNode) *RandomNode {
 	if head == nil {
 		return nil

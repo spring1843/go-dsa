@@ -16,7 +16,7 @@ const (
 	numberSeparator = ","
 )
 
-// HeadCount returns 1 + the number of directs, and all their directs for a given employee
+// HeadCount returns 1 + the number of directs, and all their directs for a given employee.
 func (h *HeadCounter) HeadCount(employeeID int) int {
 	bfs := func(employeeID int) int {
 		reportCount := 0
@@ -37,7 +37,7 @@ func (h *HeadCounter) HeadCount(employeeID int) int {
 	return bfs(employeeID)
 }
 
-// NewHeadCount returns a head counter with initialized data
+// NewHeadCount returns a head counter with initialized data.
 func NewHeadCount(data string) (*HeadCounter, error) {
 	headCounter := &HeadCounter{
 		data: make(map[int][]int),

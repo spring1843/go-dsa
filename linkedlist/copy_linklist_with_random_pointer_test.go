@@ -13,7 +13,7 @@ const (
 )
 
 func TestCopyLinkedListWithRandomPointer(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		list string
 	}{
 		{""},

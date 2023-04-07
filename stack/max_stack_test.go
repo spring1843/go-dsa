@@ -6,7 +6,7 @@ import (
 )
 
 func TestMaxStack(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		push []int
 		pop  int
 		max  int

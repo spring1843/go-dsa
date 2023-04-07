@@ -1,4 +1,5 @@
 # Queue
+
 Queues are data structures that operate on the principle of First-In-First-Out (FIFO), enabling elements to be added to the rear of the queue through the enqueue operation and removed from the front of the queue through the dequeue operation.
 
 In the real world queues are formed in situations where a first-come, first-served service is provided, such as at toll booths on highways.
@@ -43,6 +44,7 @@ func dequeue() (int, error) {
 ```
 
 Here's a [linked list](../linkedlists) implementation with the same exact outcome.
+
 ```Go
 package main
 

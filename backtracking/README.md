@@ -4,7 +4,7 @@ Backtracking is a commonly used [recursive](../recursion) technique in which the
 
 Backtracking can be compared to how a person solves a maze or searches for an exit in an unfamiliar mall. This technique guarantees a solution if one exists since it involves trying out every possibility until success or failure is achieved.
 
-# Implementation
+## Implementation
 
 A backtracking algorithm typically is implemented in these steps:
 

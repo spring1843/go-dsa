@@ -5,7 +5,7 @@ import (
 )
 
 func TestFindDuplicate(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		list      []int
 		duplicate int
 	}{

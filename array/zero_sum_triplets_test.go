@@ -6,7 +6,7 @@ import (
 )
 
 func TestZeroSumTriplets(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		list     []int
 		triplets [][]int
 	}{

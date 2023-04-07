@@ -57,7 +57,6 @@ The time complexity of pushing and popping heap elements is O(LogN). On the othe
 
 The insertion strategy entails percolating the new element up the heap until the correct location is identified. Similarly, the deletion strategy involves percolating down the heap.
 
-
 Pushing and Popping heap elements are all O(LogN) operations. The strategy for inserting is the new element is percolating up the heap until the correct location is found. similarly the strategy for deletion is to percolate down.
 
 ## Application

@@ -1,6 +1,6 @@
 package recursion
 
-// ReverseDigits returns an integer with digits in the reverse order of the input integer
+// ReverseDigits returns an integer with digits in the reverse order of the input integer.
 func ReverseDigits(n int) int {
 	return reverseRecursiveLy(n, 0, digitsCount(n))
 }

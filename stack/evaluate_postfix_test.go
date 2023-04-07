@@ -3,7 +3,7 @@ package stack
 import "testing"
 
 func TestEvaluatePostfix(t *testing.T) {
-	var tests = []struct {
+	tests := []struct {
 		postfix   []string
 		expectErr bool
 		outcome   float64
