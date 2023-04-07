@@ -13,11 +13,9 @@ issues:
         - gomnd
         - wsl
         - gochecknoglobals
-        - cyclop
         - paralleltest
         - wsl
         - dupl
-        - dupword
 
 linters:
   enable-all: true
