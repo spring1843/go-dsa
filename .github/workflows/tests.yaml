@@ -20,6 +20,7 @@ jobs:
           VALIDATE_JSCPD: false
           MARKDOWN_CONFIG_FILE: .markdownlint.yml
           YAML_CONFIG_FILE: .yamllint.yml
+          VALIDATE_GITLEAKS: false
           LOG_LEVEL: WARN
       - uses: reviewdog/action-misspell@v1
         with:

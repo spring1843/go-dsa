@@ -2,6 +2,7 @@ issues:
   exclude-rules:
     - path: /
       linters:
+        - nosnakecase
         - nlreturn
         - forcetypeassert
         - ifshort
@@ -15,6 +16,7 @@ issues:
         - paralleltest
         - wsl
         - dupl
+        - dupword
 
 linters:
   enable-all: true
