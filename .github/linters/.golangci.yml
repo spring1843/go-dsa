@@ -2,7 +2,6 @@ issues:
   exclude-rules:
     - path: /
       linters:
-        - nosnakecase
         - nlreturn
         - forcetypeassert
         - ifshort
