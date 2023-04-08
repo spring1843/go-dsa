@@ -1,6 +1,6 @@
 # Heap
 
-Heaps, also known as binary heaps or priority queues, function by retaining the minimum or maximum of the elements inserted into them. There are two types of heaps: minimum heaps and maximum heaps.
+Heaps are tree data structures, function by retaining the minimum or maximum of the elements inserted into them. There are two types of heaps: minimum heaps and maximum heaps.
 
 A heap must satisfy two conditions:
 
@@ -77,7 +77,7 @@ Given multiple sorted linked lists like {1->2, 1->3->4, 4->5}, join them into on
 
 ### Median in a Stream
 
-Given a stream of integers like {1,2,3,4}, output the median after each input like {1,}. [Solution](median_in_a_stream_test.go), [Test](median_in_a_stream_test.go)
+Given a stream of integers like {1,2,3,4}, output the median after each input like {1, 1.5, 2, 2.5}. [Solution](median_in_a_stream_test.go), [Test](median_in_a_stream_test.go)
 
 ### Kth Closest Points to the Center
 

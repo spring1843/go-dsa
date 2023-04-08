@@ -102,7 +102,7 @@ Given a number and precision, return the square root of the number using the bin
 
 ### Rate Limit
 
-Given a number of allowed calls per second, write an IsAllowed function which returns false if the call should be rate limited and true if the call should be allowed (i.e. is within the range of allowed calls per second). [Solution](rate_limit.go) [Test](rate_limit_test.go)
+Given a number of allowed calls(requests) to the server per unit time, such as second, write an IsAllowed function which returns false if the call(request) should be rate limited and true if the call should be allowed (i.e. is within the range of allowed calls per second). [Solution](rate_limit.go) [Test](rate_limit_test.go)
 
 ### Towers of Hanoi
 
