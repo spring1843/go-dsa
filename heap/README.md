@@ -1,6 +1,6 @@
 # Heap
 
-Heaps are tree data structures, function by retaining the minimum or maximum of the elements inserted into them. There are two types of heaps: minimum heaps and maximum heaps.
+Heaps are tree data structures that function by retaining the minimum or maximum of the elements inserted into them. There are two types of heaps: minimum heaps and maximum heaps.
 
 A heap must satisfy two conditions:
 
@@ -85,4 +85,4 @@ Given coordination of a point on an x,y axis and an integer k, return k closest 
 
 ### Sliding Maximum
 
-Given a list of integers like {1, 4, 5, -2, 4, 6}, and a positive integer k like 3, return the maximum of each slice of the array when a window of length k is moved from left to the right in the array like {5, 5, 5, 6}. [Solution](sliding_maximum.go), [Test](sliding_maximum_test.go)
+Given a list of integers like `{1, 4, 5, -2, 4, 6}`, and a positive integer k like 3, return the maximum of each slice of the array when a window of length k is moved from left to the right in the array like `{4}`. [Solution](sliding_maximum.go), [Test](sliding_maximum_test.go)
