@@ -32,3 +32,7 @@ DP is well-suited for tackling an array of complex problems, including those in 
 ### Rod Cutting
 
 Given a list containing price a table such as `{1,5,8,9,10}` indicating the price of a rod of a given length (1 inch rod is $1, 2 inch rod is $5, 5 inch rod is $10) and number n like 3, indicating the length of a given rod, calculate maximum revenue that can be earned by cutting the rod and selling the pieces when cutting is free. [Solution](rod_cutting.go), [Tests](rod_cutting_test.go)
+
+### Sum Up to Number
+
+Given a set of positive integers like `{1,2,3,4,5}` and an integer like `7` write a function that returns true if there are two numbers in the list that sum up to the given integer and false otherwise. [Solution](sum_up_to_integer.go), [Tests](sum_up_to_integer_test.go)
