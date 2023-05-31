@@ -50,6 +50,7 @@ To run examples locally [install Go](https://go.dev/doc/install), and run `go ge
 ## 📋 Outline
 
 For each topic, we strive to provide a comprehensive README.md file and at least 5 solved problems. Each README.md will contain:
+
   * 💡 **Implementation**: Detailed explanation on how the data structure or algorithm can be implemented, including code examples in Go.
   * 📊 **Complexity**: Analysis of the time and space complexity of the data structure or algorithm.
   * 🎯 **Application**: Discussion of problems that are commonly solved using the data structure or algorithm.
