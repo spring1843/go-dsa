@@ -18,7 +18,7 @@ When pushing a new element to a heap, because of the structure property we alway
  /  \	   /  \		 /  \				/  \		  /  \		   /   \
 25  30	  25  30  	20  30             20  30		 5   30		  15    30
          /		/                  /  \		    / \          /  \
-        15		25				 25   5		   25  20		25   20
+        15		 25				 25   5		   25  20		25   20
 										
 	(A) Add 15							(B) Add 5
 ```
