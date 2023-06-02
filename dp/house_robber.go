@@ -2,7 +2,7 @@ package dp
 
 // MaxHouseRobber given an array representing the amount of wealth inside a house
 // and given that the robber can steal only non-consecutive houses
-// returns the maximum amount of wealth the robber can steal
+// returns the maximum amount of wealth the robber can steal.
 func MaxHouseRobber(wealth []int) int {
 	if len(wealth) == 0 {
 		return 0
