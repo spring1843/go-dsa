@@ -14,13 +14,13 @@ When pushing a new element to a heap, because of the structure property we alway
 ```ASCII
 [Figure 1] Minimum heap push operation
 
-  20	    20		  15				 15			   15			 5
- /  \	   /  \		 /  \				/  \		  /  \		   /   \
-25  30	  25  30  	20  30             20  30		 5   30		  15    30
-         /		/                  /  \		    / \          /  \
-        15		25				 25   5		   25  20		25   20
+  20	    20		  15			 15		15		5
+ /  \	   /  \		 /  \			/  \	      	/  \	      /   \
+25  30	  25  30  	20  30	               20  30	      5   30	    15     30
+         /	       /      	              /  \	     / \           /  \
+        15	      25	             25   5	   25  20	 25    20
 										
-	(A) Add 15							(B) Add 5
+	(A) Add 15		     	    (B) Add 5
 ```
 
 The pop operation in a heap starts by replacing the root with the right most leaf. Then we swap the root element down with the smaller child in a min heap (and larger child in a max heap) until the heap property is achieved.
@@ -28,13 +28,13 @@ The pop operation in a heap starts by replacing the root with the right most lea
 ```ASCII
 [Figure 2] Minimum heap pop operation
 
-       5		20		15			  25	   20			30
-     /   \	   /  \	   /  \			 /  \	  /  \			/
-    15   30	  15  30  20  30		20  30   25  30		   25
-   /  \		 /		 /
-  25  20	25		25
+       5	    20	       15		  25	   20		  30
+     /   \	   /  \	      /  \		 /  \	  /  \		 /
+    15   30	  15  30     20  30		20  30   25  30		25
+   /  \		 /	    /
+  25  20	25	   25
 
-	(A) Remove						(B) Remove			(C) Remove
+	(A) Remove				(B) Remove		(C) Remove
 ```
 
 ## Implementation
