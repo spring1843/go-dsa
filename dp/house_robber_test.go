@@ -9,6 +9,7 @@ func TestMaxHouseRobber(t *testing.T) {
 		houses []int
 		max    int
 	}{
+		{[]int{}, 0},
 		{[]int{1}, 1},
 		{[]int{1, 2}, 2},
 		{[]int{1, 2, 3, 4}, 6},
