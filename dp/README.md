@@ -36,3 +36,7 @@ Given a list containing price a table such as `{1,5,8,9,10}` indicating the pric
 ### Sum Up to Number
 
 Given a set of positive integers like `{1,2,3,4,5}` and an integer like `7` write a function that returns true if there are two numbers in the list that sum up to the given integer and false otherwise. [Solution](sum_up_to_integer.go), [Tests](sum_up_to_integer_test.go)
+
+### House Robber
+
+Given an array representing the amount of wealth inside houses like `{1,2,3,4}` return the maximum wealth the robber can steal like `6` with the condition that he is not allowed to rob two consecutive houses. [Solution](house_robber.go), [Tests](house_robber_test.go)
