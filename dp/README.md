@@ -44,3 +44,7 @@ Given an array representing the amount of wealth inside houses like `{1,2,3,4}` 
 ### Minimum Deletion to Make a Palindrome
 
 Given a string like `abccb` return the minimum number of character deletions that can be done on the string to make it a palindrome like `1` (by removing `a`, we will have `bccb`). [Solution](minimum_deletion_to_make_palindrome.go), [Tests](minimum_deletion_to_make_palindrome_test.go)
+
+### Word Distance
+
+Given a string like `abc`, and another string like `abcde` return how many character modifications (insert, delete, edit) have to be done on the first string to become identical to the second string. [Solution](word_distance.go.go), [Tests](word_distance.go_test.go)
