@@ -40,10 +40,6 @@ func InfixToPostfix(infix []string) ([]string, error) {
 			continue
 		}
 
-		for len(stack.stack) > 0 && operands[element] > operands[stack.stack[len(stack.stack)-1]] {
-			output = append(output, stack.pop())
-		}
-
 		stack.push(element)
 	}
 
