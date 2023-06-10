@@ -59,10 +59,6 @@ func (queue *UsingCircularArray) isFull() bool {
 	return queue.size == queue.capacity()
 }
 
-func (queue *UsingCircularArray) isEmpty() bool {
-	return queue.size == 0
-}
-
 func (queue *UsingCircularArray) capacity() int {
 	return len(queue.circular)
 }
