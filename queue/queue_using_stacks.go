@@ -35,9 +35,6 @@ func (stack *Stack) push(element int) {
 }
 
 func (stack *Stack) pop() int {
-	if len(stack.stack) == 0 {
-		return 0
-	}
 	tmp := stack.stack[len(stack.stack)-1]
 	stack.stack = stack.stack[:len(stack.stack)-1]
 	return tmp

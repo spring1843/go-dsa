@@ -45,9 +45,6 @@ func (queue *UsingCircularArray) enqueue(n int) error {
 }
 
 func (queue *UsingCircularArray) dequeue() (int, error) {
-	if queue.isEmpty() {
-		return -1, ErrQueueEmpty
-	}
 	tmp := queue.circular[queue.front]
 	queue.circular[queue.front] = emptyValue
 	queue.front++
