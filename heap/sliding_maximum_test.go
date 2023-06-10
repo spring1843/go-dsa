@@ -1,6 +1,7 @@
 package heap
 
 import (
+	"container/heap"
 	"reflect"
 	"testing"
 )
@@ -20,9 +21,17 @@ func TestMaxSlidingWindow(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got := MaxSlidingWindow(test.numbers, test.k)
-		if !reflect.DeepEqual(got, test.maxSliding) {
+		if got := MaxSlidingWindow(test.numbers, test.k); !reflect.DeepEqual(got, test.maxSliding) {
 			t.Fatalf("Failed test case #%d. Want %d got %d", i, test.maxSliding, got)
 		}
+	}
+}
+
+func TestMaxSlidingWindowPop(t *testing.T) {
+	pq := make(slidingWindow, 5)
+	heap.Init(&pq)
+	heap.Push(&pq, 5)
+	if got := heap.Pop(&pq).(int); got != 5 {
+		t.Fatalf("Wanted %d got %d", got, 5)
 	}
 }
