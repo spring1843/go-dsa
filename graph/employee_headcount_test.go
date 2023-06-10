@@ -11,6 +11,7 @@ func TestEmployeeHeadCount(t *testing.T) {
 		expectedErr  error
 		headCounts   map[int]int
 	}{
+		{"A", errInvalidInteger, map[int]int{1: -1}},
 		{"1", nil, map[int]int{1: 1}},
 		{"1,2\n3,4,5,6\n4\n5\n6", nil, map[int]int{1: 2}},
 		{"1,2\n3,4,5,6\n4\n5\n6", nil, map[int]int{3: 4}},
