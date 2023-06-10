@@ -40,3 +40,7 @@ Given a set of positive integers like `{1,2,3,4,5}` and an integer like `7` writ
 ### House Robber
 
 Given an array representing the amount of wealth inside houses like `{1,2,3,4}` return the maximum wealth the robber can steal like `6` with the condition that he is not allowed to rob two consecutive houses. [Solution](house_robber.go), [Tests](house_robber_test.go)
+
+### Minimum Deletion to Make a Palindrome
+
+Given a string like `abccb` return the minimum number of character deletions that can be done on the string to make it a palindrome like `1` (by removing `a`, we will have `bccb`). [Solution](minimum_deletion_to_make_palindrome.go), [Tests](minimum_deletion_to_make_palindrome_test.go)
