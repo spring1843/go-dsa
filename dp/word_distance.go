@@ -1,7 +1,7 @@
 package dp
 
 // WordDistance returns how many character modifications (insert, delete, edit) can
-// be done on the first input string so that it becomes equal to the second string
+// be done on the first input string so that it becomes equal to the second string.
 func WordDistance(input1, input2 string) int {
 	dp := createDP(input2, input1)
 	for i := 1; i <= len(input1); i++ {
