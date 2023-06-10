@@ -26,3 +26,12 @@ func TestMedianInAStream(t *testing.T) {
 		}
 	}
 }
+
+func TestHeap(t *testing.T) {
+	minHeap := new(minHeap)
+	minHeap.Push(1)
+	got := minHeap.Pop().(int)
+	if got != 1 {
+		t.Fatalf("expected %d got %d", got, 1)
+	}
+}
