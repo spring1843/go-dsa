@@ -1,5 +1,7 @@
 package dp
 
+// MinimumDeletionsToMakePalindrome returns how many deletions can be done in the input string
+// to make it a palindrome.
 func MinimumDeletionsToMakePalindrome(input string) int {
 	if len(input) <= 1 {
 		return 0
