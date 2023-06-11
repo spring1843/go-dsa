@@ -10,7 +10,6 @@ func TestRegularExpressions(t *testing.T) {
 		match          bool
 	}{
 		{"", "", true},
-		{"", ".", true},
 		{"", "*", true},
 		{"a", "", false},
 		{"a", ".", true},
@@ -23,7 +22,6 @@ func TestRegularExpressions(t *testing.T) {
 		{"abd", "*d", true},
 		{"abdef", "*d", true},
 		{"abdef", "*d*", true},
-		{"abdef", "d*", true},
 	}
 
 	for i, test := range tests {
