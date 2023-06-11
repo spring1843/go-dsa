@@ -7,19 +7,30 @@ import (
 
 func TestEvaluateBinaryExpressionTree(t *testing.T) {
 	tests := []struct {
-		tree   string
-		result float64
+		tree        string
+		result      float64
+		expectedErr bool
 	}{
-		{"", 0.0},
-		{"*,6,2", 12.0},
-		{"/,6,2", 3.0},
-		{"-,6,2", 4.0},
-		{"+,*,6,+,2,nil,nil,3,4", 20.0},
-		{"*,*,+,5,5,2,2", 100.0}, // (D) in Figure 2
+		{"", 0.0, false},
+		{"*,6,2", 12.0, false},
+		{"/,6,2", 3.0, false},
+		{"-,6,2", 4.0, false},
+		{"+,*,6,+,2,nil,nil,3,4", 20.0, false},
+		{"*,*,+,5,5,2,2", 100.0, false}, // (D) in Figure 2
+		{"*,A,2", -1, true},
+		{"*,2,B", -1, true},
+		{"A,1,2", -1, true},
 	}
 
 	for i, test := range tests {
-		if got := EvaluateBinaryExpressionTree(unserializeStringBinaryTree(test.tree)); got != test.result {
+		got, err := EvaluateBinaryExpressionTree(unserializeStringBinaryTree(test.tree))
+		if !test.expectedErr && err != nil {
+			t.Fatalf("unexpected error: %s", err)
+		}
+		if test.expectedErr && err == nil {
+			t.Fatal("did not get expected error")
+		}
+		if got != test.result {
 			t.Fatalf("Failed test case #%d. Want %#f got %#f", i, test.result, got)
 		}
 	}
