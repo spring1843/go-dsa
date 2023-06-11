@@ -13,5 +13,5 @@ func IsRegularExpressionMatch(input, pattern string) bool {
 	if len(pattern) < 2 {
 		return firstMatch && IsRegularExpressionMatch(input[1:], pattern[1:])
 	}
-	return IsRegularExpressionMatch(input, pattern[2:]) || (firstMatch && IsRegularExpressionMatch(input[1:], pattern))
+	return IsRegularExpressionMatch(input, pattern[2:])
 }
