@@ -290,7 +290,7 @@ Given a start word like `pop` and an end word like `car`, a dictionary of same l
 
 ### Network Delay Time
 
-Given `n`, the number of nodes in a network, travel times a list of `{source, destination, delay}` format, and `k` and a node number, return the time it will take for a message sent from k to be received by all nodes. [Solution](network_delay_time.go), [Tests](network_delay_time_test.go)
+Given `n`, the number of nodes in a network, a list of unidirectional travel times in `{source, destination, delay}` format, and `k`, an origin node number, return the time it will take for a message sent from k to be received by all other nodes. [Solution](network_delay_time.go), [Tests](network_delay_time_test.go)
 
 ### Number of Islands
 
