@@ -23,3 +23,12 @@ func TestKthLargestElement(t *testing.T) {
 		}
 	}
 }
+
+func TestMinHeap(t *testing.T) {
+	minHeap := new(minimumHeap)
+	minHeap.Push(1)
+	got := minHeap.Pop().(int)
+	if got != 1 {
+		t.Fatalf("expected %d got %d", got, 1)
+	}
+}

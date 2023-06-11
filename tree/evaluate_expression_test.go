@@ -13,6 +13,7 @@ func TestEvaluateBinaryExpressionTree(t *testing.T) {
 		{"", 0.0},
 		{"*,6,2", 12.0},
 		{"/,6,2", 3.0},
+		{"-,6,2", 4.0},
 		{"+,*,6,+,2,nil,nil,3,4", 20.0},
 		{"*,*,+,5,5,2,2", 100.0}, // (D) in Figure 2
 	}

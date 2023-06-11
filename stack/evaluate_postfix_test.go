@@ -11,6 +11,7 @@ func TestEvaluatePostfix(t *testing.T) {
 		{[]string{""}, true, -1},
 		{[]string{"+"}, true, -1},
 		{[]string{"A", "B", "+"}, true, -1},
+		{[]string{"1", "B", "+"}, true, -1},
 		{[]string{"1", "2", "+"}, false, 3},
 		{[]string{"1", "2", "3", "+", "*"}, false, 5},
 		{[]string{"1", "2", "3", "+", "+"}, false, 6},
