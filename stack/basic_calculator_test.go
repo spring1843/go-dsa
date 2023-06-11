@@ -11,6 +11,7 @@ func TestBasicCalculator(t *testing.T) {
 		outcome    float64
 	}{
 		{"", true, -1},
+		{"1++", true, -1},
 		{"1+2", false, 3},
 		{"1*(2+3)", false, 5},
 		{"1+2+3", false, 6},
