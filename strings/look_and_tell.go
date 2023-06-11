@@ -10,7 +10,7 @@ func LookAndTell(depth int) []string {
 	output := []string{"1"}
 
 	if depth <= 0 {
-		return []string{}
+		return []string{"-1"}
 	}
 
 	if depth == 1 {
