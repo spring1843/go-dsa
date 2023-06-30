@@ -12,7 +12,7 @@ When implementing linked lists, two key concepts come into play: the linked list
 
 * At least one piece of data such as name or number
 * A reference to the next node
-* A reference to the previous node in doubly linked lists
+* A reference to the previous node (in case of doubly linked lists)
 
 To create a linked list in Go, a node structure can be defined, and a pointer to the same structure can be used. For instance, a singly linked list that follows the format 1->2->3->4->5 can be created using the following example:
 
@@ -46,7 +46,7 @@ func addToFront(node *node) {
 }
 ```
 
-In a singly linked list, a pointer is typically stored for the first and last items. Adding items to the front or back of the list is a constant-time operation. However, deleting the last item can be challenging, as the last item's pointer needs to be updated to the second-to-last item. This is where having a reference to the last item in each node proves useful. In contrast, doubly linked lists maintain pointers to both the previous and next nodes, which makes deletion operations less expensive.
+In a singly linked list, a pointer is typically stored for the first and last items. Adding items to the front or back of the list is a constant-time operation, in case we store 2 references one for the front in head pointer and one for the back in tail pointer. However, deleting the last item can be challenging, as the last item's pointer needs to be updated to the second-to-last item. In contrast, doubly linked lists maintain pointers to both the previous and next nodes, which makes deletion operations less expensive.
 
 The Go standard library contains an implementation of [doubly linked lists](https://golang.org/pkg/container/list/). In the following example numbers from 1 to 10 are added to the list, and then even numbers are removed and the resulting linked list containing odd numbers is printed.
 
@@ -111,4 +111,4 @@ Given a singly connected linked list in which each node may optionally be connec
 
 ### Implement LRU Cache
 
-Implement a least recently used cache with integer keys and values, where the least recently used evicted upon insertion when cache is at full capacity. [Solution](lru_cache.go) [Test](lru_cache_test.go)
+Implement a least recently used cache with integer keys and values, where the least recently used evicted upon insertion in order to make room for new item when cache is at full capacity. [Solution](lru_cache.go) [Test](lru_cache_test.go)
