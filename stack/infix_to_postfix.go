@@ -17,7 +17,7 @@ type operators struct {
 }
 
 // InfixToPostfix converts an infix expression to a postfix one supporting the 4 basic arithmetic operations and parentheses.
-func InfixToPostfix(infix []string) ([]string, error) {
+func InfixToPostfix(infix []string) []string {
 	output := []string{}
 	stack := new(operators)
 	for _, element := range infix {
@@ -27,10 +27,10 @@ func InfixToPostfix(infix []string) ([]string, error) {
 		}
 
 		if element == closeParenthesis {
-			popped, _ := stack.pop()
+			popped := stack.pop()
 			for popped != openParenthesis {
 				output = append(output, popped)
-				popped, _ = stack.pop()
+				popped = stack.pop()
 			}
 			continue
 		}
@@ -40,32 +40,20 @@ func InfixToPostfix(infix []string) ([]string, error) {
 			continue
 		}
 
-		for len(stack.stack) > 0 && operands[element] > operands[stack.stack[len(stack.stack)-1]] {
-			popped, _ := stack.pop()
-			output = append(output, popped)
-		}
-
 		stack.push(element)
 	}
 
 	for len(stack.stack) > 0 {
-		operand, err := stack.pop()
-		if err != nil {
-			return nil, err
-		}
-		output = append(output, operand)
+		output = append(output, stack.pop())
 	}
 
-	return output, nil
+	return output
 }
 
-func (operators *operators) pop() (string, error) {
-	if len(operators.stack) == 0 {
-		return "", ErrEmptyStack
-	}
+func (operators *operators) pop() string {
 	tmp := operators.stack[len(operators.stack)-1]
 	operators.stack = operators.stack[:len(operators.stack)-1]
-	return tmp, nil
+	return tmp
 }
 
 func (operators *operators) push(operator string) {

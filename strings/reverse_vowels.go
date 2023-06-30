@@ -25,11 +25,7 @@ func ReverseVowels(str string) (string, error) {
 	}
 	for _, r := range str {
 		if _, ok := vowels[string(r)]; ok {
-			newChar, err := pop()
-			if err != nil {
-				return "", err
-			}
-			reversed += newChar
+			reversed += pop()
 			continue
 		}
 		reversed += string(r)
@@ -41,11 +37,8 @@ func push(v string) {
 	stack = append(stack, v)
 }
 
-func pop() (string, error) {
-	if len(stack) == 0 {
-		return "", ErrPopStack
-	}
+func pop() string {
 	tmp := stack[len(stack)-1]
 	stack = stack[:len(stack)-1]
-	return tmp, nil
+	return tmp
 }
