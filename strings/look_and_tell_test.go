@@ -9,6 +9,7 @@ func TestFindDuplicate(t *testing.T) {
 		depth    int
 		lastLine string
 	}{
+		{0, "-1"},
 		{1, "1"},
 		{2, "11"},
 		{3, "21"},

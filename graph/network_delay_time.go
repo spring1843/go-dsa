@@ -15,7 +15,7 @@ const (
 // NetworkDelayTime returns the fastest times it will take for a message sent from k
 // to reach all nodes of the given graph of n vertices. The edges are given in the
 // form of {vertexSource, vertexDestination, vertexDelay}.
-func NetworkDelayTime(n, k int, edges [][]int) int {
+func NetworkDelayTime(n, k int, edges [][3]int) int {
 	var (
 		verticesMap, edgesHeap = verticesAndEdges(edges, k)
 		max                    = math.MinInt64
@@ -42,7 +42,7 @@ func NetworkDelayTime(n, k int, edges [][]int) int {
 			if i == len(edgesHeap) {
 				heap.Push(&edgesHeap, []int{vertex[vertexSource], vertex[vertexDestination] + cost[edge[edgeDestination]]})
 			}
-			if edgesHeap[i][edgeCost] > vertex[vertexDestination]+cost[edge[edgeDestination]] {
+			if edgesHeap[i][edgeCost] < vertex[vertexDestination]+cost[edge[edgeDestination]] {
 				edgesHeap[i][edgeCost] = vertex[vertexDestination] + cost[edge[edgeDestination]]
 				heap.Fix(&edgesHeap, i)
 			}
@@ -57,7 +57,7 @@ func NetworkDelayTime(n, k int, edges [][]int) int {
 // verticesAndEdges takes edges, and returns
 // a map of vertex ID as keys and the outgoing edges in the [vertexDestination, cost] form
 // a minimum heap of edges in the [vertexDestination, cost].
-func verticesAndEdges(edges [][]int, k int) (map[int][][2]int, edgeMinHeap) {
+func verticesAndEdges(edges [][3]int, k int) (map[int][][2]int, edgeMinHeap) {
 	verticesMap := make(map[int][][2]int)
 	for _, vertex := range edges {
 		verticesMap[vertex[vertexSource]] = append(verticesMap[vertex[vertexSource]], [2]int{vertex[vertexDestination], vertex[vertexDelay]})

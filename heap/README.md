@@ -4,10 +4,38 @@ Heaps are tree data structures, function by retaining the minimum or maximum of 
 
 A heap must satisfy two conditions:
 
-1. the structure property and the heap property. The structure property requires that the heap be a complete binary search [tree](../tree), where each level is filled left to right, and all levels except the bottom are full.
-2. The heap property requires that the children of a node be larger than the parent node in a min heap and smaller in a max heap, meaning that the root is the minimum in a min heap and the maximum in a max heap.
+1. The structure property requires that the heap be a complete binary search [tree](../tree), where each level is filled left to right, and all levels except the bottom are full.
+2. The heap property requires that the children of a node be larger than or equal to the parent node in a min heap and smaller than or equal to the parent in a max heap, meaning that the root is the minimum in a min heap and the maximum in a max heap.
 
-As a result, if you add elements to the min or max heap and then pop them one by one, you will obtain a list that is sorted in ascending or descending order, respectively. This sorting technique is also an O(NLogN) algorithm known as heap sort. Although there are other sorting algorithms available, none of them are faster than O(NLogN).
+As a result, if you push elements to the min or max heap and then pop them one by one, you will obtain a list that is sorted in ascending or descending order, respectively. This sorting technique is also an O(NLogN) algorithm known as heap sort. Although there are other sorting algorithms available, none of them are faster than O(NLogN).
+
+When pushing a new element to a heap, because of the structure property we always add the new element to the first available position on the lowest level of the heap, filling from left to right. Then to maintain the heap property, if the newly inserted element is smaller than its parent in a min heap (larger in a max heap), then we swap it with its parent. We continue swapping the  swapped element with its parent until the heap property is achieved.
+
+```ASCII
+[Figure 1] Minimum heap push operation
+
+  20	    20		  15			 15		15		5
+ /  \	   /  \		 /  \			/  \	      	/  \	      /   \
+25  30	  25  30  	20  30	               20  30	      5   30	    15     30
+         /	       /      	              /  \	     / \           /  \
+        15	      25	             25   5	   25  20	 25    20
+										
+	(A) Add 15		     	    (B) Add 5
+```
+
+The pop operation in a heap starts by replacing the root with the right most leaf. Then we swap the root element down with the smaller child in a min heap (and larger child in a max heap) until the heap property is achieved.
+
+```ASCII
+[Figure 2] Minimum heap pop operation
+
+       5	    20	       15		  25	   20		  30
+     /   \	   /  \	      /  \		 /  \	  /  \		 /
+    15   30	  15  30     20  30		20  30   25  30		25
+   /  \		 /	    /
+  25  20	25	   25
+
+	(A) Remove				(B) Remove		(C) Remove
+```
 
 ## Implementation
 
@@ -85,4 +113,4 @@ Given coordination of a point on an x,y axis and an integer k, return k closest 
 
 ### Sliding Maximum
 
-Given a list of integers like {1, 4, 5, -2, 4, 6}, and a positive integer k like 3, return the maximum of each slice of the array when a window of length k is moved from left to the right in the array like {5, 5, 5, 6}. [Solution](sliding_maximum.go), [Test](sliding_maximum_test.go)
+Given a list of integers like `{1, 4, 5, -2, 4, 6}`, and a positive integer k like 3, return the maximum of each slice of the array when a window of length k is moved from left to the right in the array like `{4}`. [Solution](sliding_maximum.go), [Test](sliding_maximum_test.go)
