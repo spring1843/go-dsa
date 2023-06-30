@@ -92,9 +92,9 @@ Queues are widely utilized in solving graph-related problems and managing capaci
 
 Implement a queue of integers using stacks. [Solution](queue_using_stacks.go), [Tests](queue_using_stacks_test.go)
 
-### Implement a Queue Using a Circular Array
+### Implement a Circular Queue Using an Array
 
-Implement a queue of integers using stacks. [Solution](queue_using_circular_array.go), [Tests](queue_using_circular_array_test.go)
+Implement a Circular Queue Using an Array. [Solution](circular_queue_using_array.go), [Tests](circular_queue_using_array_test.go)
 
 ### Is Binary Tree Symmetrical
 
