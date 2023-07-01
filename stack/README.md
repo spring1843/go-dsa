@@ -42,7 +42,7 @@ func pop() (int, error) {
 
 ## Complexity
 
-The push and pop operations in stacks are considered O(1) operations, making them highly efficient. Additionally, many machines have built-in stack instruction sets, further increasing their speed and performance. This unique efficiency and usefulness of stacks have solidified their place as one of the most fundamental data structures, second only to [arrays](../array).
+The push and pop operations in stacks are considered O(1) operations, making them highly efficient. Additionally, many machines have built-in stack instruction sets, further increasing their speed and performance. This unique efficiency and usefulness of stacks have solidified their place as one of the most fundamental data structures, second only to [arrays](../array). Arrays are a more general data structure than stacks, but they are not as efficient for tasks that require LIFO ordering.
 
 ## Application
 
