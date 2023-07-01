@@ -62,7 +62,7 @@ Given a set of symbols including `[]{}()`, determine if the input is is balanced
 
 ### Infix to Postfix Conversion
 
-Given an infix expression e.g. `1*2+3+4*5`, convert it to a postfix expression like `1 2 * 3 + 4 5 *` supporting the four basic arithmetic operations and parenthesis. [Solution](infix_to_postfix.go) [Test](infix_to_postfix_test.go)
+Given an infix expression e.g. `1*2+3+4*5`, convert it to a postfix expression like `1 2 * 3 + 4 5 * +` supporting the four basic arithmetic operations and parenthesis. [Solution](infix_to_postfix.go) [Test](infix_to_postfix_test.go)
 
 ### Evaluate Postfix
 
