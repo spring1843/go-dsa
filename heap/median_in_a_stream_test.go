@@ -12,6 +12,7 @@ func TestMedianInAStream(t *testing.T) {
 		{[]int{1, 2, 3, 4, 5}, 3},
 		{[]int{1, 2, 3, 4, 5, 6}, 3.5},
 		{[]int{6, 5, 4, 3, 2, 1}, 3.5},
+		{[]int{1, 4, 5, -2, 4, 6}, 4},
 	}
 
 	for i, test := range tests {
@@ -23,5 +24,14 @@ func TestMedianInAStream(t *testing.T) {
 		if got != test.median {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.median, got)
 		}
+	}
+}
+
+func TestHeap(t *testing.T) {
+	minHeap := new(minHeap)
+	minHeap.Push(1)
+	got := minHeap.Pop().(int)
+	if got != 1 {
+		t.Fatalf("expected %d got %d", got, 1)
 	}
 }

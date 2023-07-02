@@ -18,3 +18,9 @@ func TestSerializeAndUnserializeLinkedList(t *testing.T) {
 		}
 	}
 }
+
+func TestATOI(t *testing.T) {
+	if got := atoi("A"); got != -1 {
+		t.Fatalf("want %d, got %d", -1, got)
+	}
+}

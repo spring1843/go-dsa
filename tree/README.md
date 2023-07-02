@@ -17,7 +17,7 @@ Traversing a tree means visiting every node in a tree and performing some work o
 
 The traversal methods of trees are named on when a particular operation is performed on the current node relative to its children. For example, in Pre-Order traversal, the operation is performed on the node prior to traversing its children.
 
-Here we discusses and implements several types of trees, and there are many more types that exist. Some important tree types include:
+There are many types of trees. Some important tree types include:
 
 * **Binary Tree**: Every node can have no more than two children
 * **Complete Binary Tree**: Each level is filled left to right, and all levels except the bottom are full
