@@ -7,26 +7,21 @@ import (
 
 func TestInfixToPostfix(t *testing.T) {
 	tests := []struct {
-		infix     []string
-		expectErr bool
-		postfix   []string
+		infix   []string
+		postfix []string
 	}{
-		{[]string{""}, false, []string{""}},
-		{[]string{"a", "+", "b"}, false, []string{"a", "b", "+"}},
-		{[]string{"a", "-", "b", "+", "c"}, false, []string{"a", "b", "c", "+", "-"}},
-		{[]string{"a", "-", "(", "b", "+", "c", ")"}, false, []string{"a", "b", "c", "+", "-"}},
-		{[]string{"a", "+", "b", "-", "c"}, false, []string{"a", "b", "c", "-", "+"}},
-		{[]string{"a", "/", "b"}, false, []string{"a", "b", "/"}},
-		{[]string{"1", "*", "2", "+", "3", "+", "4", "*", "5"}, false, []string{"1", "2", "3", "4", "5", "*", "+", "+", "*"}},
-		{[]string{"1", "*", "(", "2", "+", "3", ")", "+", "4", "*", "5"}, false, []string{"1", "2", "3", "+", "4", "5", "*", "+", "*"}},
+		{[]string{""}, []string{""}},
+		{[]string{"a", "+", "b"}, []string{"a", "b", "+"}},
+		{[]string{"a", "-", "b", "+", "c"}, []string{"a", "b", "c", "+", "-"}},
+		{[]string{"a", "-", "(", "b", "+", "c", ")"}, []string{"a", "b", "c", "+", "-"}},
+		{[]string{"a", "+", "b", "-", "c"}, []string{"a", "b", "c", "-", "+"}},
+		{[]string{"a", "/", "b"}, []string{"a", "b", "/"}},
+		{[]string{"1", "*", "2", "+", "3", "+", "4", "*", "5"}, []string{"1", "2", "3", "4", "5", "*", "+", "+", "*"}},
+		{[]string{"1", "*", "(", "2", "+", "3", ")", "+", "4", "*", "5"}, []string{"1", "2", "3", "+", "4", "5", "*", "+", "*"}},
 	}
 
 	for i, test := range tests {
-		got, err := InfixToPostfix(test.infix)
-		if err != nil && !test.expectErr {
-			t.Fatalf("No error expected. Error: %s", err)
-		}
-		if !reflect.DeepEqual(got, test.postfix) {
+		if got := InfixToPostfix(test.infix); !reflect.DeepEqual(got, test.postfix) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.postfix, got)
 		}
 	}

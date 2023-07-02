@@ -58,4 +58,4 @@ Given a dictionary, return lists of words that are anagrams of each other. [Solu
 
 ### Find Max Points on the Same Line
 
-Given multiple coordinates of points like {[1,1], [2,2], [3,3], [4,5]}, return the maximum number of points that are on the same line like 3. [Solution](max_lines_on_line.go) [Test](max_lines_on_line_test.go)
+Given multiple coordinates of points like {[1,1], [2,2], [3,3], [4,5]}, return the maximum number of points that are on the same line like 3. [Solution](max_points_on_line.go) [Test](max_points_on_line_test.go)

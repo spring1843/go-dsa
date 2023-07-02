@@ -1,6 +1,9 @@
 package tree
 
-import "strconv"
+import (
+	"fmt"
+	"strconv"
+)
 
 type stringBinaryTreeNode struct {
 	val   string
@@ -10,24 +13,35 @@ type stringBinaryTreeNode struct {
 
 // EvaluateBinaryExpressionTree evaluates a binary expression tree and evaluates
 // it allowing the four basic arithmetic operations.
-func EvaluateBinaryExpressionTree(node *stringBinaryTreeNode) float64 {
+func EvaluateBinaryExpressionTree(node *stringBinaryTreeNode) (float64, error) {
 	if node == nil || node.val == "" {
-		return 0
+		return 0, nil
 	}
+
+	left, err := EvaluateBinaryExpressionTree(node.left)
+	if err != nil {
+		return -1, fmt.Errorf("failed evaluating value of left node to %s. %s", node.val, err)
+	}
+
+	right, err := EvaluateBinaryExpressionTree(node.right)
+	if err != nil {
+		return -1, fmt.Errorf("failed evaluating value of right node to %s. %s", node.val, err)
+	}
+
 	switch node.val {
 	case "*":
-		return EvaluateBinaryExpressionTree(node.left) * EvaluateBinaryExpressionTree(node.right)
+		return left * right, nil
 	case "/":
-		return EvaluateBinaryExpressionTree(node.left) / EvaluateBinaryExpressionTree(node.right)
+		return left / right, nil
 	case "+":
-		return EvaluateBinaryExpressionTree(node.left) + EvaluateBinaryExpressionTree(node.right)
+		return left + right, nil
 	case "-":
-		return EvaluateBinaryExpressionTree(node.left) - EvaluateBinaryExpressionTree(node.right)
+		return left - right, nil
 	}
 
 	val, err := strconv.ParseFloat(node.val, 64)
 	if err != nil {
-		panic(err)
+		return -1, fmt.Errorf("failed parsing value %s as float64. %s", node.val, err)
 	}
-	return val
+	return val, nil
 }

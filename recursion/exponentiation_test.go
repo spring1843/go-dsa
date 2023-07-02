@@ -8,6 +8,7 @@ func TestPowerOf(t *testing.T) {
 	tests := []struct {
 		x, n, result int
 	}{
+		{1, 0, 1},
 		{1, 1, 1},
 		{1, 2, 1},
 		{2, 1, 2},

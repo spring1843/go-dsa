@@ -61,7 +61,7 @@ func Unserialize(stringRepresentation string) *Node {
 func atoi(number string) int {
 	i, err := strconv.Atoi(number)
 	if err != nil {
-		panic("Failed converting string to integer. Error:" + err.Error())
+		return -1
 	}
 	return i
 }
