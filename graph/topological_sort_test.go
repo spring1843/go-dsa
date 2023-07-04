@@ -24,6 +24,8 @@ func TestTopologicalSort(t *testing.T) {
 		{[][]int{{}, {}, {4}, {}}, []int{1, 2, 3, 4}, nil},
 		{[][]int{{}, {1}, {}, {3}}, []int{2, 4, 1, 3}, nil},
 		{[][]int{{}, {1}, {}, {3}}, []int{2, 4, 1, 3}, nil},
+		{[][]int{{2, 5}, {3, 4}, {}, {5}, {}}, []int{1, 2, 3, 4, 5}, nil},
+		{[][]int{{2}, {3}, {1}}, nil, ErrNotADAG},
 		{readmeGraphs["Figure_1_A"], []int{1, 2, 4, 3, 5}, nil},
 		{readmeGraphs["Figure_1_B"], nil, ErrNotADAG},
 		{readmeGraphs["Figure_1_C"], []int{1, 3, 2, 4, 5}, nil},
