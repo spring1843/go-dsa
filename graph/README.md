@@ -190,7 +190,7 @@ DFS is capable of categorizing edges (u,v) into four types:
 
 If a DFS algorithm identifies a back edge, it indicates that the graph is cyclic.
 
-#### Dijkstra's Algorithm
+### Dijkstra's Algorithm
 
 A [greedy](../greedy) algorithm that uses BFS-like ideas and a minimum [heap](../heap) to solve single-source shortest path problems in edge weighted directed graphs like (D) in _Figure 1_.
 
