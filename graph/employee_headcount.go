@@ -2,7 +2,6 @@ package graph
 
 import (
 	"container/list"
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -16,6 +15,8 @@ const (
 	numberSeparator = ","
 )
 
+var errInvalidInteger error
+
 // HeadCount returns 1 + the number of directs, and all their directs for a given employee.
 func (h *HeadCounter) HeadCount(employeeID int) int {
 	bfs := func(employeeID int) int {
@@ -26,6 +27,10 @@ func (h *HeadCounter) HeadCount(employeeID int) int {
 		for queue.Len() != 0 {
 			employee := queue.Back().Value.(int)
 			queue.Remove(queue.Back())
+
+			if h == nil {
+				return -1
+			}
 
 			for _, report := range h.data[employee] {
 				queue.PushBack(report)
@@ -47,7 +52,7 @@ func NewHeadCount(data string) (*HeadCounter, error) {
 		for _, item := range strings.Split(line, numberSeparator) {
 			n, err := strconv.Atoi(item)
 			if err != nil {
-				return nil, fmt.Errorf("failed converting integer to ASCII, %s", err)
+				return nil, errInvalidInteger
 			}
 			broken = append(broken, n)
 		}

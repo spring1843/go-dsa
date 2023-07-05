@@ -17,12 +17,7 @@ func BasicCalculator(input string) (float64, error) {
 		return -1, ErrImbalancedParenthesis
 	}
 
-	postfix, err := InfixToPostfix(toInfix(input))
-	if err != nil {
-		return -1, err
-	}
-
-	return EvaluatePostfixExpression(postfix)
+	return EvaluatePostfixExpression(InfixToPostfix(toInfix(input)))
 }
 
 func toInfix(input string) []string {
