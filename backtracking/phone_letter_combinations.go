@@ -14,21 +14,20 @@ var phone = map[byte]string{
 // PhoneLetterCombinations intakes the digits from 2 to 9 that represent phone buttons
 // and returns all possible combinations of letters that could be generated from those.
 func PhoneLetterCombinations(digits string) []string {
-	combinations := make([]string, 0)
-	if digits == "" {
-		return combinations
+	combinations := []string{}
+	if len(digits) > 0 {
+		phoneLetterCombinationsRecursive(digits, "", &combinations)
 	}
-	phoneLetterCombinationsRecursive(digits, 0, &combinations, "")
 	return combinations
 }
 
-func phoneLetterCombinationsRecursive(digits string, p int, combinations *[]string, s string) {
-	if p == len(digits) {
-		*combinations = append(*combinations, s)
+func phoneLetterCombinationsRecursive(digits, prefix string, combinations *[]string) {
+	if len(prefix) == len(digits) {
+		*combinations = append(*combinations, prefix)
 		return
 	}
 
-	for _, digit := range phone[digits[p]] {
-		phoneLetterCombinationsRecursive(digits, p+1, combinations, s+string(digit))
+	for _, letter := range phone[digits[len(prefix)]] {
+		phoneLetterCombinationsRecursive(digits, prefix+string(letter), combinations)
 	}
 }
