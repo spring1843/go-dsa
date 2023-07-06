@@ -8,7 +8,7 @@
 
 Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed to serve as a dynamic, hands-on learning resource for exploring data structures and algorithms using the Go programming language. We aim to provide practical, executable content for learners seeking to deepen their understanding in these critical areas of computer science.
 
-* Completely free, Community driven and continuously evolving
+* Completely free, community driven and continuously evolving
 * Executes and comes with 100% test coverage, ensuring high level of quality
 * Ability to use in your favorite IDE, editor or web browser
 * Pure Go, no third party libraries, Guaranteed forward compatibility
@@ -40,11 +40,11 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 * Solve the rehearsal problems.
 * Read the problem description.
 * Copy the contents of each `*_test.go` file into [Go Playground](https://go.dev/play/).
+* Change the first line from `package SOME_PACKAGE_NAME` to `package main`.
 * Look at the sample input in the `*_test.go` file.
+* Create a solution function by looking at the function signature in the test file
 * Implement your own solution.
 * Review the provided solution and compare it to your own.
-
-To run examples locally [install Go](https://go.dev/doc/install), and run `go get -u github.com/spring1843/go-dsa`.
 
 ## 📋 Outline
 
