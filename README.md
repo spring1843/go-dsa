@@ -8,11 +8,12 @@
 
 Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed to serve as a dynamic, hands-on learning resource for exploring data structures and algorithms using the Go programming language. We aim to provide practical, executable content for learners seeking to deepen their understanding in these critical areas of computer science.
 
-* It's executable across different platforms, reducing potential errors in the provided solutions.
-* It provides 100% test coverage for all problems, ensuring the accuracy of every solution.
-* It's continuously evolving and improving, thanks to contributions and reviews from the community.
-* It lets you practice in your preferred programming environment, offering convenience and flexibility.
-* It's completely free, making advanced knowledge in this field accessible to everyone.
+* It's completely free
+* It's executable, reducing potential errors.
+* It's community driven and continuously evolving
+* No pictures, only ASCII drawings making it possible to use in every editor, IDE, and browser
+* 100% test coverage for all code, ensuring testability and higher quality
+* Only pure Go, no third party libraries, Guaranteed forward compatibility
 
 ## 📚 Table of Contents
 
