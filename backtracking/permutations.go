@@ -4,18 +4,19 @@ package backtracking
 // For example for {1,2} it would return {1,2}, {2,1}.
 func Permutations(input []int) [][]int {
 	permutations := make([][]int, 0)
-	permutationsRecursive(input, 0, len(input)-1, &permutations)
+	permutationsRecursive(input, 0, &permutations)
 	return permutations
 }
 
-func permutationsRecursive(input []int, start, end int, permutations *[][]int) {
+func permutationsRecursive(input []int, start int, permutations *[][]int) {
+	end := len(input) - 1
 	if start == end {
 		*permutations = append(*permutations, append([]int{}, input...))
 		return
 	}
 	for i := start; i <= end; i++ {
 		(input)[i], (input)[start] = (input)[start], (input)[i]
-		permutationsRecursive(input, start+1, end, permutations)
+		permutationsRecursive(input, start+1, permutations)
 		(input)[i], (input)[start] = (input)[start], (input)[i]
 	}
 }
