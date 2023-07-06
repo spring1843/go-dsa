@@ -3,9 +3,9 @@ package backtracking
 // Permutations intakes a list of numbers and returns all possible permutations of their orders
 // For example for {1,2} it would return {1,2}, {2,1}.
 func Permutations(num []int) [][]int {
-	retSlice := make([][]int, 0)
-	permutationsRecursive(&num, 0, len(num)-1, &retSlice)
-	return retSlice
+	permutations := make([][]int, 0)
+	permutationsRecursive(&num, 0, len(num)-1, &permutations)
+	return permutations
 }
 
 func permutationsRecursive(nums *[]int, start, end int, retSlice *[][]int) {
