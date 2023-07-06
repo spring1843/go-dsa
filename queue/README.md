@@ -72,8 +72,7 @@ func dequeue() (int, error) {
 	if queue.Len() == 0 {
 		return -1, errors.New("Queue is empty")
 	}
-	tmp := queue.Front().Value.(int)
-	queue.Remove(queue.Front())
+	tmp := queue.Remove(queue.Front()).(int)
 	return tmp, nil
 }
 ```

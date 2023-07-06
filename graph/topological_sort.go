@@ -11,8 +11,10 @@ type VertexWithIngress struct {
 	Val int
 
 	// The edges that this Vertex is connected to
-	Edges   []*VertexWithIngress
-	ingress int
+	Edges []*VertexWithIngress
+
+	// Ingress is the number of vertices that connect to this vertex
+	Ingress int
 }
 
 // ErrNotADAG occurs when a graph is not a Direct Acyclic Graph - DAG.
@@ -29,26 +31,24 @@ func TopologicalSort(graph []*VertexWithIngress) ([]int, error) {
 
 	for _, vertex := range graph {
 		for _, neighbor := range vertex.Edges {
-			neighbor.ingress++
+			neighbor.Ingress++
 		}
 	}
 
 	for _, vertex := range graph {
-		if vertex.ingress == 0 {
+		if vertex.Ingress == 0 {
 			queue.PushBack(vertex)
 		}
 	}
 
 	for queue.Len() != 0 {
 		i++
-		vertex := queue.Front().Value.(*VertexWithIngress)
-		queue.Remove(queue.Front())
-
+		vertex := queue.Remove(queue.Front()).(*VertexWithIngress)
 		output = append(output, vertex.Val)
 
 		for _, neighbor := range vertex.Edges {
-			neighbor.ingress--
-			if neighbor.ingress == 0 {
+			neighbor.Ingress--
+			if neighbor.Ingress == 0 {
 				queue.PushBack(neighbor)
 			}
 		}
@@ -57,6 +57,5 @@ func TopologicalSort(graph []*VertexWithIngress) ([]int, error) {
 	if i != len(graph) {
 		return nil, ErrNotADAG
 	}
-
 	return output, nil
 }
