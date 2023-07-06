@@ -8,30 +8,20 @@ func NumberOfIslands(grid [][]int) int {
 		for j := range row {
 			if grid[i][j] == 1 {
 				islands++
-				grid = visitBFS(grid, i, j)
+				visitBFS(grid, i, j)
 			}
 		}
 	}
 	return islands
 }
 
-func visitBFS(grid [][]int, i, j int) [][]int {
-	if grid[i][j] != 1 {
-		return grid
+func visitBFS(grid [][]int, i, j int) {
+	if i < 0 || i >= len(grid) || j < 0 || j >= len(grid[i]) || grid[i][j] != 1 {
+		return
 	}
 	grid[i][j] = 2
-
-	if i+1 < len(grid) {
-		grid = visitBFS(grid, i+1, j)
+	directions := [][]int{{1, 0}, {-1, 0}, {0, 1}, {0, -1}}
+	for _, direction := range directions {
+		visitBFS(grid, i+direction[0], j+direction[1])
 	}
-	if i-1 >= 0 {
-		grid = visitBFS(grid, i-1, j)
-	}
-	if len(grid) > 0 && j+1 < len(grid[0]) {
-		grid = visitBFS(grid, i, j+1)
-	}
-	if j-1 >= 0 {
-		grid = visitBFS(grid, i, j-1)
-	}
-	return grid
 }
