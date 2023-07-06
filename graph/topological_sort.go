@@ -1,40 +1,55 @@
 package graph
 
-import "errors"
+import (
+	"container/list"
+	"errors"
+)
 
 // VertexWithIngress is a Vertex with the count of vertices that connect to it.
 type VertexWithIngress struct {
-	Vertex
+	// Val is the value of the vertex
+	Val int
+
+	// The edges that this Vertex is connected to
+	Edges []*VertexWithIngress
+
+	// Ingress is the number of vertices that connect to this vertex
+	Ingress int
 }
 
-// ErrNotADAG occurs when a graph has a cycle and hence not a DAG where a DAW was expected.
-var ErrNotADAG = errors.New("not a DAG")
+// ErrNotADAG occurs when a graph is not a Direct Acyclic Graph - DAG.
+var ErrNotADAG = errors.New("graph is not a Direct Acyclic Graph - DAG")
 
 // TopologicalSort takes a vertex of a DAG and returns the value of all its
 // connected vertices in topological order.
-func TopologicalSort(graph []*Vertex) ([]int, error) {
+func TopologicalSort(graph []*VertexWithIngress) ([]int, error) {
 	var (
-		output  = []int{}
-		ingress = ingress(graph)
-		queue   = new(queue)
-		i       = 0
+		output = []int{}
+		queue  = list.New()
+		i      = 0
 	)
 
 	for _, vertex := range graph {
-		if ingress[vertex] == 0 {
-			queue.Push(vertex)
+		for _, neighbor := range vertex.Edges {
+			neighbor.Ingress++
+		}
+	}
+
+	for _, vertex := range graph {
+		if vertex.Ingress == 0 {
+			queue.PushBack(vertex)
 		}
 	}
 
 	for queue.Len() != 0 {
 		i++
-		vertex := queue.Pop()
+		vertex := queue.Remove(queue.Front()).(*VertexWithIngress)
 		output = append(output, vertex.Val)
 
 		for _, neighbor := range vertex.Edges {
-			ingress[neighbor]--
-			if ingress[neighbor] == 0 {
-				queue.Push(neighbor)
+			neighbor.Ingress--
+			if neighbor.Ingress == 0 {
+				queue.PushBack(neighbor)
 			}
 		}
 	}
@@ -42,24 +57,5 @@ func TopologicalSort(graph []*Vertex) ([]int, error) {
 	if i != len(graph) {
 		return nil, ErrNotADAG
 	}
-
 	return output, nil
-}
-
-func ingress(graph []*Vertex) map[*Vertex]int {
-	ingress := zeroedMap(graph)
-	for _, vertex := range graph {
-		for _, neighbor := range vertex.Edges {
-			ingress[neighbor]++
-		}
-	}
-	return ingress
-}
-
-func zeroedMap(graph []*Vertex) map[*Vertex]int {
-	output := make(map[*Vertex]int)
-	for _, vertex := range graph {
-		output[vertex] = 0
-	}
-	return output
 }

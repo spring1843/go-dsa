@@ -17,8 +17,7 @@ func RemoveInvalidParentheses(input string) []string {
 		seen[input] = struct{}{}
 
 		for queue.Len() != 0 {
-			input = queue.Front().Value.(string)
-			queue.Remove(queue.Front())
+			input = queue.Remove(queue.Front()).(string)
 
 			if isValidParentheses(input) {
 				if len(output) > 0 && len(output[0]) != len(input) {

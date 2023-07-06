@@ -32,7 +32,7 @@ func TestTopologicalSort(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got, err := TopologicalSort(toGraph(test.graph))
+		got, err := TopologicalSort(toGraphWithIngress(test.graph))
 		if err != nil {
 			if test.expectedErr == nil {
 				t.Fatalf("Failed test case #%d. Unexpected error. Error :%s", i, err)
@@ -49,4 +49,25 @@ func TestTopologicalSort(t *testing.T) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.topologicalSort, got)
 		}
 	}
+}
+
+func toGraphWithIngress(graph [][]int) []*VertexWithIngress {
+	graphMap := make(map[int]*VertexWithIngress)
+
+	for i := range graph {
+		graphMap[i+1] = &VertexWithIngress{Val: i + 1, Edges: []*VertexWithIngress{}}
+	}
+
+	for i, v := range graph {
+		graphMap[i+1].Edges = make([]*VertexWithIngress, len(v))
+		for j, e := range v {
+			graphMap[i+1].Edges[j] = graphMap[e]
+		}
+	}
+
+	output := make([]*VertexWithIngress, len(graphMap))
+	for i := 0; i < len(graph); i++ {
+		output[i] = graphMap[i+1]
+	}
+	return output
 }

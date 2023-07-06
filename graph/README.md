@@ -112,8 +112,7 @@ func bfs(source *vertex) {
 	queue.PushBack(source)
 
 	for queue.Len() != 0 {
-		tmp := queue.Front().Value.(*vertex)
-		queue.Remove(queue.Front())
+		tmp := queue.Remove(queue.Front()).(*vertex)
 		distance++
 		for _, v := range tmp.edges {
 			if _, ok := seen[v]; ok {
