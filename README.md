@@ -16,7 +16,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 
 ## 📚 Table of Contents
 
-* Time and Space Analysis
+* [Complexity Analysis](complexity.md)
 * Data Structures
     * [Arrays](./array)
     * [Strings](./strings)
