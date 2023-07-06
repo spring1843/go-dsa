@@ -15,20 +15,24 @@ type VertexWithIngress struct {
 	ingress int
 }
 
-// ErrNotADAG occurs when a graph has a cycle and hence not a DAG where a DAW was expected.
-var ErrNotADAG = errors.New("not a DAG")
+// ErrNotADAG occurs when a graph is not a Direct Acyclic Graph - DAG.
+var ErrNotADAG = errors.New("graph is not a Direct Acyclic Graph - DAG")
 
 // TopologicalSort takes a vertex of a DAG and returns the value of all its
 // connected vertices in topological order.
 func TopologicalSort(graph []*VertexWithIngress) ([]int, error) {
 	var (
 		output = []int{}
-		// queue  = new(vertexWithIngressQueue)
-		queue = list.New()
-		i     = 0
+		queue  = list.New()
+		i      = 0
 	)
 
-	setIngress(graph)
+	for _, vertex := range graph {
+		for _, neighbor := range vertex.Edges {
+			neighbor.ingress++
+		}
+	}
+
 	for _, vertex := range graph {
 		if vertex.ingress == 0 {
 			queue.PushBack(vertex)
@@ -55,12 +59,4 @@ func TopologicalSort(graph []*VertexWithIngress) ([]int, error) {
 	}
 
 	return output, nil
-}
-
-func setIngress(graph []*VertexWithIngress) {
-	for _, vertex := range graph {
-		for _, neighbor := range vertex.Edges {
-			neighbor.ingress++
-		}
-	}
 }
