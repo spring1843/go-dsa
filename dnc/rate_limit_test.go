@@ -11,7 +11,7 @@ TestRateLimiter tests solution(s) with the following signature and problem descr
 
 	IsAllowed(limitPerSecond int) bool
 
-Returns weather or not the caller is allowed to perform an action. The caller is allowed
+Returns wether or not the caller is allowed to perform an action. The caller is allowed
 to perform an action if the number of actions performed in the last second is less than
 or equal to limitPerSecond.
 */

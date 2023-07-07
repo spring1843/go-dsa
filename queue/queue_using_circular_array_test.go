@@ -47,7 +47,7 @@ TestCircularQueue tests solution(s) with the following signature and problem des
 Implements a queue using a circular array.
 */
 func TestCircularQueue(t *testing.T) {
-	// tests a queue by enqueues given items,
+	// Tests a queue by enqueues given items,
 	// then dequeues a number of times and finally checks the value from the last dequeue.
 	// The same process then may be repeated for a second time with different values.
 	tests := []struct {

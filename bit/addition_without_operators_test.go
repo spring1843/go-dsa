@@ -3,7 +3,7 @@ package bit
 import "testing"
 
 /*
-TestDivision tests solution(s) with the following signature and problem description:
+TestAdd tests solution(s) with the following signature and problem description:
 
 	func Add(x, y int) int
 

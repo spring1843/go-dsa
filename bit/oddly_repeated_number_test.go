@@ -5,7 +5,7 @@ import (
 )
 
 /*
-tests solution(s) with the following signature and problem description:
+TestOddlyRepeatedNumber tests solution(s) with the following signature and problem description:
 
 	func OddlyRepeatedNumber(list []int) int
 
