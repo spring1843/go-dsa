@@ -43,7 +43,7 @@ func HeadCount(data string, employeeID int) int {
 	return bfs(employeeID)
 }
 
-// toGraphOfEmployees returns a map of employees and their direct reports
+// toGraphOfEmployees creates a map of employees and their direct reports.
 func toGraphOfEmployees(data string) (map[int][]int, error) {
 	output := make(map[int][]int)
 	for _, line := range strings.Split(data, lineSeparator) {

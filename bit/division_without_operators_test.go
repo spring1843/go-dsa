@@ -7,7 +7,7 @@ TestDivision tests solution(s) with the following signature and problem descript
 
 	func Divide(x, y int) int {
 
-Divides two numbers without using division or multiplication symbols
+Divides two numbers without using division or multiplication symbols.
 */
 func TestDivision(t *testing.T) {
 	tests := []struct {
