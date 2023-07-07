@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestRotateKSteps tests solution(s) with the following signature and problem description:
+
+	RotateKSteps(list []int, k int)
+
+Rotates a given array k steps.
+*/
 func TestRotateKSteps(t *testing.T) {
 	tests := []struct {
 		list        []int

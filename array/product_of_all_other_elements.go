@@ -1,7 +1,6 @@
 package array
 
-// ProductOfAllOtherElements returns an array such that n[i] is the product of all
-// elements of the array except n[i]. Division operation is not allowed.
+// ProductOfAllOtherElements solves the problem in O(n) time and O(1) space.
 func ProductOfAllOtherElements(list []int) []int {
 	if len(list) == 0 {
 		return list

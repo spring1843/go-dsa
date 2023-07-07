@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestFindDuplicate tests solution(s) with the following signature and problem description:
+
+	FindDuplicate(list []int) int
+
+Finds the duplicate in a list of integers (1,n).
+*/
 func TestFindDuplicate(t *testing.T) {
 	tests := []struct {
 		list      []int

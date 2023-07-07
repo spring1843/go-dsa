@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+/*
+TestEqualSumSubArrays tests solution(s) with the following signature and problem description:
+
+	func EqualSubArrays(list []int) [][]int {
+
+Given a list of integers returns two sub arrays that have equal sums without changing the
+order of the items in the list.
+*/
 func TestEqualSumSubArrays(t *testing.T) {
 	tests := []struct {
 		list      []int

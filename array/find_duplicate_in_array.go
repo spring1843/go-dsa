@@ -1,6 +1,6 @@
 package array
 
-// FindDuplicate Finds the duplicate in a list of integers (1,n).
+// FindDuplicate solves the problem in O(n) time and O(1) space.
 func FindDuplicate(list []int) int {
 	for _, item := range list {
 		itemIndex := item - 1

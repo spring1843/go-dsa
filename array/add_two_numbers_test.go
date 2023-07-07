@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+/*
+TestAddTwoNumbers tests solution(s) with the following signature and problem description:
+
+	AddTwoNumbers(num1, num2 []int) []int
+
+Adds two numbers which are represented as an array and returns the results
+In the same format. For example [2,5], and [3,5] would add up to[6,0] because 25 + 35 = 60.
+*/
 func TestAddTwoNumbers(t *testing.T) {
 	tests := []struct {
 		num1, num2, sum []int

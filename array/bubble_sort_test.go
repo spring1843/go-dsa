@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestBubbleSort tests solution(s) with the following signature and problem description:
+
+	BubbleSort(input []int)
+
+Implements the Bubble Sort algorithm.
+*/
 func TestBubbleSort(t *testing.T) {
 	tests := []struct {
 		input, sorted []int
