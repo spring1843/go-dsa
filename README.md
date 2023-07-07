@@ -18,21 +18,104 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 * [Complexity Analysis](complexity.md)
 * Data Structures
     * [Arrays](./array)
+        * Reverse Array In-place
+        * Add Numbers
+        * Find Duplicate in Array
+        * Zero Sum Triplets
+        * Product of All Other Elements
+        * Equal Sum Sub-arrays
+        * Rotate K Steps
     * [Strings](./strings)
+        * The longest Dictionary Word Containing Key
+        * Look and Tell
+        * In Memory Database
+        * Number in English
+        * Reverse Vowels In a String
+        * Longest Substring of Two Unique Characters
     * [Linked Lists](./linkedlist)
+        * Linked List Serialization
+        * Reverse a Linked List In-place
+        * Join Two Sorted Linked Lists
+        * Copy Linked List with Random Pointer
+        * Implement LRU Cache
     * [Stacks](./stack)
+        * Max Stack
+        * Balancing Symbols
+        * Infix to Postfix Conversion
+        * Evaluate Postfix
+        * Basic Calculator
     * [Queues](./queue)
+        * A Queue Using Stacks
+        * Implement a Queue Using a Circular Array
+        * Is Binary Tree Symmetrical
+        * Generate Binary Numbers
+        * Find The Maximum of Sub-array of Length K
     * [Hash Tables](./hashtable)
+        * Find Missing Number
+        * List Elements Summing Up to K
+        * Fastest Way to Cut a Brick Wall
+        * Find Anagrams
+        * Find Max Points on the Same Line
     * [Trees](./tree)
+        * Serialize Binary Tree
+        * Evaluate A Binary Expression Tree
+        * Sorted Array to Balanced BST
+        * Traverse Binary Tree
+        * Implement Autocomplete
     * [Heaps](./heap)
+        * Kth Largest Element
+        * Merge Sorted Lists
+        * Median in a Stream
+        * Kth Closest Points to the Center
+        * Sliding Maximum
 * Algorithms
     * [Recursion](./recursion)
+        * Reverse an integer recursively
+        * Palindrome
+        * Climbing Stairs
+        * Exponentiation
+        * Permutations
+        * Regular Expressions Matching
     * [Divide and Conquer](dnc)
+        * Binary Search
+        * Square Root with Binary Search
+        * Rate Limit
+        * Towers of Hanoi
+        * Merge Sort
     * [Bit Manipulation](./bit)
+        * Division without multiplication or division operators
+        * Middle without division
+        * Addition without using plus (+) or any other arithmetic operators
+        * Maximum without if conditions
+        * Oddly Repeated Number
     * [Backtracking](./backtracking)
+        * Permutations
+        * Generate Parenthesis
+        * Phone Letter Combinations
+        * Sudoku
+        * N Queens
     * [Graphs](./graph)
+        * Iteratively Implement BFS and DFS
+        * Is Graph a DAG
+        * Topological Sort
+        * Employee Head Count
+        * Remove Invalid Parentheses
+        * Cheapest Flights
+        * Word Ladder
+        * Network Delay Time
+        * Number of Islands
     * [Greedy Algorithms](./greedy)
+        * Maximum Stock Profit
+        * Activity Selector
+        * Knapsack
+        * Jump Game
+        * Task Scheduling
     * [Dynamic Programming](./dp)
+        * Rod Cutting
+        * Sum Up to Number
+        * House Robber
+        * Minimum Deletion to Make a Palindrome
+        * Word Distance
 
 ## 🛠️ How to use
 
