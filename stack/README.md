@@ -6,9 +6,40 @@ One way to visualize stacks is to think of a backpack where items are placed and
 
 ## Implementation
 
-In Go, stacks can be implemented using slices, which are a dynamic data structure that can easily perform push and pop operations. Alternatively, linked lists can also be used to implement stacks, which can make addition and deletion less expensive.
+In Go, stacks can be implemented using doubly [linked lists](../linkedlist/) or [arrays and slices](../array/). Here is a linked list implementation:
 
-To push an item onto a stack, the built-in append function can be used, while popping an item can be done by resizing the slice using selectors. An example below demonstrates these operations, showing how a stack of integers `{1, 2, 3}` can be filled and emptied.
+```Go
+package main
+
+import (
+	"container/list"
+	"errors"
+)
+
+var stack = list.New()
+
+func main() {
+	push(1) // [1]
+	push(2) // [1,2]
+	push(3) // [1,2,3]
+	pop()   // [1,2]
+	pop()   // [1]
+	pop()   // []
+}
+
+func push(val int) {
+	stack.PushBack(val)
+}
+
+func pop() (int, error) {
+	if stack.Len() == 0 {
+		return -1, errors.New("stack is empty")
+	}
+	return stack.Remove(stack.Back()).(int), nil
+}
+```
+
+In the slice implementation to push an item onto a stack, the built-in append function can be used, while popping an item can be done by resizing the slice using selectors. An example below demonstrates these operations, showing how a stack of integers `{1, 2, 3}` can be filled and emptied.
 
 ```Go
 package main
@@ -32,7 +63,7 @@ func push(val int) {
 
 func pop() (int, error) {
 	if len(stack) == 0 {
-		return -1, errors.New("Stack is empty")
+		return -1, errors.New("stack is empty")
 	}
 	tmp := stack[len(stack)-1]
 	stack = stack[0 : len(stack)-1]
