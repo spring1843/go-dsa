@@ -10,9 +10,7 @@ type vertex struct {
 
 var graph = make(map[string]*vertex)
 
-// WordLadder returns the minimum number of transformations from start to end in a dictionary
-// where words are all equal in length, and a transformation can only happen if the difference
-// between two words is only in one letter. Zero is returned if no such transformations can occur.
+// WordLadder solves the problem in O(n) time and O(n) space.
 func WordLadder(start, end string, dic []string) int {
 	graph = make(map[string]*vertex)
 

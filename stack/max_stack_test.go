@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+/*
+TestMaxStack tests solution(s) with the following signature and problem description:
+
+	func (maxStack *MaxStack) Push(i int)
+	func (maxStack *MaxStack) Max() int
+
+Returns the maximum integer in the stack.
+*/
 func TestMaxStack(t *testing.T) {
 	tests := []struct {
 		push []int

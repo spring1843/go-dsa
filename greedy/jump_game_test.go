@@ -4,6 +4,14 @@ import (
 	"testing"
 )
 
+/*
+TestJumpGame tests solution(s) with the following signature and problem description:
+
+	func JumpGame(jumps []int) bool
+
+Returns true if we can reach the last index of the given a slice, where each value at
+each position represents the maximum allowed jump length from that position.
+*/
 func TestJumpGame(t *testing.T) {
 	tests := []struct {
 		jumps          []int

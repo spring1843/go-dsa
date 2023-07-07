@@ -2,7 +2,7 @@ package graph
 
 import "container/list"
 
-// RemoveInvalidParentheses removes the minimum number of invalid parentheses to make the input valid.
+// RemoveInvalidParentheses solves the problem in O(n^2) time and O(n) space.
 func RemoveInvalidParentheses(input string) []string {
 	bfs := func(input string) []string {
 		output := make([]string, 0)

@@ -11,7 +11,7 @@ var (
 	stack []rune
 )
 
-// IsExpressionBalanced returns true if a given expression contains symbols like [](){} is balanced or not.
+// IsExpressionBalanced solves the problem in O(n) time and O(n) space.
 func IsExpressionBalanced(s string) bool {
 	stack = []rune{}
 	if s == "" {

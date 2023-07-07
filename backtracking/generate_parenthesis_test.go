@@ -6,6 +6,13 @@ import (
 	"testing"
 )
 
+/*
+TestGenerateParenthesis tests solution(s) with the following signature and problem description:
+
+	GenerateParenthesis(n int) []string
+
+Returns all possible variation of n pairs of valid parenthesis.
+*/
 func TestGenerateParenthesis(t *testing.T) {
 	tests := []struct {
 		n                int

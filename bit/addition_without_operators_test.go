@@ -2,6 +2,13 @@ package bit
 
 import "testing"
 
+/*
+TestAdd tests solution(s) with the following signature and problem description:
+
+	func Add(x, y int) int
+
+Adds to numbers without using any arithmetic operators.
+*/
 func TestAdd(t *testing.T) {
 	tests := []struct {
 		a, b int

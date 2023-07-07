@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+/*
+TestNQueens tests solution(s) with the following signature and problem description:
+
+	func NQueens(n int) []Chessboard
+
+Returns possible solutions to the n-queen puzzle in an n x n chessboard
+where n queens are placed on the chessboard such that none attacks another.
+*/
 func TestNQueens(t *testing.T) {
 	tests := []struct {
 		n         int

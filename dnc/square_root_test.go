@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestSquareRoot tests solution(s) with the following signature and problem description:
+
+	func SquareRoot(number, precision int) float64
+
+Uses Binary search to find the square root of a number up to a precision point.
+*/
 func TestSquareRoot(t *testing.T) {
 	tests := []struct {
 		number    int

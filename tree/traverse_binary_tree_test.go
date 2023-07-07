@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+/*
+TestTraverseBinaryTree tests solution(s) with the following signature and problem description:
+
+	func TraverseBinaryTree(root *BinaryTreeNode) ([]int, []int, []int)
+
+Performs in-order, pre-order, and post-order traversals on an integer binary tree and adds
+each visited node into a slice of integers.
+*/
 func TestTraverseBinaryTree(t *testing.T) {
 	tests := []struct {
 		tree          string

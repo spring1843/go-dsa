@@ -1,7 +1,6 @@
 package greedy
 
-// JumpGame returns true if we can reach the last index of the given a slice, where each value at
-// each position represents the maximum allowed jump length from that position.
+// JumpGame solves the problem in O(n) time and O(1) space.
 func JumpGame(jumps []int) bool {
 	if len(jumps) == 0 {
 		return true

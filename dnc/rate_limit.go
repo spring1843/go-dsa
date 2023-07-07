@@ -6,6 +6,7 @@ import (
 
 var rateLimitEvents []int64
 
+// IsAllowed solves the problem in O(1) time and O(n) space.
 func IsAllowed(limitPerSecond int) bool {
 	now := time.Now().Unix()
 	removeOldERateLimitEvents(now)

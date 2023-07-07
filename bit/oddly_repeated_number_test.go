@@ -4,6 +4,14 @@ import (
 	"testing"
 )
 
+/*
+TestOddlyRepeatedNumber tests solution(s) with the following signature and problem description:
+
+	func OddlyRepeatedNumber(list []int) int
+
+Repeated number finds an element in a given array that is repeated an
+odd number of times.
+*/
 func TestOddlyRepeatedNumber(t *testing.T) {
 	tests := []struct {
 		list          []int

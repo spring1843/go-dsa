@@ -2,6 +2,13 @@ package bit
 
 import "testing"
 
+/*
+TestMax tests solution(s) with the following signature and problem description:
+
+	func Max(x, y int) int
+
+Returns the maximum of two numbers without using if conditions.
+*/
 func TestMax(t *testing.T) {
 	tests := []struct {
 		a, b, max int

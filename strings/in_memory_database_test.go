@@ -5,6 +5,15 @@ import (
 	"testing"
 )
 
+/*
+TestInMemoryDictionary tests solution(s) with the following signature and problem description:
+
+	func RunDBCommand(cmd string) string
+
+Executes commands on an in memory database that stores string key-value pairs.
+Supported commands are SET, GET, EXISTS, and UNSET
+It also allows transactions with BEGIN, ROLLBACK and COMMIT commands.
+*/
 func TestInMemoryDictionary(t *testing.T) {
 	tests := []struct {
 		input, allOutputs string

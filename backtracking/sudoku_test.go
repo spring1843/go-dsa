@@ -10,6 +10,15 @@ type boardAndSolution struct {
 	solution [][]int
 }
 
+/*
+TestSudoku tests solution(s) with the following signature and problem description:
+
+	func Sudoku(board [][]int) bool {
+
+Solves a given partially filled or empty 9x9 Sudoku board by placing integers
+between 1 and 9 in empty spot designated by 0 such that In each row, column, and
+3x3 sub square the values are unique.
+*/
 func TestSudoku(t *testing.T) {
 	tests := []boardAndSolution{
 		testBoard1(),

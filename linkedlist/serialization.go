@@ -24,7 +24,7 @@ func NewNode(v int) *Node {
 	}
 }
 
-// Serialize returns a string representation of a given linked list.
+// Serialize solves the problem in O(n) time and O(1) space.
 func Serialize(node *Node) string {
 	if node == nil {
 		return ""
@@ -39,7 +39,7 @@ func Serialize(node *Node) string {
 	return strings.TrimSuffix(output, separator)
 }
 
-// Unserialize returns a linked list when given a string representation.
+// Unserialize solves the problem in O(n) time and O(1) space.
 func Unserialize(stringRepresentation string) *Node {
 	if stringRepresentation == "" {
 		return nil

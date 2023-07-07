@@ -6,6 +6,13 @@ import (
 	"testing"
 )
 
+/*
+TestMaxSlidingWindow tests solution(s) with the following signature and problem description:
+
+	func MaxSlidingWindow(numbers []int, k int) []int {
+
+Returns a maximum in each slice created by a sliding window of size k on a list of numbers.
+*/
 func TestMaxSlidingWindow(t *testing.T) {
 	tests := []struct {
 		numbers    []int

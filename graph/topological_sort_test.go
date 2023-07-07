@@ -12,6 +12,14 @@ var readmeGraphs = map[string][][]int{
 	"Figure_1_C": {{2}, {4}, {2}, {5}, {}},
 }
 
+/*
+TestTopologicalSort tests solution(s) with the following signature and problem description:
+
+	func TopologicalSort(graph []*VertexWithIngress) ([]int, error)
+
+Takes a vertex of a DAG and returns the value of all its connected vertices in topological
+order.
+*/
 func TestTopologicalSort(t *testing.T) {
 	tests := []struct {
 		graph           [][]int

@@ -2,6 +2,13 @@ package bit
 
 import "testing"
 
+/*
+TestMiddleWithoutDivision tests solution(s) with the following signature and problem description:
+
+	func MiddleWithoutDivision(min, max int)
+
+Finds the middle integer between two integers.
+*/
 func TestMiddleWithoutDivision(t *testing.T) {
 	tests := []struct {
 		a, b, mid int

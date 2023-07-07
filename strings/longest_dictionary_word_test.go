@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestLongestDictionaryWordContainingKey tests solution(s) with the following signature and problem description:
+
+	func LongestDictionaryWordContainingKey(key string, dic []string) string
+
+Returns the longest word in a dictionary containing every letter of a key.
+*/
 func TestLongestDictionaryWordContainingKey(t *testing.T) {
 	tests := []struct {
 		input                           string

@@ -2,6 +2,13 @@ package hashtable
 
 import "testing"
 
+/*
+TestCutBrickWall tests solution(s) with the following signature and problem description:
+
+	func CutBrickWall(wall [][]int) int
+
+Returns the position at which a wall can be cut to two pieces with minimal amount of cuts.
+*/
 func TestCutBrickWall(t *testing.T) {
 	tests := []struct {
 		cutPosition int

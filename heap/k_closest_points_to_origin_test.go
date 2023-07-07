@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestKClosestPointToOrigin tests solution(s) with the following signature and problem description:
+
+	func KClosestPointToOrigin(points [][]int, k int) [][]int
+
+Returns the coordinates of the k closest points to origin.
+*/
 func TestKClosestPointToOrigin(t *testing.T) {
 	tests := []struct {
 		points     [][]int

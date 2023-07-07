@@ -6,9 +6,7 @@ import (
 
 var dbs []map[string]string
 
-// RunDBCommand executes commands on an in memory database that stores string key-value pairs.
-// Supported commands are SET, GET, EXISTS, and UNSET
-// It also allows transactions with BEGIN, ROLLBACK and COMMIT commands.
+// RunDBCommand solves the problem in O(1) time and O(n) space.
 func RunDBCommand(cmd string) string {
 	splitCmd := strings.Split(cmd, " ")
 	switch splitCmd[0] {

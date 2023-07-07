@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestActivitySelector tests solution(s) with the following signature and problem description:
+
+	func ActivitySelector(start, finish []int) []int
+
+Selects activities that don't overlap.
+*/
 func TestActivitySelector(t *testing.T) {
 	tests := []struct {
 		start      []int

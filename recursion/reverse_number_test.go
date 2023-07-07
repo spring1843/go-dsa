@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestReverseDigits tests solution(s) with the following signature and problem description:
+
+	func ReverseDigits(n int) int
+
+Returns an integer with digits in the reverse order of the input integer.
+*/
 func TestReverseDigits(t *testing.T) {
 	tests := []struct {
 		n, reversed int

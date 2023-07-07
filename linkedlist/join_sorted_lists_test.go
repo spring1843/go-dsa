@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestJoinTwoSortedLinkedLists tests solution(s) with the following signature and problem description:
+
+	func JoinTwoSortedLinkedLists(l1, l2 *Node) *Node
+
+Merges two sorted linked lists into one.
+*/
 func TestJoinTwoSortedLinkedLists(t *testing.T) {
 	tests := []struct {
 		list1, list2, joined string

@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestKthLargestElement tests solution(s) with the following signature and problem description:
+
+	func KthLargestElement(elements []int, k int) int
+
+Finds the kth largest element in an list.
+*/
 func TestKthLargestElement(t *testing.T) {
 	tests := []struct {
 		list       []int

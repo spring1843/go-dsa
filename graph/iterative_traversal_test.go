@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+/*
+TestIterativeTraversal tests solution(s) with the following signature and problem description:
+
+	func IterativeTraversal(graph []*Vertex) ([]int, []int)
+
+Performs a BFS and DFS on the given graph and returns the value of each vertex in the order
+it was visited.
+*/
 func TestIterativeTraversal(t *testing.T) {
 	tests := []struct {
 		graph    [][]int

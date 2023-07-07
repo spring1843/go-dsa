@@ -47,7 +47,7 @@ var digits = map[int]string{
 	billion:  "Billion",
 }
 
-// NumberInEnglish returns how a given number would be read in English.
+// NumberInEnglish solves the problem in O(1) time and O(1) space.
 func NumberInEnglish(num int) string {
 	var output, eachOutput string
 

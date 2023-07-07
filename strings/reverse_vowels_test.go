@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestReverseVowels tests solution(s) with the following signature and problem description:
+
+	func ReverseVowels(str string) (string, error)
+
+Reverses the order of vowels in a string.
+*/
 func TestReverseVowels(t *testing.T) {
 	tests := []struct {
 		word     string

@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestFindDuplicate tests solution(s) with the following signature and problem description:
+
+	func LookAndTell(depth int) []string
+
+Outputs an array such that each element reads the previous element the first element being "1".
+*/
 func TestFindDuplicate(t *testing.T) {
 	tests := []struct {
 		depth    int

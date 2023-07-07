@@ -1,7 +1,6 @@
 package strings
 
-// LongestDictionaryWordContainingKey returns the longest word in a dictionary
-// containing every letter of a key.
+// LongestDictionaryWordContainingKey solves the problem in O(n) time and O(1) space.
 func LongestDictionaryWordContainingKey(key string, dic []string) string {
 	keyNum := hash(key)
 	longest := ""

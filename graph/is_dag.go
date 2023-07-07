@@ -1,7 +1,6 @@
 package graph
 
-// IsDAG returns true if the given graph is a Directed Acyclic Graph (DAG)
-// A directed graph is acyclic if it contains no cycles.
+// IsDAG solves the problem in O(V+E) time and O(V) space.
 func IsDAG(graph []*Vertex) bool {
 	for _, vertex := range graph {
 		visited := make(map[*Vertex]struct{})

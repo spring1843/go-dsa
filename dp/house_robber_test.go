@@ -4,6 +4,15 @@ import (
 	"testing"
 )
 
+/*
+TestMaxHouseRobber tests solution(s) with the following signature and problem description:
+
+	func MaxHouseRobber(wealth []int) int
+
+given an array representing the amount of wealth inside a house
+and given that the robber can steal only non-consecutive houses
+returns the maximum amount of wealth the robber can steal.
+*/
 func TestMaxHouseRobber(t *testing.T) {
 	tests := []struct {
 		houses []int

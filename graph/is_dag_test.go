@@ -2,6 +2,14 @@ package graph
 
 import "testing"
 
+/*
+TestIsDAG tests solution(s) with the following signature and problem description:
+
+	func IsDAG(graph []*Vertex) bool
+
+Returns true if the given graph is a Directed Acyclic Graph (DAG) A directed graph
+is acyclic if it contains no cycles.
+*/
 func TestIsDAG(t *testing.T) {
 	tests := []struct {
 		graph [][]int

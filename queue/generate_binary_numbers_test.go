@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestGenerateBinaryNumbers tests solution(s) with the following signature and problem description:
+
+	func GenerateBinaryNumbers(n int) []string
+
+Returns string representation of binary numbers from 0 to n.
+*/
 func TestGenerateBinaryNumbers(t *testing.T) {
 	tests := []struct {
 		n        int

@@ -11,8 +11,7 @@ var phone = map[byte]string{
 	'9': "wxyz",
 }
 
-// PhoneLetterCombinations intakes the digits from 2 to 9 that represent phone buttons
-// and returns all possible combinations of letters that could be generated from those.
+// PhoneLetterCombinations solves the problem in O(3^n) time and O(3^n) space.
 func PhoneLetterCombinations(digits string) []string {
 	combinations := []string{}
 	if len(digits) > 0 {

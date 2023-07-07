@@ -11,8 +11,7 @@ type stringBinaryTreeNode struct {
 	right *stringBinaryTreeNode
 }
 
-// EvaluateBinaryExpressionTree evaluates a binary expression tree and evaluates
-// it allowing the four basic arithmetic operations.
+// EvaluateBinaryExpressionTree solves the problem in O(n) time and O(n) space.
 func EvaluateBinaryExpressionTree(node *stringBinaryTreeNode) (float64, error) {
 	if node == nil || node.val == "" {
 		return 0, nil

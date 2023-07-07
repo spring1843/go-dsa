@@ -1,6 +1,6 @@
 package strings
 
-// LongestSubstringOfTwoChars returns the longest substring of two different characters in a string.
+// LongestSubstringOfTwoChars solves the problem in O(n) time and O(1) space.
 func LongestSubstringOfTwoChars(input string) string {
 	if len(input) <= 1 {
 		return ""

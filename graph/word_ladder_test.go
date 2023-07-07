@@ -2,6 +2,15 @@ package graph
 
 import "testing"
 
+/*
+TestWordLadder tests solution(s) with the following signature and problem description:
+
+	func WordLadder(start, end string, dic []string) int {
+
+Returns the minimum number of transformations from start to end in a dictionary
+where words are all equal in length, and a transformation can only happen if the difference
+between two words is only in one letter. Zero is returned if no such transformations can occur.
+*/
 func TestWordLadder(t *testing.T) {
 	tests := []struct {
 		start, end         string

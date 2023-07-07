@@ -8,6 +8,7 @@ type Event struct {
 	EndTime   int
 }
 
+// Solves the problem in O(n*log(n)) time and O(1) space.
 func ScheduleEvents(events []Event) []Event {
 	sort.Slice(events, func(i, j int) bool {
 		return events[i].EndTime < events[j].EndTime

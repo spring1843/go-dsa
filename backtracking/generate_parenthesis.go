@@ -1,6 +1,6 @@
 package backtracking
 
-// GenerateParenthesis returns all possible variation of n pairs of valid parenthesis.
+// GenerateParenthesis solves the problem in O(2^n) time and O(n) space.
 func GenerateParenthesis(n int) []string {
 	return generateParenthesisRecursive([]string{}, "", 0, 0, n)
 }

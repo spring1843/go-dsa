@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestSumUpToK tests solution(s) with the following signature and problem description:
+
+	func SumUpToK(numbers []int, k int) []int
+
+Returns indices of the first pairs that sum up to k.
+*/
 func TestSumUpToK(t *testing.T) {
 	tests := []struct {
 		k                int

@@ -1,8 +1,6 @@
 package backtracking
 
-// Sudoku solves a given partially filled or empty 9x9 Soduku board by placing
-// integers between 1 and 9 in empty spot designated by 0 such that
-// In each row, column, and 3x3 sub square the values are unique.
+// Sudoku solves the problem in O(9^(n*n)) time and O(n*n) space.
 func Sudoku(board [][]int) bool {
 	for i := 0; i < len(board); i++ {
 		for j := 0; j < len(board[0]); j++ {

@@ -11,7 +11,7 @@ type RandomNode struct {
 	Random *RandomNode
 }
 
-// CopyLinkedListWithRandomPointer returns a deep copy of the given randomly connected linked list.
+// CopyLinkedListWithRandomPointer solves the problem in O(n) time and O(n) space.
 func CopyLinkedListWithRandomPointer(head *RandomNode) *RandomNode {
 	if head == nil {
 		return nil

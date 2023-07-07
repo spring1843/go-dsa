@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestAutoComplete tests solution(s) with the following signature and problem description:
+
+	func (t *trie) AutoComplete(word string) []string
+
+Suggests auto-completion ideas based on the input and given dictionary.
+*/
 func TestAutoComplete(t *testing.T) {
 	tests := []struct {
 		input       string

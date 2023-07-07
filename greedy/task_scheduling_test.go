@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+/*
+TestScheduleEvents tests solution(s) with the following signature and problem description:
+
+	func ScheduleEvents(events []Event) []Event
+
+Given a list of events with start and end times, find the maximum number of events that
+can be scheduled without overlap.
+*/
 func TestScheduleEvents(t *testing.T) {
 	tests := []struct {
 		events   []Event

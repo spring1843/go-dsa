@@ -6,6 +6,13 @@ import (
 	"github.com/spring1843/go-dsa/linkedlist"
 )
 
+/*
+TestMergeSortedLists tests solution(s) with the following signature and problem description:
+
+	func MergeSortedLists(lists []*linkedlist.Node) *linkedlist.Node
+
+Merges multiple sorted singly linked lists into one.
+*/
 func TestMergeSortedLists(t *testing.T) {
 	tests := []struct {
 		sortedLinkedLists []string

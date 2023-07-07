@@ -1,7 +1,6 @@
 package bit
 
-// OddlyRepeatedNumber repeated number finds an element in a given array that is
-// repeated an odd number of times.
+// OddlyRepeatedNumber solves the problem in O(n) time and O(1) space.
 func OddlyRepeatedNumber(list []int) int {
 	if len(list) == 0 {
 		return -1

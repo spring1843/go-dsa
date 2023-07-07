@@ -2,6 +2,13 @@ package stack
 
 import "testing"
 
+/*
+TestEvaluatePostfix tests solution(s) with the following signature and problem description:
+
+	func EvaluatePostfixExpression(expression []string) (float64, error)
+
+Evaluates an expression into a float64.
+*/
 func TestEvaluatePostfix(t *testing.T) {
 	tests := []struct {
 		postfix   []string

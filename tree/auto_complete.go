@@ -14,7 +14,7 @@ type (
 	}
 )
 
-// AutoComplete suggests auto-completion ideas based on the input and given dictionary.
+// AutoComplete solves the problem in O(n) time and O(n) space.
 func (t *trie) AutoComplete(word string) []string {
 	output := []string{}
 	current := t.root

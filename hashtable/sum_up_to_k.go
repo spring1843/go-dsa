@@ -1,6 +1,6 @@
 package hashtable
 
-// SumUpToK returns indices of the first pairs that sum up to k.
+// SumUpToK solves the problem in O(n) time and O(n) space.
 func SumUpToK(numbers []int, k int) []int {
 	output := []int{}
 	hash := make(map[int]int, len(numbers))

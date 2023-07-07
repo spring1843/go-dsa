@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestLongestSubstrings tests solution(s) with the following signature and problem description:
+
+	func LongestSubstringOfTwoChars(input string) string {
+
+Returns the longest substring of two different characters in a string.
+*/
 func TestLongestSubstrings(t *testing.T) {
 	tests := []struct {
 		input            string

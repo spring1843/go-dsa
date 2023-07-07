@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestRemoveInvalidParentheses tests solution(s) with the following signature and problem description:
+
+	func RemoveInvalidParentheses(input string) []string
+
+Removes the minimum number of invalid parentheses to make the input valid.
+*/
 func TestRemoveInvalidParentheses(t *testing.T) {
 	tests := []struct {
 		input   string

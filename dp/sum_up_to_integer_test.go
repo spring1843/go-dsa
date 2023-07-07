@@ -4,6 +4,14 @@ import (
 	"testing"
 )
 
+/*
+TestSumUpToInteger tests solution(s) with the following signature and problem description:
+
+	SumUpToInteger(numbers []int, sum int) bool {
+
+When given a list of integers and a sum, returns true if any combination of the integers
+sums up to the sum.
+*/
 func TestSumUpToInteger(t *testing.T) {
 	tests := []struct {
 		numbers []int

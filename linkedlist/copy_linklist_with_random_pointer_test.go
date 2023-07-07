@@ -12,6 +12,13 @@ const (
 	noRandomLink         = "nil"
 )
 
+/*
+TestCopyLinkedListWithRandomPointer tests solution(s) with the following signature and problem description:
+
+	func CopyLinkedListWithRandomPointer(head *RandomNode) *RandomNode
+
+Returns a deep copy of the given randomly connected linked list.
+*/
 func TestCopyLinkedListWithRandomPointer(t *testing.T) {
 	tests := []struct {
 		list string

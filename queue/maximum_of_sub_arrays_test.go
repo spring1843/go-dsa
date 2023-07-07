@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestMaxOfKLengthSubArrays tests solution(s) with the following signature and problem description:
+
+	func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error) {
+
+takes a list of integers and returns a list of the maximum of each sub-array of length k.
+*/
 func TestMaxOfKLengthSubArrays(t *testing.T) {
 	tests := []struct {
 		k        int

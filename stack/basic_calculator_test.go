@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestBasicCalculator tests solution(s) with the following signature and problem description:
+func BasicCalculator(input string) (float64, error)
+
+Calculates basic expressions into a float64 supporting the four basic
+arithmetic operations and parenthesis.
+*/
 func TestBasicCalculator(t *testing.T) {
 	tests := []struct {
 		expression string

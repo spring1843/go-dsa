@@ -4,8 +4,7 @@ import (
 	"strconv"
 )
 
-// LookAndTell outputs an array such that each element reads the previous
-// element the first element being "1".
+// LookAndTell solves the problem in O(n) time and O(n) space.
 func LookAndTell(depth int) []string {
 	output := []string{"1"}
 

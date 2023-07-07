@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestReadNumberInEnglish tests solution(s) with the following signature and problem description:
+
+	func NumberInEnglish(num int) string
+
+Returns how a given number would be read in English.
+*/
 func TestReadNumberInEnglish(t *testing.T) {
 	tests := []struct {
 		number  int
