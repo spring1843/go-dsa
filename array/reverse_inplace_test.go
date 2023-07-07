@@ -5,7 +5,14 @@ import (
 	"testing"
 )
 
-func TestReverseInplace(t *testing.T) {
+/*
+TestReverseInPlace tests solution(s) with the following signature and problem description:
+
+	ReverseInPlace(list []int, start, end int)
+
+Reverses parts of the array in place.
+*/
+func TestReverseInPlace(t *testing.T) {
 	tests := []struct {
 		list     []int
 		start    int
@@ -22,7 +29,7 @@ func TestReverseInplace(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		ReverseInplace(test.list, test.start, test.end)
+		ReverseInPlace(test.list, test.start, test.end)
 		if !reflect.DeepEqual(test.list, test.reversed) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.reversed, test.list)
 		}

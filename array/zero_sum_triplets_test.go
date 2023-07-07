@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestZeroSumTriplets tests solution(s) with the following signature and problem description:
+
+	ZeroSumTriplets(list []int) [][]int
+
+Finds all triplets in a list that sum to zero.
+*/
 func TestZeroSumTriplets(t *testing.T) {
 	tests := []struct {
 		list     []int

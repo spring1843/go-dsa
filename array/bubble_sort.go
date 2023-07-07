@@ -1,6 +1,6 @@
 package array
 
-// BubbleSort implements the Bubble Sort algorithm.
+// BubbleSort solves the problem in O(n^2) time and O(1) space.
 func BubbleSort(input []int) {
 	for i := range input {
 		for j := range input {

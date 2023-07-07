@@ -2,8 +2,7 @@ package array
 
 import "math"
 
-// AddTwoNumbers adds two numbers which are represented as an array and returns the results
-// In the same format. For example [2,5], and [3,5] would add up to[6,0] because 25 + 35 = 60.
+// AddTwoNumbers solves the problem in O(n) time and O(1) space.
 func AddTwoNumbers(num1, num2 []int) []int {
 	num1, num2 = equalizeLengths(num1, num2)
 	carry := false

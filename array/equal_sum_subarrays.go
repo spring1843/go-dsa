@@ -1,7 +1,6 @@
 package array
 
-// EqualSubArrays given a list of integers returns two sub arrays that have
-// equal sums without changing the order of the items in the list.
+// EqualSubArrays solves the problem in O(n^2) time and O(1) space.
 func EqualSubArrays(list []int) [][]int {
 	output := make([][]int, 0)
 	if len(list) < 2 {
