@@ -2,6 +2,7 @@ package graph
 
 import (
 	"container/list"
+	"errors"
 	"strconv"
 	"strings"
 )
@@ -11,7 +12,7 @@ const (
 	numberSeparator = ","
 )
 
-var errInvalidInteger error
+var errInvalidInteger = errors.New("invalid integer")
 
 // HeadCount solves the problem in O(n) time and O(n) space.
 func HeadCount(data string, employeeID int) int {
