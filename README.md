@@ -25,6 +25,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * Product of All Other Elements
         * Equal Sum Sub-arrays
         * Rotate K Steps
+        * Bubble Sort
     * [Strings](./strings)
         * The longest Dictionary Word Containing Key
         * Look and Tell

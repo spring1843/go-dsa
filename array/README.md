@@ -113,3 +113,7 @@ Given an array of integers A, return two sub-arrays with equal sums without chan
 ### Rotate K Steps
 
 Given an array of integers and a number k, rotate the array k times. [Solution](rotate_k_steps.go), [Tests](rotate_k_steps_test.go)
+
+### Bubble Sort
+
+Given an array of unsorted integers, sort the array using the Bubble Sort algorithm, where each element is repeatedly compared with the next element and swapped if needed. [Solution](bubble_sort.go), [Tests](bubble_sort_test.go)

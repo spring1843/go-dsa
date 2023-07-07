@@ -114,7 +114,7 @@ The time complexity of O(n log n) is commonly observed when it is necessary to i
 
 Polynomial time complexity marks the initial threshold of problematic time complexity for algorithms. This complexity often arises when an algorithm includes nested loops, involving both an inner loop and an outer loop. Examples:
 
-* Bobble sort rehearsal problem in [array](../array)
+* Bubble sort rehearsal problem in [array](../array)
 * Naive way of searching an unsorted [array](../array) for duplicates by using nested loops
 
 ### Exponential O(2^n)
