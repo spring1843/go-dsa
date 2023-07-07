@@ -18,6 +18,7 @@ func TestEmployeeHeadCount(t *testing.T) {
 	}{
 		{"A", map[int]int{1: -1}},
 		{"1", map[int]int{1: 1}},
+		{"A,B\nC,D,E,F\nG\nH\nI", map[int]int{1: -1}},
 		{"1,2\n3,4,5,6\n4\n5\n6", map[int]int{1: 2}},
 		{"1,2\n3,4,5,6\n4\n5\n6", map[int]int{3: 4}},
 		{"1,2\n3,4,5,6\n4\n5\n6,7\n7", map[int]int{3: 5}},

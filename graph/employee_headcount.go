@@ -20,28 +20,24 @@ func HeadCount(data string, employeeID int) int {
 	if err != nil {
 		return -1
 	}
+	return headCountBFS(graph, employeeID)
+}
 
-	bfs := func(employeeID int) int {
-		reportCount := 0
-		queue := list.New()
-		queue.PushBack(employeeID)
+func headCountBFS(graph map[int][]int, employeeID int) int {
+	reportCount := 0
+	queue := list.New()
+	queue.PushBack(employeeID)
 
-		for queue.Len() != 0 {
-			employee := queue.Back().Value.(int)
-			queue.Remove(queue.Back())
+	for queue.Len() != 0 {
+		employee := queue.Back().Value.(int)
+		queue.Remove(queue.Back())
 
-			if graph == nil {
-				return -1
-			}
-
-			for _, report := range graph[employee] {
-				queue.PushBack(report)
-				reportCount++
-			}
+		for _, report := range graph[employee] {
+			queue.PushBack(report)
+			reportCount++
 		}
-		return reportCount + 1
 	}
-	return bfs(employeeID)
+	return reportCount + 1
 }
 
 // toGraphOfEmployees creates a map of employees and their direct reports.
