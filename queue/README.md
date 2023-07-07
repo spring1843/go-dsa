@@ -8,42 +8,7 @@ Another variation of queues is the double-ended queue, which allows for dequeuin
 
 ## Implementation
 
-Similar to [stacks](../stack) queues can be implemented either with arrays or linked list.Here's a slice implementation of an integer queue:
-
-```Go
-package main
-
-import (
-	"errors"
-	"fmt"
-)
-
-var queue []int
-
-func main() {
-	enqueue(1) // [1]
-	enqueue(2) // [1,2]
-	enqueue(3) // [1,2,3]
-	dequeue()  // [2,3]
-	dequeue()  // [3]
-	dequeue()  // []
-}
-
-func enqueue(val int) {
-	queue = append(queue, val)
-}
-
-func dequeue() (int, error) {
-	if len(queue) == 0 {
-		return -1, errors.New("Queue is empty")
-	}
-	tmp := queue[0]
-	queue = queue[1:len(queue)]
-	return tmp, nil
-}
-```
-
-Here's a [linked list](../linkedlists) implementation with the same exact outcome.
+Similar to [stacks](../stack) queues can be implemented using doubly [linked lists](../linkedlist/) or [arrays and slices](../array/). Here is a linked list implementation:
 
 ```Go
 package main
@@ -70,9 +35,40 @@ func enqueue(val int) {
 
 func dequeue() (int, error) {
 	if queue.Len() == 0 {
-		return -1, errors.New("Queue is empty")
+		return -1, errors.New("queue is empty")
 	}
-	tmp := queue.Remove(queue.Front()).(int)
+	return queue.Remove(queue.Front()).(int), nil
+}
+```
+
+Here's a slice implementation of an integer queue:
+
+```Go
+package main
+
+import "errors"
+
+var queue []int
+
+func main() {
+	enqueue(1) // [1]
+	enqueue(2) // [1,2]
+	enqueue(3) // [1,2,3]
+	dequeue()  // [2,3]
+	dequeue()  // [3]
+	dequeue()  // []
+}
+
+func enqueue(val int) {
+	queue = append(queue, val)
+}
+
+func dequeue() (int, error) {
+	if len(queue) == 0 {
+		return -1, errors.New("queue is empty")
+	}
+	tmp := queue[0]
+	queue = queue[1:len(queue)]
 	return tmp, nil
 }
 ```
