@@ -24,6 +24,7 @@ func newLRU(capacity int) *lruCache {
 	}
 }
 
+// get solves the problem in O(1) time and O(n) space.
 func (cache *lruCache) get(key int) int {
 	if _, ok := cache.elements[key]; ok {
 		v := cache.elements[key]
@@ -33,6 +34,7 @@ func (cache *lruCache) get(key int) int {
 	return -1
 }
 
+// put solves the problem in O(1) time and O(n) space.
 func (cache *lruCache) put(key int, value int) {
 	if v, ok := cache.elements[key]; ok {
 		v.Value.(*element).value = value

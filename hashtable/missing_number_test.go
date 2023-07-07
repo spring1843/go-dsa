@@ -2,6 +2,13 @@ package hashtable
 
 import "testing"
 
+/*
+TestMissingNumber tests solution(s) with the following signature and problem description:
+
+	func MissingNumber(numbers []int) int
+
+Returns a missing number in a given sequential list of numbers.
+*/
 func TestMissingNumber(t *testing.T) {
 	tests := []struct {
 		numbers []int

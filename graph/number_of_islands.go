@@ -1,7 +1,6 @@
 package graph
 
-// NumberOfIslands returns the number of islands or connected lands in a grid where 0 represents water
-// and one represents land.
+// NumberOfIslands solves the problem in O(n) time and O(1) space.
 func NumberOfIslands(grid [][]int) int {
 	islands := 0
 	for i, row := range grid {

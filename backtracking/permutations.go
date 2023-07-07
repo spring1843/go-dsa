@@ -1,7 +1,6 @@
 package backtracking
 
-// Permutations intakes a list of numbers and returns all possible permutations of their orders
-// For example for {1,2} it would return {1,2}, {2,1}.
+// Permutations solves the problem in O(n!) time and O(n) space.
 func Permutations(input []int) [][]int {
 	permutations := make([][]int, 0)
 	permutationsRecursive(input, 0, &permutations)

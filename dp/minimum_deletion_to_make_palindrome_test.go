@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestMinimumDeletionsToMakePalindrome tests solution(s) with the following signature and problem description:
+
+	func MinimumDeletionsToMakePalindrome(input string) int
+
+Returns how many deletions can be done in the input string to make it a palindrome.
+*/
 func TestMinimumDeletionsToMakePalindrome(t *testing.T) {
 	tests := []struct {
 		input                           string

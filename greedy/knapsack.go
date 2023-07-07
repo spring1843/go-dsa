@@ -8,7 +8,7 @@ type KnapsackItem struct {
 	Value  int
 }
 
-// Knapsack returns the maximum value that can be put in a knapsack of a given capacity.
+// Knapsack solves the problem in O(n*log(n)) time and O(1) space.
 func Knapsack(items []KnapsackItem, capacity int) int {
 	sort.Slice(items, func(i, j int) bool {
 		return items[i].Value/items[i].Weight > items[j].Value/items[j].Weight

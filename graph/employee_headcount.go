@@ -6,10 +6,6 @@ import (
 	"strings"
 )
 
-type HeadCounter struct {
-	data map[int][]int
-}
-
 const (
 	lineSeparator   = "\n"
 	numberSeparator = ","
@@ -17,8 +13,13 @@ const (
 
 var errInvalidInteger error
 
-// HeadCount returns 1 + the number of directs, and all their directs for a given employee.
-func (h *HeadCounter) HeadCount(employeeID int) int {
+// HeadCount solves the problem in O(n) time and O(n) space.
+func HeadCount(data string, employeeID int) int {
+	graph, err := toGraphOfEmployees(data)
+	if err != nil {
+		return -1
+	}
+
 	bfs := func(employeeID int) int {
 		reportCount := 0
 		queue := list.New()
@@ -28,11 +29,11 @@ func (h *HeadCounter) HeadCount(employeeID int) int {
 			employee := queue.Back().Value.(int)
 			queue.Remove(queue.Back())
 
-			if h == nil {
+			if graph == nil {
 				return -1
 			}
 
-			for _, report := range h.data[employee] {
+			for _, report := range graph[employee] {
 				queue.PushBack(report)
 				reportCount++
 			}
@@ -42,11 +43,9 @@ func (h *HeadCounter) HeadCount(employeeID int) int {
 	return bfs(employeeID)
 }
 
-// NewHeadCount returns a head counter with initialized data.
-func NewHeadCount(data string) (*HeadCounter, error) {
-	headCounter := &HeadCounter{
-		data: make(map[int][]int),
-	}
+// toGraphOfEmployees returns a map of employees and their direct reports
+func toGraphOfEmployees(data string) (map[int][]int, error) {
+	output := make(map[int][]int)
 	for _, line := range strings.Split(data, lineSeparator) {
 		broken := make([]int, 0)
 		for _, item := range strings.Split(line, numberSeparator) {
@@ -56,7 +55,7 @@ func NewHeadCount(data string) (*HeadCounter, error) {
 			}
 			broken = append(broken, n)
 		}
-		headCounter.data[broken[0]] = broken[1:]
+		output[broken[0]] = broken[1:]
 	}
-	return headCounter, nil
+	return output, nil
 }

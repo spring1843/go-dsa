@@ -1,6 +1,6 @@
 package recursion
 
-// PowerOf raises x to the power of n.
+// PowerOf solves the problem in O(log(n)) time and O(1) space.
 func PowerOf(x, n int) int {
 	if n == 0 {
 		return 1

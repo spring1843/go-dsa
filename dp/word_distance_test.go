@@ -4,6 +4,14 @@ import (
 	"testing"
 )
 
+/*
+TestWordDistance tests solution(s) with the following signature and problem description:
+
+	func WordDistance(input1, input2 string) int
+
+Returns how many character modifications (insert, delete, edit) can
+be done on the first input string so that it becomes equal to the second string.
+*/
 func TestWordDistance(t *testing.T) {
 	tests := []struct {
 		input1   string

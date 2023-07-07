@@ -17,10 +17,12 @@ type (
 	}
 )
 
+// enqueue solves the problem in O(1) time and O(n) space.
 func (usingStacks *UsingStacks) enqueue(n int) {
 	usingStacks.stack1.push(n)
 }
 
+// dequeue solves the problem in O(1) time and O(n) space.
 func (usingStacks *UsingStacks) dequeue() int {
 	if len(usingStacks.stack2.stack) == 0 {
 		for len(usingStacks.stack1.stack) != 0 {

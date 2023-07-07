@@ -2,6 +2,14 @@ package queue
 
 import "testing"
 
+/*
+TestQueueUsingStacks tests solution(s) with the following signature and problem description:
+
+	(usingStacks *UsingStacks) enqueue(n int) {
+	(usingStacks *UsingStacks) dequeue() int {
+
+Implements a queue using stacks.
+*/
 func TestQueueUsingStacks(t *testing.T) {
 	tests := []struct {
 		enqueue                  []int

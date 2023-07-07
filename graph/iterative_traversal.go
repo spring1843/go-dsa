@@ -18,8 +18,7 @@ type (
 	}
 )
 
-// IterativeTraversal performs a BFS and DFS on the given graph and returns
-// the value of each vertex in the order it was visited.
+// IterativeTraversal solves the problem in O(n) time and O(n) space.
 func IterativeTraversal(graph []*Vertex) ([]int, []int) {
 	dfs := traverseAllNodes(new(stack), graph)
 	bfs := traverseAllNodes(new(queue), graph)

@@ -2,6 +2,14 @@ package heap
 
 import "testing"
 
+/*
+TestMedianInAStream tests solution(s) with the following signatures and problem description:
+
+	func newMedianKeeper() medianKeeper
+	func (m *medianKeeper) addNumber(num int)
+
+Returns the median of all numbers added so far.
+*/
 func TestMedianInAStream(t *testing.T) {
 	tests := []struct {
 		numbers []int

@@ -12,9 +12,7 @@ const (
 	edgeDestination, edgeCost                    = 0, 1
 )
 
-// NetworkDelayTime returns the fastest times it will take for a message sent from k
-// to reach all nodes of the given graph of n vertices. The edges are given in the
-// form of {vertexSource, vertexDestination, vertexDelay}.
+// NetworkDelayTime solves the problem in O(n log n) time and O(n) space.
 func NetworkDelayTime(n, k int, edges [][3]int) int {
 	var (
 		verticesMap, edgesHeap = verticesAndEdges(edges, k)

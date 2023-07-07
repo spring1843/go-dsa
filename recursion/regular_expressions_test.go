@@ -4,6 +4,17 @@ import (
 	"testing"
 )
 
+/*
+TestRegularExpressions tests solution(s) with the following signature and problem description:
+
+	func IsRegularExpressionMatch(input, pattern string) bool
+
+Returns true if the given input matches the given pattern and false otherwise
+In this regular expression patten
+
+	. indicates any single character
+	* matches zero or more characters of the preceding character
+*/
 func TestRegularExpressions(t *testing.T) {
 	tests := []struct {
 		input, pattern string

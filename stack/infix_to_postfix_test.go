@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+/*
+TestInfixToPostfix tests solution(s) with the following signature and problem description:
+
+	func InfixToPostfix(infix []string) []string
+
+Converts an infix expression to a postfix one supporting the 4 basic arithmetic operations
+and parentheses.
+*/
 func TestInfixToPostfix(t *testing.T) {
 	tests := []struct {
 		infix   []string

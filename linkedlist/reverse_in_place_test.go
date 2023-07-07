@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestReverseLinkedList tests solution(s) with the following signature and problem description:
+
+	func ReverseLinkedList(head *Node) *Node {
+
+Reverses a linked list in-place.
+*/
 func TestReverseLinkedList(t *testing.T) {
 	tests := []struct {
 		list, reversed string

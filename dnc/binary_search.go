@@ -1,7 +1,6 @@
 package dnc
 
-// BinarySearch finds the index a given number in an ordered slice of sorted integers
-// using Binary Search.
+// BinarySearch solves the problem in O(log n) time and O(1) space.
 func BinarySearch(list []int, search int) int {
 	return binarySearchRecursive(list, 0, len(list), search)
 }

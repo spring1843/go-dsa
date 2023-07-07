@@ -2,6 +2,15 @@ package graph
 
 import "testing"
 
+/*
+TestNetworkDelayTime tests solution(s) with the following signature and problem description:
+
+	func NetworkDelayTime(n, k int, edges [][3]int) int {
+
+Returns the fastest times it will take for a message sent from k
+to reach all nodes of the given graph of n vertices. The edges are given in the
+form of {vertexSource, vertexDestination, vertexDelay}.
+*/
 func TestNetworkDelayTime(t *testing.T) {
 	tests := []struct {
 		edges [][3]int // source, destination, delay

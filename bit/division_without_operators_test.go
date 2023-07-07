@@ -2,6 +2,13 @@ package bit
 
 import "testing"
 
+/*
+TestDivision tests solution(s) with the following signature and problem description:
+
+	func Divide(x, y int) int {
+
+Divides two numbers without using division or multiplication symbols
+*/
 func TestDivision(t *testing.T) {
 	tests := []struct {
 		a, b int

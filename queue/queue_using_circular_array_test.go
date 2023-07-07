@@ -38,10 +38,18 @@ var queueOperations = []struct {
 	{operationTypeEnqueue, 1},
 }
 
-// TestCircularQueue tests a queue by enqueues given items,
-// then dequeues a number of times and finally checks the value from the last dequeue.
-// The same process then may be repeated for a second time with different values.
+/*
+TestCircularQueue tests solution(s) with the following signature and problem description:
+
+	func (queue *UsingCircularArray) enqueue(n int) error
+	func (queue *UsingCircularArray) dequeue() (int, error)
+
+Implements a queue using a circular array.
+*/
 func TestCircularQueue(t *testing.T) {
+	// tests a queue by enqueues given items,
+	// then dequeues a number of times and finally checks the value from the last dequeue.
+	// The same process then may be repeated for a second time with different values.
 	tests := []struct {
 		size        int
 		firstRound  *testCase

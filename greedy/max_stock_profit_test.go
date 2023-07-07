@@ -2,6 +2,14 @@ package greedy
 
 import "testing"
 
+/*
+TestMaxStockProfit tests solution(s) with the following signature and problem description:
+
+	func MaxStockProfit(prices []int) int
+
+Returns the highest amount of profit that can be made by buying and selling a stock, given
+a list of prices at different times.
+*/
 func TestMaxStockProfit(t *testing.T) {
 	tests := []struct {
 		prices    []int

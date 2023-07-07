@@ -4,6 +4,7 @@ import (
 	"math"
 )
 
+// CutRod solves the problem in O(n^2) time and O(n) space.
 func CutRod(prices []int, n int) int {
 	revenues := make([]int, n+1)
 	revenues[0] = 0

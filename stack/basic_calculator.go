@@ -10,8 +10,7 @@ type evaluation struct {
 
 var ErrImbalancedParenthesis = errors.New("expression has imbalanced parenthesis")
 
-// BasicCalculator calculates basic expressions into a float64 supporting the four basic
-// arithmetic operations and parenthesis.
+// BasicCalculator solves the problem in O(n) time and O(n) space.
 func BasicCalculator(input string) (float64, error) {
 	if IsExpressionBalanced(input) {
 		return -1, ErrImbalancedParenthesis

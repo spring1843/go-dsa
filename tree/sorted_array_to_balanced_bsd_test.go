@@ -2,6 +2,13 @@ package tree
 
 import "testing"
 
+/*
+TestBalancedBinarySearchTree tests solution(s) with the following signature and problem description:
+
+	func BalancedBinarySearchTree(sorted []int) *BinaryTreeNode
+
+Takes a sorted list of numbers and returns a balanced binary search tree.
+*/
 func TestBalancedBinarySearchTree(t *testing.T) {
 	tests := []struct {
 		numbers []int

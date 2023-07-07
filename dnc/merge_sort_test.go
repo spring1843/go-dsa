@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestMergeSort tests solution(s) with the following signature and problem description:
+
+	func MergeSort(list []int) []int
+
+Sorts a list of integers using Merge Sort.
+*/
 func TestMergeSort(t *testing.T) {
 	tests := []struct {
 		list   []int

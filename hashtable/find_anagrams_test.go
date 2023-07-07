@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestFindAnagrams tests solution(s) with the following signature and problem description:
+
+	func FindAnagrams(words []string) [][]string
+
+Returns a list of words that are anagrams of each other.
+*/
 func TestFindAnagrams(t *testing.T) {
 	tests := []struct {
 		words    []string

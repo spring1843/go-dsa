@@ -1,7 +1,6 @@
 package hashtable
 
-// CutBrickWall returns the position at which a wall can be cut to two
-// pieces with minimal amount of cuts.
+// CutBrickWall runs in O(n) time and O(n) space.
 func CutBrickWall(wall [][]int) int {
 	cuts := make(map[int]int)
 	var max, position int

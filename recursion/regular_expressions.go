@@ -1,10 +1,6 @@
 package recursion
 
-// IsRegularExpressionMatch returns true if the given input matches the given pattern and false otherwise
-// In this regular expression patten
-//
-//	. indicates any single character
-//	* matches zero or more characters of the preceding character
+// IsRegularExpressionMatch solves the problem in O(n) time and O(n) space.
 func IsRegularExpressionMatch(input, pattern string) bool {
 	if len(pattern) == 0 {
 		return len(input) == 0

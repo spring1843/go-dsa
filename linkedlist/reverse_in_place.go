@@ -1,6 +1,6 @@
 package linkedlist
 
-// ReverseLinkedList reverses a linked list in-place.
+// ReverseLinkedList solves the problem in O(n) time and O(1) space.
 func ReverseLinkedList(head *Node) *Node {
 	if head == nil || head.Next == nil {
 		return head

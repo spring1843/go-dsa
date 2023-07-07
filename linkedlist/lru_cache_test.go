@@ -2,6 +2,14 @@ package linkedlist
 
 import "testing"
 
+/*
+TestLRU tests solution(s) with the following signature and problem description:
+
+	func get(key int) int
+	func put(key int, value int) {
+
+Implement a LRU cache with get and put methods.
+*/
 func TestLRU(t *testing.T) {
 	tests := []struct {
 		capacity int

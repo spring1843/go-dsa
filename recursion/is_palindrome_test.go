@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestIsPalindrome tests solution(s) with the following signature and problem description:
+
+	func IsPalindrome(s string) bool
+
+Returns true if a given string is a Palindrome and false otherwise.
+*/
 func TestIsPalindrome(t *testing.T) {
 	tests := []struct {
 		s            string

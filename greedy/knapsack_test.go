@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+/*
+TestKnapsack tests solution(s) with the following signature and problem description:
+
+	func Knapsack(items []KnapsackItem, capacity int) int
+
+Returns the maximum value that can be put in a knapsack of a given capacity.
+*/
 func TestKnapsack(t *testing.T) {
 	tests := []struct {
 		items     []KnapsackItem

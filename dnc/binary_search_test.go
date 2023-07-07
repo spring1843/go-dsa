@@ -4,6 +4,14 @@ import (
 	"testing"
 )
 
+/*
+TestBinarySearch tests solution(s) with the following signature and problem description:
+
+	func BinarySearch(list []int, search int) int
+
+Finds the index a given number in an ordered slice of sorted integers
+using Binary Search.
+*/
 func TestBinarySearch(t *testing.T) {
 	tests := []struct {
 		sortedNumbers    []int

@@ -14,7 +14,7 @@ var (
 	ErrPopStack = errors.New("can not Pop on an empty stack")
 )
 
-// ReverseVowels reverses the order of vowels in a string.
+// ReverseVowels solves the problem in O(n) time and O(n) space.
 func ReverseVowels(str string) (string, error) {
 	stack = []string{}
 	reversed := ""

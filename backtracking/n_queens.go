@@ -8,8 +8,7 @@ const (
 // Chessboard represents a chessboard.
 type Chessboard [][]int
 
-// NQueens returns possible solutions to the n-queen puzzle in an n x n chessboard
-// where n queens are placed on the chessboard such that none attacks another.
+// NQueens solves the problem in O(n!) time and O(n) space.
 func NQueens(n int) []Chessboard {
 	output := nQueensRecursive(0, n, make([]int, n), make(Chessboard, 0))
 	return toPrettyChessboard(output, n)

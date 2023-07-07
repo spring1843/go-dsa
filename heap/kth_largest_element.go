@@ -6,7 +6,7 @@ import (
 
 type minimumHeap []int
 
-// KthLargestElement finds the kth largest element in an list.
+// KthLargestElement solves the problem in O(n) time and O(n) space.
 func KthLargestElement(elements []int, k int) int {
 	minHeap := minimumHeap(elements)
 	heap.Init(&minHeap)

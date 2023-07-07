@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-// EvaluatePostfixExpression evaluates an expression into a float64.
+// EvaluatePostfixExpression solves the problem in O(n) time and O(n) space.
 func EvaluatePostfixExpression(expression []string) (float64, error) {
 	stack := new(evaluation)
 	for _, element := range expression {

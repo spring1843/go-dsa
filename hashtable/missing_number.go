@@ -1,6 +1,6 @@
 package hashtable
 
-// MissingNumber returns a missing number in a given sequential list of numbers.
+// MissingNumber solves the problem in O(n) time and O(n) space.
 func MissingNumber(numbers []int) int {
 	if len(numbers) < 1 {
 		return -1

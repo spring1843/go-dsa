@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestPermutations tests solution(s) with the following signature and problem description:
+
+	func Permutations(numbers []int) [][]int
+
+Returns all possible permutations of the given integers.
+*/
 func TestPermutations(t *testing.T) {
 	tests := []struct {
 		input        []int

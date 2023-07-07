@@ -8,8 +8,7 @@ import (
 // ErrQueueEmpty occurs when popping an empty stack.
 var ErrQueueEmpty = errors.New("empty queue")
 
-// MaxOfKLengthSubArrays takes a list of integers and returns
-// a list of the maximum of each subarray of length k.
+// MaxOfKLengthSubArrays solves the problem in O(n) time and O(k) space.
 func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error) {
 	output := []int{}
 	queue := list.New()

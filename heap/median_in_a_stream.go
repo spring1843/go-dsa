@@ -15,6 +15,7 @@ func newMedianKeeper() medianKeeper {
 	return medianKeeper{&maxHeap{}, &minHeap{}}
 }
 
+// addNumber solves the problem in O(log n) time and O(n) space.
 func (m *medianKeeper) addNumber(num int) {
 	if m.len()%2 == 0 {
 		if m.len() == 0 {

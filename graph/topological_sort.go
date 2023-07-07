@@ -20,8 +20,7 @@ type VertexWithIngress struct {
 // ErrNotADAG occurs when a graph is not a Direct Acyclic Graph - DAG.
 var ErrNotADAG = errors.New("graph is not a Direct Acyclic Graph - DAG")
 
-// TopologicalSort takes a vertex of a DAG and returns the value of all its
-// connected vertices in topological order.
+// TopologicalSort solves the problem in O(n) time and O(n) space.
 func TopologicalSort(graph []*VertexWithIngress) ([]int, error) {
 	var (
 		output = []int{}

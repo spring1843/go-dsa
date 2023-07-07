@@ -1,6 +1,6 @@
 package bit
 
-// Add adds to numbers without using any arithmetic operators.
+// Add solves the problem in O(1) time and O(1) space.
 func Add(x, y int) int {
 	for y != 0 {
 		sum := x ^ y

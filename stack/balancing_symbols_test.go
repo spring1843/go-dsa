@@ -2,6 +2,13 @@ package stack
 
 import "testing"
 
+/*
+TestIsExpressionBalanced tests solution(s) with the following signature and problem description:
+
+	func IsExpressionBalanced(s string) bool
+
+Returns true if a given expression contains symbols like [](){} is balanced or not.
+*/
 func TestIsExpressionBalanced(t *testing.T) {
 	tests := []struct {
 		expression string

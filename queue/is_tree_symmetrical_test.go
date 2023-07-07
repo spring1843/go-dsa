@@ -6,6 +6,13 @@ import (
 	"github.com/spring1843/go-dsa/tree"
 )
 
+/*
+TestIsTreeSymmetrical tests solution(s) with the following signature and problem description:
+
+	func IsTreeSymmetrical(root *tree.BinaryTreeNode) (bool, error)
+
+Returns true if the given binary tree is symmetric and false otherwise.
+*/
 func TestIsTreeSymmetrical(t *testing.T) {
 	tests := []struct {
 		tree        string

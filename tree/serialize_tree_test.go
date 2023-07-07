@@ -2,6 +2,13 @@ package tree
 
 import "testing"
 
+/*
+TestSerializeAndUnserializeBinaryTree tests solution(s) with the following signature and problem description:
+
+	func Unserialize(s string) *BinaryTreeNode
+
+Unserializes a given string into a binary tree.
+*/
 func TestSerializeAndUnserializeBinaryTree(t *testing.T) {
 	tests := []string{
 		"",

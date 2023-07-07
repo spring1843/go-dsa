@@ -2,6 +2,14 @@ package hashtable
 
 import "testing"
 
+/*
+TestMaxPointsOnALine tests solution(s) with the following signature and problem description:
+
+	func MaxPointsOnALine(points [][]int) int
+
+Given a number of coordinates for points, returns the maximum number of points that are on
+the same line.
+*/
 func TestMaxPointsOnALine(t *testing.T) {
 	tests := []struct {
 		points   [][]int

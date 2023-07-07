@@ -29,6 +29,7 @@ func NewCircularQueue(size int) *UsingCircularArray {
 	}
 }
 
+// enqueue solves the problem in O(1) time and O(1) space.
 func (queue *UsingCircularArray) enqueue(n int) error {
 	if queue.isFull() {
 		return ErrQueueAtMaxCapacity
@@ -44,6 +45,7 @@ func (queue *UsingCircularArray) enqueue(n int) error {
 	return nil
 }
 
+// dequeue solves the problem in O(1) time and O(1) space.
 func (queue *UsingCircularArray) dequeue() (int, error) {
 	tmp := queue.circular[queue.front]
 	queue.circular[queue.front] = emptyValue

@@ -5,6 +5,14 @@ import (
 	"testing"
 )
 
+/*
+TestCheapestFlights tests solution(s) with the following signature and problem description:
+
+	func CheapestFlights(flights [][]int, cityCount, source, destination, maxStops int) int
+
+finds cheapest flights with up to k stops from vertexSource to vertexDestination given a collection of flights
+and their costs.
+*/
 func TestCheapestFlights(t *testing.T) {
 	tests := []struct {
 		flight                                                 [][]int

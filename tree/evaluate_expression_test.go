@@ -5,6 +5,13 @@ import (
 	"testing"
 )
 
+/*
+TestEvaluateBinaryExpressionTree tests solution(s) with the following signature and problem description:
+
+	func EvaluateBinaryExpressionTree(node *stringBinaryTreeNode) (float64, error)
+
+Evaluates a binary expression tree and evaluates it allowing the four basic arithmetic operations.
+*/
 func TestEvaluateBinaryExpressionTree(t *testing.T) {
 	tests := []struct {
 		tree        string

@@ -8,7 +8,7 @@ type queue struct {
 	data []*tree.BinaryTreeNode
 }
 
-// IsTreeSymmetrical returns true if the given binary tree is symmetric and false otherwise.
+// IsTreeSymmetrical solves the problem in O(n) time and O(n) space.
 func IsTreeSymmetrical(root *tree.BinaryTreeNode) (bool, error) {
 	if root == nil {
 		return false, nil
