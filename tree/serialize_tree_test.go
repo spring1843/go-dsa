@@ -5,10 +5,18 @@ import "testing"
 /*
 TestSerializeAndUnserializeBinaryTree tests solution(s) with the following signature and problem description:
 
-	func Serialize(root *BinaryTreeNode) string
-	func Unserialize(s string) *BinaryTreeNode
+			func Serialize(root *BinaryTreeNode) string
+			func Unserialize(s string) *BinaryTreeNode
 
-Write two functions to serialize and unserialize a binary tree like (B) in _Figure 2_  in README.md to and
+
+	     4
+	    / \
+	   /   \
+	  2     6
+	 / \   / \
+	    3 5
+
+Write two functions to serialize and unserialize a binary tree like the one above to and
 from a string like `4,2,6,nil,3,5,nil`.
 */
 func TestSerializeAndUnserializeBinaryTree(t *testing.T) {

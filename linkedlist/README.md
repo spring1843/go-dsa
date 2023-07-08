@@ -93,8 +93,9 @@ A music album is a good example of linked lists. The tracks come in an order, an
 
 ## Rehearsal
 
-* [Solution](serialization.go) [Linked List Serialization](serialization_test.go)
-* [Solution](reverse_in_place.go) [Reverse a Linked List In-place](reverse_in_place_test.go)
-* [Solution](join_sorted_lists.go) [Join Two Sorted Linked Lists](join_sorted_lists_test.go)
-* [Solution](copy_linklist_with_random_pointer.go) [Copy Linked List with Random Pointer](copy_linklist_with_random_pointer_test.go)
-* [Solution](lru_cache.go) [Implement LRU Cache](lru_cache_test.go)
+* [Linked List Serialization](./serialization_test.go), [Solution](./serialization.go)
+* [Reverse a Linked List In-place](./reverse_in_place_test.go), [Solution](./reverse_in_place.go)
+* [Join Two Sorted Linked Lists](./join_sorted_lists_test.go), [Solution](./join_sorted_lists.go)
+* [Keep Repetitions](./keep_repetitions_test.go), [Solution](./keep_repetitions_test.go)
+* [Copy Linked List with Random Pointer](./copy_linklist_with_random_pointer_test.go), [Solution](./copy_linklist_with_random_pointer.go)
+* [Implement LRU Cache](./lru_cache_test.go), [Solution](./lru_cache.go)

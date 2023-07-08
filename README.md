@@ -38,6 +38,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Linked List Serialization](./linkedlist/serialization_test.go)
         * [Reverse a Linked List In-place](./linkedlist/reverse_in_place_test.go)
         * [Join Two Sorted Linked Lists](./linkedlist/join_sorted_lists_test.go)
+        * [Keep Repetitions](./linkedlist/keep_repetitions_test.go), [Solution](./linkedlist/keep_repetitions_test.go)
         * [Copy Linked List with Random Pointer](./linkedlist/copy_linklist_with_random_pointer_test.go)
         * [Implement LRU Cache](./linkedlist/lru_cache_test.go)
     * [Stacks](./stack/README.md)

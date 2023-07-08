@@ -24,7 +24,7 @@ func TestReverseLinkedList(t *testing.T) {
 	for i, test := range tests {
 		got := Serialize(ReverseLinkedList(Unserialize(test.list)))
 		if got != test.reversed {
-			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.reversed, got)
+			t.Fatalf("Failed test case #%d. Want %s got %s", i, test.reversed, got)
 		}
 	}
 }
