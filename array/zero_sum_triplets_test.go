@@ -10,7 +10,8 @@ TestZeroSumTriplets tests solution(s) with the following signature and problem d
 
 	ZeroSumTriplets(list []int) [][]int
 
-Finds all triplets in a list that sum to zero.
+Given an array of numbers like {1, 2, -4, 6, 3} returns unique triplets from the numbers
+with sum that equals zero like {-4, 1, 3}.
 */
 func TestZeroSumTriplets(t *testing.T) {
 	tests := []struct {

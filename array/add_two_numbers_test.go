@@ -10,8 +10,8 @@ TestAddTwoNumbers tests solution(s) with the following signature and problem des
 
 	AddTwoNumbers(num1, num2 []int) []int
 
-Adds two numbers which are represented as an array and returns the results
-In the same format. For example [2,5], and [3,5] would add up to[6,0] because 25 + 35 = 60.
+Given two numbers as an array like [2,9] and [9,9,9] return the sum of the numbers they
+represent like [1,0,2,8], because 29+999=1028.
 */
 func TestAddTwoNumbers(t *testing.T) {
 	tests := []struct {
@@ -21,6 +21,7 @@ func TestAddTwoNumbers(t *testing.T) {
 		{[]int{1}, []int{0}, []int{1}},
 		{[]int{1}, []int{1}, []int{2}},
 		{[]int{1}, []int{9}, []int{1, 0}},
+		{[]int{2, 5}, []int{3, 5}, []int{6, 0}},
 		{[]int{2, 9}, []int{9, 9, 9}, []int{1, 0, 2, 8}},
 		{[]int{9, 9, 9}, []int{9, 9, 9}, []int{1, 9, 9, 8}},
 	}

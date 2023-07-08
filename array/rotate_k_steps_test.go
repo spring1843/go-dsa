@@ -10,7 +10,7 @@ TestRotateKSteps tests solution(s) with the following signature and problem desc
 
 	RotateKSteps(list []int, k int)
 
-Rotates a given array k steps.
+Given an list of integers and a number k, rotate the array k times.
 */
 func TestRotateKSteps(t *testing.T) {
 	tests := []struct {

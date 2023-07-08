@@ -10,8 +10,8 @@ TestProductOfAllOtherElements tests solution(s) with the following signature and
 
 	ProductOfAllOtherElements(list []int) []int
 
-Returns an array such that n[i] is the product of all elements of the array except n[i].
-Division operation is not allowed.
+Given an array of integers A, construct a new array B such that B[i] = product of all items
+in A except A[i] without using division in O(n) time.
 */
 func TestProductOfAllOtherElements(t *testing.T) {
 	tests := []struct {
