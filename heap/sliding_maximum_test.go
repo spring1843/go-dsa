@@ -13,7 +13,7 @@ TestMaxSlidingWindow tests solution(s) with the following signature and problem 
 
 Given a list of integers like {1, 4, 5, -2, 4, 6}, and a positive integer k like 3, return
 the maximum of each slice of the array when a window of length k is moved from left to the
-right in the array like {4}.
+right in the array like {5, 5, 5, 6}.
 */
 func TestMaxSlidingWindow(t *testing.T) {
 	tests := []struct {
