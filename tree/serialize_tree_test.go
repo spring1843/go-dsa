@@ -8,12 +8,13 @@ TestSerializeAndUnserializeBinaryTree tests solution(s) with the following signa
 			func Serialize(root *BinaryTreeNode) string
 			func Unserialize(s string) *BinaryTreeNode
 
-		 4
-		/ \
+
+	     4
+	    / \
 	   /   \
 	  2     6
-	   \   /
-		3 5
+	 / \   / \
+	    3 5
 
 Write two functions to serialize and unserialize a binary tree like the one above to and
 from a string like `4,2,6,nil,3,5,nil`.
