@@ -48,7 +48,7 @@ func (m *MinHeap) Push(value int) {
 // Pull removes the root value from the heap
 func (m *MinHeap) Pull() int {
 	if len(m.Data) == 0 {
-		return 0 // or any other appropriate default value
+		return 0
 	}
 
 	rootValue := m.Data[0].Val
