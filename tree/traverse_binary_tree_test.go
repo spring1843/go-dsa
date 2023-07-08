@@ -10,7 +10,14 @@ TestTraverseBinaryTree tests solution(s) with the following signature and proble
 
 	func TraverseBinaryTree(root *BinaryTreeNode) ([]int, []int, []int)
 
-Given a binary tree like _figure 1_, in README.md write three functions to traverse the
+	     4
+	    / \
+	   /   \
+	  2     6
+	 / \   / \
+	1   3 5   7
+
+Given a binary tree like the above one create three functions to traverse the
 tree in-order, pre-order, and post-order.
 */
 func TestTraverseBinaryTree(t *testing.T) {
