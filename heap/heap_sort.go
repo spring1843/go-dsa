@@ -31,14 +31,14 @@ func HeapSort(list []int) []int {
 	return sorted
 }
 
-// Returns a new Min Heap
+// Returns a new Min Heap.
 func NewMinHeap() *MinHeap {
 	return &MinHeap{
 		Data: []*Vertex{},
 	}
 }
 
-// Push inserts a new value into the heap
+// Push inserts a new value into the heap.
 func (m *MinHeap) Push(value int) {
 	vertex := &Vertex{
 		Val: value,
@@ -47,7 +47,7 @@ func (m *MinHeap) Push(value int) {
 	m.heapifyUp(len(m.Data) - 1)
 }
 
-// Pop removes the root value from the heap
+// Pop removes the root value from the heap.
 func (m *MinHeap) Pop() int {
 	if len(m.Data) == 0 {
 		return math.MinInt
@@ -61,12 +61,12 @@ func (m *MinHeap) Pop() int {
 	return rootValue
 }
 
-// Len returns the number of elements in the heap
+// Len returns the number of elements in the heap.
 func (m *MinHeap) Len() int {
 	return len(m.Data)
 }
 
-// heapifyUp moves the vertex up the heap to maintain the heap property
+// heapifyUp moves the vertex up the heap to maintain the heap property.
 func (m *MinHeap) heapifyUp(index int) {
 	for index > 0 {
 		parentIndex := (index - 1) / 2
@@ -78,7 +78,7 @@ func (m *MinHeap) heapifyUp(index int) {
 	}
 }
 
-// heapifyDown moves the vertex down the heap to maintain the heap property
+// heapifyDown moves the vertex down the heap to maintain the heap property.
 func (m *MinHeap) heapifyDown(index int) {
 	for {
 		leftChildIndex := 2*index + 1
@@ -102,7 +102,7 @@ func (m *MinHeap) heapifyDown(index int) {
 	}
 }
 
-// swap swaps the positions of two vertices in the heap
+// swap swaps the positions of two vertices in the heap.
 func (m *MinHeap) swap(i, j int) {
 	m.Data[i], m.Data[j] = m.Data[j], m.Data[i]
 }
