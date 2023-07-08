@@ -89,7 +89,7 @@ Arrays are used wherever sequential data or more than one piece of data is neede
 * [Reverse Array In-place](./reverse_inplace_test.go), [Solution](./reverse_inplace.go)
 * [Add Two Numbers](./add_two_numbers_test.go), [Solution](./add_two_numbers.go)
 * [Find Duplicate in Array](./find_duplicate_in_array_test.go), [Solution](./find_duplicate_in_array.go)
-* [Zero Sum Triplets](./zero_sum_triplets_test.go), [Solution]((./zero_sum_triplets.go)) 
+* [Zero Sum Triplets](./zero_sum_triplets_test.go), [Solution](./zero_sum_triplets.go)
 * [Product of All Other Elements](./product_of_all_other_elements_test.go), [Solution](./product_of_all_other_elements.go)
 * [Equal Sum Sub-arrays](./equal_sum_subarrays_test.go), [Solution](./equal_sum_subarrays.go)
 * [Rotate K Times](./rotate_k_steps_test.go), [Solution](./rotate_k_steps.go)
