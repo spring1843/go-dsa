@@ -8,7 +8,7 @@ import (
 /*
 TestEqualSumSubArrays tests solution(s) with the following signature and problem description:
 
-	func EqualSubArrays(list []int) [][]int {
+	func EqualSubArrays(list []int) [][]int
 
 Given an list of integers A, return two sub-arrays with equal sums without changing the
 order of the elements in the list.

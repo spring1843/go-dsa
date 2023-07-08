@@ -7,7 +7,7 @@ import (
 /*
 TestClimbingStairs tests solution(s) with the following signature and problem description:
 
-	func ClimbingStairs(n int) int {
+	func ClimbingStairs(n int) int
 
 Given n the number of steps, return in how many ways you can climb these stairs if you are
 only able to climb 1 or 2 steps at a time.

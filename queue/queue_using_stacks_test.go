@@ -5,8 +5,12 @@ import "testing"
 /*
 TestQueueUsingStacks tests solution(s) with the following signature and problem description:
 
-	(usingStacks *UsingStacks) enqueue(n int) {
-	(usingStacks *UsingStacks) dequeue() int {
+	type UsingStacks struct {
+		stack1 Stack
+		stack2 Stack
+	}
+	(usingStacks *UsingStacks) enqueue(n int)
+	(usingStacks *UsingStacks) dequeue() int
 
 Implement a queue of integers using stacks.
 */

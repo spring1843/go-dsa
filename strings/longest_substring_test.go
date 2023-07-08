@@ -7,7 +7,7 @@ import (
 /*
 TestLongestSubstrings tests solution(s) with the following signature and problem description:
 
-	func LongestSubstringOfTwoChars(input string) string {
+	func LongestSubstringOfTwoChars(input string) string
 
 Given a string like "aabbc" return the longest substring of two unique characters like "aabb".
 */

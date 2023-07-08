@@ -13,7 +13,7 @@ type boardAndSolution struct {
 /*
 TestSudoku tests solution(s) with the following signature and problem description:
 
-	func Sudoku(board [][]int) bool {
+	func Sudoku(board [][]int) bool
 
 Given a partially filled 9x9 grid with integers from 1 to 9 representing a Sudoku
 board and 0 representing an empty slot that needs to be filled, write a function
