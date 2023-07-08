@@ -23,13 +23,6 @@ func LongestValidParentheses(s string) int {
 	return longest
 }
 
-func maxInt(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func intStackPush(a int) {
 	intStack = append(intStack, a)
 }
