@@ -10,7 +10,8 @@ TestReverseInPlace tests solution(s) with the following signature and problem de
 
 	ReverseInPlace(list []int, start, end int)
 
-Reverses parts of the array in place.
+Given an array of integers, a start index, and an end index, reverse the integers in the
+array in-place without using any extra memory.
 */
 func TestReverseInPlace(t *testing.T) {
 	tests := []struct {

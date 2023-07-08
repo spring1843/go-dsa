@@ -9,7 +9,7 @@ TestFindDuplicate tests solution(s) with the following signature and problem des
 
 	FindDuplicate(list []int) int
 
-Finds the duplicate in a list of integers (1,n).
+Given a list of integers (1,2,...,n), find a duplicate number in O(n) time.
 */
 func TestFindDuplicate(t *testing.T) {
 	tests := []struct {

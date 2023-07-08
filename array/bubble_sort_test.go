@@ -10,7 +10,9 @@ TestBubbleSort tests solution(s) with the following signature and problem descri
 
 	BubbleSort(input []int)
 
-Implements the Bubble Sort algorithm.
+Given an array of unsorted integers, sort the array using the Bubble Sort algorithm.
+The algorithm should be in-place, meaning it should not create a new array and it should
+work by swapping elements in the array until it is sorted.
 */
 func TestBubbleSort(t *testing.T) {
 	tests := []struct {

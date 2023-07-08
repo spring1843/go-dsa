@@ -10,8 +10,8 @@ TestEqualSumSubArrays tests solution(s) with the following signature and problem
 
 	func EqualSubArrays(list []int) [][]int {
 
-Given a list of integers returns two sub arrays that have equal sums without changing the
-order of the items in the list.
+Given an list of integers A, return two sub-arrays with equal sums without changing the
+order of the elements in the list.
 */
 func TestEqualSumSubArrays(t *testing.T) {
 	tests := []struct {
