@@ -45,6 +45,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Infix to Postfix Conversion](./stack/infix_to_postfix_test.go)
         * [Evaluate Postfix](./stack/evaluate_postfix_test.go)
         * [Basic Calculator](./stack/basic_calculator_test.go)
+        * [Longest Valid Parentheses](./stack/longest_valid_parentheses_test.go)
     * [Queues](./queue/README.md)
         * [A Queue Using Stacks](./queue/queue_using_stacks_test.go)
         * [Implement a Queue Using a Circular Array](./queue/queue_using_circular_array_test.go)
