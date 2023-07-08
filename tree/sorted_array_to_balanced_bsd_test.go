@@ -7,7 +7,7 @@ TestBalancedBinarySearchTree tests solution(s) with the following signature and 
 
 	func BalancedBinarySearchTree(sorted []int) *BinaryTreeNode
 
-Takes a sorted list of numbers and returns a balanced binary search tree.
+Given a sorted array of integers like {1,2,3,4,5} return the root to a balanced BST.
 */
 func TestBalancedBinarySearchTree(t *testing.T) {
 	tests := []struct {

@@ -9,7 +9,8 @@ TestKthLargestElement tests solution(s) with the following signature and problem
 
 	func KthLargestElement(elements []int, k int) int
 
-Finds the kth largest element in an list.
+Given an array of integers like {3,5,6,3,1,2,9} and k an integer like 3 return the kth
+largest element like 5.
 */
 func TestKthLargestElement(t *testing.T) {
 	tests := []struct {

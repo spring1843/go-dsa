@@ -10,8 +10,9 @@ TestCheapestFlights tests solution(s) with the following signature and problem d
 
 	func CheapestFlights(flights [][]int, cityCount, source, destination, maxStops int) int
 
-finds cheapest flights with up to k stops from vertexSource to vertexDestination given a collection of flights
-and their costs.
+Given a list of flights each with a source and destination and a price, a maximum number of stops,
+source, and destination cities, return the cheapest costs not exceeding the maximum number of stops
+to reach from source city to destination.
 */
 func TestCheapestFlights(t *testing.T) {
 	tests := []struct {

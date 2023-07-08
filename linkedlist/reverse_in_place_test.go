@@ -9,7 +9,7 @@ TestReverseLinkedList tests solution(s) with the following signature and problem
 
 	func ReverseLinkedList(head *Node) *Node {
 
-Reverses a linked list in-place.
+Reverse a given linked list in place.
 */
 func TestReverseLinkedList(t *testing.T) {
 	tests := []struct {

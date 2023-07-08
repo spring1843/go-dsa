@@ -7,9 +7,10 @@ TestWordLadder tests solution(s) with the following signature and problem descri
 
 	func WordLadder(start, end string, dic []string) int {
 
-Returns the minimum number of transformations from start to end in a dictionary
-where words are all equal in length, and a transformation can only happen if the difference
-between two words is only in one letter. Zero is returned if no such transformations can occur.
+Given a start word like `pop` and an end word like `car`, a dictionary of same length words
+like  `{"top","cop","cap","car"}` return the minimum number of transformations like 4 to get
+from start to end where each transformation between two words can happen when they are
+different by only one letter.
 */
 func TestWordLadder(t *testing.T) {
 	tests := []struct {

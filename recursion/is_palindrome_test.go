@@ -9,7 +9,7 @@ TestIsPalindrome tests solution(s) with the following signature and problem desc
 
 	func IsPalindrome(s string) bool
 
-Returns true if a given string is a Palindrome and false otherwise.
+Given a string like `abba` return true if it's a palindrome and false otherwise.
 */
 func TestIsPalindrome(t *testing.T) {
 	tests := []struct {

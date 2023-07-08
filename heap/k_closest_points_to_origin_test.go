@@ -10,7 +10,7 @@ TestKClosestPointToOrigin tests solution(s) with the following signature and pro
 
 	func KClosestPointToOrigin(points [][]int, k int) [][]int
 
-Returns the coordinates of the k closest points to origin.
+Given coordination of a point on an x,y axis and an integer k, return k closest points to the origin.
 */
 func TestKClosestPointToOrigin(t *testing.T) {
 	tests := []struct {

@@ -9,7 +9,10 @@ TestKnapsack tests solution(s) with the following signature and problem descript
 
 	func Knapsack(items []KnapsackItem, capacity int) int
 
-Returns the maximum value that can be put in a knapsack of a given capacity.
+Given weight capacity of a knapsack like 5, a list of divisible items (such as pieces
+of metal) with values and weights like `{Value: 6, Weight: 2}, {Value: 10, Weight: 2},
+{Value: 12, Weight: 3}` return the maximum value of items that can be placed in the
+knapsack like `22`.
 */
 func TestKnapsack(t *testing.T) {
 	tests := []struct {

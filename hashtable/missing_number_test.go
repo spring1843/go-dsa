@@ -7,7 +7,7 @@ TestMissingNumber tests solution(s) with the following signature and problem des
 
 	func MissingNumber(numbers []int) int
 
-Returns a missing number in a given sequential list of numbers.
+Given an unsorted array of numbers like {7,5,3,4,1,2,0,-1} return the missing integer like 6.
 */
 func TestMissingNumber(t *testing.T) {
 	tests := []struct {

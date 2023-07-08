@@ -9,8 +9,8 @@ TestOddlyRepeatedNumber tests solution(s) with the following signature and probl
 
 	func OddlyRepeatedNumber(list []int) int
 
-Repeated number finds an element in a given array that is repeated an
-odd number of times.
+Given an array of integers that are all repeated an even number of times except one,
+find the oddly repeated element.
 */
 func TestOddlyRepeatedNumber(t *testing.T) {
 	tests := []struct {

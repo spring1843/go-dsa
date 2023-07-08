@@ -11,7 +11,14 @@ TestIsTreeSymmetrical tests solution(s) with the following signature and problem
 
 	func IsTreeSymmetrical(root *tree.BinaryTreeNode) (bool, error)
 
-Returns true if the given binary tree is symmetric and false otherwise.
+Given a binary tree the one above "2,4,4,5,6,6,5", true if it is symmetric (mirrored from the root), and false otherwise.
+
+		     2
+		   /   \
+		  /     \
+		 4       4
+		/ \     / \
+	   5   6   6   5
 */
 func TestIsTreeSymmetrical(t *testing.T) {
 	tests := []struct {

@@ -9,7 +9,8 @@ TestReadNumberInEnglish tests solution(s) with the following signature and probl
 
 	func NumberInEnglish(num int) string
 
-Returns how a given number would be read in English.
+Given a number like 34, return how the number  would be read in English e.g. (Thirty Four) for
+integers smaller than one Trillion.
 */
 func TestReadNumberInEnglish(t *testing.T) {
 	tests := []struct {

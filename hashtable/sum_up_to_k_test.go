@@ -10,7 +10,7 @@ TestSumUpToK tests solution(s) with the following signature and problem descript
 
 	func SumUpToK(numbers []int, k int) []int
 
-Returns indices of the first pairs that sum up to k.
+Given a list, output the indices of the first two elements that sum up to K.
 */
 func TestSumUpToK(t *testing.T) {
 	tests := []struct {

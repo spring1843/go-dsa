@@ -9,7 +9,7 @@ TestGenerateBinaryNumbers tests solution(s) with the following signature and pro
 
 	func GenerateBinaryNumbers(n int) []string
 
-Returns string representation of binary numbers from 0 to n.
+Given a number n (n>=0) count from 0 to n in binary.
 */
 func TestGenerateBinaryNumbers(t *testing.T) {
 	tests := []struct {

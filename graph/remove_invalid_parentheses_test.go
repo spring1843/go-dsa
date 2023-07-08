@@ -10,7 +10,8 @@ TestRemoveInvalidParentheses tests solution(s) with the following signature and 
 
 	func RemoveInvalidParentheses(input string) []string
 
-Removes the minimum number of invalid parentheses to make the input valid.
+Given a string containing parentheses and other alphabet letters like `(z)())()`, remove the minimum
+amount of parentheses to make the string valid like `(z())()` and `(z)()()`.
 */
 func TestRemoveInvalidParentheses(t *testing.T) {
 	tests := []struct {

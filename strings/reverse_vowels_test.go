@@ -9,7 +9,7 @@ TestReverseVowels tests solution(s) with the following signature and problem des
 
 	func ReverseVowels(str string) (string, error)
 
-Reverses the order of vowels in a string.
+Given a string e.g. "coat", reverse the order in which vowels appear e.g. "caot".
 */
 func TestReverseVowels(t *testing.T) {
 	tests := []struct {

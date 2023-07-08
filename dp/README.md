@@ -29,22 +29,8 @@ DP is well-suited for tackling an array of complex problems, including those in 
 
 ## Rehearsal
 
-### Rod Cutting
-
-Given a list containing price a table such as `{1,5,8,9,10}` indicating the price of a rod of a given length (1 inch rod is $1, 2 inch rod is $5, 5 inch rod is $10) and number n like 3, indicating the length of a given rod, calculate maximum revenue that can be earned by cutting the rod and selling the pieces when cutting is free. [Solution](rod_cutting.go), [Tests](rod_cutting_test.go)
-
-### Sum Up to Number
-
-Given a set of positive integers like `{1,2,3,4,5}` and an integer like `7` write a function that returns true if there are two numbers in the list that sum up to the given integer and false otherwise. [Solution](sum_up_to_integer.go), [Tests](sum_up_to_integer_test.go)
-
-### House Robber
-
-Given an array representing the amount of wealth inside houses like `{1,2,3,4}` return the maximum wealth the robber can steal like `6` with the condition that he is not allowed to rob two consecutive houses. [Solution](house_robber.go), [Tests](house_robber_test.go)
-
-### Minimum Deletion to Make a Palindrome
-
-Given a string like `abccb` return the minimum number of character deletions that can be done on the string to make it a palindrome like `1` (by removing `a`, we will have `bccb`). [Solution](minimum_deletion_to_make_palindrome.go), [Tests](minimum_deletion_to_make_palindrome_test.go)
-
-### Word Distance
-
-Given a string like `abc`, and another string like `abcde` return how many character modifications (insert, delete, edit) have to be done on the first string to become identical to the second string. [Solution](word_distance.go.go), [Tests](word_distance.go_test.go)
+* [Rod Cutting](rod_cutting_test.go), [Solution](rod_cutting.go)
+* [Sum Up to Number](sum_up_to_integer_test.go), [Solution](sum_up_to_integer.go)
+* [House Robber](house_robber_test.go), [Solution](house_robber.go).
+* [Minimum Deletion to Make a Palindrome](minimum_deletion_to_make_palindrome_test.go), [Solution](minimum_deletion_to_make_palindrome.go)
+* [Word Distance](word_distance_test.go), [Solution](word_distance.go.go)

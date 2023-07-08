@@ -9,11 +9,12 @@ TestRegularExpressions tests solution(s) with the following signature and proble
 
 	func IsRegularExpressionMatch(input, pattern string) bool
 
-Returns true if the given input matches the given pattern and false otherwise
-In this regular expression patten
+Given an input and a regular expression pattern where
 
-	. indicates any single character
-	* matches zero or more characters of the preceding character
+	`.` denotes to any character
+	`*` denotes to zero or more of the proceeding characters
+
+Write a recursive function to return true if the input matches the pattern and false otherwise.
 */
 func TestRegularExpressions(t *testing.T) {
 	tests := []struct {

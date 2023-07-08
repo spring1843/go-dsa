@@ -15,9 +15,10 @@ TestSudoku tests solution(s) with the following signature and problem descriptio
 
 	func Sudoku(board [][]int) bool {
 
-Solves a given partially filled or empty 9x9 Sudoku board by placing integers
-between 1 and 9 in empty spot designated by 0 such that In each row, column, and
-3x3 sub square the values are unique.
+Given a partially filled 9x9 grid with integers from 1 to 9 representing a Sudoku
+board and 0 representing an empty slot that needs to be filled, write a function
+that solves the board such that the values in each row, column and each of
+the 9 3x3 sub-grids are unique.
 */
 func TestSudoku(t *testing.T) {
 	tests := []boardAndSolution{

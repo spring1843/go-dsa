@@ -9,7 +9,7 @@ TestLongestSubstrings tests solution(s) with the following signature and problem
 
 	func LongestSubstringOfTwoChars(input string) string {
 
-Returns the longest substring of two different characters in a string.
+Given a string like "aabbc" return the longest substring of two unique characters like "aabb".
 */
 func TestLongestSubstrings(t *testing.T) {
 	tests := []struct {

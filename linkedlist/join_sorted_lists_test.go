@@ -9,7 +9,7 @@ TestJoinTwoSortedLinkedLists tests solution(s) with the following signature and 
 
 	func JoinTwoSortedLinkedLists(l1, l2 *Node) *Node
 
-Merges two sorted linked lists into one.
+Given two sorted linked lists of integers, merge them into one sorted linked list.
 */
 func TestJoinTwoSortedLinkedLists(t *testing.T) {
 	tests := []struct {

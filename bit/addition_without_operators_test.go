@@ -7,7 +7,7 @@ TestAdd tests solution(s) with the following signature and problem description:
 
 	func Add(x, y int) int
 
-Adds to numbers without using any arithmetic operators.
+Add x by y, two integers without using the built-in + or any other arithmetic operators.
 */
 func TestAdd(t *testing.T) {
 	tests := []struct {

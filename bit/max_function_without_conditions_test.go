@@ -7,7 +7,8 @@ TestMax tests solution(s) with the following signature and problem description:
 
 	func Max(x, y int) int
 
-Returns the maximum of two numbers without using if conditions.
+Write max, a function that returns the largest of two numbers without using a
+comparison or if conditions.
 */
 func TestMax(t *testing.T) {
 	tests := []struct {

@@ -7,7 +7,7 @@ TestIsExpressionBalanced tests solution(s) with the following signature and prob
 
 	func IsExpressionBalanced(s string) bool
 
-Returns true if a given expression contains symbols like [](){} is balanced or not.
+Given a set of symbols including []{}(), determine if the input is is balanced or not.
 */
 func TestIsExpressionBalanced(t *testing.T) {
 	tests := []struct {

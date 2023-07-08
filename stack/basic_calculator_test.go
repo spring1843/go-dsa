@@ -8,8 +8,8 @@ import (
 TestBasicCalculator tests solution(s) with the following signature and problem description:
 func BasicCalculator(input string) (float64, error)
 
-Calculates basic expressions into a float64 supporting the four basic
-arithmetic operations and parenthesis.
+Given an expression containing integers, parentheses and the four basic arithmetic operations
+like 1*2+3+4*5 calculate the expression into a numerical value like 25.
 */
 func TestBasicCalculator(t *testing.T) {
 	tests := []struct {

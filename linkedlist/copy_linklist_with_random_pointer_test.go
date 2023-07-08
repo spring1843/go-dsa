@@ -17,7 +17,8 @@ TestCopyLinkedListWithRandomPointer tests solution(s) with the following signatu
 
 	func CopyLinkedListWithRandomPointer(head *RandomNode) *RandomNode
 
-Returns a deep copy of the given randomly connected linked list.
+Given a singly connected linked list in which each node may optionally be connected to another node in
+random order, return a deep copy of the linked list.
 */
 func TestCopyLinkedListWithRandomPointer(t *testing.T) {
 	tests := []struct {

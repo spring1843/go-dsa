@@ -9,7 +9,8 @@ TestLongestDictionaryWordContainingKey tests solution(s) with the following sign
 
 	func LongestDictionaryWordContainingKey(key string, dic []string) string
 
-Returns the longest word in a dictionary containing every letter of a key.
+Given a key like "car", and a dictionary like {"rectify", "race", "archeology", "racoon"} return the longest
+dictionary word that contains every letter of the key like "archeology".
 */
 func TestLongestDictionaryWordContainingKey(t *testing.T) {
 	tests := []struct {

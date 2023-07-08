@@ -7,8 +7,8 @@ TestIsDAG tests solution(s) with the following signature and problem description
 
 	func IsDAG(graph []*Vertex) bool
 
-Returns true if the given graph is a Directed Acyclic Graph (DAG) A directed graph
-is acyclic if it contains no cycles.
+Given a directed graph determine if it's a DAG or not. A directed acyclic graph (DAG)
+is a directed graph that has no cycles.
 */
 func TestIsDAG(t *testing.T) {
 	tests := []struct {
