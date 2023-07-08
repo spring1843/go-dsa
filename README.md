@@ -17,106 +17,106 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 
 * [Complexity Analysis](complexity.md)
 * Data Structures
-    * [Arrays](./array)
-        * Reverse Array In-place
-        * Add Numbers
-        * Find Duplicate in Array
-        * Zero Sum Triplets
-        * Product of All Other Elements
-        * Equal Sum Sub-arrays
-        * Rotate K Steps
-        * Bubble Sort
-    * [Strings](./strings)
-        * The longest Dictionary Word Containing Key
-        * Look and Tell
-        * In Memory Database
-        * Number in English
-        * Reverse Vowels In a String
-        * Longest Substring of Two Unique Characters
-    * [Linked Lists](./linkedlist)
-        * Linked List Serialization
-        * Reverse a Linked List In-place
-        * Join Two Sorted Linked Lists
-        * Copy Linked List with Random Pointer
-        * Implement LRU Cache
-    * [Stacks](./stack)
-        * Max Stack
-        * Balancing Symbols
-        * Infix to Postfix Conversion
-        * Evaluate Postfix
-        * Basic Calculator
-    * [Queues](./queue)
-        * A Queue Using Stacks
-        * Implement a Queue Using a Circular Array
-        * Is Binary Tree Symmetrical
-        * Generate Binary Numbers
-        * Find The Maximum of Sub-array of Length K
-    * [Hash Tables](./hashtable)
-        * Find Missing Number
-        * List Elements Summing Up to K
-        * Fastest Way to Cut a Brick Wall
-        * Find Anagrams
-        * Find Max Points on the Same Line
-    * [Trees](./tree)
-        * Serialize Binary Tree
-        * Evaluate A Binary Expression Tree
-        * Sorted Array to Balanced BST
-        * Traverse Binary Tree
-        * Implement Autocomplete
-    * [Heaps](./heap)
-        * Kth Largest Element
-        * Merge Sorted Lists
-        * Median in a Stream
-        * Kth Closest Points to the Center
-        * Sliding Maximum
+    * [Arrays](./array/README.md)
+        * [Reverse Array In-place](./array/reverse_inplace_test.go)
+        * [Add Numbers](./array/add_two_numbers_test.go)
+        * [Find Duplicate in Array](./array/find_duplicate_in_array_test.go)
+        * [Zero Sum Triplets](./array/zero_sum_triplets_test.go)
+        * [Product of All Other Elements](./array/product_of_all_other_elements_test.go)
+        * [Equal Sum Sub-arrays](./array/equal_sum_subarrays_test.go)
+        * [Rotate K Steps](./array/rotate_k_steps_test.go)
+        * [Bubble Sort](./array/bubble_sort_test.go)
+    * [Strings](./strings/README.md)
+        * [The longest Dictionary Word Containing Key](./strings/longest_dictionary_word_test.go)
+        * [Look and Tell](./strings/look_and_tell_test.go)
+        * [In Memory Database](./strings/in_memory_database_test.go)
+        * [Number in English](./strings/number_in_english_test.go)
+        * [Reverse Vowels In a String](./strings/reverse_vowels_test.go)
+        * [Longest Substring of Two Unique Characters](./strings/longest_substring_test.go)
+    * [Linked Lists](./linkedlist/README.md)
+        * [Linked List Serialization](./linkedlist/serialization_test.go)
+        * [Reverse a Linked List In-place](./linkedlist/reverse_in_place_test.go)
+        * [Join Two Sorted Linked Lists](./linkedlist/join_sorted_lists_test.go)
+        * [Copy Linked List with Random Pointer](./linkedlist/copy_linklist_with_random_pointer_test.go)
+        * [Implement LRU Cache](./linkedlist/lru_cache_test.go)
+    * [Stacks](./stack/README.md)
+        * [Max Stack](./stack/max_stack_test.go)
+        * [Balancing Symbols](./stack/balancing_symbols_test.go)
+        * [Infix to Postfix Conversion](./stack/infix_to_postfix_test.go)
+        * [Evaluate Postfix](./stack/evaluate_postfix_test.go)
+        * [Basic Calculator](./stack/basic_calculator_test.go)
+    * [Queues](./queue/README.md)
+        * [A Queue Using Stacks](./queue/queue_using_stacks_test.go)
+        * [Implement a Queue Using a Circular Array](./queue/queue_using_circular_array_test.go)
+        * [Is Binary Tree Symmetrical](./queue/is_tree_symmetrical_test.go)
+        * [Generate Binary Numbers](./queue/generate_binary_numbers_test.go)
+        * [Find The Maximum of Sub-array of Length K](./queue/maximum_of_sub_arrays_test.go)
+    * [Hash Tables](./hashtable/README.md)
+        * [Find Missing Number](./hashtable/missing_number_test.go)
+        * [List Elements Summing Up to K](./hashtable/sum_up_to_k_test.go)
+        * [Fastest Way to Cut a Brick Wall](./hashtable/find_anagrams_test.go)
+        * [Find Anagrams](./hashtable/find_anagrams_test.go)
+        * [Find Max Points on the Same Line](./hashtable/max_points_on_line_test.go)
+    * [Trees](./tree/README.md)
+        * [Serialize Binary Tree](./tree/serialize_tree_test.go)
+        * [Evaluate A Binary Expression Tree](./tree/evaluate_expression_test.go)
+        * [Sorted Array to Balanced BST](./tree/sorted_array_to_balanced_bsd_test.go)
+        * [Traverse Binary Tree](./tree/traverse_binary_tree_test.go)
+        * [Implement Autocomplete](./tree/auto_complete_test.go)
+    * [Heaps](./heap/README.md)
+        * [Kth Largest Element](./heap/kth_largest_element_test.go)
+        * [Merge Sorted Lists](./heap/merge_sorted_list_test.go)
+        * [Median in a Stream](./heap/median_in_a_stream_test.go)
+        * [Kth Closest Points to the Center](./heap/k_closest_points_to_origin_test.go)
+        * [Sliding Maximum](./heap/sliding_maximum_test.go)
 * Algorithms
-    * [Recursion](./recursion)
-        * Reverse an integer recursively
-        * Palindrome
-        * Climbing Stairs
-        * Exponentiation
-        * Permutations
-        * Regular Expressions Matching
-    * [Divide and Conquer](dnc)
-        * Binary Search
-        * Square Root with Binary Search
-        * Rate Limit
-        * Towers of Hanoi
-        * Merge Sort
-    * [Bit Manipulation](./bit)
-        * Division without multiplication or division operators
-        * Middle without division
-        * Addition without using plus (+) or any other arithmetic operators
-        * Maximum without if conditions
-        * Oddly Repeated Number
-    * [Backtracking](./backtracking)
-        * Permutations
-        * Generate Parenthesis
-        * Phone Letter Combinations
-        * Sudoku
-        * N Queens
-    * [Graphs](./graph)
-        * Iteratively Implement BFS and DFS
-        * Is Graph a DAG
-        * Topological Sort
-        * Employee Head Count
-        * Remove Invalid Parentheses
-        * Cheapest Flights
-        * Word Ladder
-        * Network Delay Time
-        * Number of Islands
-    * [Greedy Algorithms](./greedy)
-        * Maximum Stock Profit
-        * Activity Selector
-        * Knapsack
-        * Jump Game
-        * Task Scheduling
-    * [Dynamic Programming](./dp)
-        * Rod Cutting
-        * Sum Up to Number
-        * House Robber
-        * Minimum Deletion to Make a Palindrome
-        * Word Distance
+    * [Recursion](./recursion/README.md)
+        * [Reverse an integer recursively](./recursion/reverse_number_test.go)
+        * [Palindrome](./recursion/is_palindrome_test.go)
+        * [Climbing Stairs](./recursion/climbing_stairs_test.go)
+        * [Exponentiation](./recursion/exponentiation_test.go)
+        * [Permutations](./recursion/permutations_test.go)
+        * [Regular Expressions Matching](./recursion/)
+    * [Divide and Conquer](./dnc//README.md)
+        * [Binary Search](./dnc/binary_search_test.go)
+        * [Square Root with Binary Search](./dnc/square_root_test.go)
+        * [Rate Limit](./dnc/rate_limit_test.go)
+        * [Towers of Hanoi](./dnc/towers_of_hanoi_test.go)
+        * [Merge Sort](./dnc/merge_sort_test.go)
+    * [Bit Manipulation](./bit//README.md)
+        * [Division without multiplication or division operators](./bit/division_without_operators_test.go)
+        * [Middle without division](./bit/middle_without_division_test.go)
+        * [Addition without using plus (+) or any other arithmetic operators](./bit/addition_without_operators_test.go)
+        * [Maximum without if conditions](./bit/max_function_without_conditions_test.go)
+        * [Oddly Repeated Number](./bit/oddly_repeated_number_test.go)
+    * [Backtracking](./backtracking//README.md)
+        * [Permutations](./backtracking/permutations_test.go)
+        * [Generate Parenthesis](./backtracking/generate_parenthesis_test.go)
+        * [Phone Letter Combinations](./backtracking/phone_letter_combinations_test.go)
+        * [Sudoku](./backtracking/sudoku_test.go)
+        * [N Queens](./backtracking/n_queens_test.go)
+    * [Graphs](./graph/README.md)
+        * [Iteratively Implement BFS and DFS](./graph/iterative_traversal_test.go)
+        * [Is Graph a DAG](./graph/is_dag_test.go)
+        * [Topological Sort](./graph/topological_sort_test.go)
+        * [Employee Head Count](./graph/employee_headcount_test.go)
+        * [Remove Invalid Parentheses](./graph/remove_invalid_parentheses_test.go)
+        * [Cheapest Flights](./graph/cheapest_flights_test.go)
+        * [Word Ladder](./graph/word_ladder_test.go)
+        * [Network Delay Time](./graph/network_delay_time_test.go)
+        * [Number of Islands](./graph/number_of_islands_test.go)
+    * [Greedy Algorithms](./greedy/README.md)
+        * [Maximum Stock Profit](./greedy/max_stock_profit_test.go)
+        * [Activity Selector](./greedy/activity_selector_test.go)
+        * [Knapsack](./greedy/knapsack_test.go)
+        * [Jump Game](./greedy/jump_game_test.go)
+        * [Task Scheduling](./greedy/task_scheduling_test.go)
+    * [Dynamic Programming](./dp/README.md)
+        * [Rod Cutting](./dp/rod_cutting_test.go)
+        * [Sum Up to Number](./dp/sum_up_to_integer_test.go)
+        * [House Robber](./dp/house_robber_test.go)
+        * [Minimum Deletion to Make a Palindrome](./dp/minimum_deletion_to_make_palindrome_test.go)
+        * [Word Distance](./dp/word_distance_test.go)
 
 ## 🛠️ How to use
 
