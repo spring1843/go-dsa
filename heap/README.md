@@ -7,9 +7,9 @@ A heap must satisfy two conditions:
 1. The structure property requires that the heap be a complete binary search [tree](../tree), where each level is filled left to right, and all levels except the bottom are full.
 2. The heap property requires that the children of a node be larger than or equal to the parent node in a min heap and smaller than or equal to the parent in a max heap, meaning that the root is the minimum in a min heap and the maximum in a max heap.
 
-As a result, if you push elements to the min or max heap and then pop them one by one, you will obtain a list that is sorted in ascending or descending order, respectively. This sorting technique is also an O(n*Log n) algorithm known as heap sort. Although there are other sorting algorithms available, none of them are faster than O(n*Logn).
+As a result, if you push elements to the min or max heap and then pop them one by one, you will obtain a list that is sorted in ascending or descending order, respectively. This sorting technique is also an O(n*Log n) algorithm known as [heap sort](./heap_sort_test.go). Although there are other sorting algorithms available, none of them are faster than O(n*Logn).
 
-When pushing a new element to a heap, because of the structure property we always add the new element to the first available position on the lowest level of the heap, filling from left to right. Then to maintain the heap property, if the newly inserted element is smaller than its parent in a min heap (larger in a max heap), then we swap it with its parent. We continue swapping the  swapped element with its parent until the heap property is achieved.
+When pushing a new element to a heap, because of the structure property we always add the new element to the first available position on the lowest level of the heap, filling from left to right. Then to maintain the heap property, if the newly inserted element is smaller than its parent in a min heap (larger in a max heap), then we swap it with its parent. We continue swapping the swapped element with its parent until the heap property is achieved.
 
 ```ASCII
 [Figure 1] Minimum heap push operation
@@ -100,3 +100,4 @@ Priority queues implemented as heaps are utilized in job scheduling, for example
 * [Median in a Stream](median_in_a_stream_test.go), [Solution](median_in_a_stream_test.go)
 * [Kth Closest Points to the Center](k_closest_points_to_origin_test.go), [Solution](k_closest_points_to_origin.go)
 * [Sliding Maximum](sliding_maximum_test.go), [Solution](sliding_maximum.go)
+* [Heap Sort](heap_sort_test.go), [Solution](heap_search.go)

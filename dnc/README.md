@@ -97,3 +97,4 @@ DNC algorithms are suitable for solving problems that can be divided into smalle
 * [Rate Limit](rate_limit_test.go), [Solution](rate_limit.go)
 * [Towers of Hanoi](towers_of_hanoi_test.go), [Solution](towers_of_hanoi.go)
 * [Merge Sort](merge_sort_test.go), [Solution](merge_sort.go)
+* [Quick Sort](quick_sort_test.go), [Solution](quick_sort.go)

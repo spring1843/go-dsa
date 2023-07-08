@@ -94,3 +94,4 @@ Arrays are used wherever sequential data or more than one piece of data is neede
 * [Equal Sum Sub-arrays](./equal_sum_subarrays_test.go), [Solution](./equal_sum_subarrays.go)
 * [Rotate K Times](./rotate_k_steps_test.go), [Solution](./rotate_k_steps.go)
 * [Bubble Sort](./bubble_sort_test.go), [Solution](bubble_sort.go)
+* [Insertion Sort](./insertion_sort_test.go), [Solution](./insertion_sort.go)
