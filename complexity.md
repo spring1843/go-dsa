@@ -98,6 +98,7 @@ Attaining logarithmic time complexity in an algorithm is highly desirable as it 
 * Push and Pop in [heap](./heap/README.md)
 * [Square Root](./dnc/square_root.go)
 * [Median in a Stream](./heap/median_in_a_stream.go)
+
 ### Linear - O(n)
 
 Linear time complexity is considered favorable when an algorithm necessitates traversing every input, with no feasible way to avoid it. Examples:
