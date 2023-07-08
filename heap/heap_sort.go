@@ -64,15 +64,6 @@ func (m *MinHeap) Len() int {
 	return len(m.Data)
 }
 
-// Peek returns the root value of the heap
-func (m *MinHeap) Peek() int {
-	if len(m.Data) == 0 {
-		return 0 // or any other appropriate default value
-	}
-
-	return m.Data[0].Val
-}
-
 // heapifyUp moves the vertex up the heap to maintain the heap property
 func (m *MinHeap) heapifyUp(index int) {
 	for index > 0 {
