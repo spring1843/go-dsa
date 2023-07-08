@@ -85,6 +85,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Rate Limit](./dnc/rate_limit_test.go)
         * [Towers of Hanoi](./dnc/towers_of_hanoi_test.go)
         * [Merge Sort](./dnc/merge_sort_test.go)
+        * [Quick Sort](./dnc/quick_sort_test.go)
     * [Bit Manipulation](./bit//README.md)
         * [Division without multiplication or division operators](./bit/division_without_operators_test.go)
         * [Middle without division](./bit/middle_without_division_test.go)
