@@ -1,31 +1,45 @@
 package stack
 
-import "container/list"
+var intStack []int
 
 // LongestValidParentheses solves the problem in O(n) time and O(n) space.
-func LongestValidParentheses(input string) int {
-	stack := list.New()
+func LongestValidParentheses(s string) int {
+	intStack = make([]int, 0)
+	intStackPush(-1)
 
 	longest := 0
-
-	tmp := 0
-	for _, char := range input {
+	for i, char := range s {
 		if char == '(' {
-			stack.PushBack(char)
+			intStackPush(i)
 			continue
 		}
-
-		if stack.Len() == 0 {
-			tmp = 0
+		intStackPop()
+		if len(intStack) == 0 {
+			intStackPush(i)
 			continue
 		}
-
-		stack.Remove(stack.Front())
-		tmp += 2
-		if tmp > longest {
-			longest = tmp
-		}
+		longest = max(longest, i-intStackPeek())
 	}
-
 	return longest
+}
+
+func maxInt(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func intStackPush(a int) {
+	intStack = append(intStack, a)
+}
+
+func intStackPop() int {
+	tmp := intStack[len(intStack)-1]
+	intStack = intStack[:len(intStack)-1]
+	return tmp
+}
+
+func intStackPeek() int {
+	return intStack[len(intStack)-1]
 }
