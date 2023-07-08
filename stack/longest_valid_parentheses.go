@@ -3,7 +3,7 @@ package stack
 var intStack []int
 
 // LongestValidParentheses solves the problem in O(n) time and O(n) space.
-func LongestValidParentheses(s string) int {
+func LongestValidParentheses(input string) int {
 	intStack = make([]int, 0)
 	intStackPush(-1)
 
