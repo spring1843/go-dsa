@@ -82,11 +82,11 @@ Big O notation of an algorithm can be simplified using the following two rules:
 
 Constant time complexity represents the most efficient scenario for an algorithm, where the execution time remains constant regardless of the input size. Achieving constant time complexity often involves eliminating loops and recursive calls. Examples:
 
-* Reads and writes in a [hash table](./hashtable)
-* Enqueue and Dequeue in a [queue](./queue)
-* Push and Pop in a [stack](./stack)
-* Finding the minimum or maximum in [heap](./heap)
-* Removing the last element of a [doubly linked list](./linkedlist)
+* Reads and writes in a [hash table](./hashtable/README.md)
+* Enqueue and Dequeue in a [queue](./queue/README.md)
+* Push and Pop in a [stack](./stack/README.md)
+* Finding the minimum or maximum in [heap](./heap/README.md)
+* Removing the last element of a [doubly linked list](./linkedlist/README.md)
 * [Max without conditions](./bit/max_function_without_conditions.go)
 
 ### Logarithmic - O(Log n)
@@ -94,16 +94,16 @@ Constant time complexity represents the most efficient scenario for an algorithm
 Attaining logarithmic time complexity in an algorithm is highly desirable as it eliminates the need to iterate through every input in order to solve a given problem. Examples:
 
 * Searching sorted items using [Binary Search](./dnc/binary_search.go)
-* Inserting, Deleting and Searching in a [Binary Search Tree](./tree)
-* Push and Pop in [heap](./heap)
+* Inserting, Deleting and Searching in a [Binary Search Tree](./tree/README.md)
+* Push and Pop in [heap](./heap/README.md)
 * [Square Root](./dnc/square_root.go)
 * [Median in a Stream](./heap/median_in_a_stream.go)
 ### Linear - O(n)
 
 Linear time complexity is considered favorable when an algorithm necessitates traversing every input, with no feasible way to avoid it. Examples:
 
-* Removing the last element in a [singly linked list](./linkedlist)
-* Searching an unsorted [array](./array) or [linked list](./linklist)
+* Removing the last element in a [singly linked list](./linkedlist/README.md)
+* Searching an unsorted [array](./array/README.md) or [linked list](./linkedlist/README.md)
 * [Number of Islands](./graph/number_of_islands.go)
 * [Missing Number](./hashtable/missing_number.go)
 
@@ -114,7 +114,7 @@ The time complexity of O(n*Log n) is commonly observed when it is necessary to i
 * [Merge Sort](./dnc/merge_sort.go) and [Heap Sort](./heap/README.md)
 * [Knapsack](./greedy/knapsack.go)
 * [Find Anagrams](./hashtable/find_anagrams.go)
-* In order traversal of a [Binary Search Tree](./tree)
+* In order traversal of a [Binary Search Tree](./tree/README.md)
 
 ### Polynomial - O(n^2)
 
@@ -131,8 +131,7 @@ Exponential complexity is considered highly undesirable; however, it represents 
 * [Climbing Stairs](./recursion/climbing_stairs.go)
 * [Tower of Hanoi](./dnc/towers_of_hanoi.go)
 * [Generate Parenthesis](./backtracking/generate_parenthesis.go)
-* Basic [Recursive](./recursion) implementation of Fibonacci
-
+* Basic [Recursive](./recursion/README.md) implementation of Fibonacci
 
 ### Factorial O(n!)
 
