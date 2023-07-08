@@ -1,6 +1,6 @@
 package dnc
 
-// BinarySearch solves the problem in O(log n) time and O(1) space.
+// BinarySearch solves the problem in O(Log n) time and O(1) space.
 func BinarySearch(list []int, search int) int {
 	return binarySearchRecursive(list, 0, len(list), search)
 }

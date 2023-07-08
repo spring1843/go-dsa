@@ -40,7 +40,7 @@ There are many types of trees. Some important tree types include:
 
 A Binary Search Tree (BST) is a type of sorted tree where, for every node n, the values of all nodes in its left subtree are less than n and the values of all nodes in its right subtree are greater than n.
 
-Performing an In-Order traversal of a binary search tree and outputting each visited node results in a sorted (In-Order) list of nodes. This is known as the tree sort algorithm, which has a time complexity of O(NLogN). While there are other sorting algorithms available, none are more efficient than O(NLogN).
+Performing an In-Order traversal of a binary search tree and outputting each visited node results in a sorted (In-Order) list of nodes. This is known as the tree sort algorithm, which has a time complexity of O(NLogN). While there are other sorting algorithms available, none are more efficient than O(n*Log n).
 
 ### BST Complexity
 
@@ -48,13 +48,13 @@ The time complexity of operations such as Search, Deletion, Insertion, and findi
 
 ## AVL - Height Balanced BST
 
-A height balanced binary search tree has a height of O(log n) and its left and right subtrees of all nodes have equal heights.
+A height balanced binary search tree has a height of O(Log n) and its left and right subtrees of all nodes have equal heights.
 
 In order to maintain balance after an insertion, a single rotation is needed if the insertion was on the outer side, either left-left or right-right, while a double rotation is required if the insertion was on the inner side, either left-right or right-left.
 
 ### AVL Complexity
 
-Same as a Binary Search Tree except that the height of the tree is known. So Search, Deletion, Insertion, and finding Min and Max in an AVL tree are all O(LogN) operations.
+Same as a Binary Search Tree except that the height of the tree is known. So Search, Deletion, Insertion, and finding Min and Max in an AVL tree are all O(Log n) operations.
 
 ## Trie
 
@@ -66,7 +66,7 @@ Insertion and Search are done in O(K), where K is the length of the word.
 
 ## Application
 
-Trees, such as Binary Search Trees (BSTs), can offer a time complexity of O(log n) for searches, as opposed to the linear access time of linked lists. Trees are widely employed in search systems, and operating systems can represent file information using tree structures.
+Trees, such as Binary Search Trees (BSTs), can offer a time complexity of O(Log n) for searches, as opposed to the linear access time of linked lists. Trees are widely employed in search systems, and operating systems can represent file information using tree structures.
 
 ## Rehearsal
 

@@ -32,7 +32,7 @@ t│                             t│                      ...    t│          
  └────────────────────────►     └────────────────────────►     └────────────────────────►
               n                              n                              n
 
-           O(N Log N)                    O(Log 2^n)                       O(2^n)
+           O(n*Log n)                    O(Log 2^n)                       O(2^n)
  ▲                     .        ▲            .                 ▲        .
  │                    ..        │            .                 │        .
  │                    .         │            .                 │        .
@@ -75,57 +75,68 @@ However, it is essential to note that this is not always the case. In practice, 
 
 Big O notation of an algorithm can be simplified using the following two rules:
 
-1. Remove constants. `O(n) + 2*O(n Log n) + 3*O(K) + 5` is simplified to `O(n) + O(n Log n) + O(K)`.
-2. Remove non dominant, or slower terms. `O(n) + O(n Log n) + O(K)` is simplified to `O(n Log n)` because `O(n Log n)` is the most dominant term..
+1. Remove constants. `O(n) + 2*O(n*Log n) + 3*O(K) + 5` is simplified to `O(n) + O(n*Log n) + O(K)`.
+2. Remove non dominant, or slower terms. `O(n) + O(n*Log n) + O(K)` is simplified to `O(n*Log n)` because `O(n*Log n)` is the most dominant term..
 
 ### Constant - O(K) or O(1)
 
 Constant time complexity represents the most efficient scenario for an algorithm, where the execution time remains constant regardless of the input size. Achieving constant time complexity often involves eliminating loops and recursive calls. Examples:
 
-* Reads and writes in a [hash table](../hashtable)
-* Enqueue and Dequeue in a [queue](../queue)
-* Push and Pop in a [stack](../stack)
-* Finding the minimum or maximum in [heap](../heap)
-* Removing the last element of a [doubly linked list](../linkedlist)
+* Reads and writes in a [hash table](./hashtable)
+* Enqueue and Dequeue in a [queue](./queue)
+* Push and Pop in a [stack](./stack)
+* Finding the minimum or maximum in [heap](./heap)
+* Removing the last element of a [doubly linked list](./linkedlist)
+* [Max without conditions](./bit/max_function_without_conditions.go)
 
 ### Logarithmic - O(Log n)
 
 Attaining logarithmic time complexity in an algorithm is highly desirable as it eliminates the need to iterate through every input in order to solve a given problem. Examples:
 
-* Searching sorted items using [Binary Search](../dnc)
-* Inserting, Deleting and Searching in a [Binary Search Tree](../tree)
-* Push and Pop in [heap](../heap)
-
+* Searching sorted items using [Binary Search](./dnc/binary_search.go)
+* Inserting, Deleting and Searching in a [Binary Search Tree](./tree)
+* Push and Pop in [heap](./heap)
+* [Square Root](./dnc/square_root.go)
+* [Median in a Stream](./heap/median_in_a_stream.go)
 ### Linear - O(n)
 
 Linear time complexity is considered favorable when an algorithm necessitates traversing every input, with no feasible way to avoid it. Examples:
 
-* Removing the last element in a [singly linked list](../linkedlist)
-* Searching an unsorted [array](../array) or [linked list](../linklist)
+* Removing the last element in a [singly linked list](./linkedlist)
+* Searching an unsorted [array](./array) or [linked list](./linklist)
+* [Number of Islands](./graph/number_of_islands.go)
+* [Missing Number](./hashtable/missing_number.go)
 
-### O(n Log n)
+### O(n*Log n)
 
-The time complexity of O(n log n) is commonly observed when it is necessary to iterate through all inputs, and can yield an out come at the same time through an efficient operation. Sorting is a common example. It's not possible to sort items faster than O(n log n). Examples:
+The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs, and can yield an out come at the same time through an efficient operation. Sorting is a common example. It's not possible to sort items faster than O(n*Log n). Examples:
 
-* [Merge Sort](../dnc) and [Heap Sort](../heap)
-* In order traversal of a [Binary Search Tree](../tree)
+* [Merge Sort](./dnc/merge_sort.go) and [Heap Sort](./heap/README.md)
+* [Knapsack](./greedy/knapsack.go)
+* [Find Anagrams](./hashtable/find_anagrams.go)
+* In order traversal of a [Binary Search Tree](./tree)
 
 ### Polynomial - O(n^2)
 
 Polynomial time complexity marks the initial threshold of problematic time complexity for algorithms. This complexity often arises when an algorithm includes nested loops, involving both an inner loop and an outer loop. Examples:
 
-* Bubble sort rehearsal problem in [array](../array)
-* Naive way of searching an unsorted [array](../array) for duplicates by using nested loops
+* [Bubble Sort](./array/bubble_sort.go)
+* [Cheapest Flight](./graph/cheapest_flights.go)
+* [Remove Invalid Parenthesis](./graph/remove_invalid_parentheses.go)
 
 ### Exponential O(2^n)
 
 Exponential complexity is considered highly undesirable; however, it represents only the second-worst  complexity scenario. Examples:
 
-* Basic [Recursive](../recursion) implementation of Fibonacci
-* Tower of Hanoi rehearsal in [divide and conquer](../dnc)
+* [Climbing Stairs](./recursion/climbing_stairs.go)
+* [Tower of Hanoi](./dnc/towers_of_hanoi.go)
+* [Generate Parenthesis](./backtracking/generate_parenthesis.go)
+* Basic [Recursive](./recursion) implementation of Fibonacci
+
 
 ### Factorial O(n!)
 
 Factorial time complexity represents the most severe time complexity for an algorithm. Understanding the scale of factorials is crucial, as even the estimated total number of atoms in the universe, which is approximately 10^80, is smaller than the factorial of 57. Example:
 
-* Permutations rehearsal in [back tracking](../backtracking)
+* [N queens](./backtracking/n_queens.go)
+* [Permutations](./backtracking/permutations.go)
