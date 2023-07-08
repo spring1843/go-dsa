@@ -8,7 +8,7 @@ func LongestValidParentheses(input string) int {
 	intStackPush(-1)
 
 	longest := 0
-	for i, char := range s {
+	for i, char := range input {
 		if char == '(' {
 			intStackPush(i)
 			continue
