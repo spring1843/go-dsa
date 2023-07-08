@@ -10,7 +10,7 @@ type (
 	priorityQueue []*linkedlist.Node
 )
 
-// MergeSortedLists solves the problem in O(nlogk) time and O(k) space.
+// MergeSortedLists solves the problem in O(n*Log k) time and O(k) space.
 func MergeSortedLists(lists []*linkedlist.Node) *linkedlist.Node {
 	pq := new(priorityQueue)
 

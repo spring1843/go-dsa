@@ -4,7 +4,7 @@ import "container/heap"
 
 type slidingWindow []int
 
-// MaxSlidingWindow solves the problem in O(nlogk) time and O(k) space.
+// MaxSlidingWindow solves the problem in O(n*Log k) time and O(k) space.
 func MaxSlidingWindow(numbers []int, k int) []int {
 	output := []int{}
 	if len(numbers) <= 1 || len(numbers) < k {

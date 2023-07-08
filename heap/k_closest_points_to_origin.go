@@ -13,7 +13,7 @@ type (
 	pointsHeap []*point
 )
 
-// KClosestPointToOrigin solves the problem in O(nlogk) time and O(k) space.
+// KClosestPointToOrigin solves the problem in O(n*Log k) time and O(k) space.
 func KClosestPointToOrigin(points [][]int, k int) [][]int {
 	if len(points) <= 1 {
 		return points

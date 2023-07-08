@@ -12,7 +12,7 @@ const (
 	edgeDestination, edgeCost                    = 0, 1
 )
 
-// NetworkDelayTime solves the problem in O(n log n) time and O(n) space.
+// NetworkDelayTime solves the problem in O(n*Log n) time and O(n) space.
 func NetworkDelayTime(n, k int, edges [][3]int) int {
 	var (
 		verticesMap, edgesHeap = verticesAndEdges(edges, k)

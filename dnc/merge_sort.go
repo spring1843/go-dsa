@@ -1,6 +1,6 @@
 package dnc
 
-// MergeSort solves the problem in O(n log n) time and O(n) space.
+// MergeSort solves the problem in O(n*Log n) time and O(n) space.
 func MergeSort(list []int) []int {
 	if len(list) <= 1 {
 		return list

@@ -73,10 +73,6 @@ Given n the number of steps, return in how many ways you can climb these stairs 
 
 Given x and n, return x raised to the power of n in an efficient manner. [Solution](exponentiation.go) [Test](exponentiation_test.go)
 
-### Permutations
-
-Given a set of integers like `{1,2}`, return all possible permutations like `{1,2},{2,1}`.  [Solution](permutations.go) [Test](permutations_test.go)
-
 ### Regular Expressions Matching
 
 Given an input and a regular expression pattern where `.` denotes to any character and `*` denotes to zero or more of the proceeding characters, write a recursive function to return true if the input matches the pattern and false otherwise. [Solution](regular_expressions.go) [Test](regular_expressions_test.go)
