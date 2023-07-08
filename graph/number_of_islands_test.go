@@ -7,7 +7,7 @@ import (
 /*
 TestNumberOfIslands tests solution(s) with the following signature and problem description:
 
-	func NumberOfIslands(grid [][]int) int {
+	func NumberOfIslands(grid [][]int) int
 
 Given a grid in which 0 represents water and 1 represents a piece of land, return the
 number of islands. An Island is one or more piece of land that could be connected to other

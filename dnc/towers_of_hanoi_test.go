@@ -8,7 +8,7 @@ import (
 /*
 TestTowerOfHanoi tests solution(s) with the following signature and problem description:
 
-	func TowerOfHanoi(n, start, end int) [][2]int {
+	func TowerOfHanoi(n, start, end int) [][2]int
 
 Given n, number of disks, and start and end tower, return the moves it takes to move all
 disks from start to end tower. The disks are stacked on top of each other with the

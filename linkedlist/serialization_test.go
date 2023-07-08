@@ -7,7 +7,7 @@ import (
 /*
 TestSerializeAndUnserializeLinkedList tests solution(s) with the following signature and problem description:
 
-	func Serialize(node *Node) string {
+	func Serialize(node *Node) string
 	func Unserialize(stringRepresentation string) *Node
 
 Write a function that turns a linked list into a string representation, and then a function that turns that

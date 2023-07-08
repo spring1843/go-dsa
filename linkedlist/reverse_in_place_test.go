@@ -7,7 +7,7 @@ import (
 /*
 TestReverseLinkedList tests solution(s) with the following signature and problem description:
 
-	func ReverseLinkedList(head *Node) *Node {
+	func ReverseLinkedList(head *Node) *Node
 
 Reverse a given linked list in place.
 */

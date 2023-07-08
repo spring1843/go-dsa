@@ -5,7 +5,7 @@ import "testing"
 /*
 TestNetworkDelayTime tests solution(s) with the following signature and problem description:
 
-	func NetworkDelayTime(n, k int, edges [][3]int) int {
+	func NetworkDelayTime(n, k int, edges [][3]int) int
 
 Given `n`, the number of nodes in a network, a list of unidirectional travel times in
 `{source, destination, delay}` format, and `k`, an origin node number, return the time it will

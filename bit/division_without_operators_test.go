@@ -5,7 +5,7 @@ import "testing"
 /*
 TestDivision tests solution(s) with the following signature and problem description:
 
-	func Divide(x, y int) int {
+	func Divide(x, y int) int
 
 Divide x by y, two integers without using the built-in `/` or `*` operators.
 */

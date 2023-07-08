@@ -8,7 +8,7 @@ import (
 /*
 TestMaxOfKLengthSubArrays tests solution(s) with the following signature and problem description:
 
-	func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error) {
+	func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error)
 
 Given a set an array of numbers like {1,2,3,4,5} and a number k like 2 return the maximum in
 each k-lengthed sub array. e.g. {2,3,4,5} corresponding to the max in each set of the sub

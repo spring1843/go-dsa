@@ -8,7 +8,7 @@ import (
 /*
 TestPermutations tests solution(s) with the following signature and problem description:
 
-	func Permutations(input []int) [][]int {
+	func Permutations(input []int) [][]int
 
 Given a list of integers like {1,2}, produce all possible combinations like {1,2},{2,1}.
 */

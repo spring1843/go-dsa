@@ -5,7 +5,7 @@ import "testing"
 /*
 TestWordLadder tests solution(s) with the following signature and problem description:
 
-	func WordLadder(start, end string, dic []string) int {
+	func WordLadder(start, end string, dic []string) int
 
 Given a start word like `pop` and an end word like `car`, a dictionary of same length words
 like  `{"top","cop","cap","car"}` return the minimum number of transformations like 4 to get
