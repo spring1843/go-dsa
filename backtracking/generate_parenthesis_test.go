@@ -11,7 +11,8 @@ TestGenerateParenthesis tests solution(s) with the following signature and probl
 
 	GenerateParenthesis(n int) []string
 
-Returns all possible variation of n pairs of valid parenthesis.
+Given an integer n produce all valid variations of arranging
+n pair of parenthesis. e.g. for `2` it should return `()()` and `(())`.
 */
 func TestGenerateParenthesis(t *testing.T) {
 	tests := []struct {

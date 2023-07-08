@@ -10,8 +10,9 @@ TestScheduleEvents tests solution(s) with the following signature and problem de
 
 	func ScheduleEvents(events []Event) []Event
 
-Given a list of events with start and end times, find the maximum number of events that
-can be scheduled without overlap.
+Given a list of named tasks with their start and end timing like `{A, 1, 3}, {B, 2, 3}, {C, 3, 4}`
+(Task A starts at 1 and ends at 3). return a schedule that includes as many events as
+possible like `{A 1 3}, {C 3 4}`.
 */
 func TestScheduleEvents(t *testing.T) {
 	tests := []struct {

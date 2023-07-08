@@ -10,8 +10,7 @@ TestPermutations tests solution(s) with the following signature and problem desc
 
 	func Permutations(input []int) [][]int {
 
-Intakes a list of numbers and returns all possible permutations of their orders
-For example for {1,2} it would return {1,2}, {2,1}.
+Given a list of integers like {1,2}, produce all possible combinations like {1,2},{2,1}.
 */
 func TestPermutations(t *testing.T) {
 	tests := []struct {

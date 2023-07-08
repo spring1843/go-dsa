@@ -9,8 +9,9 @@ TestWordDistance tests solution(s) with the following signature and problem desc
 
 	func WordDistance(input1, input2 string) int
 
-Returns how many character modifications (insert, delete, edit) can
-be done on the first input string so that it becomes equal to the second string.
+Given a string like abc, and another string like abcde return how many character
+modifications (insert, delete, edit) have to be done on the first string to become
+identical to the second string. In this case, the answer is 2.
 */
 func TestWordDistance(t *testing.T) {
 	tests := []struct {
@@ -25,6 +26,7 @@ func TestWordDistance(t *testing.T) {
 		{"ab", "ac", 1},
 		{"ab", "dc", 2},
 		{"ab", "dcd", 3},
+		{"abc", "abcde", 2},
 		{"abcdef", "abcde", 1},
 		{"gabcdef", "abcde", 2},
 	}

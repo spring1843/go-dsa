@@ -40,22 +40,8 @@ Compilers use hash tables to generate a symbol table, to keep track of variable 
 
 ## Rehearsal
 
-### Find Missing Number
-
-Given an unsorted array of numbers like {7,5,3,4,1,2,0,-1} return the missing integer like 6. [Solution](missing_number.go) [Test](missing_number.go)
-
-### List Elements Summing Up to K
-
-Given a list, output the indices of the first two elements that sum up to K. [Solution](sum_up_to_k.go) [Test](sum_up_to_k_test.go)
-
-### Fastest Way to Cut a Brick Wall
-
-Given a two dimensional array of numbers representing the length of each brick in each row of a wall, return the position at which we could do the least amount of cuts (by not having to cut the touch points where bricks meet). [Solution](cut_brick_wall.go) [Test](cut_brick_wall_test.go)
-
-### Find Anagrams
-
-Given a dictionary, return lists of words that are anagrams of each other. [Solution](find_anagrams.go), [Tests](find_anagrams_test.go)
-
-### Find Max Points on the Same Line
-
-Given multiple coordinates of points like {[1,1], [2,2], [3,3], [4,5]}, return the maximum number of points that are on the same line like 3. [Solution](max_points_on_line.go) [Test](max_points_on_line_test.go)
+* [Find Missing Number](missing_number_test.go), [Solution](missing_number.go)
+* [List Elements Summing Up to K](sum_up_to_k_test.go), [Solution](sum_up_to_k.go)
+* [Fastest Way to Cut a Brick Wall](cut_brick_wall_test.go), [Solution](cut_brick_wall.go)
+* [Find Anagrams](find_anagrams_test.go), [Solution](find_anagrams.go)
+* [Find Max Points on the Same Line](max_points_on_line_test.go), [Solution](max_points_on_line.go)

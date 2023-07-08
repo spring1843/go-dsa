@@ -10,8 +10,8 @@ TestInfixToPostfix tests solution(s) with the following signature and problem de
 
 	func InfixToPostfix(infix []string) []string
 
-Converts an infix expression to a postfix one supporting the 4 basic arithmetic operations
-and parentheses.
+Given an infix expression e.g. 1*2+3+4*5, convert it to a postfix expression
+like 1 2 * 3 + 4 5 * supporting the four basic arithmetic operations and parenthesis.
 */
 func TestInfixToPostfix(t *testing.T) {
 	tests := []struct {

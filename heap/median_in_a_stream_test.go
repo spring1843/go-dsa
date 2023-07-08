@@ -8,7 +8,8 @@ TestMedianInAStream tests solution(s) with the following signatures and problem 
 	func newMedianKeeper() medianKeeper
 	func (m *medianKeeper) addNumber(num int)
 
-Returns the median of all numbers added so far.
+Given a stream of integers like {1,2,3,4}, output the median after each input
+like {1, 1.5, 2, 2.5}.
 */
 func TestMedianInAStream(t *testing.T) {
 	tests := []struct {

@@ -5,9 +5,11 @@ import "testing"
 /*
 TestSerializeAndUnserializeBinaryTree tests solution(s) with the following signature and problem description:
 
+	func Serialize(root *BinaryTreeNode) string
 	func Unserialize(s string) *BinaryTreeNode
 
-Unserializes a given string into a binary tree.
+Write two functions to serialize and unserialize a binary tree like (B) in _Figure 2_  in README.md to and
+from a string like `4,2,6,nil,3,5,nil`.
 */
 func TestSerializeAndUnserializeBinaryTree(t *testing.T) {
 	tests := []string{

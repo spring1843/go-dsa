@@ -9,7 +9,7 @@ TestPowerOf tests solution(s) with the following signature and problem descripti
 
 	func PowerOf(x, n int) int
 
-Raises x to the power of n.
+Given x and n, return x raised to the power of n in an efficient manner.
 */
 func TestPowerOf(t *testing.T) {
 	tests := []struct {

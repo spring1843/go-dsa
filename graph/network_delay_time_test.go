@@ -7,9 +7,9 @@ TestNetworkDelayTime tests solution(s) with the following signature and problem 
 
 	func NetworkDelayTime(n, k int, edges [][3]int) int {
 
-Returns the fastest times it will take for a message sent from k
-to reach all nodes of the given graph of n vertices. The edges are given in the
-form of {vertexSource, vertexDestination, vertexDelay}.
+Given `n`, the number of nodes in a network, a list of unidirectional travel times in
+`{source, destination, delay}` format, and `k`, an origin node number, return the time it will
+take for a message sent from k to be received by all other nodes.
 */
 func TestNetworkDelayTime(t *testing.T) {
 	tests := []struct {

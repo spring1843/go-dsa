@@ -10,7 +10,9 @@ TestAutoComplete tests solution(s) with the following signature and problem desc
 
 	func (t *trie) AutoComplete(word string) []string
 
-Suggests auto-completion ideas based on the input and given dictionary.
+Given a word like "car" and a dictionary like {"car","caravan","card","carpet","cap","ca"},
+return autocomplete suggestions where the given word is the prefix of a dictionary word
+like {"avan","d","pet"}.
 */
 func TestAutoComplete(t *testing.T) {
 	tests := []struct {

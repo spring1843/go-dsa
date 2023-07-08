@@ -10,9 +10,8 @@ TestInMemoryDictionary tests solution(s) with the following signature and proble
 
 	func RunDBCommand(cmd string) string
 
-Executes commands on an in memory database that stores string key-value pairs.
-Supported commands are SET, GET, EXISTS, and UNSET
-It also allows transactions with BEGIN, ROLLBACK and COMMIT commands.
+Write an in memory database that stores string key-value pairs and supports SET, GET, EXISTS,
+and UNSET commands. It should also allow transactions with BEGIN, COMMIT and ROLLBACK commands.
 */
 func TestInMemoryDictionary(t *testing.T) {
 	tests := []struct {

@@ -9,7 +9,8 @@ TestFindDuplicate tests solution(s) with the following signature and problem des
 
 	func LookAndTell(depth int) []string
 
-Outputs an array such that each element reads the previous element the first element being "1".
+Given a depth, return the output of look and tell an algorithm where each line reads the
+last line. For example "1" is read as "11" (one one), and "11" is read as "21" (two ones).
 */
 func TestFindDuplicate(t *testing.T) {
 	tests := []struct {

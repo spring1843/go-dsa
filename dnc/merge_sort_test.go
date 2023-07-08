@@ -10,7 +10,7 @@ TestMergeSort tests solution(s) with the following signature and problem descrip
 
 	func MergeSort(list []int) []int
 
-Sorts a list of integers using Merge Sort.
+Given a list of integers like {3,1,2}, return a sorted set like {1,2,3} using Merge Sort.
 */
 func TestMergeSort(t *testing.T) {
 	tests := []struct {

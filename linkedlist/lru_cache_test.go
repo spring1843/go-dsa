@@ -8,7 +8,8 @@ TestLRU tests solution(s) with the following signature and problem description:
 	func get(key int) int
 	func put(key int, value int) {
 
-Implement a LRU cache with get and put methods.
+Implement a least recently used cache with integer keys and values, where the
+least recently used evicted upon insertion when cache is at full capacity.
 */
 func TestLRU(t *testing.T) {
 	tests := []struct {

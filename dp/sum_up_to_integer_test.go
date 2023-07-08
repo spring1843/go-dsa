@@ -9,8 +9,9 @@ TestSumUpToInteger tests solution(s) with the following signature and problem de
 
 	SumUpToInteger(numbers []int, sum int) bool {
 
-When given a list of integers and a sum, returns true if any combination of the integers
-sums up to the sum.
+Given a set of positive integers like {1,2,3,4,5} and an integer like 7 write a
+function that returns true if there are two numbers in the list that sum up to the given
+integer and false otherwise.
 */
 func TestSumUpToInteger(t *testing.T) {
 	tests := []struct {

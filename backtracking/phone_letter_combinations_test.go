@@ -11,8 +11,8 @@ TestPhoneLetterCombinations tests solution(s) with the following signature and p
 
 	func PhoneLetterCombinations(digits string) []string
 
-Intakes the digits from 2 to 9 that represent phone buttons
-and returns all possible combinations of letters that could be generated from those.
+Intakes a string of digits from 2 to 9 inclusive and returns all possible combinations of letters
+that could be generated from those. For example for input 2 it should return abc.
 */
 func TestPhoneLetterCombinations(t *testing.T) {
 	tests := []struct {

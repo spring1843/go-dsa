@@ -10,7 +10,8 @@ TestSquareRoot tests solution(s) with the following signature and problem descri
 
 	func SquareRoot(number, precision int) float64
 
-Uses Binary search to find the square root of a number up to a precision point.
+Given a number and precision, return the square root of the number using the binary
+search algorithm.
 */
 func TestSquareRoot(t *testing.T) {
 	tests := []struct {

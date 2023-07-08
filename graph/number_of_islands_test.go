@@ -9,8 +9,9 @@ TestNumberOfIslands tests solution(s) with the following signature and problem d
 
 	func NumberOfIslands(grid [][]int) int {
 
-Returns the number of islands or connected lands in a grid where 0 represents water
-and one represents land.
+Given a grid in which 0 represents water and 1 represents a piece of land, return the
+number of islands. An Island is one or more piece of land that could be connected to other
+pieces of land on left, right, top or bottom.
 */
 func TestNumberOfIslands(t *testing.T) {
 	tests := []struct {

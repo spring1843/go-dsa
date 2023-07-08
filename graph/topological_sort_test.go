@@ -17,8 +17,9 @@ TestTopologicalSort tests solution(s) with the following signature and problem d
 
 	func TopologicalSort(graph []*VertexWithIngress) ([]int, error)
 
-Takes a vertex of a DAG and returns the value of all its connected vertices in topological
-order.
+In a DAG the topological order returns elements such that if there's a path from v(i) to
+v(j), then v(i) appears before v(j) in the ordering. Given a graph like (B) of _Figure 1_
+output the graph in topological order like {1,2,3,4}.
 */
 func TestTopologicalSort(t *testing.T) {
 	tests := []struct {

@@ -10,8 +10,8 @@ TestIterativeTraversal tests solution(s) with the following signature and proble
 
 	func IterativeTraversal(graph []*Vertex) ([]int, []int)
 
-Performs a BFS and DFS on the given graph and returns the value of each vertex in the order
-it was visited.
+Implement BFS and DFS on a graph without using recursion, and return the value of each vertex
+as it is visited.
 */
 func TestIterativeTraversal(t *testing.T) {
 	tests := []struct {

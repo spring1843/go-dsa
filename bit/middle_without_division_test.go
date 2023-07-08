@@ -7,7 +7,8 @@ TestMiddleWithoutDivision tests solution(s) with the following signature and pro
 
 	func MiddleWithoutDivision(min, max int)
 
-Finds the middle integer between two integers.
+Given two integers min and max like `1` and `5`, return an integer like `3` that is in
+the middle of the two.
 */
 func TestMiddleWithoutDivision(t *testing.T) {
 	tests := []struct {

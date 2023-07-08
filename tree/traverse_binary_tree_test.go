@@ -10,8 +10,8 @@ TestTraverseBinaryTree tests solution(s) with the following signature and proble
 
 	func TraverseBinaryTree(root *BinaryTreeNode) ([]int, []int, []int)
 
-Performs in-order, pre-order, and post-order traversals on an integer binary tree and adds
-each visited node into a slice of integers.
+Given a binary tree like _figure 1_, in README.md write three functions to traverse the
+tree in-order, pre-order, and post-order.
 */
 func TestTraverseBinaryTree(t *testing.T) {
 	tests := []struct {

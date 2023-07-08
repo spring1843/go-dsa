@@ -9,7 +9,8 @@ TestMinimumDeletionsToMakePalindrome tests solution(s) with the following signat
 
 	func MinimumDeletionsToMakePalindrome(input string) int
 
-Returns how many deletions can be done in the input string to make it a palindrome.
+Given a string like abccb return the minimum number of character deletions that can be done on the string
+to make it a palindrome like 1 (by removing a, we will have bccb).
 */
 func TestMinimumDeletionsToMakePalindrome(t *testing.T) {
 	tests := []struct {

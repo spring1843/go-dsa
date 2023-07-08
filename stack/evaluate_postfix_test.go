@@ -7,7 +7,7 @@ TestEvaluatePostfix tests solution(s) with the following signature and problem d
 
 	func EvaluatePostfixExpression(expression []string) (float64, error)
 
-Evaluates an expression into a float64.
+Given a postfix expression like 1 2 3 + *, calculate the expression e.g. 5.
 */
 func TestEvaluatePostfix(t *testing.T) {
 	tests := []struct {

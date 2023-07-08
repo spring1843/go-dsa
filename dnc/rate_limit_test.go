@@ -9,11 +9,11 @@ import (
 /*
 TestRateLimiter tests solution(s) with the following signature and problem description:
 
-	IsAllowed(limitPerSecond int) bool
+	func IsAllowed(limitPerSecond int) bool
 
-Returns wether or not the caller is allowed to perform an action. The caller is allowed
-to perform an action if the number of actions performed in the last second is less than
-or equal to limitPerSecond.
+Given a number of allowed requests calls per second (calls/time) write an IsAllowed
+function which returns false if the request should be rate limited because it exceeds the
+limit and true if the request should be allowed.
 */
 func TestRateLimiter(t *testing.T) {
 	tests := []struct {

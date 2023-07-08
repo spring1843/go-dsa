@@ -10,7 +10,8 @@ TestSerializeAndUnserializeLinkedList tests solution(s) with the following signa
 	func Serialize(node *Node) string {
 	func Unserialize(stringRepresentation string) *Node
 
-Write a serialize and unserialize function for linked lists.
+Write a function that turns a linked list into a string representation, and then a function that turns that
+string representation to an actual linked list.
 */
 func TestSerializeAndUnserializeLinkedList(t *testing.T) {
 	tests := []string{
