@@ -30,7 +30,7 @@ func TestJoinTwoSortedLinkedLists(t *testing.T) {
 	for i, test := range tests {
 		got := Serialize(JoinTwoSortedLinkedLists(Unserialize(test.list1), Unserialize(test.list2)))
 		if got != test.joined {
-			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.joined, got)
+			t.Fatalf("Failed test case #%d. Want %s got %s", i, test.joined, got)
 		}
 	}
 }
