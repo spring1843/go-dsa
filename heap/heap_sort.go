@@ -1,16 +1,18 @@
 package heap
 
+import "math"
+
 type (
-	// Vertex is a node in a heap
+	// Vertex is a node in a heap.
 	Vertex struct {
-		// Val is the value of the vertex
+		// Val is the value of the vertex.
 		Val int
-		// Left is the left child of the vertex
+		// Left is the left child of the vertex.
 		Left *Vertex
-		// Right is the right child of the vertex
+		// Right is the right child of the vertex.
 		Right *Vertex
 	}
-	// MinHeap is a heap where the root is always the minimum value
+	// MinHeap is a heap where the root is always the minimum value.
 	MinHeap struct {
 		Data []*Vertex
 	}
@@ -24,7 +26,7 @@ func HeapSort(list []int) []int {
 		heap.Push(val)
 	}
 	for heap.Len() > 0 {
-		sorted = append(sorted, heap.Pull())
+		sorted = append(sorted, heap.Pop())
 	}
 	return sorted
 }
@@ -45,10 +47,10 @@ func (m *MinHeap) Push(value int) {
 	m.heapifyUp(len(m.Data) - 1)
 }
 
-// Pull removes the root value from the heap
-func (m *MinHeap) Pull() int {
+// Pop removes the root value from the heap
+func (m *MinHeap) Pop() int {
 	if len(m.Data) == 0 {
-		return 0
+		return math.MinInt
 	}
 
 	rootValue := m.Data[0].Val

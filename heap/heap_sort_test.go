@@ -1,6 +1,7 @@
 package heap
 
 import (
+	"math"
 	"reflect"
 	"testing"
 )
@@ -30,5 +31,16 @@ func TestHeapSort(t *testing.T) {
 		if got := HeapSort(test.list); !reflect.DeepEqual(got, test.sorted) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.sorted, got)
 		}
+	}
+}
+
+func TestMinHeapImplementation(t *testing.T) {
+	heap := NewMinHeap()
+	if got := heap.Pop(); got != math.MinInt {
+		t.Fatalf("Failed test case. Want %v got %v", math.MinInt, got)
+	}
+	heap.Push(1)
+	if got := heap.Pop(); got != 1 {
+		t.Fatalf("Failed test case. Want %v got %v", 1, got)
 	}
 }
