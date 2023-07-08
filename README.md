@@ -26,6 +26,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Equal Sum Sub-arrays](./array/equal_sum_subarrays_test.go)
         * [Rotate K Times](./array/rotate_k_steps_test.go)
         * [Bubble Sort](./array/bubble_sort_test.go)
+        * [Insertion Sort](./array/insertion_sort_test.go), [Solution](./array/insertion_sort.go)
     * [Strings](./strings/README.md)
         * [The longest Dictionary Word Containing Key](./strings/longest_dictionary_word_test.go)
         * [Look and Tell](./strings/look_and_tell_test.go)
