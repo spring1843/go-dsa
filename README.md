@@ -26,7 +26,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Equal Sum Sub-arrays](./array/equal_sum_subarrays_test.go)
         * [Rotate K Times](./array/rotate_k_steps_test.go)
         * [Bubble Sort](./array/bubble_sort_test.go)
-        * [Insertion Sort](./array/insertion_sort_test.go), [Solution](./array/insertion_sort.go)
+        * [Insertion Sort](./array/insertion_sort_test.go)
     * [Strings](./strings/README.md)
         * [The longest Dictionary Word Containing Key](./strings/longest_dictionary_word_test.go)
         * [Look and Tell](./strings/look_and_tell_test.go)
@@ -73,7 +73,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Median in a Stream](./heap/median_in_a_stream_test.go)
         * [Kth Closest Points to the Center](./heap/k_closest_points_to_origin_test.go)
         * [Sliding Maximum](./heap/sliding_maximum_test.go)
-        * [Heap Sort](./heap/heap_sort_test.go), [Solution](./heap/heap_sort.go)
+        * [Heap Sort](./heap/heap_sort_test.go)
 * Algorithms
     * [Recursion](./recursion/README.md)
         * [Reverse an integer recursively](./recursion/reverse_number_test.go)
