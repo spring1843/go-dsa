@@ -88,7 +88,7 @@ When working with graphs, it is often necessary to perform a search to solve dif
 * **Breadth First Search - BFS** used to find the shortest path
 * **Depth First Search - DFS** often a subroutine, in another algorithm e.g. in maze traversal, cycle finding, and path finding.
 
-Both BFS and DFS can be [implemented iteratively using a container (queue, or stack)](#iteratively-implement-bfs-and-dfs).
+Both BFS and DFS can be [implemented iteratively using a container (queue, or stack)](./iterative_traversal_test.go).
 
 #### Breadth First Search - BFS
 
