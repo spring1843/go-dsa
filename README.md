@@ -71,7 +71,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Median in a Stream](./heap/median_in_a_stream_test.go)
         * [Kth Closest Points to the Center](./heap/k_closest_points_to_origin_test.go)
         * [Sliding Maximum](./heap/sliding_maximum_test.go)
-        * [Heap Search](./heap/heap_search_test.go), [Solution](./heap/heap_search.go)
+        * [Heap Sort](./heap/heap_sort_test.go), [Solution](./heap/heap_sort.go)
 * Algorithms
     * [Recursion](./recursion/README.md)
         * [Reverse an integer recursively](./recursion/reverse_number_test.go)
