@@ -95,9 +95,9 @@ Priority queues implemented as heaps are utilized in job scheduling, for example
 
 ## Rehearsal
 
-* [Kth Largest Element](kth_largest_element_test.go), [Solution](kth_largest_element.go)
-* [Merge Sorted Lists](merge_sorted_list_test.go), [Solution](merge_sorted_list.go)
-* [Median in a Stream](median_in_a_stream_test.go), [Solution](median_in_a_stream_test.go)
-* [Kth Closest Points to the Center](k_closest_points_to_origin_test.go), [Solution](k_closest_points_to_origin.go)
-* [Sliding Maximum](sliding_maximum_test.go), [Solution](sliding_maximum.go)
-* [Heap Sort](heap_sort_test.go), [Solution](heap_search.go)
+* [Kth Largest Element](./kth_largest_element_test.go), [Solution](./kth_largest_element.go)
+* [Merge Sorted Lists](./merge_sorted_list_test.go), [Solution](./merge_sorted_list.go)
+* [Median in a Stream](./median_in_a_stream_test.go), [Solution](./median_in_a_stream_test.go)
+* [Kth Closest Points to the Center](./k_closest_points_to_origin_test.go), [Solution](./k_closest_points_to_origin.go)
+* [Sliding Maximum](./sliding_maximum_test.go), [Solution](./sliding_maximum.go)
+* [Heap Sort](./heap_sort_test.go), [Solution](./heap_sort.go)
