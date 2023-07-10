@@ -9,7 +9,7 @@ To address these questions, the Big O asymptotic notation is employed, which cha
 
 ## Big O
 
-Big O is a mathematical notion commonly used to describe and compare the worst case performance of an algorithm in both time and space given inputs of size `n`. Seven Big O notations that are commonly used in algorithm complexity analysis are discussed in the following sections.
+Big O is a mathematical notion commonly used to describe the impact on time or space as input size `n` increases. Seven Big O notations that are commonly used in algorithm complexity analysis are discussed in the following sections.
 
 ```ASCII
 [Figure 1] Schematic diagrams of Big O for common run times from fastest to slowest.
@@ -131,7 +131,7 @@ Exponential complexity is considered highly undesirable; however, it represents 
 
 * [Climbing Stairs](./recursion/climbing_stairs.go)
 * [Tower of Hanoi](./dnc/towers_of_hanoi.go)
-* [Generate Parenthesis](./backtracking/generate_parenthesis.go)
+* [Generate Parentheses](./backtracking/generate_parentheses.go)
 * Basic [Recursive](./recursion/README.md) implementation of Fibonacci
 
 ### Factorial O(n!)

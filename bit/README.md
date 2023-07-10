@@ -95,7 +95,7 @@ Bit manipulation operations are characterized by a constant time complexity of O
 
 ## Application
 
-Bit manipulation techniques are widely utilized in diverse fields of computing, such as cryptography, data compression, network protocols, and databases, to name a few. Each specific bitwise operation has its own qualities that makes it useful in different scenarios.
+Bit manipulation techniques are widely utilized in diverse fields of computing, such as cryptography, data compression, network protocols, and databases, to name a few. Each specific bitwise operation has its own qualities that make it useful in different scenarios.
 
 AND is used to extract a bit(s) from a larger number. For example, to check if a certain bit is set in a number, we can AND the number with a mask that has only that bit set to 1, and if the result is not 0, then that bit was set. Another application is to clear or reset certain bits in a number by ANDing with a mask that has those bits set to 0.
 

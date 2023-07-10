@@ -17,7 +17,7 @@ n pair of parentheses. e.g. for `2` it should return `()()` and `(())`.
 func TestGenerateParentheses(t *testing.T) {
 	tests := []struct {
 		n                int
-		validParenthesis []string
+		validParentheses []string
 	}{
 		{0, []string{""}},
 		{1, []string{"()"}},
@@ -32,8 +32,8 @@ func TestGenerateParentheses(t *testing.T) {
 		if len(got) > 0 {
 			sort.Strings(got)
 		}
-		if !reflect.DeepEqual(test.validParenthesis, got) {
-			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.validParenthesis, got)
+		if !reflect.DeepEqual(test.validParentheses, got) {
+			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.validParentheses, got)
 		}
 	}
 }
