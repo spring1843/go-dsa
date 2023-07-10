@@ -1,6 +1,6 @@
 # Dynamic Programming
 
-Dynamic Programming (DP) and [divide-and-conquer](../dnc) share a common strategy of breaking down a problem into smaller sub-problems. However, DP achieves superior algorithmic performance by solving each sub-problem only once and preemptively eliminating sub-problems that cannot contribute to optimal solutions. This approach enables DP to avoid the redundancy inherent in DNC and produce more efficient solutions.
+Dynamic Programming (DP) and [divide-and-conquer](../dnc) share a common strategy of breaking down a problem into smaller subproblems. However, DP achieves superior algorithmic performance by solving each subproblem only once and preemptively eliminating subproblems that cannot contribute to optimal solutions. This approach enables DP to avoid the redundancy inherent in DNC and produce more efficient solutions.
 
 ## Implementation
 
@@ -15,9 +15,9 @@ If only the value of the solution is needed, step 4 may be omitted. Conversely, 
 
 There are two general methods for writing DP algorithms: the top-down and bottom-up approaches.
 
-In the top-down approach, a caching mechanism is utilized to store each sub-problem solution and prevent redundancy. This technique is also known as memoization.
+In the top-down approach, a caching mechanism is utilized to store each subproblem solution and prevent redundancy. This technique is also known as memoization.
 
-In the bottom-up approach, sub-problems are solved in order of size, with smaller ones tackled first. Since all subsequent smaller sub-problems are already solved when addressing a particular sub-problem, the result is stored.
+In the bottom-up approach, subproblems are solved in order of size, with smaller ones tackled first. Since all subsequent smaller subproblems are already solved when addressing a particular subproblem, the result is stored.
 
 ## Complexity
 

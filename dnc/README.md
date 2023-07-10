@@ -1,10 +1,10 @@
 # Divide-and-Conquer
 
-The divide-and-conquer (DNC) paradigm is a common approach to solving problems [recursively](../recursion). It involves breaking down a problem into smaller and smaller sub-problems until a base case is reached, where the problem can be solved directly. The divide-and-conquer method consists of three steps:
+The divide-and-conquer (DNC) paradigm is a common approach to solving problems [recursively](../recursion). It involves breaking down a problem into smaller and smaller subproblems until a base case is reached, where the problem can be solved directly. The divide-and-conquer method consists of three steps:
 
-1. Divide: The problem is divided into smaller sub-problems, typically by partitioning the input data into two or more subsets.
-2. Conquer: The smaller sub-problems are solved recursively using the same algorithm, typically by applying the divide-and-conquer approach again.
-3. Combine: The solutions to the smaller sub-problems are combined to obtain a solution to the original problem.
+1. Divide: The problem is divided into smaller subproblems, typically by partitioning the input data into two or more subsets.
+2. Conquer: The smaller subproblems are solved recursively using the same algorithm, typically by applying the divide-and-conquer approach again.
+3. Combine: The solutions to the smaller subproblems are combined to obtain a solution to the original problem.
 
 ## Implementation
 
@@ -88,7 +88,7 @@ If used inappropriately, DNC algorithms can lead to an exponential number of unn
 
 ## Application
 
-DNC algorithms are suitable for solving problems that can be divided into smaller sub-problems that can be solved in a similar way. Examples of such problems include sorting algorithms (e.g., merge sort, quicksort), searching algorithms (e.g., binary search), and matrix multiplication.
+DNC algorithms are suitable for solving problems that can be divided into smaller subproblems that can be solved in a similar way. Examples of such problems include sorting algorithms (e.g., merge sort, quicksort), searching algorithms (e.g., binary search), and matrix multiplication.
 
 ## Rehearsal
 

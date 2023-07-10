@@ -1,6 +1,6 @@
 # Recursion
 
-Recursion is a computational technique that implements a [divide and conquer](../dnc) approach to problem-solving by breaking down a complex problem into smaller sub-problems. It consists of two components:
+Recursion is a computational technique that implements a [divide and conquer](../dnc) approach to problem-solving by breaking down a complex problem into smaller subproblems. It consists of two components:
 
 * one or more base cases that provide output for simple inputs
 * a recursive case that combines the outputs obtained from recursive function calls to generate a solution for the original problem.
@@ -47,13 +47,13 @@ Recursions are often inefficient, both in terms of time and memory usage. The nu
 
 There are a few different ways of determining the time complexity of recursive algorithms:
 
-1. Recurrence Relations: This approach involves defining a recurrence relation that expresses the time complexity of the algorithm in terms of the time complexity of its sub-problems. For example, for the recursive Fibonacci algorithm, the recurrence relation is T(n) = T(n-1) + T(n-2) + O(1), where T(n) represents the time complexity of the algorithm for an input of size n.
+1. Recurrence Relations: This approach involves defining a recurrence relation that expresses the time complexity of the algorithm in terms of the time complexity of its subproblems. For example, for the recursive Fibonacci algorithm, the recurrence relation is T(n) = T(n-1) + T(n-2) + O(1), where T(n) represents the time complexity of the algorithm for an input of size n.
 2. Recursion Trees: This method involves drawing a tree to represent the recursive calls made by the algorithm. The time complexity of the algorithm can be calculated by summing the work done at each level of the tree. For example, for the recursive factorial algorithm, each level of the tree represents a call to the function with a smaller input size, and the work done at each level is constant.
 3. Master Theorem: This approach is a formula for solving recurrence relations that have the form T(n) = aT(n/b) + f(n). The Master Theorem can be used to quickly determine the time complexity of some [Divide-and-conquer](../dnd) algorithms.
 
 ## Application
 
-Recursion finds practical application within a range of algorithms, including [Dynamic Programming](../dp), [Graph](../graph), [Divide-and-conquer](../dnd), and [Backtracking](../backtracking). Typically, recursion is best suited to problems that exhibit sub-problems or require the calculation of the nth or first nth value in a series.
+Recursion finds practical application within a range of algorithms, including [Dynamic Programming](../dp), [Graph](../graph), [Divide-and-conquer](../dnd), and [Backtracking](../backtracking). Typically, recursion is best suited to problems that exhibit subproblems or require the calculation of the nth or first nth value in a series.
 
 ## Rehearsal
 

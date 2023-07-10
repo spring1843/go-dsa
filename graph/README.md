@@ -178,7 +178,7 @@ func dfs(u *timedVertex) {
 
 * Sets the status of edges at the time of discovery, and at the time exploring is finished
 * Produces a depth-first forest comprising several depth-first trees
-* Generates a well-formed parenthesis structure, where discovery of a vertex V is represented with (V and finishing discovering it is represented with V). For instance applying DFS on the graph (A) in _Figure 1_ would result in the output `(1(2(3(5))4()))`.
+* Generates a well-formed parentheses structure, where discovery of a vertex V is represented with (V and finishing discovering it is represented with V). For instance, applying DFS on the graph (A) in _Figure 1_ would result in the output `(1(2(3(5))4()))`.
 
 DFS is capable of categorizing edges (u,v) into four types:
 

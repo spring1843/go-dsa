@@ -37,7 +37,7 @@ The Go standard library includes a [regular expressions](https://golang.org/pkg/
 
 ## Application
 
-Strings are used to store words, characters, sentences and etc.
+Strings are used to store words, characters, sentences, etc.
 
 ## Rehearsal
 
