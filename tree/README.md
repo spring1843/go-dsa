@@ -1,6 +1,6 @@
 # Trees
 
-A collection of zero or more nodes in which root, a distinguished node is connected to all subtrees via a directed edge. In the real world trees are like a real tree but upside down.
+A collection of zero or more nodes in which the root, a distinguished node, is connected to all subtrees via a directed edge. In the real world trees are like a real tree but upside down.
 
 Traversing a tree means visiting every node in a tree and performing some work on it. Picking the right order in which we visit each node is key in solving a problem efficiently. Main three ways of traversing a tree are shown in figure-1.
 
@@ -15,7 +15,7 @@ Traversing a tree means visiting every node in a tree and performing some work o
 1   3 5   7
 ```
 
-The traversal methods of trees are named on when a particular operation is performed on the current node relative to its children. For example, in Pre-Order traversal, the operation is performed on the node prior to traversing its children.
+The traversal methods of trees are named when a particular operation is performed on the current node relative to its children. For example, in Pre-Order traversal, the operation is performed on the node prior to traversing its children.
 
 There are many types of trees. Some important tree types include:
 

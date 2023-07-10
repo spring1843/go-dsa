@@ -23,7 +23,7 @@ When pushing a new element to a heap, because of the structure property we alway
 	(A) Add 15		     	    (B) Add 5
 ```
 
-The pop operation in a heap starts by replacing the root with the right most leaf. Then we swap the root element down with the smaller child in a min heap (and larger child in a max heap) until the heap property is achieved.
+The pop operation in a heap starts by replacing the root with the rightmost leaf. Then we swap the root element down with the smaller child in a min heap (and larger child in a max heap) until the heap property is achieved.
 
 ```ASCII
 [Figure 2] Minimum heap pop operation
@@ -85,13 +85,13 @@ The time complexity of pushing and popping heap elements is O(LogN). On the othe
 
 The insertion strategy entails percolating the new element up the heap until the correct location is identified. Similarly, the deletion strategy involves percolating down the heap.
 
-Pushing and Popping heap elements are all O(Log n) operations. The strategy for inserting is the new element is percolating up the heap until the correct location is found. similarly the strategy for deletion is to percolate down.
+Pushing and Popping heap elements are all O(Log n) operations. The strategy for inserting the new element is percolating up the heap until the correct location is found. Similarly the strategy for deletion is to percolate down.
 
 ## Application
 
 Heaps in the form of priority queues are used for scheduling in operating systems and job schedulers. They are also used in simulating and implementing scheduling and priority systems for capacity management in hospitals and businesses.
 
-Priority queues implemented as heaps are utilized in job scheduling, for example scheduling the execution of different processes in an operating systems. They are also employed in simulating and implementing priority and scheduling systems to manage capacity in hospitals and businesses.
+Priority queues implemented as heaps are utilized in job scheduling, for example scheduling the execution of different processes in operating systems. They are also employed in simulating and implementing priority and scheduling systems to manage capacity in hospitals and businesses.
 
 ## Rehearsal
 

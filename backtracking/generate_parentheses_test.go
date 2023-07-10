@@ -7,17 +7,17 @@ import (
 )
 
 /*
-TestGenerateParenthesis tests solution(s) with the following signature and problem description:
+TestGenerateParentheses tests solution(s) with the following signature and problem description:
 
-	GenerateParenthesis(n int) []string
+	GenerateParentheses(n int) []string
 
 Given an integer n produce all valid variations of arranging
-n pair of parenthesis. e.g. for `2` it should return `()()` and `(())`.
+n pair of parentheses. e.g. for `2` it should return `()()` and `(())`.
 */
-func TestGenerateParenthesis(t *testing.T) {
+func TestGenerateParentheses(t *testing.T) {
 	tests := []struct {
 		n                int
-		validParenthesis []string
+		validParentheses []string
 	}{
 		{0, []string{""}},
 		{1, []string{"()"}},
@@ -28,12 +28,12 @@ func TestGenerateParenthesis(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got := GenerateParenthesis(test.n)
+		got := GenerateParentheses(test.n)
 		if len(got) > 0 {
 			sort.Strings(got)
 		}
-		if !reflect.DeepEqual(test.validParenthesis, got) {
-			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.validParenthesis, got)
+		if !reflect.DeepEqual(test.validParentheses, got) {
+			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.validParentheses, got)
 		}
 	}
 }

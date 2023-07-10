@@ -8,12 +8,12 @@ type evaluation struct {
 	stack []float64
 }
 
-var ErrImbalancedParenthesis = errors.New("expression has imbalanced parenthesis")
+var ErrImbalancedParentheses = errors.New("expression has imbalanced parentheses")
 
 // BasicCalculator solves the problem in O(n) time and O(n) space.
 func BasicCalculator(input string) (float64, error) {
 	if IsExpressionBalanced(input) {
-		return -1, ErrImbalancedParenthesis
+		return -1, ErrImbalancedParentheses
 	}
 
 	return EvaluatePostfixExpression(InfixToPostfix(toInfix(input)))

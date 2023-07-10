@@ -8,7 +8,7 @@ Another variation of queues is the double-ended queue, which allows for dequeuin
 
 ## Implementation
 
-Similar to [stacks](../stack) queues can be implemented using doubly [linked lists](../linkedlist/) or [arrays and slices](../array/). Here is a linked list implementation:
+Similar to [stacks](../stack), queues can be implemented using doubly [linked lists](../linkedlist/) or [arrays and slices](../array/). Here is a linked list implementation:
 
 ```Go
 package main

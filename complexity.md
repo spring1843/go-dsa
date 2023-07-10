@@ -9,7 +9,7 @@ To address these questions, the Big O asymptotic notation is employed, which cha
 
 ## Big O
 
-Big O is mathematical notion commonly used to describe and compare the worst case performance of an algorithm in both time and space given inputs of size `n`. Seven Big O notations that commonly used in algorithm complexity analysis are discussed in the following sections.
+Big O is a mathematical notion commonly used to describe the impact on time or space as input size `n` increases. Seven Big O notations that are commonly used in algorithm complexity analysis are discussed in the following sections.
 
 ```ASCII
 [Figure 1] Schematic diagrams of Big O for common run times from fastest to slowest.
@@ -110,7 +110,7 @@ Linear time complexity is considered favorable when an algorithm necessitates tr
 
 ### O(n*Log n)
 
-The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs, and can yield an out come at the same time through an efficient operation. Sorting is a common example. It's not possible to sort items faster than O(n*Log n). Examples:
+The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs, and can yield an outcome at the same time through an efficient operation. Sorting is a common example. It's not possible to sort items faster than O(n*Log n). Examples:
 
 * [Merge Sort](./dnc/merge_sort.go) and [Heap Sort](./heap/README.md)
 * [Knapsack](./greedy/knapsack.go)
@@ -123,7 +123,7 @@ Polynomial time complexity marks the initial threshold of problematic time compl
 
 * [Bubble Sort](./array/bubble_sort.go)
 * [Cheapest Flight](./graph/cheapest_flights.go)
-* [Remove Invalid Parenthesis](./graph/remove_invalid_parentheses.go)
+* [Remove Invalid Parentheses](./graph/remove_invalid_parentheses.go)
 
 ### Exponential O(2^n)
 
@@ -131,7 +131,7 @@ Exponential complexity is considered highly undesirable; however, it represents 
 
 * [Climbing Stairs](./recursion/climbing_stairs.go)
 * [Tower of Hanoi](./dnc/towers_of_hanoi.go)
-* [Generate Parenthesis](./backtracking/generate_parenthesis.go)
+* [Generate Parentheses](./backtracking/generate_parentheses.go)
 * Basic [Recursive](./recursion/README.md) implementation of Fibonacci
 
 ### Factorial O(n!)
