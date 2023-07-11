@@ -1,14 +1,14 @@
 # Array
 
-Arrays are a basic and essential data structure in computer science. They consist of a fixed-size contiguous block of memory and offer O(1) read and write time complexity. As a fundamental element of programming languages, arrays come built-in as part of their core.
+Arrays are a basic and essential data structure in computer science. They consist of a fixed-size contiguous memory block and offer O(1) read and write time complexity. As a fundamental element of programming languages, arrays come built-in in their core.
 
-To provide a real-world analogy, consider an array of athletes preparing for a sprinting match. Each athlete occupies a specific position within the array, which is typically denoted as 1, 2,..., n. While it is technically possible for each athlete to be in a different position, the positions generally carry some form of significance, such as alphabetical order or seniority within the sport.
+To provide a real-world analogy, consider an array of athletes preparing for a sprinting match. Each athlete occupies a specific position within the array, typically denoted as 1, 2,..., n. While it is technically possible for each athlete to be in a different position, the positions generally carry some form of significance, such as alphabetical order or seniority within the sport.
 
 ## Implementation
 
-In the Go programming language, arrays are considered values rather than pointers and represent the entirety of the array. Whenever an array is passed to a function, a copy of the array is created, resulting in additional memory usage. However, to avoid this issue, it is possible to pass a pointer to the array instead.
+In the Go programming language, arrays are considered values rather than pointers and represent the entirety of the array. Whenever an array is passed to a function, a copy is created, resulting in additional memory usage. However, to avoid this issue, it is possible to pass a pointer to the array instead.
 
-To define an array in Go, it is necessary to specify the size of the array using a constant. By using constants in this manner, it is no longer necessary to utilize the make function to create the array.
+To define an array in Go, it is necessary to specify the array size using a constant. By using constants in this manner, it is no longer necessary to use the make function to create the array.
 
 ```Go
 package main
@@ -24,7 +24,7 @@ func main() {
 
 Although arrays are fundamental data structures in Go, their constant size can make them inflexible and difficult to use in situations where a variable size is required. To address this issue, Go provides [slices](https://blog.golang.org/slices-intro) which are an abstraction of arrays that offer more convenient access to sequential data typically stored in arrays.
 
-Slices enable the addition of values using the `append` function, which allows for dynamic resizing of the slice. Additionally, selectors of the format [low:high] can be used to select or manipulate data in the slice. By utilizing slices instead of arrays, Go programmers gain a more flexible and powerful tool to manage their data structures.
+Slices enable the addition of values using the `append` function, which allows for dynamic slice resizing. Additionally, selectors of the format [low:high] can be used to select or manipulate data in the slice. By utilizing slices instead of arrays, Go programmers gain a more flexible and powerful tool to manage their data structures.
 
 ```Go
 package main
@@ -74,11 +74,11 @@ func main() {
 
 ## Complexity
 
-In computer science, the act of accessing an element within an array using an index `i` has an O(1) time complexity. This means that regardless of the size of the array, the read and write operations for a given element can be performed in constant time.
+Accessing an element within an array using an index `i` has an O(1) time complexity. This means that regardless of the size of the array, read and write operations for a given element can be performed in constant time.
 
 While arrays are useful for certain tasks, searching an unsorted array can be a time-consuming O(n) operation. Since the target item could be located anywhere in the array, every element must be checked until the item is found. Due to this limitation, alternative data structures such as trees and hash tables are often more suitable for search operations.
 
-Both addition and deletion operations on arrays can be O(n) operations in Arrays. The process of removing an element can create an empty slot that must be eliminated by shifting the remaining items. Similarly, adding items to an array may require shifting existing items to create space for the new item. These inefficiencies can make alternative data structures, such as [trees](../tree) or [hash tables](../hashtable), more suitable for managing operations involving additions and deletions.
+Addition and deletion operations on arrays can be O(n) operations in Arrays. The process of removing an element can create an empty slot that must be eliminated by shifting the remaining items. Similarly, adding items to an array may require shifting existing items to create space for the added item. These inefficiencies can make alternative data structures, such as [trees](../tree) or [hash tables](../hashtable), more suitable for managing operations involving additions and deletions.
 
 ## Application
 

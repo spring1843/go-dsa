@@ -9,7 +9,7 @@ TestKeepRepetitions tests solution(s) with the following signature and problem d
 
 	func KeepRepetitions(head *Node) *Node
 
-Given a linked-list of sorted integers, create a copy of the list that contains one example of
+Given a linked list of sorted integers, create a copy of the list that contains one example of
 each repeated item.
 */
 func TestKeepRepetitions(t *testing.T) {

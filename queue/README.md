@@ -75,7 +75,7 @@ func dequeue() (int, error) {
 
 ## Complexity
 
-Enqueue and dequeue operations are both done in O(1) times.
+Enqueue and dequeue operations both perform in O(1) times.
 
 ## Application
 

@@ -6,22 +6,22 @@ Backtracking can be compared to how a person solves a maze or searches for an ex
 
 ## Implementation
 
-A backtracking algorithm is typically implemented in these steps:
+Backtracking algorithms are typically implemented in these steps:
 
-1. Pruning: eliminating invalid approaches when possible
+1. Pruning invalid approaches when possible
 2. Generating a partial solution by iterating through available alternatives
 3. Checking the validity of the selected alternative according to the problem conditions and rules
 4. Checking for solution completion when required
 
 ## Complexity
 
-The time complexity of backtracking algorithms may vary depending on the problem at hand, but they generally require iterating through possible alternatives and checking for validity at each step. Although backtracking may be the only feasible approach for certain problems, it does not always guarantee an optimal solution. To improve the time complexity of backtracking algorithms, pruning, which involves eliminating known invalid options before iterating through the alternatives, is an effective technique.
+The time complexity of backtracking algorithms may vary depending on the problem at hand, however they generally require iterating through possible alternatives and checking for validity at each step. Although backtracking may be the only feasible approach to certain problems, it does not always guarantee an optimal solution. To improve the time complexity of backtracking algorithms, pruning, which involves eliminating known invalid options before iterating through the alternatives, is an effective technique.
 
 In addition, the space complexity of backtracking algorithms is typically not efficient since the recursive process requires maintaining a copy of the state at each step.
 
 ## Application
 
-Backtracking is widely used to solve board games and is often employed by computers to select their next moves. Furthermore, the backtracking technique is also applied to graphs and trees through the use of [Depth First Search](../graph/graph#depth-first-search---dfs). It also has applications in object detection in image processing.
+Backtracking is widely used to solve board games and computers use it to select their next moves. Furthermore, the backtracking technique is also applied to graphs and trees through the use of [Depth First Search](../graph/graph#depth-first-search---dfs). It also has applications in object detection and image processing.
 
 ## Rehearsal
 

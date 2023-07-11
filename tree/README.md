@@ -15,7 +15,7 @@ Traversing a tree means visiting every node in a tree and performing some work o
 1   3 5   7
 ```
 
-The traversal methods of trees are named when a particular operation is performed on the current node relative to its children. For example, in Pre-Order traversal, the operation is performed on the node before traversing its children.
+Tree traversal methods are named after the order in which they visit nodes. For example, in Pre-Order traversal, the operation is performed on the node before traversing its children.
 
 There are many types of trees. Some important tree types include:
 
@@ -24,7 +24,7 @@ There are many types of trees. Some important tree types include:
 * **Full Binary Tree**: Every non-leaf node has exactly two children
 
 ```ASCII
-[Figure 2] Important Tree Concepts
+[Figure 2] Important tree Concepts
 
      1		 4	    1        * 	  1 - Is it a binary tree?
     /|\		/ \	   /        / \	    2 - Is it a complete binary tree?
@@ -40,11 +40,11 @@ There are many types of trees. Some important tree types include:
 
 A Binary Search Tree (BST) is a type of sorted tree where, for every node n, the values of all nodes in its left subtree are less than n, and the values of all nodes in its right subtree are greater than n.
 
-Performing an In-Order traversal of a binary search tree and outputting each visited node results in a sorted (In-Order) list of nodes. This is known as the tree sort algorithm, which has a time complexity of O(NLogN). While there are other sorting algorithms available, none are more efficient than O(n*Log n).
+Performing an In-Order traversal of a binary search tree and outputting each visited node results in a sorted (In-Order) list of nodes. This is known as the tree sorting algorithm, which has a time complexity of O(NLogN). While there are other sorting algorithms available, none are more efficient than O(n*Log n).
 
 ### BST Complexity
 
-The time complexity of operations such as Search, Deletion, Insertion, and finding the minimum and maximum values in a binary search tree is O(h), where h represents the height of the tree.
+The time complexity of operations such as Search, Deletion, Insertion, and finding the minimum and maximum values in a binary search tree is O(h), where h represents the tree height.
 
 ## AVL - Height Balanced BST
 
@@ -54,19 +54,19 @@ To maintain balance after an insertion, a single rotation is needed if the inser
 
 ### AVL Complexity
 
-Same as a Binary Search Tree except that the height of the tree is known. So Search, Deletion, Insertion, and finding Min and Max in an AVL tree are all O(Log n) operations.
+Same as a Binary Search Tree except that the tree height is known. So Search, Deletion, Insertion, and finding Min and Max in an AVL tree are all O(Log n) operations.
 
 ## Trie
 
-A Trie, also known as a prefix tree, is a tree data structure that is commonly used for representing strings. Each descendant of a node in the Trie shares a common prefix, and a path from the root to a leaf node spells out a word held in the Trie.
+A Trie, also known as a prefix tree, is a tree data structure commonly used for representing strings. Each descendant of a node in the Trie shares a common prefix, and a path from the root to a leaf node spells out a word held in the Trie.
 
 ### Trie Complexity
 
-Insertion and Search are done in O(K), where K is the length of the word.
+Insertion and Search are done in O(K), where K is the length word length.
 
 ## Application
 
-Trees, such as Binary Search Trees (BSTs), can offer a time complexity of O(Log n) for searches, as opposed to the linear access time of linked lists. Trees are widely employed in search systems, and operating systems can represent file information using tree structures.
+Trees, such as Binary Search Trees (BSTs) offer O(Log n) time complexity for searches, which is superior to [linked lists](../linkedlist/)' and [array](../array/)'s linear access time. Trees are widely employed in search systems, and operating systems can represent file information using tree structures.
 
 ## Rehearsal
 
