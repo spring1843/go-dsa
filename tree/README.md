@@ -1,6 +1,6 @@
 # Trees
 
-A collection of zero or more nodes in which the root, a distinguished node, is connected to all subtrees via a directed edge. In the real world, trees are like a real tree but upside down.
+A collection of zero or more nodes in which the root, a distinguished node, is connected to all subtrees via a directed edge. In the real world, trees are like real trees but upside down.
 
 Traversing a tree means visiting every node in a tree and performing some work on it. Picking the right order in which we visit each node is key in solving a problem efficiently. The main three ways of traversing a tree are shown in figure-1.
 
@@ -15,7 +15,7 @@ Traversing a tree means visiting every node in a tree and performing some work o
 1   3 5   7
 ```
 
-The traversal methods of trees are named when a particular operation is performed on the current node relative to its children. For example, in Pre-Order traversal, the operation is performed on the node prior to traversing its children.
+The traversal methods of trees are named when a particular operation is performed on the current node relative to its children. For example, in Pre-Order traversal, the operation is performed on the node before traversing its children.
 
 There are many types of trees. Some important tree types include:
 
@@ -50,7 +50,7 @@ The time complexity of operations such as Search, Deletion, Insertion, and findi
 
 A height-balanced binary search tree has a height of O(Log n), and its left and right subtrees of all nodes have equal heights.
 
-In order to maintain balance after an insertion, a single rotation is needed if the insertion was on the outer side, either left-left or right-right, while a double rotation is required if the insertion was on the inner side, either left-right or right-left.
+To maintain balance after an insertion, a single rotation is needed if the insertion is on the outer side, either left-left or right-right, while a double rotation is required if the insertion is on the inner side, either left-right or right-left.
 
 ### AVL Complexity
 

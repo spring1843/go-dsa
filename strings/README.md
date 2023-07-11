@@ -4,7 +4,7 @@ Strings are a ubiquitous data structure that typically manifests as built-in dat
 
 ## Implementation
 
-In Go strings are a data type. Behind the scene strings are a slice of bytes. The `strings` package provides several useful convenience functions. Examples include:
+In Go, strings are a data type. Behind the scene strings are a slice of bytes. The `strings` package provides several useful convenience functions. Examples include:
 
 * [Index](https://golang.org/pkg/strings/#Index), [Contains](https://golang.org/pkg/strings/#Contains), [HasPrefix](https://golang.org/pkg/strings/#HasPrefix), [HasSuffix](https://golang.org/pkg/strings/#HasSuffix)
 * [Split](https://golang.org/pkg/strings/#Split), [Fields](https://golang.org/pkg/strings/#Split), [Join](https://golang.org/pkg/strings/#Join)
@@ -33,7 +33,7 @@ func main() {
 
 Strings have the same complexity as [arrays](../array/) and slices in Go.
 
-The Go standard library includes a [regular expressions](https://golang.org/pkg/regexp/) package that unlike most other languages comes with a guarantee to run in O(n) time.
+The Go standard library includes a [regular expressions](https://golang.org/pkg/regexp/) package that, unlike most other languages, comes with a guarantee to run in O(n) time.
 
 ## Application
 

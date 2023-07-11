@@ -9,7 +9,7 @@ A heap must satisfy two conditions:
 
 As a result, if you push elements to the min or max heap and then pop them one by one, you will obtain a list that is sorted in ascending or descending order, respectively. This sorting technique is also an O(n*Log n) algorithm known as [heap sort](./heap_sort_test.go). Although there are other sorting algorithms available, none of them are faster than O(n*Logn).
 
-When pushing a new element to a heap, because of the structure property we always add the new element to the first available position on the lowest level of the heap, filling from left to right. Then to maintain the heap property, if the newly inserted element is smaller than its parent in a min heap (larger in a max heap), then we swap it with its parent. We continue swapping the swapped element with its parent until the heap property is achieved.
+When pushing a new element to a heap, because of the structure property, we always add the new element to the first available position on the lowest level of the heap, filling from left to right. Then to maintain the heap property, if the newly inserted element is smaller than its parent in a min heap (larger in a max heap), then we swap it with its parent. We continue swapping the swapped element with its parent until the heap property is achieved.
 
 ```ASCII
 [Figure 1] Minimum heap push operation

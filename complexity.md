@@ -73,10 +73,10 @@ To understand the big O notation, let us focus on time complexity and specifical
 
 However, it is essential to note that this is not always the case. In practice, a O(1) algorithm with a single time-consuming operation might be slower than a O(n) algorithm with multiple operations if the single operation in the first algorithm requires more time to complete than the collective operations in the second algorithm.
 
-Big O notation of an algorithm can be simplified using the following two rules:
+The Big O notation of an algorithm can be simplified using the following two rules:
 
 1. Remove constants. `O(n) + 2*O(n*Log n) + 3*O(K) + 5` is simplified to `O(n) + O(n*Log n) + O(K)`.
-2. Remove non dominant or slower terms. `O(n) + O(n*Log n) + O(K)` is simplified to `O(n*Log n)` because `O(n*Log n)` is the most dominant term..
+2. Remove non-dominant or slower terms. `O(n) + O(n*Log n) + O(K)` is simplified to `O(n*Log n)` because `O(n*Log n)` is the most dominant term..
 
 ### Constant - O(K) or O(1)
 
@@ -91,7 +91,7 @@ Constant time complexity represents the most efficient scenario for an algorithm
 
 ### Logarithmic - O(Log n)
 
-Attaining logarithmic time complexity in an algorithm is highly desirable as it eliminates the need to iterate through every input in order to solve a given problem. Examples:
+Attaining logarithmic time complexity in an algorithm is highly desirable as it eliminates the need to iterate through every input to solve a given problem. Examples:
 
 * Searching sorted items using [Binary Search](./dnc/binary_search.go)
 * Inserting, Deleting, and Searching in a [Binary Search Tree](./tree/README.md)

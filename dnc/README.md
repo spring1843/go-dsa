@@ -84,7 +84,7 @@ func search(list []int, target int) int {
 
 ## Complexity
 
-If used inappropriately, DNC algorithms can lead to an exponential number of unnecessary recursive calls, resulting in a time complexity of O(2^n). However, if an appropriate dividing strategy and base case that can be solved directly are identified, DNC algorithms can be very effective, with a time complexity as low as O(Log n) in the case of binary search. As DNC algorithms are recursive in nature, their complexity analysis is analogous to that of [recursive](../recursion) algorithms.
+If used inappropriately, DNC algorithms can lead to an exponential number of unnecessary recursive calls, resulting in a time complexity of O(2^n). However, if an appropriate dividing strategy and base case that can be solved directly are identified, DNC algorithms can be very effective, with a time complexity as low as O(Log n) in the case of binary search. As DNC algorithms are recursive, their complexity analysis is analogous to that of [recursive](../recursion) algorithms.
 
 ## Application
 

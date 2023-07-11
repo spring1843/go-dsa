@@ -34,7 +34,7 @@ Hash tables provide O(1) time complexity for inserting, deletion, and searching 
 
 ## Application
 
-Hash tables are widely used in algorithms to cache and memoize data for fast constant access times. This advantage in performance makes hash tables more suitable than [Arrays](../arrays) and even [Binary Search Trees](../tree), when there is no need to keep the data ordered, they can't, however, be used for finding a range, min or max of data.
+When there is no need to keep the data hash tables are widely used in algorithms to cache and memoize data for fast constant access times. This advantage in performance makes hash tables more suitable than [Arrays](../arrays) and even [Binary Search Trees](../tree).
 
 Compilers use hash tables to generate a symbol table to keep track of variable declarations.
 

@@ -1,6 +1,6 @@
 # Graph
 
-A graph is a collection of vertices that are connected through directed or undirected edges. In an edge-weighted tree, each edge is assigned a value representing its cost or benefit. Graphs can be used to model various real-world scenarios, For example graph A in the below figure can represent university courses and their prerequisites, cities and their highways, followers in a social network, links on a site, and many more.
+A graph is a collection of vertices that are connected through directed or undirected edges. In an edge-weighted tree, each edge is assigned a value representing its cost or benefit. Graphs can be used to model various real-world scenarios. For example graph A in the below figure can represent university courses and their prerequisites, cities and their highways, followers in a social network, links on a site, and many more.
 
 ```ASCII
 [Figure 1] Graph Examples - Numbers, arrows, and numbers in brackets each respectively represent vertices, edges, and edge weights.
@@ -18,7 +18,7 @@ An entire branch of mathematics named graph theory is dedicated to the study of 
 
 * **Directed Acyclic Graph - DAG**:  A directed graph with no cycles
 * **Connected Graph**: There is a path between any two vertices
-* **Minimum Spanning Tree**: Subset of edges in an undirected, edge-weighted, and connected graph, that connects all the vertices at the lowest cost
+* **Minimum Spanning Tree**: Subset of edges in an undirected, edge-weighted, and connected graph that connects all the vertices at the lowest cost
 
 ## Implementation
 
