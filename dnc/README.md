@@ -1,6 +1,6 @@
 # Divide-and-Conquer
 
-The divide-and-conquer (DNC) paradigm is a common approach to solving problems [recursively](../recursion). It involves breaking down a problem into smaller and smaller sub-problems until a base case is reached, where the problem can be solved directly. The divide-and-conquer method consists of three steps:
+The divide-and-conquer (DNC) paradigm is a common approach to solving problems [recursively](../recursion). It involves breaking down a problem into smaller and smaller sub-problems until a base case is reached, where the problem can be directly solved. The divide-and-conquer method consists of three steps:
 
 1. Divide: The problem is divided into smaller sub-problems, typically by partitioning the input data into two or more subsets.
 2. Conquer: The smaller sub-problems are solved recursively using the same algorithm, typically by applying the divide-and-conquer approach again.
@@ -8,7 +8,7 @@ The divide-and-conquer (DNC) paradigm is a common approach to solving problems [
 
 ## Implementation
 
-The binary search algorithm is a classic Divide-and-Conquer algorithm used to find a specific value in a sorted list. The search process begins by comparing the target value to the middle element of the list. If they are not equal, the half of the list in which the target value cannot be present is eliminated. This process is repeated on the remaining half of the list until the target value is found or until there are no more elements to search. Binary search can be implemented iteratively or recursively. Both implementations are shown below.
+The binary search algorithm is a classic Divide-and-Conquer algorithm used to find a specific value in a sorted list. The search process begins by comparing the target value to the middle element of the list. If they are not equal, the half of the list in which the target value cannot be present is eliminated. This process is repeated on the remaining half of the list until the target value is found or until there are no more elements to search. Both recursive and iterative implementations of binary search are shown below.
 
 ```Go
 package main

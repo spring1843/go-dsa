@@ -9,7 +9,7 @@ To address these questions, the Big O asymptotic notation, which characterizes h
 
 ## Big O
 
-Big O is a mathematical notion commonly used to describe the impact on time or space as input size `n` increases. Seven Big O notations commonly used in algorithm complexity analysis are discussed in the following sections.
+Big O is a mathematical notation commonly used to describe the impact on time or space as input size `n` increases. Seven Big O notations commonly used in algorithm complexity analysis are discussed in the following sections.
 
 ```ASCII
 [Figure 1] Schematic diagram of Big O for common run times from fastest to slowest.
@@ -110,7 +110,7 @@ Linear time complexity is considered favorable when an algorithm traverses every
 
 ### O(n*Log n)
 
-The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs and yield an outcome at the same time through an efficient operation. Sorting is a common example. It's impossible to sort items faster than O(n*Log n). Examples:
+The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs and yield an outcome at the same time through an efficient operation. Sorting is a common example. It is impossible to sort items faster than O(n*Log n). Examples:
 
 * [Merge Sort](./dnc/merge_sort.go)
 * [Quick Sort](./dnc/quick_sort.go)

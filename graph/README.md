@@ -95,24 +95,28 @@ Both BFS and DFS can be [implemented iteratively using a container (queue or sta
 BFS is a non-recursive algorithm that employs a [queue](../queue) and is a generalization of [post-order traversal](../tree) in a tree. When provided with a graph G and a vertex V, BFS systematically explores all nodes in G that are reachable from V, as illustrated in the following example:
 
 ```Go
-package graph_test
+package main
 
-import "container/list"
+import (
+	"container/list"
+	"fmt"
+)
 
-type vertex struct {
-		val      int
-		edges    []*vertex
-		distance int
+type vertexWithDistance struct {
+	val   int
+	edges []*vertexWithDistance
+
+	distance int
 }
 
-func bfs(source *vertex) {
+func bfs(source *vertexWithDistance) {
 	distance := 0
-	seen := make(map[*vertex]struct{})
+	seen := make(map[*vertexWithDistance]struct{})
 	queue := list.New()
 	queue.PushBack(source)
 
 	for queue.Len() != 0 {
-		tmp := queue.Remove(queue.Front()).(*vertex)
+		tmp := queue.Remove(queue.Front()).(*vertexWithDistance)
 		distance++
 		for _, v := range tmp.edges {
 			if _, ok := seen[v]; ok {
@@ -124,6 +128,25 @@ func bfs(source *vertex) {
 		}
 	}
 }
+
+func main() {
+	graph := makeGraph()
+	bfs(graph[0])
+	for _, vertex := range graph {
+		fmt.Printf("%#v\n", vertex)
+	}
+}
+
+func makeGraph() []*vertexWithDistance {
+	a := &vertexWithDistance{val: 1}
+	b := &vertexWithDistance{val: 2}
+	c := &vertexWithDistance{val: 3}
+	d := &vertexWithDistance{val: 5}
+	a.edges = []*vertexWithDistance{b}
+	b.edges = []*vertexWithDistance{c}
+	c.edges = []*vertexWithDistance{d}
+	return []*vertexWithDistance{a, b, c, d}
+}
 ```
 
 * Vertices at distance K are discovered before those at distance K + 1
@@ -134,12 +157,14 @@ For any vertex S that is reachable from V, the simple path in the BFS tree from 
 
 #### Depth First Search - DFS
 
-Depth First Search (DFS) is a graph traversal algorithm that explores a graph by visiting as far as possible along each branch before backtracking. It uses a [stack](../stack) data structure when implemented iteratively, is [recursive](../recursion), and is a generalization of pre-order traversal in trees.
+Depth First Search (DFS) is a graph traversal algorithm that explores a graph by exploring as far as possible along each branch before backtracking. It uses a [stack](../stack) data structure when implemented iteratively, is [recursive](../recursion), and is a generalization of pre-order traversal in trees.
 
 When given a graph G and a vertex S, DFS systematically discovers all nodes in G reachable from S. It is typically implemented using a driver that discovers the edges of the most recently discovered vertex V that has unexplored edges. Once all of V's edges have been explored, the search [backtracks](../backtracking/) to explore all edges leaving the vertex from which V was discovered. This process continues until the all edges are discovered.
 
 ```Go
-package graph_test
+package main
+
+import "fmt"
 
 type timedVertex struct {
 	val   int
@@ -154,25 +179,44 @@ var (
 	time = 0
 )
 
-func dfsDriver(graph []*timedVertex) {
+func dfs(graph []*timedVertex) {
 	for _, v := range graph {
 		if _, ok := seen[v]; !ok {
-			dfs(v)
+			dfsRecursive(v)
 		}
 	}
 }
 
-func dfs(u *timedVertex) {
+func dfsRecursive(u *timedVertex) {
 	time++
 	u.discoveryTimeStart = time
 	for _, v := range u.edges {
 		if _, ok := seen[v]; !ok {
-			dfsVisit(v)
+			dfsRecursive(v)
 		}
 	}
 	seen[u] = struct{}{}
 	time++
 	u.discoveryTimeFinish = time
+}
+
+func main() {
+	graph := makeGraph()
+	dfs(graph)
+	for _, vertex := range graph {
+		fmt.Printf("%#v\n", vertex)
+	}
+}
+
+func makeGraph() []*timedVertex {
+	a := &timedVertex{val: 1}
+	b := &timedVertex{val: 2}
+	c := &timedVertex{val: 3}
+	d := &timedVertex{val: 5}
+	a.edges = []*timedVertex{b}
+	b.edges = []*timedVertex{c}
+	c.edges = []*timedVertex{d}
+	return []*timedVertex{a, b, c, d}
 }
 ```
 
