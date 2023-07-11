@@ -11,7 +11,7 @@ A Dynamic Programming (DP) approach to algorithms typically entails four steps:
 3. Computing the value of the optimal solution in a bottom-up manner
 4. Determining the optimal solution using the values computed in the previous steps.
 
-If only the value of the solution is needed, step 4 may be omitted. Conversely, when the solution is required, it is advisable to consider the necessary values at the final step to facilitate storage of pertinent information at step 3 and simplify step 4.
+If only the value of the solution is needed, step 4 may be omitted. Conversely, when the solution is required, it is advisable to consider the necessary values at the final step to facilitate the storage of pertinent information at step 3 and simplify step 4.
 
 There are two general methods for writing DP algorithms: the top-down and bottom-up approaches.
 

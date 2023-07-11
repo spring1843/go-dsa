@@ -1,8 +1,8 @@
 # Trees
 
-A collection of zero or more nodes in which the root, a distinguished node, is connected to all subtrees via a directed edge. In the real world trees are like a real tree but upside down.
+A collection of zero or more nodes in which the root, a distinguished node, is connected to all subtrees via a directed edge. In the real world, trees are like a real tree but upside down.
 
-Traversing a tree means visiting every node in a tree and performing some work on it. Picking the right order in which we visit each node is key in solving a problem efficiently. Main three ways of traversing a tree are shown in figure-1.
+Traversing a tree means visiting every node in a tree and performing some work on it. Picking the right order in which we visit each node is key in solving a problem efficiently. The main three ways of traversing a tree are shown in figure-1.
 
 ```ASCII
 [Figure 1] Tree traversals - Full Binary Search Tree Example
@@ -38,7 +38,7 @@ There are many types of trees. Some important tree types include:
 
 ## Binary Search Tree (BST)
 
-A Binary Search Tree (BST) is a type of sorted tree where, for every node n, the values of all nodes in its left subtree are less than n and the values of all nodes in its right subtree are greater than n.
+A Binary Search Tree (BST) is a type of sorted tree where, for every node n, the values of all nodes in its left subtree are less than n, and the values of all nodes in its right subtree are greater than n.
 
 Performing an In-Order traversal of a binary search tree and outputting each visited node results in a sorted (In-Order) list of nodes. This is known as the tree sort algorithm, which has a time complexity of O(NLogN). While there are other sorting algorithms available, none are more efficient than O(n*Log n).
 
@@ -48,7 +48,7 @@ The time complexity of operations such as Search, Deletion, Insertion, and findi
 
 ## AVL - Height Balanced BST
 
-A height balanced binary search tree has a height of O(Log n) and its left and right subtrees of all nodes have equal heights.
+A height-balanced binary search tree has a height of O(Log n), and its left and right subtrees of all nodes have equal heights.
 
 In order to maintain balance after an insertion, a single rotation is needed if the insertion was on the outer side, either left-left or right-right, while a double rotation is required if the insertion was on the inner side, either left-right or right-left.
 

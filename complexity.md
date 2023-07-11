@@ -5,7 +5,7 @@ Algorithms can be differentiated based on their time and space complexity. When 
 1. What is the time `t` required for execution?
 2. How much memory space `s` does it utilize?
 
-To address these questions, the Big O asymptotic notation is employed, which characterizes how an algorithm performs with respect to time and space as the input size `n` increases.
+To address these questions, the Big O asymptotic notation, which characterizes how an algorithm performs with respect to time and space as the input size `n` increases, is employed.
 
 ## Big O
 
@@ -76,7 +76,7 @@ However, it is essential to note that this is not always the case. In practice, 
 Big O notation of an algorithm can be simplified using the following two rules:
 
 1. Remove constants. `O(n) + 2*O(n*Log n) + 3*O(K) + 5` is simplified to `O(n) + O(n*Log n) + O(K)`.
-2. Remove non dominant, or slower terms. `O(n) + O(n*Log n) + O(K)` is simplified to `O(n*Log n)` because `O(n*Log n)` is the most dominant term..
+2. Remove non dominant or slower terms. `O(n) + O(n*Log n) + O(K)` is simplified to `O(n*Log n)` because `O(n*Log n)` is the most dominant term..
 
 ### Constant - O(K) or O(1)
 
@@ -85,7 +85,7 @@ Constant time complexity represents the most efficient scenario for an algorithm
 * Reads and writes in a [hash table](./hashtable/README.md)
 * Enqueue and Dequeue in a [queue](./queue/README.md)
 * Push and Pop in a [stack](./stack/README.md)
-* Finding the minimum or maximum in [heap](./heap/README.md)
+* Finding the minimum or maximum in a [heap](./heap/README.md)
 * Removing the last element of a [doubly linked list](./linkedlist/README.md)
 * [Max without conditions](./bit/max_function_without_conditions.go)
 
@@ -94,14 +94,14 @@ Constant time complexity represents the most efficient scenario for an algorithm
 Attaining logarithmic time complexity in an algorithm is highly desirable as it eliminates the need to iterate through every input in order to solve a given problem. Examples:
 
 * Searching sorted items using [Binary Search](./dnc/binary_search.go)
-* Inserting, Deleting and Searching in a [Binary Search Tree](./tree/README.md)
-* Push and Pop in [heap](./heap/README.md)
+* Inserting, Deleting, and Searching in a [Binary Search Tree](./tree/README.md)
+* Push and Pop in a [heap](./heap/README.md)
 * [Square Root](./dnc/square_root.go)
 * [Median in a Stream](./heap/median_in_a_stream.go)
 
 ### Linear - O(n)
 
-Linear time complexity is considered favorable when an algorithm necessitates traversing every input, with no feasible way to avoid it. Examples:
+Linear time complexity is considered favorable when an algorithm necessitates traversing every input with no feasible way to avoid it. Examples:
 
 * Removing the last element in a [singly linked list](./linkedlist/README.md)
 * Searching an unsorted [array](./array/README.md) or [linked list](./linkedlist/README.md)
@@ -110,7 +110,7 @@ Linear time complexity is considered favorable when an algorithm necessitates tr
 
 ### O(n*Log n)
 
-The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs, and can yield an outcome at the same time through an efficient operation. Sorting is a common example. It's not possible to sort items faster than O(n*Log n). Examples:
+The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs and can yield an outcome at the same time through an efficient operation. Sorting is a common example. It's not possible to sort items faster than O(n*Log n). Examples:
 
 * [Merge Sort](./dnc/merge_sort.go) and [Heap Sort](./heap/README.md)
 * [Knapsack](./greedy/knapsack.go)
@@ -119,7 +119,7 @@ The time complexity of O(n*Log n) is commonly observed when it is necessary to i
 
 ### Polynomial - O(n^2)
 
-Polynomial time complexity marks the initial threshold of problematic time complexity for algorithms. This complexity often arises when an algorithm includes nested loops, involving both an inner loop and an outer loop. Examples:
+Polynomial time complexity marks the initial threshold of problematic time complexity for algorithms. This complexity often arises when an algorithm includes nested loops involving both an inner loop and an outer loop. Examples:
 
 * [Bubble Sort](./array/bubble_sort.go)
 * [Cheapest Flight](./graph/cheapest_flights.go)

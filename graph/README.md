@@ -3,7 +3,7 @@
 A graph is a collection of vertices that are connected through directed or undirected edges. In an edge-weighted tree, each edge is assigned a value representing its cost or benefit. Graphs can be used to model various real-world scenarios, For example graph A in the below figure can represent university courses and their prerequisites, cities and their highways, followers in a social network, links on a site, and many more.
 
 ```ASCII
-[Figure 1] Graph Examples - Numbers , arrows, and numbers in brackets each respectively represent vertices, edges, and edge weights.
+[Figure 1] Graph Examples - Numbers, arrows, and numbers in brackets each respectively represent vertices, edges, and edge weights.
 
      5		3     5	  3              6   	       1 - Is it a DAG?
   ↗  ↑  ↖     ↗   ↘    ↖   ↘	      (4)  ↖ (1)	 2- Is it a connected graph?
@@ -18,13 +18,13 @@ An entire branch of mathematics named graph theory is dedicated to the study of 
 
 * **Directed Acyclic Graph - DAG**:  A directed graph with no cycles
 * **Connected Graph**: There is a path between any two vertices
-* **Minimum Spanning Tree**: Subset of edges in an undirected, edge weighted, and connected graph, that connects all the vertices at the lowest cost
+* **Minimum Spanning Tree**: Subset of edges in an undirected, edge-weighted, and connected graph, that connects all the vertices at the lowest cost
 
 ## Implementation
 
 Graphs are commonly represented using either an adjacency matrix or an adjacency list.
 
-* **Adjacency Matrix**: Faster look up times and more suitable for dense graphs
+* **Adjacency Matrix**: Faster look-up times and more suitable for dense graphs
 * **Adjacency List**: More space efficient, suitable for graphs with fewer edges
 
 ```Go
@@ -86,9 +86,9 @@ func main() {
 When working with graphs, it is often necessary to perform a search to solve different problems. The efficiency of the algorithm used depends on the order in which the graph is searched. Two commonly used search methods are:
 
 * **Breadth First Search - BFS** used to find the shortest path
-* **Depth First Search - DFS** often a subroutine, in another algorithm e.g. in maze traversal, cycle finding, and path finding.
+* **Depth First Search - DFS** often a subroutine, in another algorithm. Used in maze traversal, cycle finding, and pathfinding
 
-Both BFS and DFS can be [implemented iteratively using a container (queue, or stack)](./iterative_traversal_test.go).
+Both BFS and DFS can be [implemented iteratively using a container (queue or stack)](./iterative_traversal_test.go).
 
 #### Breadth First Search - BFS
 
@@ -130,7 +130,7 @@ func bfs(source *vertex) {
 * The shortest distance (i.e., the smallest number of edges) from the source vertex to each reachable vertex is computed
 * A BFS tree with root V containing all reachable vertices is produced
 
-For any vertex S that is reachable from V, the simple path in the BFS tree from V to S corresponds to a _shortest_ path (minimum number of edges) from V to S in G.
+For any vertex S that is reachable from V, the simple path in the BFS tree from V to S corresponds to the _shortest_ path (minimum number of edges) from V to S in G.
 
 #### Depth First Search - DFS
 
@@ -176,9 +176,9 @@ func dfs(u *timedVertex) {
 }
 ```
 
-* Sets the status of edges at the time of discovery, and at the time exploring is finished
+* Sets the status of edges at the time of discovery and at the time exploring is finished
 * Produces a depth-first forest comprising several depth-first trees
-* Generates a well-formed parentheses structure, where discovery of a vertex V is represented with (V and finishing discovering it is represented with V). For instance, applying DFS on the graph (A) in _Figure 1_ would result in the output `(1(2(3(5))4()))`.
+* Generates a well-formed parentheses structure, where the discovery of a vertex V is represented with (V and finishing discovering it is represented with V). For instance, applying DFS on graph (A) in _Figure 1_ would result in the output `(1(2(3(5))4()))`.
 
 DFS is capable of categorizing edges (u,v) into four types:
 
@@ -191,7 +191,7 @@ If a DFS algorithm identifies a back edge, it indicates that the graph is cyclic
 
 ### Dijkstra's Algorithm
 
-A [greedy](../greedy) algorithm that uses BFS-like ideas and a minimum [heap](../heap) to solve single-source shortest path problems in edge weighted directed graphs like (D) in _Figure 1_.
+A [greedy](../greedy) algorithm that uses BFS-like ideas and a minimum [heap](../heap) to solve single-source shortest path problems in edge-weighted directed graphs like (D) in _Figure 1_.
 
  ```Go
 package graph_test

@@ -23,7 +23,7 @@ When pushing a new element to a heap, because of the structure property we alway
 	(A) Add 15		     	    (B) Add 5
 ```
 
-The pop operation in a heap starts by replacing the root with the rightmost leaf. Then we swap the root element down with the smaller child in a min heap (and larger child in a max heap) until the heap property is achieved.
+The pop operation in a heap starts by replacing the root with the rightmost leaf. Then we swap the root element down with the smaller child in a min heap (and the larger child in a max heap) until the heap property is achieved.
 
 ```ASCII
 [Figure 2] Minimum heap pop operation
@@ -77,7 +77,7 @@ func (m *maxHeap) Pop() interface{} {
 
 To utilize a heap to store a particular type, certain methods such as len and less must be implemented for that type to conform to the heap interface. By default, the heap is a min heap, where each node is less than its children. However, the package provides the flexibility to define what "being less than" means. For instance, changing `m[i] > m[j]` to `m[i] < m[j]` would transform the heap into a minimum heap.
 
-In Go, the heap implementation is based on slices. The heap property is maintained such that the left child of the node at index `i` (where i is greater than or equal to 1) is always located at `2i`, and the right child is at `2i+1`. If the slice already contains elements before any pushing operation, the heap must be initialized using heap.Init(h Interface) to establish the order.
+In Go, the heap implementation is based on slices. The heap property is maintained such that the left child of the node at index `i` (where i is greater than or equal to 1) is always located at `2i`, and the right child is at `2i+1`. If the slice already contains elements before any pushing operation, the heap must be initialized using `heap.Init(h Interface)` to establish the order.
 
 ## Complexity
 
@@ -85,7 +85,7 @@ The time complexity of pushing and popping heap elements is O(LogN). On the othe
 
 The insertion strategy entails percolating the new element up the heap until the correct location is identified. Similarly, the deletion strategy involves percolating down the heap.
 
-Pushing and Popping heap elements are all O(Log n) operations. The strategy for inserting the new element is percolating up the heap until the correct location is found. Similarly the strategy for deletion is to percolate down.
+Pushing and Popping heap elements are all O(Log n) operations. The strategy for inserting the new element is percolating up the heap until the correct location is found. Similarly, the strategy for deletion is to percolate down.
 
 ## Application
 

@@ -6,11 +6,11 @@ Two types of linked lists exist: singly linked lists, in which each node is link
 
 ## Implementation
 
-When implementing linked lists you typically have two concepts, the linked list itself which has a link to the head and bottom nodes, and node(s) which contains at least one piece of data that is being stored in the linked list and also a link to the next node for singly linked lists, and an additional link to the previous node in doubly linked lists. To have a linked list in Go you can define a node `struct` like below and use a pointer to the same structure. The example below creates a singly linked list that looks like `1->2->3->4->5`
+When implementing linked lists, you typically have two concepts, the linked list itself, which has a link to the head and bottom nodes, and node(s), which contains at least one piece of data that is being stored in the linked list and also a link to the next node for singly linked lists, and an additional link to the previous node in doubly linked lists. To have a linked list in Go, you can define a node `struct` like the one below and use a pointer to the same structure. The example below creates a singly linked list that looks like `1->2->3->4->5`
 
 When implementing linked lists, two key concepts come into play: the linked list itself, which includes references to the head and tail nodes, and the individual nodes which hold:
 
-* At least one piece of data such as name or number
+* At least one piece of data, such as name or number
 * A reference to the next node
 * A reference to the previous node in doubly linked lists
 
@@ -48,7 +48,7 @@ func addToFront(node *node) {
 
 In a singly linked list, a pointer is typically stored for the first and last items. Adding items to the front or back of the list is a constant-time operation. However, deleting the last item can be challenging, as the last item's pointer needs to be updated to the second-to-last item. This is where having a reference to the last item in each node proves useful. In contrast, doubly linked lists maintain pointers to both the previous and next nodes, which makes deletion operations less expensive.
 
-The Go standard library contains an implementation of [doubly linked lists](https://golang.org/pkg/container/list/). In the following example numbers from 1 to 10 are added to the list, and then even numbers are removed and the resulting linked list containing odd numbers is printed.
+The Go standard library contains an implementation of [doubly linked lists](https://golang.org/pkg/container/list/). In the following example, numbers from 1 to 10 are added to the list, and then even numbers are removed, and the resulting linked list containing odd numbers is printed.
 
 ```Go
 package main
@@ -83,13 +83,13 @@ func main() {
 
 Adding new items to the front or back of the linked list has the time complexity of O(1).
 
-Deleting the first item is also O(1). Deleting the last item in a singly linked list is O(n), because we have to find the node before the last node and for that we have to visit every node. In a doubly linked list where a node is connected to both previous and next nodes though, deleting the last item can be done in O(1) time.
+Deleting the first item is also O(1). Deleting the last item in a singly linked list is O(n), because we have to find the node before the last node, and for that, we have to visit every node. In a doubly linked list where a node is connected to both previous and next nodes, though, deleting the last item can be done in O(1) time.
 
 ## Application
 
-Linked lists can be useful where the order of similar items matters especially if there is a need for flexible reordering of the items or having a current, next and previous items.
+Linked lists can be useful where the order of similar items matters, especially if there is a need for flexible reordering of the items or having a current, next, and previous items.
 
-A music album is a good example of linked lists. The tracks come in an order, and at any given time you are listening to one track while you have the option of going to the next song in a singly linked list, and both previous and next song in a doubly linked list.
+A music album is a good example of linked lists. The tracks come in an order, and at any given time, you are listening to one track while you have the option of going to the next song in a singly linked list and both the previous and next song in a doubly linked list.
 
 ## Rehearsal
 

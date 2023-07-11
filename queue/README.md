@@ -2,7 +2,7 @@
 
 Queues are data structures that operate on the principle of First-In-First-Out (FIFO), enabling elements to be added to the rear of the queue through the enqueue operation and removed from the front of the queue through the dequeue operation.
 
-In the real world queues are formed in situations where a first-come, first-served service is provided, such as at toll booths on highways.
+In the real world, queues are formed in situations where a first-come, first-served service is provided, such as at toll booths on highways.
 
 Another variation of queues is the double-ended queue, which allows for dequeuing from both ends, thereby facilitating both FIFO and LIFO (Last In, First Out) data structures.
 
@@ -79,7 +79,7 @@ Enqueue and dequeue operations are both done in O(1) times.
 
 ## Application
 
-Queues are widely utilized in solving graph-related problems and managing capacity in various contexts such as printers, where tasks are processed in the order of their arrival. They are also utilized in situations where a first-come-first-serve approach is necessary.
+Queues are widely utilized in solving graph-related problems and managing capacity in various contexts, such as printers, where tasks are processed in the order of their arrival. They are also utilized in situations where a first-come-first-serve approach is necessary.
 
 ## Rehearsal
 
@@ -87,4 +87,4 @@ Queues are widely utilized in solving graph-related problems and managing capaci
 * [Implement a Queue Using a Circular Array](queue_using_circular_array_test.go), [Solution](queue_using_circular_array.go)
 * [Is Binary Tree Symmetrical](is_tree_symmetrical_test.go), [Solution](is_tree_symmetrical.go)
 * [Generate Binary Numbers](generate_binary_numbers_test.go), [Solution](generate_binary_numbers.go)
-* [Find The Maximum of Sub-array of Length K](maximum_of_sub_arrays_test.go), [Solution](maximum_of_sub_arrays.go)
+* [Find The Maximum Sub-array of Length K](maximum_of_sub_arrays_test.go), [Solution](maximum_of_sub_arrays.go)

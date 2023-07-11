@@ -1,6 +1,6 @@
 # Stack
 
-Stacks are data structures that operate on the principle of Last-In-First-Out (LIFO), where the last element added to the stack is the first to be removed. Stacks allow push, pop and top operations to add, and remove data.
+Stacks are data structures that operate on the principle of Last-In-First-Out (LIFO), where the last element added to the stack is the first to be removed. Stacks allow push, pop, and top operations to add and remove data.
 
 One way to visualize stacks is to think of a backpack where items are placed and later removed in reverse order, with the last item added to the bag being the first item removed.
 
@@ -79,7 +79,7 @@ The push and pop operations in stacks are considered O(1) operations, making the
 
 Stacks are helpful when LIFO operations are desired. Many [graph](../graph) problems are solved with stacks.
 
-Within the context of process execution, a portion of memory known as the "stack" is reserved to hold stack frames. Whenever a function is called, relevant data such as parameters, local variables, and return values are stored within a frame to be accessed after the function has completed. As such, when an excessive number of function calls or an infinite recursive function are made, the computer's ability to store all of this information is exceeded, resulting in the well known stack overflow error.
+Within the context of process execution, a portion of memory known as the "stack" is reserved to hold stack frames. Whenever a function is called, relevant data such as parameters, local variables, and return values are stored within a frame to be accessed after the function has been completed. As such, when an excessive number of function calls or an infinite recursive function are made, the computer's ability to store all of this information is exceeded, resulting in the well-known stack overflow error.
 
 ## Rehearsal
 
