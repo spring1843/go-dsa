@@ -85,7 +85,7 @@ Deleting the first item is also O(1). Deleting the last item in a singly linked 
 
 ## Application
 
-Linked lists can be useful where the order of items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items. Music players for example have play lists that play tracks in an order. At any given time, one track is playing while it is possible to change the current track with the previous or next tracks.
+Linked lists can be useful where the order of items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items. Music players for example have play lists that play tracks in an order. At any given time, one track is playing while it is possible to change the current track with the previous or next ones.
 
 ## Rehearsal
 

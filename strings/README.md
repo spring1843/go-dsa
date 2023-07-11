@@ -13,7 +13,7 @@ In Go, strings are a data type. Behind the scenes strings are a slice of bytes. 
 * [Title](https://golang.org/pkg/strings/#Title), [ToLower](https://golang.org/pkg/strings/#ToLower), [ToUpper](https://golang.org/pkg/strings/#ToUpper)
 * [Trim](https://golang.org/pkg/strings/#Trim), [TrimSpace](https://golang.org/pkg/strings/#TrimSpace), [TrimSuffix](https://golang.org/pkg/strings/#TrimSuffix), [TrimPrefix](https://golang.org/pkg/strings/#TrimPrefix)
 
-When a string is iterated in Go using the `range` keyword, every element becomes a [rune](https://blog.golang.org/strings#TOC_5.) which is the same as `int32`. If the code being written works with many single character strings, it's a better option to define variables and function parameters as `rune`. The following code shows how to iterate through a string.
+When a string is iterated in Go using the `range` keyword, every element becomes a [rune](https://blog.golang.org/strings#TOC_5.) which is the same as `int32`. If the code being written works with many single character strings, it is a better option to define variables and function parameters as `rune`. The following code shows how to iterate through a string.
 
 ```Go
 package main

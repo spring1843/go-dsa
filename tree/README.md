@@ -2,7 +2,7 @@
 
 A collection of zero or more nodes in which the root, a distinguished node, is connected to all subtrees via a directed edge. In the real world, trees are like real trees but upside down.
 
-Traversing a tree means visiting every node in a tree and performing some work on it. Picking the right order in which nodes are visited is key in solving a problem efficiently. The main three ways of traversing a tree are shown in figure-1.
+Traversing a tree means visiting every node in a tree and performing some work on it. Picking the right order in which nodes are visited is key in efficiently solving a problem. The main three ways of traversing a tree are shown in figure-1.
 
 ```ASCII
 [Figure 1] Tree traversals - Full Binary Search Tree Example

@@ -28,7 +28,7 @@ func main() {
 
 When using maps in Go, it is crucial to remember that the order of the items stored in the map is not preserved. This is unlike arrays and slices. Relying on the order of map contents can lead to unexpected issues, such as inconsistent code behavior and intermittent failures.
 
-As shown below it is possible in Go to store variables as keys in a map. It's also possible to have a map of only keys with no values.
+As shown below it is possible in Go to store variables as keys in a map. It is also possible to have a map of only keys with no values.
 
 ```Go
 package main

@@ -5,13 +5,13 @@ Recursion is a computational technique that implements a [divide-and-conquer](..
 * One or more base cases that provide output for simple inputs
 * A recursive case that combines the outputs obtained from recursive function calls to generate a solution for the original problem.
 
-Although recursions enhance code readability, they are usually not efficient and challenging to debug. Consequently, unless they provide a more efficient solution to a problem, such as in the case of Quicksort, they are generally not preferred.
+Although recursions enhance code readability, they are usually inefficient and challenging to debug. Consequently, unless they provide a more efficient solution to a problem, such as in the case of Quicksort, they are generally not preferred.
 
 During execution, a program typically stores function variables in a memory area known as the stack before executing recursion. The recursive function may assign different values to the same variables during each recursion. When the recursion ends, the stack pops and remembers the values. However, if recursion continues indefinitely, the stack will grow with each call, causing the familiar stack overflow error. Since recursion employs the stack to execute, every recursive problem can be converted into an iterative one. This transformation, however, typically leads to more complex code and may require the use of a [stack](../stack).
 
 ## Implementation
 
-The computation of the nth Fibonacci number can be achieved recursively. For the base cases, it is established that the Fibonacci number for 0 and 1 is 0 and 1, respectively. Additionally, for any other number, the Fibonacci number is equal to the sum of the two preceding Fibonacci numbers.
+The computation of the nth Fibonacci number can be achieved with recursion. For the base cases, it is established that the Fibonacci number for 0 and 1 is respectively 0 and 1. Additionally, for any other number, the Fibonacci number is equal to the sum of the two preceding Fibonacci numbers.
 
 ```Go
 package main

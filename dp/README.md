@@ -21,7 +21,7 @@ In the bottom-up approach, sub-problems are solved in order of size, with the sm
 
 ## Complexity
 
-Top-down and bottom-up approaches usually perform similarly.
+Top-down and bottom-up approaches have a similar time complexity.
 
 ## Application
 
