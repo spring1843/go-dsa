@@ -81,11 +81,11 @@ func main() {
 
 Adding new items to the front or back of the linked list has the time complexity of O(1).
 
-Deleting the first item is also O(1). Deleting the last item in a singly linked list is O(n), because we have to find the node before the last node, and for that, we have to visit every node. In a doubly linked list deleting the last item can be done in O(1) time, since nodes are connected to both previous and next nodes.
+Deleting the first item is also O(1). Deleting the last item in a singly linked list is O(n), because the node before the last node has to be found, and for that, every node must be visited. In a doubly linked list deleting the last item can be done in O(1) time, since nodes are connected to both previous and next nodes.
 
 ## Application
 
-Linked lists can be useful where the order of items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items. Music albums for example have tracks have an order, and at any given time, you are listening to one track while you have the option of going to the next song in a singly linked list and both the previous and next song in a doubly linked list.
+Linked lists can be useful where the order of items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items. Music players for example have play lists that play tracks in an order. At any given time, one track is playing while it is possible to change the current track with the previous or next tracks.
 
 ## Rehearsal
 

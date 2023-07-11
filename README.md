@@ -6,7 +6,7 @@
 [![Coverage Report](https://coveralls.io/repos/github/spring1843/go-dsa/badge.svg?branch=main)](https://coveralls.io/github/spring1843/go-dsa?branch=main)
 [![Go Reference](https://pkg.go.dev/badge/github.com/spring1843/go-dsa.svg)](https://pkg.go.dev/github.com/spring1843/go-dsa)
 
-Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed to serve as a dynamic, hands-on learning resource for exploring data structures and algorithms using the Go programming language. We aim to provide practical, executable content for learners seeking to deepen their understanding of these critical areas of computer science.
+Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed to serve as a dynamic, hands-on learning resource for exploring data structures and algorithms using the Go programming language aiming to provide practical, executable content for learners seeking to deepen their understanding of these critical areas of computer science.
 
 * Completely free, community-driven, and continuously evolving
 * Executes and comes with 100% test coverage, ensuring a high level of quality
@@ -137,7 +137,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 
 ## 📋 Outline
 
-For each topic, we strive to provide a comprehensive README.md file and at least five solved problems. Each README.md will contain the following:
+All topics are discussed in README.md files in the corresponding directory. Each topic includes the following sections:
 
 * 💡 **Implementation**: Detailed explanation of how the data structure or algorithm can be implemented, including code examples in Go.
 * 📊 **Complexity**: Analysis of the time and space complexity of the data structure or algorithm.
