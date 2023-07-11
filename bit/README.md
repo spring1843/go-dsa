@@ -97,11 +97,11 @@ Bit manipulation operations are characterized by a constant time complexity of O
 
 Bit manipulation techniques are widely utilized in diverse fields of computing, such as cryptography, data compression, network protocols, and databases, to name a few. Each specific bitwise operation has its own qualities that make it useful in different scenarios.
 
-AND is used to extract a bit(s) from a larger number. For example, to check if a certain bit is set in a number, we can AND the number with a mask that has only that bit set to 1, and if the result is not 0, then that bit was set. Another application is to clear or reset certain bits in a number by ANDing with a mask that has those bits set to 0.
+AND is used to extract bit(s) from a larger number. For example, to check if a certain bit is set in a number, we can AND the number with a mask that has only that bit set to 1, and if the result is not 0, then that bit was set. Another application is to clear or reset certain bits in a number by ANDing with a mask that has those bits set to 0.
 
-OR can be useful in solving problems where we want to "set" or "turn on" certain bits in a binary number. For example, if we have a variable flags which is a binary number representing various options, we can set a particular flag by ORing the variable with a binary number where only the corresponding bit for that flag is 1. This will turn on the flag in the variable without affecting any other flags.
+OR can be useful in solving problems where we want to "set" or "turn on" certain bits in a binary number. For example, if we have a variable flag, which is a binary number representing various options, we can set a particular flag by ORing the variable with a binary number where only the corresponding bit for that flag is 1. This will turn on the flag in the variable without affecting any other flags.
 
-XOR can be used for encryption and decryption, as well as error detection and correction. It can also be used to swap two variables without using a temporary variable. Additionally, XOR can be used to solve problems related to finding unique elements in a list or array, or to check whether two sets of data have any overlapping elements
+XOR can be used for encryption and decryption, as well as error detection and correction. It can also be used to swap two variables without using a temporary variable. Additionally, XOR can be used to solve problems related to finding unique elements in a list or array or to check whether two sets of data have any overlapping elements.
 
 Negation can be used to invert a set of flags or to find the two's complement of a number. In computer architecture, negation is often used in the implementation of logical and arithmetic operations.
 

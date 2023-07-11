@@ -1,13 +1,13 @@
 # Recursion
 
-Recursion is a computational technique that implements a [divide and conquer](../dnc) approach to problem-solving by breaking down a complex problem into smaller sub-problems. It consists of two components:
+Recursion is a computational technique that implements a [divide-and-conquer](../dnc) approach to problem-solving by breaking down a complex problem into smaller sub-problems. It consists of two components:
 
-* one or more base cases that provide output for simple inputs
-* a recursive case that combines the outputs obtained from recursive function calls to generate a solution for the original problem.
+* One or more base cases that provide output for simple inputs
+* A recursive case that combines the outputs obtained from recursive function calls to generate a solution for the original problem.
 
 Although recursions enhance code readability, they are usually not efficient and can be challenging to debug. Consequently, unless they provide a more efficient solution to a problem, such as in the case of Quicksort, they are generally not preferred.
 
-During execution, a program typically stores function variables in a memory area known as the stack before executing recursion. The recursive function may assign different values to the same variables during each recursion. When the recursion ends, the stack pops and remembers the values. However, if recursion continues indefinitely, the stack will grow with each call causing the familiar stack overflow error. Since recursion employs the stack to execute, every recursive problem can be converted into an iterative one. This transformation, however, typically leads to more complex code and may require the use of a [stack](../stack).
+During execution, a program typically stores function variables in a memory area known as the stack before executing recursion. The recursive function may assign different values to the same variables during each recursion. When the recursion ends, the stack pops and remembers the values. However, if recursion continues indefinitely, the stack will grow with each call, causing the familiar stack overflow error. Since recursion employs the stack to execute, every recursive problem can be converted into an iterative one. This transformation, however, typically leads to more complex code and may require the use of a [stack](../stack).
 
 ## Implementation
 
@@ -37,9 +37,9 @@ func fibonacci(n int) int {
 When formulating recursive algorithms, it is essential to consider the following four rules of recursion:
 
 1. It is imperative to establish a base case, or else the program will terminate abruptly
-2. The algorithm should make progress towards the base case at each recursive call
-3. Recursive calls are presumed to be effective; thus, it is unnecessary to traverse every recursive call and perform bookkeeping
-4. Use memoization, a technique that prevents redundant computation by caching previously computed results, can be used to enhance the algorithm's efficiency
+2. The algorithm should make progress toward the base case at each recursive call.
+3. Recursive calls are presumed to be effective; thus, it is unnecessary to traverse every recursive call and perform bookkeeping.
+4. Use memoization, a technique that prevents redundant computation by caching previously computed results, can be used to enhance the algorithm's efficiency.
 
 ## Complexity
 

@@ -6,12 +6,12 @@
 [![Coverage Report](https://coveralls.io/repos/github/spring1843/go-dsa/badge.svg?branch=main)](https://coveralls.io/github/spring1843/go-dsa?branch=main)
 [![Go Reference](https://pkg.go.dev/badge/github.com/spring1843/go-dsa.svg)](https://pkg.go.dev/github.com/spring1843/go-dsa)
 
-Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed to serve as a dynamic, hands-on learning resource for exploring data structures and algorithms using the Go programming language. We aim to provide practical, executable content for learners seeking to deepen their understanding in these critical areas of computer science.
+Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed to serve as a dynamic, hands-on learning resource for exploring data structures and algorithms using the Go programming language. We aim to provide practical, executable content for learners seeking to deepen their understanding of these critical areas of computer science.
 
-* Completely free, community driven and continuously evolving
-* Executes and comes with 100% test coverage, ensuring high level of quality
-* Ability to use in your favorite IDE, editor or web browser
-* Pure Go, no third party libraries, Guaranteed forward compatibility
+* Completely free, community-driven, and continuously evolving
+* Executes and comes with 100% test coverage, ensuring a high level of quality
+* Ability to use in your favorite IDE, editor, or web browser
+* Pure Go, no third-party libraries, Guaranteed forward compatibility
 
 ## 📚 Table of Contents
 
@@ -53,7 +53,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Implement a Queue Using a Circular Array](./queue/queue_using_circular_array_test.go)
         * [Is Binary Tree Symmetrical](./queue/is_tree_symmetrical_test.go)
         * [Generate Binary Numbers](./queue/generate_binary_numbers_test.go)
-        * [Find The Maximum of Sub-array of Length K](./queue/maximum_of_sub_arrays_test.go)
+        * [Find The Maximum Sub-array of Length K](./queue/maximum_of_sub_arrays_test.go)
     * [Hash Tables](./hashtable/README.md)
         * [Find Missing Number](./hashtable/missing_number_test.go)
         * [List Elements Summing Up to K](./hashtable/sum_up_to_k_test.go)
@@ -131,15 +131,15 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 * Copy the contents of each `*_test.go` file into [Go Playground](https://go.dev/play/).
 * Change the first line from `package SOME_PACKAGE_NAME` to `package main`.
 * Look at the sample input in the `*_test.go` file.
-* Create a solution function by looking at the function signature in the test file
+* Create a solution function by looking at the function signature in the test file.
 * Implement your own solution.
 * Review the provided solution and compare it to your own.
 
 ## 📋 Outline
 
-For each topic, we strive to provide a comprehensive README.md file and at least 5 solved problems. Each README.md will contain:
+For each topic, we strive to provide a comprehensive README.md file and at least five solved problems. Each README.md will contain the following:
 
-* 💡 **Implementation**: Detailed explanation on how the data structure or algorithm can be implemented, including code examples in Go.
+* 💡 **Implementation**: Detailed explanation of how the data structure or algorithm can be implemented, including code examples in Go.
 * 📊 **Complexity**: Analysis of the time and space complexity of the data structure or algorithm.
 * 🎯 **Application**: Discussion of problems that are commonly solved using the data structure or algorithm.
-* 📝 **Rehearsal**: Practice problems with links to tests that provide 100% coverage, and example inputs and outputs.
+* 📝 **Rehearsal**: Practice problems with links to tests that provide 100% coverage and example inputs and outputs.
