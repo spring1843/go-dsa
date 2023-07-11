@@ -1,6 +1,6 @@
 # String
 
-String is a ubiquitous data structure that is typically built in data type in programming languages. However, beneath the surface, they are essentially arrays of characters that enable textual data storage and manipulation.
+String is a ubiquitous data structure that is typically built-in data type in programming languages. However, beneath the surface, they are essentially arrays of characters that enable textual data storage and manipulation.
 
 ## Implementation
 

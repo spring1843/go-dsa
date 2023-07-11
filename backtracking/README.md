@@ -8,10 +8,10 @@ Backtracking can be compared to how a person solves a maze or searches for an ex
 
 Backtracking algorithms are typically implemented in these steps:
 
-1. Pruning invalid approaches when possible
-2. Generating a partial solution by iterating through available alternatives
-3. Checking the validity of the selected alternative according to the problem conditions and rules
-4. Checking for solution completion when required
+1. Prune invalid approaches when possible.
+2. Generate a partial solution by iterating through available alternatives.
+3. Check the validity of the selected alternative according to the problem conditions and rules.
+4. Check for solution completion when required.
 
 ## Complexity
 

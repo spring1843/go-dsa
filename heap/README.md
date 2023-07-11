@@ -7,7 +7,7 @@ A heap must satisfy two conditions:
 1. The structure property requires that the heap be a complete binary search [tree](../tree), where each level is filled left to right, and all levels except the bottom are full.
 2. The heap property requires that the children of a node be larger than or equal to the parent node in a min heap and smaller than or equal to the parent in a max heap, meaning that the root is the minimum in a min heap and the maximum in a max heap.
 
-As a result, if you push elements to the min or max heap and then pop them one by one, you will obtain sorted list in ascending or descending order, respectively. This sorting technique known as heap sort which is included in the rehearsals of this section.. Although there are other sorting algorithms available, none are faster than O(n*Logn).
+As a result, if you push elements to the min or max heap and then pop them one by one, you will obtain sorted list in ascending or descending order, respectively. This sorting technique known as heap sort which is included in the rehearsals of this section. Although there are other sorting algorithms available, none are faster than O(n*Logn).
 
 When pushing an element to a heap, because of the structure property, we always add the new element to the first available position on the lowest level of the heap, filling from left to right. Then to maintain the heap property, if the newly inserted element is smaller than its parent in a min heap (larger in a max heap), then we swap it with its parent. We continue swapping the swapped element with its parent until the heap property is achieved.
 
