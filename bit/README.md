@@ -13,7 +13,7 @@ AND	1100	OR	1100	XOR	1100	Negation	1100	L Shift	1100	R Shift	1100
 
 ## Implementation
 
-Go provides below the operators for bit manipulation:
+Go provides the below operators for bit manipulation:
 
 ```Go
 package main
@@ -91,7 +91,7 @@ func xorCrypt(key, message []byte) []byte {
 
 ## Complexity
 
-Bit manipulation operations are characterized by a constant time complexity of O(1). This high level of performance renders them an optimal choice to replace other approaches, especially when working with large data sets. As a result, they are frequently utilized in algorithmic design to optimize certain operations.
+Bit manipulation operations are characterized by a constant time complexity. This high level of performance renders them an optimal choice to replace other approaches, especially when working with large data sets. As a result, they are frequently used to achieve better performance.
 
 ## Application
 

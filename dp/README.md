@@ -17,7 +17,7 @@ There are two general methods for writing DP algorithms: top-down and bottom-up 
 
 In the top-down approach, a caching mechanism is utilized to store each sub-problem solution and prevent redundancy. This technique is also known as memoization.
 
-In the bottom-up approach, sub-problems are solved in order of size, with the smaller ones tackled first. Since all subsequent smaller sub-problems are already solved when addressing a particular sub-problem, the result is stored.
+In the bottom-up approach, sub-problems are solved in order of size, with the smaller ones tackled first. Since all subsequent smaller sub-problems are already solved when addressing a particular problem, the result is calculated and stored.
 
 ## Complexity
 

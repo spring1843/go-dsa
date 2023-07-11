@@ -1,6 +1,6 @@
 # String
 
-Strings are a ubiquitous data structure that typically manifests itself as built-in data types in programming languages. However, beneath the surface, they are essentially arrays of characters that enable textual data storage and manipulation.
+String is a ubiquitous data structure that is typically built in data type in programming languages. However, beneath the surface, they are essentially arrays of characters that enable textual data storage and manipulation.
 
 ## Implementation
 
@@ -33,7 +33,7 @@ func main() {
 
 Strings have the same complexity as [arrays](../array/) and slices in Go.
 
-The Go standard library includes a [regular expressions](https://golang.org/pkg/regexp/) package that, unlike most other languages, guaranteed to run in O(n) time.
+Unlike many other programming languages [regular expressions](https://golang.org/pkg/regexp/) are guaranteed to have O(n) time complexity in Go, allowing efficient string pattern matching.
 
 ## Application
 

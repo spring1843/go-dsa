@@ -7,7 +7,7 @@ A heap must satisfy two conditions:
 1. The structure property requires that the heap be a complete binary search [tree](../tree), where each level is filled left to right, and all levels except the bottom are full.
 2. The heap property requires that the children of a node be larger than or equal to the parent node in a min heap and smaller than or equal to the parent in a max heap, meaning that the root is the minimum in a min heap and the maximum in a max heap.
 
-As a result, if you push elements to the min or max heap and then pop them one by one, you will obtain sorted list in ascending or descending order, respectively. This sorting technique is also an O(n*Log n) algorithm known as [heap sort](./heap_sort_test.go). Although there are other sorting algorithms available, none are faster than O(n*Logn).
+As a result, if you push elements to the min or max heap and then pop them one by one, you will obtain sorted list in ascending or descending order, respectively. This sorting technique known as heap sort which is included in the rehearsals of this section.. Although there are other sorting algorithms available, none are faster than O(n*Logn).
 
 When pushing an element to a heap, because of the structure property, we always add the new element to the first available position on the lowest level of the heap, filling from left to right. Then to maintain the heap property, if the newly inserted element is smaller than its parent in a min heap (larger in a max heap), then we swap it with its parent. We continue swapping the swapped element with its parent until the heap property is achieved.
 
@@ -83,10 +83,6 @@ In Go, heaps are implemented with slices. The heap property is maintained such t
 
 Pushing and popping are O(LogN) operations in heaps. On the other hand, initializing a heap, which involves pushing N elements, has a time complexity of O(n*Log n).
 
-The insertion strategy entails percolating up the new element in heap until the correct location is identified. Similarly, the deletion strategy involves percolating down the heap.
-
-Pushing and Popping heap elements are all O(Log n) operations. The strategy for inserting the new element percolates the heap up until the correct location is found. Similarly, the strategy for deletion is to percolate down.
-
 ## Application
 
 Heaps in the form of priority queues are used for scheduling in operating systems and job schedulers. They are also used in simulating and implementing scheduling and priority systems for capacity management in hospitals and businesses.
@@ -95,9 +91,9 @@ Priority queues implemented as heaps are commonly used in job scheduling, for ex
 
 ## Rehearsal
 
+* [Heap Sort](./heap_sort_test.go), [Solution](./heap_sort.go)
 * [Kth Largest Element](./kth_largest_element_test.go), [Solution](./kth_largest_element.go)
 * [Merge Sorted Lists](./merge_sorted_list_test.go), [Solution](./merge_sorted_list.go)
 * [Median in a Stream](./median_in_a_stream_test.go), [Solution](./median_in_a_stream_test.go)
 * [Kth Closest Points to the Center](./k_closest_points_to_origin_test.go), [Solution](./k_closest_points_to_origin.go)
 * [Sliding Maximum](./sliding_maximum_test.go), [Solution](./sliding_maximum.go)
-* [Heap Sort](./heap_sort_test.go), [Solution](./heap_sort.go)

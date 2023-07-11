@@ -82,7 +82,7 @@ The Big O notation of an algorithm can be simplified using the following two rul
 
 Constant time complexity represents the most efficient scenario for an algorithm, where execution time remains constant regardless of input size. Achieving constant time complexity often involves eliminating loops and recursive calls. Examples:
 
-* Reads and writes in a [hash table](./hashtable/README.md)
+* Read and write in a [hash table](./hashtable/README.md)
 * Enqueue and Dequeue in a [queue](./queue/README.md)
 * Push and Pop in a [stack](./stack/README.md)
 * Find the minimum or maximum in a [heap](./heap/README.md)
@@ -112,7 +112,9 @@ Linear time complexity is considered favorable when an algorithm traverses every
 
 The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs and yield an outcome at the same time through an efficient operation. Sorting is a common example. It's impossible to sort items faster than O(n*Log n). Examples:
 
-* [Merge Sort](./dnc/merge_sort.go) and [Heap Sort](./heap/README.md)
+* [Merge Sort](./dnc/merge_sort.go)
+* [Quick Sort](./dnc/quick_sort.go)
+* [Heap Sort](./heap/heap_sort.go)
 * [Knapsack](./greedy/knapsack.go)
 * [Find Anagrams](./hashtable/find_anagrams.go)
 * In order traversal of a [Binary Search Tree](./tree/README.md)
@@ -127,7 +129,7 @@ Polynomial time complexity marks the initial threshold of problematic time compl
 
 ### Exponential O(2^n)
 
-Exponential complexity is considered highly undesirable; however, it represents only the second-worst  complexity scenario. Examples:
+Exponential complexity is considered highly undesirable; however, it represents only the second-worst complexity scenario. Examples:
 
 * [Climbing Stairs](./recursion/climbing_stairs.go)
 * [Towers of Hanoi](./dnc/towers_of_hanoi.go)

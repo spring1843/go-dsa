@@ -8,7 +8,7 @@ To provide a real-world analogy, consider an array of athletes preparing for a s
 
 In the Go programming language, arrays are considered values rather than pointers and represent the entirety of the array. Whenever an array is passed to a function, a copy is created, resulting in additional memory usage. However, to avoid this issue, it is possible to pass a pointer to the array instead.
 
-To define an array in Go, it is necessary to specify the array size using a constant. By using constants in this manner, it is no longer necessary to use the make function to create the array.
+To define an array in Go, it is possible to specify the array size using a constant. By using constants in this manner, it is no longer necessary to use the make function to create the array.
 
 ```Go
 package main
@@ -74,11 +74,11 @@ func main() {
 
 ## Complexity
 
-Accessing an element within an array using an index `i` has an O(1) time complexity. This means that regardless of the size of the array, read and write operations for a given element can be performed in constant time.
+Accessing an element within an array using an index has O(1) time complexity. This means that regardless of the size of the array, read and write operations for a given element can be performed in constant time.
 
 While arrays are useful for certain tasks, searching an unsorted array can be a time-consuming O(n) operation. Since the target item could be located anywhere in the array, every element must be checked until the item is found. Due to this limitation, alternative data structures such as trees and hash tables are often more suitable for search operations.
 
-Addition and deletion operations on arrays can be O(n) operations in Arrays. The process of removing an element can create an empty slot that must be eliminated by shifting the remaining items. Similarly, adding items to an array may require shifting existing items to create space for the added item. These inefficiencies can make alternative data structures, such as [trees](../tree) or [hash tables](../hashtable), more suitable for managing operations involving additions and deletions.
+Addition and deletion operations are O(n) operations in Arrays. The process of removing an element can create an empty slot that must be eliminated by shifting the remaining items. Similarly, adding items to an array may require shifting existing items to create space for the added item. These inefficiencies can make alternative data structures, such as [trees](../tree) or [hash tables](../hashtable), more suitable for managing operations involving additions and deletions.
 
 ## Application
 

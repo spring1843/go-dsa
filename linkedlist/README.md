@@ -12,7 +12,7 @@ When implementing linked lists, two key concepts come into play: the linked list
 * A reference to the next node
 * A reference to the previous node in doubly linked lists
 
-To create a linked list in Go, a node structure can be defined, and a pointer to the same structure can be used. For instance, a singly linked list with the data `1->2->3->4->5` can be created using the following example:
+To create a linked list in Go, a node `struct` can be defined, and a pointer to the same structure can be used to link the node into the next one. For instance, a singly linked list with the data `1->2->3->4->5` can be created using the following example:
 
 ```Go
 package main
@@ -85,9 +85,7 @@ Deleting the first item is also O(1). Deleting the last item in a singly linked 
 
 ## Application
 
-Linked lists can be useful where the order of similar items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items.
-
-Music albums are a suitable example for linked lists. The tracks come in an order, and at any given time, you are listening to one track while you have the option of going to the next song in a singly linked list and both the previous and next song in a doubly linked list.
+Linked lists can be useful where the order of items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items. Music albums for example have tracks have an order, and at any given time, you are listening to one track while you have the option of going to the next song in a singly linked list and both the previous and next song in a doubly linked list.
 
 ## Rehearsal
 

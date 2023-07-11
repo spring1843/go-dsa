@@ -4,7 +4,7 @@ import "sort"
 
 type sortRunes []rune
 
-// FindAnagrams solves the problem in O(n*Log n)  time and O(n) space.
+// FindAnagrams solves the problem in O(n*Log n) time and O(n) space.
 func FindAnagrams(words []string) [][]string {
 	anagrams := make(map[string][]string)
 	for _, word := range words {

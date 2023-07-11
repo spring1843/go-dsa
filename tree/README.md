@@ -15,7 +15,7 @@ Traversing a tree means visiting every node in a tree and performing some work o
 1   3 5   7
 ```
 
-Tree traversal methods are named after the order in which they visit nodes. For example, in Pre-Order traversal, the operation is performed on the node before traversing its children.
+Tree traversal methods are named after the order in which the nodes are explored. For example, in Pre-Order traversal, the node is explored prior to its children and in post order traversal the node is explored after its children.
 
 There are many types of trees. Some important tree types include:
 

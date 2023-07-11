@@ -51,6 +51,8 @@ There are a few different ways of determining the time complexity of recursive a
 2. Recursion Trees: This method involves drawing a tree to represent the algorithm's recursive calls. The time complexity of the algorithm can be calculated by summing the work done at each level of the tree. For example, for the recursive factorial algorithm, each level of the tree represents a call to the function with a smaller input size, and the work done at each level is constant.
 3. Master Theorem: This approach is a formula for solving recurrence relations that have the form T(n) = aT(n/b) + f(n). The Master Theorem can be used to quickly determine the time complexity of some [Divide-and-conquer](../dnd) algorithms.
 
+The space complexity of recursive calls is affected by having to store a copy of the state and variables in the stack with each recursion.
+
 ## Application
 
 Recursion finds practical application within a range of algorithms, including [Dynamic Programming](../dp), [Graph](../graph), [Divide-and-conquer](../dnd), and [Backtracking](../backtracking). Typically, recursion is best suited to problems that exhibit sub-problems or require the calculation of the nth or first nth value in a series.

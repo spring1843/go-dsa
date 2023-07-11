@@ -14,9 +14,9 @@ A graph is a collection of vertices connected through directed or undirected edg
     (A)	       (B)	 (C)  	      (D)
 ```
 
-Mathematicians have dedicated branch of mathematics named graph theory to the study of graphs. Here are some essential graph concepts to remember:
+Graph theory a branch of mathematics is dedicated to study of graphs. Here are some essential graph concepts to remember:
 
-* **Directed Acyclic Graph - DAG**:  A directed graph with no cycles
+* **Directed Acyclic Graph - DAG**: A directed graph with no cycles
 * **Connected Graph**: There is a path between any two vertices
 * **Minimum Spanning Tree**: Subset of edges in an undirected, edge-weighted, and connected graph that connects all the vertices at the lowest cost
 
@@ -83,7 +83,7 @@ func main() {
 
 ### Searching Graphs
 
-When working with graphs, it is often necessary to search to solve different problems. The efficiency of the algorithm used depends on the order in which the graph is searched. Two commonly used search methods are:
+When working with graphs, it is often necessary to search them in order to solve problems. The efficiency of the algorithm used depends on the order in which the graph is searched. Two commonly used search methods are:
 
 * **Breadth First Search - BFS** used to find the shortest path
 * **Depth First Search - DFS** often a subroutine, in another algorithm. Used in maze traversal, cycle finding, and pathfinding
