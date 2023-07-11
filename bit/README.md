@@ -13,7 +13,7 @@ AND	1100	OR	1100	XOR	1100	Negation	1100	L Shift	1100	R Shift	1100
 
 ## Implementation
 
-Go provides below operators that can be used in bit manipulation:
+Go provides the below operators for bit manipulation:
 
 ```Go
 package main
@@ -44,7 +44,7 @@ func printBinary(n int) {
 
 ## Arithmetic by Shifting
 
-Left shifting can be viewed as a multiplication operation by 2 raised to the power of a specified number, while right shifting can be viewed as a division operation by 2 raised to the power of a specified number. For instance, a << b can be interpreted as multiplying a by 2^b, and a >> b can be interpreted as dividing a by 2^b.
+Left shifting can be viewed as a multiplication operation by 2 raised to the power of a specified number. Right shifting can be viewed as a division operation by 2 raised to the power of a specified number. For instance, a << b can be interpreted as multiplying a by 2^b, and a >> b can be interpreted as dividing a by 2^b.
 
 ```Go
 package main
@@ -65,7 +65,7 @@ func main() {
 
 ## Cryptography and Other XOR applications
 
-The XOR operation can be used to perform basic cryptography. By XORing a message with a key, we can generate an encrypted message. This encrypted message can be shared with someone else who knows the same key. If they XOR the key with the encrypted message, they will obtain the original plaintext message. This method is not secure enough because the key is relatively easy to guess from the encrypted message. The following example demonstrates this process:
+The XOR operation can be used for basic cryptography. By XORing a message with a key, we can generate an encrypted message. This encrypted message can be shared with someone else who knows the same key. If they XOR the key with the encrypted message, they will obtain the original plaintext message. This method is not secure enough because the key is relatively easy to guess from the encrypted message. The following example demonstrates this process:
 
 ```Go
 package main
@@ -91,19 +91,19 @@ func xorCrypt(key, message []byte) []byte {
 
 ## Complexity
 
-Bit manipulation operations are characterized by a constant time complexity of O(1). This high level of performance renders them an optimal choice as a replacement for other approaches, especially when working with large data sets. As a result, they are frequently utilized in algorithmic design to optimize the execution of certain operations.
+Bit manipulation operations are characterized by a constant time complexity. This high level of performance renders them an optimal choice to replace other approaches, especially when working with large data sets. As a result, they are frequently used to achieve better performance.
 
 ## Application
 
-Bit manipulation techniques are widely utilized in diverse fields of computing, such as cryptography, data compression, network protocols, and databases, to name a few. Each specific bitwise operation has its own qualities that make it useful in different scenarios.
+Bit manipulation techniques are widely utilized in diverse fields of computing, such as cryptography, data compression, network protocols, and databases, to name a few. Each bitwise operation has its own qualities that make it useful in different scenarios.
 
-AND is used to extract bit(s) from a larger number. For example, to check if a certain bit is set in a number, we can AND the number with a mask that has only that bit set to 1, and if the result is not 0, then that bit was set. Another application is to clear or reset certain bits in a number by ANDing with a mask that has those bits set to 0.
+AND extracts bit(s) from a larger number. For example, to check if a certain bit is set in a number, we can AND the number with a mask that has only that bit set to 1, and if the result is not 0, then that bit was set. Another application is to clear or reset certain bits in a number by ANDing with a mask that has those bits set to 0.
 
-OR can be useful in solving problems where we want to "set" or "turn on" certain bits in a binary number. For example, if we have a variable flag, which is a binary number representing various options, we can set a particular flag by ORing the variable with a binary number where only the corresponding bit for that flag is 1. This will turn on the flag in the variable without affecting any other flags.
+OR can be useful in solving problems where we want to "set" or "turn on" certain bits in a binary number. For example, if we have a variable flag, which is a binary number representing various options, we can set a particular flag by ORing the variable with a binary number where only the corresponding bit for that flag is 1. This will turn on the flag in the variable without affecting other flags.
 
 XOR can be used for encryption and decryption, as well as error detection and correction. It can also be used to swap two variables without using a temporary variable. Additionally, XOR can be used to solve problems related to finding unique elements in a list or array or to check whether two sets of data have any overlapping elements.
 
-Negation can be used to invert a set of flags or to find the two's complement of a number. In computer architecture, negation is often used in the implementation of logical and arithmetic operations.
+Negation can be used to invert a set of flags or find the two's complement of a number.
 
 ## Rehearsal
 

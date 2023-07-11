@@ -44,7 +44,7 @@ func (m *MinHeap) Push(value int) {
 		Val: value,
 	}
 	m.Data = append(m.Data, vertex)
-	m.heapifyUp(len(m.Data) - 1)
+	m.percolateUp(len(m.Data) - 1)
 }
 
 // Pop removes the root value from the heap.
@@ -57,7 +57,7 @@ func (m *MinHeap) Pop() int {
 	lastIndex := len(m.Data) - 1
 	m.Data[0] = m.Data[lastIndex]
 	m.Data = m.Data[:lastIndex]
-	m.heapifyDown(0)
+	m.percolateDown(0)
 	return rootValue
 }
 
@@ -66,8 +66,8 @@ func (m *MinHeap) Len() int {
 	return len(m.Data)
 }
 
-// heapifyUp moves the vertex up the heap to maintain the heap property.
-func (m *MinHeap) heapifyUp(index int) {
+// percolateUp swaps the vertex up the heap to maintain the heap property.
+func (m *MinHeap) percolateUp(index int) {
 	for index > 0 {
 		parentIndex := (index - 1) / 2
 		if m.Data[parentIndex].Val <= m.Data[index].Val {
@@ -78,8 +78,8 @@ func (m *MinHeap) heapifyUp(index int) {
 	}
 }
 
-// heapifyDown moves the vertex down the heap to maintain the heap property.
-func (m *MinHeap) heapifyDown(index int) {
+// percolateDown moves the vertex down the heap to maintain the heap property.
+func (m *MinHeap) percolateDown(index int) {
 	for {
 		leftChildIndex := 2*index + 1
 		rightChildIndex := 2*index + 2

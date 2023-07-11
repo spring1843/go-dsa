@@ -1,9 +1,9 @@
 # Graph
 
-A graph is a collection of vertices that are connected through directed or undirected edges. In an edge-weighted tree, each edge is assigned a value representing its cost or benefit. Graphs can be used to model various real-world scenarios. For example graph A in the below figure can represent university courses and their prerequisites, cities and their highways, followers in a social network, links on a site, and many more.
+A graph is a collection of vertices connected through directed or undirected edges. In an edge-weighted tree, each edge is assigned a value representing its cost or benefit. Graphs can be used to model various real-world scenarios. For example graph A in the below figure can represent university courses and their prerequisites, cities and their highways, followers in a social network, links on a site, and many more.
 
 ```ASCII
-[Figure 1] Graph Examples - Numbers, arrows, and numbers in brackets each respectively represent vertices, edges, and edge weights.
+[Figure 1] Graph Examples - Numbers, arrows, and numbers in brackets represent vertices, edges, and edge weights.
 
      5		3     5	  3              6   	       1 - Is it a DAG?
   ↗  ↑  ↖     ↗   ↘    ↖   ↘	      (4)  ↖ (1)	 2- Is it a connected graph?
@@ -14,15 +14,15 @@ A graph is a collection of vertices that are connected through directed or undir
     (A)	       (B)	 (C)  	      (D)
 ```
 
-An entire branch of mathematics named graph theory is dedicated to the study of graphs. Here are some essential graph concepts that are important to remember:
+Graph theory a branch of mathematics is dedicated to study of graphs. Here are some essential graph concepts to remember:
 
-* **Directed Acyclic Graph - DAG**:  A directed graph with no cycles
+* **Directed Acyclic Graph - DAG**: A directed graph with no cycles
 * **Connected Graph**: There is a path between any two vertices
 * **Minimum Spanning Tree**: Subset of edges in an undirected, edge-weighted, and connected graph that connects all the vertices at the lowest cost
 
 ## Implementation
 
-Graphs are commonly represented using either an adjacency matrix or an adjacency list.
+Graphs are commonly represented using an adjacency matrix or an adjacency list.
 
 * **Adjacency Matrix**: Faster look-up times and more suitable for dense graphs
 * **Adjacency List**: More space efficient, suitable for graphs with fewer edges
@@ -83,7 +83,7 @@ func main() {
 
 ### Searching Graphs
 
-When working with graphs, it is often necessary to perform a search to solve different problems. The efficiency of the algorithm used depends on the order in which the graph is searched. Two commonly used search methods are:
+When working with graphs, it is often necessary to search them in order to solve problems. The efficiency of the algorithm used depends on the order in which the graph is searched. Two commonly used search methods are:
 
 * **Breadth First Search - BFS** used to find the shortest path
 * **Depth First Search - DFS** often a subroutine, in another algorithm. Used in maze traversal, cycle finding, and pathfinding
@@ -136,7 +136,7 @@ For any vertex S that is reachable from V, the simple path in the BFS tree from 
 
 Depth First Search (DFS) is a graph traversal algorithm that explores a graph by visiting as far as possible along each branch before backtracking. It uses a [stack](../stack) data structure when implemented iteratively, is [recursive](../recursion), and is a generalization of pre-order traversal in trees.
 
-When given a graph G and a vertex S, DFS systematically discovers all nodes in G reachable from S. It is typically implemented using a driver that discovers the edges of the most recently discovered vertex V that has unexplored edges. Once all of V's edges have been explored, the search [backtracks](../backtracking/) to explore all edges leaving the vertex from which V was discovered. This process continues until the discovery of all edges.
+When given a graph G and a vertex S, DFS systematically discovers all nodes in G reachable from S. It is typically implemented using a driver that discovers the edges of the most recently discovered vertex V that has unexplored edges. Once all of V's edges have been explored, the search [backtracks](../backtracking/) to explore all edges leaving the vertex from which V was discovered. This process continues until the all edges are discovered.
 
 ```Go
 package graph_test
@@ -187,7 +187,7 @@ DFS is capable of categorizing edges (u,v) into four types:
 * Forward edge: v is a decedent of u, 1 to 8
 * Cross edge: all other edges, 5 to 4
 
-If a DFS algorithm identifies a back edge, it indicates that the graph is cyclic.
+Discovery of a back edge in a DFS algorithm indicates a cyclic graph.
 
 ### Dijkstra's Algorithm
 

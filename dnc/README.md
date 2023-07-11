@@ -4,11 +4,11 @@ The divide-and-conquer (DNC) paradigm is a common approach to solving problems [
 
 1. Divide: The problem is divided into smaller sub-problems, typically by partitioning the input data into two or more subsets.
 2. Conquer: The smaller sub-problems are solved recursively using the same algorithm, typically by applying the divide-and-conquer approach again.
-3. Combine: The solutions to the smaller sub-problems are combined to obtain a solution to the original problem.
+3. Combine: The solutions to the smaller sub-problems are combined to solve the original problem.
 
 ## Implementation
 
-The binary search algorithm is a classic example of a Divide-and-Conquer algorithm that is commonly used to find a specific value in a sorted list or array. The search process begins by comparing the target value to the middle element of the list. If they are not equal, the half of the list where the target value cannot be present is eliminated. This process is repeated on the remaining half of the list until the target value is found or until there are no more elements to search. Binary search can be implemented iteratively or recursively, and both implementations are shown below.
+The binary search algorithm is a classic Divide-and-Conquer algorithm used to find a specific value in a sorted list. The search process begins by comparing the target value to the middle element of the list. If they are not equal, the half of the list in which the target value cannot be present is eliminated. This process is repeated on the remaining half of the list until the target value is found or until there are no more elements to search. Binary search can be implemented iteratively or recursively. Both implementations are shown below.
 
 ```Go
 package main
@@ -57,7 +57,7 @@ func binarySearchIterative(list []int, target int) int {
 }
 ```
 
-A pre-implemented binary search function is available in Go which returns the index of the first element satisfying a given condition. This function eliminates the need to manually implement the binary search algorithm.
+Go comes with a built-in a binary search function which returns the index of the first element satisfying a given condition. This function eliminates the need to manually implement the binary search algorithm.
 
 ```Go
 package main
@@ -84,7 +84,7 @@ func search(list []int, target int) int {
 
 ## Complexity
 
-If used inappropriately, DNC algorithms can lead to an exponential number of unnecessary recursive calls, resulting in a time complexity of O(2^n). However, if an appropriate dividing strategy and base case that can be solved directly are identified, DNC algorithms can be very effective, with a time complexity as low as O(Log n) in the case of binary search. As DNC algorithms are recursive, their complexity analysis is analogous to that of [recursive](../recursion) algorithms.
+If used inappropriately, DNC algorithms can lead to an exponential number of unnecessary recursive calls, resulting in a time complexity of O(2^n). However, if an appropriate dividing strategy and a base case that can be solved directly are identified, DNC algorithms can be very effective. They have a time complexity as low as O(Log n) such as the case of binary search. As DNC algorithms are recursive, their complexity analysis is similar to that of [recursive](../recursion) algorithms.
 
 ## Application
 
