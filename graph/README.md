@@ -100,6 +100,7 @@ package main
 import (
 	"container/list"
 	"fmt"
+	"log"
 )
 
 type vertexWithDistance struct {
@@ -109,7 +110,14 @@ type vertexWithDistance struct {
 	distance int
 }
 
-func bfs(source *vertexWithDistance) {
+func bfsRecursive(source *vertexWithDistance, distance int) {
+	source.distance = distance
+	for _, edge := range source.edges {
+		bfsRecursive(edge, distance+1)
+	}
+}
+
+func bfsIterative(source *vertexWithDistance) {
 	distance := 0
 	seen := make(map[*vertexWithDistance]struct{})
 	queue := list.New()
@@ -130,10 +138,18 @@ func bfs(source *vertexWithDistance) {
 }
 
 func main() {
-	graph := makeGraph()
-	bfs(graph[0])
-	for _, vertex := range graph {
-		fmt.Printf("%#v\n", vertex)
+	graph1 := makeGraph()
+	bfsIterative(graph1[0])
+
+	graph2 := makeGraph()
+	bfsRecursive(graph2[0], 0)
+
+	for i, vertex := range graph1 {
+		if vertex.distance == graph2[i].distance {
+			fmt.Printf("vertex val: %d, distance: %d\n", vertex.val, vertex.distance)
+		} else {
+			log.Fatal("mismatch between iterative and recursive")
+		}
 	}
 }
 
