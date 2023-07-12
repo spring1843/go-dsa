@@ -154,14 +154,16 @@ func main() {
 }
 
 func makeGraph() []*vertexWithDistance {
-	a := &vertexWithDistance{val: 1}
-	b := &vertexWithDistance{val: 2}
-	c := &vertexWithDistance{val: 3}
-	d := &vertexWithDistance{val: 5}
-	a.edges = []*vertexWithDistance{b}
-	b.edges = []*vertexWithDistance{c}
-	c.edges = []*vertexWithDistance{d}
-	return []*vertexWithDistance{a, b, c, d}
+	graph := []*vertexWithDistance{
+		&vertexWithDistance{val: 1},
+		&vertexWithDistance{val: 2},
+		&vertexWithDistance{val: 3},
+		&vertexWithDistance{val: 4},
+	}
+	graph[0].edges = []*vertexWithDistance{graph[1]}
+	graph[1].edges = []*vertexWithDistance{graph[2]}
+	graph[2].edges = []*vertexWithDistance{graph[3]}
+	return graph
 }
 ```
 
@@ -225,14 +227,16 @@ func main() {
 }
 
 func makeGraph() []*timedVertex {
-	a := &timedVertex{val: 1}
-	b := &timedVertex{val: 2}
-	c := &timedVertex{val: 3}
-	d := &timedVertex{val: 5}
-	a.edges = []*timedVertex{b}
-	b.edges = []*timedVertex{c}
-	c.edges = []*timedVertex{d}
-	return []*timedVertex{a, b, c, d}
+	graph := []*timedVertex{
+		&timedVertex{val: 1},
+		&timedVertex{val: 2},
+		&timedVertex{val: 3},
+		&timedVertex{val: 4},
+	}
+	graph[0].edges = []*timedVertex{graph[1]}
+	graph[1].edges = []*timedVertex{graph[2]}
+	graph[2].edges = []*timedVertex{graph[3]}
+	return graph
 }
 ```
 
