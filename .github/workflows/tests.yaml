@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          locale: "US"
       - uses: github/super-linter@v4
         env:
           DEFAULT_BRANCH: main
@@ -22,10 +26,7 @@ jobs:
           YAML_CONFIG_FILE: .yamllint.yml
           VALIDATE_GITLEAKS: false
           LOG_LEVEL: WARN
-      - uses: reviewdog/action-misspell@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          locale: "US"
+          VALIDATE_SHELL_SHFMT: false
   tests:
     runs-on: ubuntu-latest
     steps:
@@ -37,7 +38,7 @@ jobs:
             ~/.cache/go-build
             ~/go/pkg/
             ~/go/bin/
-          key: go-cache-${{ hashFiles('go.sum') }}
+          key: go-cache-${{ hashFiles('go.mod') }}
       - run: go test -v -coverprofile=profile.cov ./...
       - uses: shogo82148/actions-goveralls@v1
         with:

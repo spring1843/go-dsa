@@ -11,6 +11,7 @@ var (
 		`i`: true,
 		`u`: true,
 	}
+	// ErrPopStack is returned when the stack is empty.
 	ErrPopStack = errors.New("can not Pop on an empty stack")
 )
 
