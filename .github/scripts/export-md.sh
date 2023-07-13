@@ -6,7 +6,7 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 # shellcheck source=/dev/null
 source "${SCRIPT_DIR}/sections.sh"
 
-declare -a FILES=(
+declare -a files=(
   README.md
   complexity.md
 )
