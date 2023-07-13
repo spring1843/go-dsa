@@ -22,6 +22,7 @@ jobs:
           YAML_CONFIG_FILE: .yamllint.yml
           VALIDATE_GITLEAKS: false
           LOG_LEVEL: WARN
+          VALIDATE_SHELL_SHFMT: false
       - uses: reviewdog/action-misspell@v1
         with:
           github_token: ${{ secrets.github_token }}
