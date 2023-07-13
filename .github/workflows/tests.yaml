@@ -31,9 +31,6 @@ jobs:
           VALIDATE_GITLEAKS: false
           LOG_LEVEL: WARN
           VALIDATE_SHELL_SHFMT: false
-      - uses: golangci/golangci-lint-action@v3.6.0
-        with:
-          version: v1.53.3
   tests:
     runs-on: ubuntu-latest
     steps:
