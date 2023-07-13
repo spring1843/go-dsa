@@ -1,26 +1,17 @@
 #!/usr/bin/env bash
+# Exports the markdown files from the docs site
+
 set -euo pipefail
 
-# This script is used to export the markdown files from the docs site
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+source "${SCRIPT_DIR}/sections.sh"
+
 declare -a files=(
   README.md
   complexity.md
-  ./array/README.md
-  ./strings/README.md
-  ./linkedlist/README.md
-  ./stack/README.md
-  ./queue/README.md
-  ./hashtable/README.md
-  ./tree/README.md
-  ./heap/README.md
-  ./recursion/README.md
-  ./dnc//README.md
-  ./bit//README.md
-  ./backtracking/README.md
-  ./graph/README.md
-  ./greedy/README.md
-  ./dp/README.md
 )
+
+files+=("${sections[@]/%//README.md}")
 
 for file in "${files[@]}"; do
    cat "$file"
