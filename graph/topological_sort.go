@@ -8,7 +8,7 @@ import (
 // VertexWithIngress is a Vertex with the count of vertices that connect to it.
 type VertexWithIngress struct {
 	// Val is the value of the vertex
-	Val int
+	Val any
 
 	// The edges that this Vertex is connected to
 	Edges []*VertexWithIngress
@@ -21,9 +21,9 @@ type VertexWithIngress struct {
 var ErrNotADAG = errors.New("graph is not a Direct Acyclic Graph - DAG")
 
 // TopologicalSort solves the problem in O(n) time and O(n) space.
-func TopologicalSort(graph []*VertexWithIngress) ([]int, error) {
+func TopologicalSort(graph []*VertexWithIngress) ([]*VertexWithIngress, error) {
 	var (
-		output = []int{}
+		output = []*VertexWithIngress{}
 		queue  = list.New()
 		i      = 0
 	)
@@ -43,7 +43,7 @@ func TopologicalSort(graph []*VertexWithIngress) ([]int, error) {
 	for queue.Len() != 0 {
 		i++
 		vertex := queue.Remove(queue.Front()).(*VertexWithIngress)
-		output = append(output, vertex.Val)
+		output = append(output, vertex)
 
 		for _, neighbor := range vertex.Edges {
 			neighbor.Ingress--
