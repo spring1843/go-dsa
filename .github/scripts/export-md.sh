@@ -10,7 +10,7 @@ declare -a FILES=(
   complexity.md
 )
 
-FILES+=("${SECTIONS[@]/%//README.md}")
+FILES+=("${sections[@]/%//README.md}")
 
 for file in "${FILES[@]}"; do
    cat "$file"
