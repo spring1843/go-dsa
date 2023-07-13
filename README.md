@@ -59,6 +59,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Find Missing Number](./hashtable/missing_number_test.go)
         * [List Elements Summing Up to K](./hashtable/sum_up_to_k_test.go)
         * [Fastest Way to Cut a Brick Wall](./hashtable/find_anagrams_test.go)
+        * [Smallest Missing Positive Integer](./hashtable/smallest_missing_positive_integer_test.go)
         * [Find Anagrams](./hashtable/find_anagrams_test.go)
         * [Find Max Points on the Same Line](./hashtable/max_points_on_line_test.go)
     * [Trees](./tree/README.md)
