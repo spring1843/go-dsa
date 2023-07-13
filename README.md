@@ -51,7 +51,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Longest Valid Parentheses](./stack/longest_valid_parentheses_test.go)
     * [Queues](./queue/README.md)
         * [A Queue Using Stacks](./queue/queue_using_stacks_test.go)
-        * [Implement a Queue Using a Circular Array](./queue/queue_using_circular_array_test.go)
+        * [Implement a Circular Queue Array](./circular_queue_using_array_test.go)
         * [Is Binary Tree Symmetrical](./queue/is_tree_symmetrical_test.go)
         * [Generate Binary Numbers](./queue/generate_binary_numbers_test.go)
         * [Find The Maximum Sub-array of Length K](./queue/maximum_of_sub_arrays_test.go)

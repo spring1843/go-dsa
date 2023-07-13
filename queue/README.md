@@ -83,8 +83,8 @@ Queues are widely utilized in solving graph-related problems and managing capaci
 
 ## Rehearsal
 
-* [A Queue Using Stacks](queue_using_stacks_test.go), [Solution](queue_using_stacks.go)
-* [Implement a Queue Using a Circular Array](queue_using_circular_array_test.go), [Solution](queue_using_circular_array.go)
-* [Is Binary Tree Symmetrical](is_tree_symmetrical_test.go), [Solution](is_tree_symmetrical.go)
-* [Generate Binary Numbers](generate_binary_numbers_test.go), [Solution](generate_binary_numbers.go)
-* [Find The Maximum Sub-array of Length K](maximum_of_sub_arrays_test.go), [Solution](maximum_of_sub_arrays.go)
+* [A Queue Using Stacks](./queue_using_stacks_test.go), [Solution](./queue_using_stacks.go)
+* [Implement a Circular Queue Array](./circular_queue_using_array_test.go), [Solution](./circular_queue_using_array.go)
+* [Is Binary Tree Symmetrical](./is_tree_symmetrical_test.go), [Solution](./is_tree_symmetrical.go)
+* [Generate Binary Numbers](./generate_binary_numbers_test.go), [Solution](./generate_binary_numbers.go)
+* [Find The Maximum Sub-array of Length K](./maximum_of_sub_arrays_test.go), [Solution](./maximum_of_sub_arrays.go)
