@@ -9,10 +9,9 @@ declare -a FILES=(
   README.md
   complexity.md
 )
+files+=("${sections[@]/%//README.md}")
 
-FILES+=("${sections[@]/%//README.md}")
-
-for file in "${FILES[@]}"; do
+for file in "${files[@]}"; do
    cat "$file"
    printf "\n"
 done

@@ -12,6 +12,7 @@ type UsingCircularArray struct {
 
 const emptyValue = 0
 
+// ErrQueueAtMaxCapacity occurs when the queue is at max capacity.
 var ErrQueueAtMaxCapacity = errors.New("queue is at max capacity")
 
 // NewCircularQueue returns a fixed size circular queue.

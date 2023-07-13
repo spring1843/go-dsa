@@ -31,7 +31,7 @@ func HeapSort(list []int) []int {
 	return sorted
 }
 
-// Returns a new Min Heap.
+// NewMinHeap Returns a new Min Heap.
 func NewMinHeap() *MinHeap {
 	return &MinHeap{
 		Data: []*Vertex{},
