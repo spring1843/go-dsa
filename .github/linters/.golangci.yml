@@ -10,10 +10,10 @@ issues:
     - EXC0008
     - EXC0009
     - EXC0010
+    - EXC0011
     - EXC0012
     - EXC0013
     - EXC0014
-    - EXC0015
   exclude-rules:
     - path: /
       linters:
