@@ -20,3 +20,12 @@ issues:
 
 linters:
   enable-all: true
+  enable:
+    - revive
+
+issues:
+  include:
+    - EXC0012
+    - EXC0013
+    - EXC0014
+    - EXC0015
