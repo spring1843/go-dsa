@@ -110,6 +110,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Word Ladder](./graph/word_ladder_test.go)
         * [Network Delay Time](./graph/network_delay_time_test.go)
         * [Number of Islands](./graph/number_of_islands_test.go)
+        * [Dependency Order](./graph/dependency_order_test)
     * [Greedy Algorithms](./greedy/README.md)
         * [Maximum Stock Profit](./greedy/max_stock_profit_test.go)
         * [Activity Selector](./greedy/activity_selector_test.go)

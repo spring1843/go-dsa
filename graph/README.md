@@ -320,12 +320,13 @@ Graph algorithms find extensive usage in addressing real-world challenges, inclu
 
 ## Rehearsal
 
-* [Iteratively Implement BFS and DFS](iterative_traversal_test.go), [Solution](iterative_traversal.go)
-* [Is Graph a DAG](is_dag_test.go), [Solution](is_dag.go)
-* [Topological Sort](topological_sort_test.go), [Solution](topological_sort.go)
-* [Employee Head Count](employee_headcount_test.go), [Solution](employee_headcount.go)
-* [Remove Invalid Parentheses](remove_invalid_parentheses_test.go), [Solution](remove_invalid_parentheses.go)
-* [Cheapest Flights](cheapest_flights_test.go), [Solution](cheapest_flights.go)
-* [Word Ladder](word_ladder_test.go), [Solution](word_ladder.go)
-* [Network Delay Time](network_delay_time_test.go), [Solution](network_delay_time.go)
-* [Number of Islands](number_of_islands_test.go), [Solution](number_of_islands.go)
+* [Iteratively Implement BFS and DFS](./iterative_traversal_test.go), [Solution](./iterative_traversal.go)
+* [Is Graph a DAG](./is_dag_test.go), [Solution](./is_dag.go)
+* [Topological Sort](./topological_sort_test.go), [Solution](./topological_sort.go)
+* [Employee Head Count](./employee_headcount_test.go), [Solution](./employee_headcount.go)
+* [Remove Invalid Parentheses](./remove_invalid_parentheses_test.go), [Solution](./remove_invalid_parentheses.go)
+* [Cheapest Flights](./cheapest_flights_test.go), [Solution](./cheapest_flights.go)
+* [Word Ladder](./word_ladder_test.go), [Solution](./word_ladder.go)
+* [Network Delay Time](./network_delay_time_test.go), [Solution](./network_delay_time.go)
+* [Number of Islands](./number_of_islands_test.go), [Solution](./number_of_islands.go)
+* [Dependency Order](./dependency_order_test), [Solution](./dependency_order_test.go)
