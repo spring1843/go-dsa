@@ -30,6 +30,8 @@ b,c
 d,e,f
 
 Means that a depends on b, c, d; b depends on c; d depends on e, f.
+The output should be f,e,c,d,b,a. Note that the order of the elements in the output is not
+important, but the order of the dependencies is important.
 */
 func TestDependencyOrder(t *testing.T) {
 	tests := []struct {
