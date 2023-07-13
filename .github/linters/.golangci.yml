@@ -1,4 +1,20 @@
 issues:
+  include:
+    - EXC0001
+    - EXC0002
+    - EXC0003
+    - EXC0004
+    - EXC0005
+    - EXC0006
+    - EXC0007
+    - EXC0008
+    - EXC0009
+    - EXC0010
+    - EXC0011
+    - EXC0012
+    - EXC0013
+    - EXC0014
+    - EXC0015
   exclude-rules:
     - path: /
       linters:
@@ -22,10 +38,4 @@ linters:
   enable-all: true
   enable:
     - revive
-
-issues:
-  include:
-    - EXC0012
-    - EXC0013
-    - EXC0014
-    - EXC0015
+    - misspell
