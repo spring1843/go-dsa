@@ -4,16 +4,17 @@
 set -euo pipefail
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+# shellcheck source=sections.sh
 source "${SCRIPT_DIR}/sections.sh"
 
-declare -a files=(
+declare -a FILES=(
   README.md
   complexity.md
 )
 
-files+=("${sections[@]/%//README.md}")
+FILES+=("${SECTIONS[@]/%//README.md}")
 
-for file in "${files[@]}"; do
+for file in "${FILES[@]}"; do
    cat "$file"
    printf "\n"
 done

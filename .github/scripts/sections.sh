@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-declare -a sections=(
+declare -a SECTIONS=(
   ./array
   ./strings
   ./linkedlist
