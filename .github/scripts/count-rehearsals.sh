@@ -7,7 +7,7 @@ source "${SCRIPT_DIR}/sections.sh"
 
 ALL_TESTS=0
 for section in "${sections[@]}"; do
-   SECTION_TESTS=$(ls -l $section/*_test.go | wc -l)
+   SECTION_TESTS=$(find $section -name "*_test.go" | wc -l)
    ALL_TESTS=$((ALL_TESTS + SECTION_TESTS))
 done
 echo $ALL_TESTS
