@@ -18,6 +18,7 @@ jobs:
             ~/.cache/go-build
             ~/go/pkg/
             ~/go/bin/
+          key: go-cache-${{ hashFiles('go.mod') }}
       - uses: github/super-linter@v4
         env:
           DEFAULT_BRANCH: main
@@ -49,7 +50,7 @@ jobs:
             ~/.cache/go-build
             ~/go/pkg/
             ~/go/bin/
-          key: go-cache-${{ hashFiles('go.sum') }}
+          key: go-cache-${{ hashFiles('go.mod') }}
       - run: go test -v -coverprofile=profile.cov ./...
       - uses: shogo82148/actions-goveralls@v1
         with:
