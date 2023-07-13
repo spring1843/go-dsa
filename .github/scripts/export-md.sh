@@ -3,7 +3,7 @@
 set -euo pipefail
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
-# shellcheck source=./sections.sh
+# shellcheck source=./.github/scripts/sections.sh
 source "${SCRIPT_DIR}/sections.sh"
 
 declare -a files=(
