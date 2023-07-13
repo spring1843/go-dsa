@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-declare -a SECTIONS=(
+declare -a sections=(
   ./array
   ./strings
   ./linkedlist
@@ -19,4 +19,4 @@ declare -a SECTIONS=(
   ./dp
 )
 
-export SECTIONS
+export sections
