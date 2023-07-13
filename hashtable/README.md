@@ -79,8 +79,9 @@ Compilers use hash tables to generate a symbol table to keep track of variable d
 
 ## Rehearsal
 
-* [Find Missing Number](missing_number_test.go), [Solution](missing_number.go)
-* [List Elements Summing Up to K](sum_up_to_k_test.go), [Solution](sum_up_to_k.go)
-* [Fastest Way to Cut a Brick Wall](cut_brick_wall_test.go), [Solution](cut_brick_wall.go)
-* [Find Anagrams](find_anagrams_test.go), [Solution](find_anagrams.go)
-* [Find Max Points on the Same Line](max_points_on_line_test.go), [Solution](max_points_on_line.go)
+* [Find Missing Number](./missing_number_test.go), [Solution](./missing_number.go)
+* [List Elements Summing Up to K](./sum_up_to_k_test.go), [Solution](./sum_up_to_k.go)
+* [Fastest Way to Cut a Brick Wall](./cut_brick_wall_test.go), [Solution](./cut_brick_wall.go)
+* [Smallest Missing Positive Integer](./smallest_missing_positive_integer_test.go), [Solution](./smallest_missing_positive_integer.go)
+* [Find Anagrams](./find_anagrams_test.go), [Solution](./find_anagrams.go)
+* [Find Max Points on the Same Line](m./ax_points_on_line_test.go), [Solution](./max_points_on_line.go)
