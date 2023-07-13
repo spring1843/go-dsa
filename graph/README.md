@@ -222,7 +222,7 @@ func main() {
 	graph := makeGraph()
 	dfs(graph)
 	for _, vertex := range graph {
-		fmt.Printf("%#v\n", vertex)
+		fmt.Printf("vertex val: %d, discoveryTimeStart: %d, discoveryTimeFinish: %d\n", vertex.val, vertex.discoveryTimeStart, vertex.discoveryTimeFinish)
 	}
 }
 
@@ -288,10 +288,7 @@ func dijkstra(graph []*timedVertex) {
                 continue
             }
 
-            //distance type
-
             if v.distance + cvw < w.distance {
-                //update w
                 w.distance
             }
         }
