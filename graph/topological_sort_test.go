@@ -34,14 +34,19 @@ func TestTopologicalSort(t *testing.T) {
 		{[][]int{{}, {1}, {}, {3}}, []int{2, 4, 1, 3}, nil},
 		{[][]int{{}, {1}, {}, {3}}, []int{2, 4, 1, 3}, nil},
 		{[][]int{{2, 5}, {3, 4}, {}, {5}, {}}, []int{1, 2, 3, 4, 5}, nil},
-		{[][]int{{2}, {3}, {1}}, nil, ErrNotADAG},
+		{[][]int{{2}, {3}, {1}}, []int{}, ErrNotADAG},
 		{readmeGraphs["Figure_1_A"], []int{1, 2, 4, 3, 5}, nil},
-		{readmeGraphs["Figure_1_B"], nil, ErrNotADAG},
+		{readmeGraphs["Figure_1_B"], []int{}, ErrNotADAG},
 		{readmeGraphs["Figure_1_C"], []int{1, 3, 2, 4, 5}, nil},
 	}
 
 	for i, test := range tests {
-		got, err := TopologicalSort(toGraphWithIngress(test.graph))
+		orderedGraph, err := TopologicalSort(toGraphWithIngress(test.graph))
+		got := make([]int, 0, len(orderedGraph))
+		for i := range orderedGraph {
+			got = append(got, orderedGraph[i].Val.(int))
+		}
+
 		if err != nil {
 			if test.expectedErr == nil {
 				t.Fatalf("Failed test case #%d. Unexpected error. Error :%s", i, err)
