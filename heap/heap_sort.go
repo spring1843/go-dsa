@@ -18,8 +18,8 @@ type (
 	}
 )
 
-// HeapSort solves the problem in O(n*Log n) time and O(n) space.
-func HeapSort(list []int) []int {
+// Sort solves the problem in O(n*Log n) time and O(n) space.
+func Sort(list []int) []int {
 	sorted := []int{}
 	heap := NewMinHeap()
 	for _, val := range list {
