@@ -28,3 +28,5 @@ func TestSmallestMissingPositiveInteger(t *testing.T) {
 		}
 	}
 }
+
+export SECTIONS

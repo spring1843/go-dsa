@@ -18,3 +18,5 @@ declare -a SECTIONS=(
   ./greedy
   ./dp
 )
+
+export SECTIONS
