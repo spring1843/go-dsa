@@ -46,4 +46,5 @@ Strings store words, characters, sentences, etc.
 * [In Memory Database](./in_memory_database_test.go), [Solution](./in_memory_database.go)
 * [Number in English](./number_in_english_test.go), [Solution](./number_in_english.go)
 * [Reverse Vowels In a String](./reverse_vowels_test.go), [Solution](./reverse_vowels.go)
+* [Roman Numerals](./roman_numerals_test.go), [Solution](./roman_numerals.go)
 * [Longest Substring of Two Unique Characters](./longest_substring_test.go), [Solution](./longest_substring.go)
