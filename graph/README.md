@@ -154,14 +154,16 @@ func main() {
 }
 
 func makeGraph() []*vertexWithDistance {
-	a := &vertexWithDistance{val: 1}
-	b := &vertexWithDistance{val: 2}
-	c := &vertexWithDistance{val: 3}
-	d := &vertexWithDistance{val: 5}
-	a.edges = []*vertexWithDistance{b}
-	b.edges = []*vertexWithDistance{c}
-	c.edges = []*vertexWithDistance{d}
-	return []*vertexWithDistance{a, b, c, d}
+	graph := []*vertexWithDistance{
+		{val: 1},
+		{val: 2},
+		{val: 3},
+		{val: 4},
+	}
+	graph[0].edges = []*vertexWithDistance{graph[1]}
+	graph[1].edges = []*vertexWithDistance{graph[2]}
+	graph[2].edges = []*vertexWithDistance{graph[3]}
+	return graph
 }
 ```
 
@@ -220,19 +222,21 @@ func main() {
 	graph := makeGraph()
 	dfs(graph)
 	for _, vertex := range graph {
-		fmt.Printf("%#v\n", vertex)
+		fmt.Printf("vertex val: %d, discoveryTimeStart: %d, discoveryTimeFinish: %d\n", vertex.val, vertex.discoveryTimeStart, vertex.discoveryTimeFinish)
 	}
 }
 
 func makeGraph() []*timedVertex {
-	a := &timedVertex{val: 1}
-	b := &timedVertex{val: 2}
-	c := &timedVertex{val: 3}
-	d := &timedVertex{val: 5}
-	a.edges = []*timedVertex{b}
-	b.edges = []*timedVertex{c}
-	c.edges = []*timedVertex{d}
-	return []*timedVertex{a, b, c, d}
+	graph := []*timedVertex{
+		{val: 1},
+		{val: 2},
+		{val: 3},
+		{val: 4},
+	}
+	graph[0].edges = []*timedVertex{graph[1]}
+	graph[1].edges = []*timedVertex{graph[2]}
+	graph[2].edges = []*timedVertex{graph[3]}
+	return graph
 }
 ```
 
@@ -284,10 +288,7 @@ func dijkstra(graph []*timedVertex) {
                 continue
             }
 
-            //distance type
-
             if v.distance + cvw < w.distance {
-                //update w
                 w.distance
             }
         }
