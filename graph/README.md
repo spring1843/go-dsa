@@ -155,10 +155,10 @@ func main() {
 
 func makeGraph() []*vertexWithDistance {
 	graph := []*vertexWithDistance{
-		&vertexWithDistance{val: 1},
-		&vertexWithDistance{val: 2},
-		&vertexWithDistance{val: 3},
-		&vertexWithDistance{val: 4},
+		{val: 1},
+		{val: 2},
+		{val: 3},
+		{val: 4},
 	}
 	graph[0].edges = []*vertexWithDistance{graph[1]}
 	graph[1].edges = []*vertexWithDistance{graph[2]}
@@ -228,10 +228,10 @@ func main() {
 
 func makeGraph() []*timedVertex {
 	graph := []*timedVertex{
-		&timedVertex{val: 1},
-		&timedVertex{val: 2},
-		&timedVertex{val: 3},
-		&timedVertex{val: 4},
+		{val: 1},
+		{val: 2},
+		{val: 3},
+		{val: 4},
 	}
 	graph[0].edges = []*timedVertex{graph[1]}
 	graph[1].edges = []*timedVertex{graph[2]}
