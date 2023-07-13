@@ -19,6 +19,10 @@ jobs:
             ~/go/pkg/
             ~/go/bin/
           key: go-cache-${{ hashFiles('go.mod') }}
+      - uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          locale: "US"
       - uses: github/super-linter@v4
         env:
           DEFAULT_BRANCH: main
