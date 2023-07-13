@@ -76,7 +76,7 @@ func TestCircularQueue(t *testing.T) {
 	}
 }
 
-func enqueueDequeueAndCheckValue(t *testing.T, queue *UsingCircularArray, testID int, test *testCase) {
+func enqueueDequeueAndCheckValue(t *testing.T, queue *CircularQueue, testID int, test *testCase) {
 	t.Helper()
 	for _, n := range test.enqueue {
 		if err := queue.enqueue(n); err != nil {
