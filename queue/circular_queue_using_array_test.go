@@ -2,6 +2,46 @@ package queue
 
 import "testing"
 
+/*
+TestCircularQueue tests solution(s) with the following signature and problem description:
+
+	func (queue *UsingCircularArray) enqueue(n int) error
+	func (queue *UsingCircularArray) dequeue() (int, error)
+
+Given a size, implement a circular queue using an array.
+A circular queue also called a ring buffer is different from a normal queue in that
+the last element is connected to the first element.
+*/
+func TestCircularQueue(t *testing.T) {
+	// Tests a queue by enqueues given items,
+	// then dequeues a number of times and finally checks the value from the last dequeue.
+	// The same process then may be repeated for a second time with different values.
+	tests := []struct {
+		size        int
+		firstRound  *testCase
+		secondRound *testCase
+	}{
+		{0, &testCase{[]int{1, 2, 3, 4}, -1, -1, true, false}, nil},
+		{4, &testCase{[]int{1, 2, 3, 4}, 1, 1, false, false}, nil},
+		{4, &testCase{[]int{1, 2, 3, 4}, 2, 2, false, false}, nil},
+		{4, &testCase{[]int{1, 2, 3, 4}, 3, 3, false, false}, nil},
+		{4, &testCase{[]int{1, 2, 2, 3}, 2, 2, false, false}, nil},
+		{2, &testCase{[]int{1, 2, 2, 3}, 2, 2, true, false}, nil},
+		{2, &testCase{[]int{1, 2}, 3, -1, false, true}, nil},
+		{2, &testCase{[]int{1, 2}, 2, 2, false, false}, &testCase{[]int{1, 2}, 1, 1, false, false}},
+		{2, &testCase{[]int{1, 2}, 1, 1, false, false}, &testCase{[]int{1}, 2, 1, false, false}},
+	}
+
+	for i, test := range tests {
+		queue := NewCircularQueue(test.size)
+
+		enqueueDequeueAndCheckValue(t, queue, i, test.firstRound)
+		if test.secondRound != nil {
+			enqueueDequeueAndCheckValue(t, queue, i, test.secondRound)
+		}
+	}
+}
+
 type testCase struct {
 	enqueue                  []int
 	dequeueTimes             int
@@ -36,44 +76,6 @@ var queueOperations = []struct {
 	{operationTypeEnqueue, 1},
 	{operationTypeDequeue, 0},
 	{operationTypeEnqueue, 1},
-}
-
-/*
-TestCircularQueue tests solution(s) with the following signature and problem description:
-
-	func (queue *UsingCircularArray) enqueue(n int) error
-	func (queue *UsingCircularArray) dequeue() (int, error)
-
-Implements a queue using a circular array.
-*/
-func TestCircularQueue(t *testing.T) {
-	// Tests a queue by enqueues given items,
-	// then dequeues a number of times and finally checks the value from the last dequeue.
-	// The same process then may be repeated for a second time with different values.
-	tests := []struct {
-		size        int
-		firstRound  *testCase
-		secondRound *testCase
-	}{
-		{0, &testCase{[]int{1, 2, 3, 4}, -1, -1, true, false}, nil},
-		{4, &testCase{[]int{1, 2, 3, 4}, 1, 1, false, false}, nil},
-		{4, &testCase{[]int{1, 2, 3, 4}, 2, 2, false, false}, nil},
-		{4, &testCase{[]int{1, 2, 3, 4}, 3, 3, false, false}, nil},
-		{4, &testCase{[]int{1, 2, 2, 3}, 2, 2, false, false}, nil},
-		{2, &testCase{[]int{1, 2, 2, 3}, 2, 2, true, false}, nil},
-		{2, &testCase{[]int{1, 2}, 3, -1, false, true}, nil},
-		{2, &testCase{[]int{1, 2}, 2, 2, false, false}, &testCase{[]int{1, 2}, 1, 1, false, false}},
-		{2, &testCase{[]int{1, 2}, 1, 1, false, false}, &testCase{[]int{1}, 2, 1, false, false}},
-	}
-
-	for i, test := range tests {
-		queue := NewCircularQueue(test.size)
-
-		enqueueDequeueAndCheckValue(t, queue, i, test.firstRound)
-		if test.secondRound != nil {
-			enqueueDequeueAndCheckValue(t, queue, i, test.secondRound)
-		}
-	}
 }
 
 func enqueueDequeueAndCheckValue(t *testing.T, queue *CircularQueue, testID int, test *testCase) {
