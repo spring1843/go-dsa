@@ -5,11 +5,11 @@ Algorithms can be differentiated based on their time and space complexity. When 
 1. What is the time `t` required for execution?
 2. How much memory space `s` does it utilize?
 
-To address these questions, the Big O asymptotic notation, which characterizes how an algorithm performs with respect to time and space as the input size `n` increases, is employed.
+The Big O asymptotic notation, which characterizes how an algorithm performs with respect to time and space as the input size `n` increases, is employed to address these questions.
 
 ## Big O
 
-Big O is a mathematical notation commonly used to describe the impact on time or space as input size `n` increases. Seven Big O notations commonly used in algorithm complexity analysis are discussed in the following sections.
+Big O is a mathematical notation commonly used to describe the impact on time or space as input size `n` increases. We are mostly interested in discussing the worst case of an algorithm, but it is also beneficial to compare algorithms in their average and best case scenarios. Seven Big O notations commonly used in algorithm complexity analysis are discussed in the following sections.
 
 ```ASCII
 [Figure 1] Schematic diagram of Big O for common run times from fastest to slowest.
@@ -69,9 +69,9 @@ t│   .
               n
 ```
 
-To understand the big O notation, let us focus on time complexity and specifically examine the O(n) diagram. This diagram depicts a decline in algorithm performance as input size increases. In contrast, the O(1) diagram represents an algorithm that consistently performs in constant time, with input size having no impact on its efficiency. Consequently, the latter algorithm generally outperforms the former.
+To understand the big O notation, let us focus on time complexity and specifically examine the O(n) diagram. This diagram depicts a decline in algorithm performance as the input size increases. In contrast, the O(1) diagram represents an algorithm that consistently performs in constant time, with input size having no impact on its efficiency. Consequently, the latter algorithm generally outperforms the former.
 
-However, it is essential to note that this is not always the case. In practice, a O(1) algorithm with a single time-consuming operation might be slower than a O(n) algorithm with multiple operations if the single operation in the first algorithm requires more time to complete than the collective operations in the second algorithm.
+However, it is essential to note that this is not always the case. A O(1) algorithm with a single time-consuming operation might be slower than a O(n) algorithm with multiple operations if the single operation in the first algorithm requires more time to complete than the collective operations in the second algorithm.
 
 The Big O notation of an algorithm can be simplified using the following two rules:
 
@@ -110,7 +110,7 @@ Linear time complexity is considered favorable when an algorithm traverses every
 
 ### O(n*Log n)
 
-The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs and yield an outcome at the same time through an efficient operation. Sorting is a common example. It is impossible to sort items faster than O(n*Log n). Examples:
+The time complexity of O(n*Log n) is commonly observed when it is necessary to iterate through all inputs and simultaneously yield an outcome through an efficient operation. Sorting is a common example. It is impossible to sort items faster than O(n*Log n). Examples:
 
 * [Merge Sort](./dnc/merge_sort.go)
 * [Quick Sort](./dnc/quick_sort.go)
@@ -121,7 +121,7 @@ The time complexity of O(n*Log n) is commonly observed when it is necessary to i
 
 ### Polynomial - O(n^2)
 
-Polynomial time complexity marks the initial threshold of problematic time complexity for algorithms. This complexity often arises when an algorithm includes nested loops involving both an inner loop an outer loop. Examples:
+Quadratic time complexity marks the initial threshold of problematic time complexity for algorithms. This complexity often arises when an algorithm includes nested loops involving inner and outer loops. Examples:
 
 * [Bubble Sort](./array/bubble_sort.go)
 * [Cheapest Flight](./graph/cheapest_flights.go)
@@ -129,7 +129,7 @@ Polynomial time complexity marks the initial threshold of problematic time compl
 
 ### Exponential O(2^n)
 
-Exponential complexity is considered highly undesirable; however, it represents only the second-worst complexity scenario. Examples:
+Exponential complexity is considered highly undesirable but represents only the second-worst complexity scenario. Examples:
 
 * [Climbing Stairs](./recursion/climbing_stairs.go)
 * [Towers of Hanoi](./dnc/towers_of_hanoi.go)

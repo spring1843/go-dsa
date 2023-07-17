@@ -6,7 +6,7 @@
 [![Coverage Report](https://coveralls.io/repos/github/spring1843/go-dsa/badge.svg?branch=main)](https://coveralls.io/github/spring1843/go-dsa?branch=main)
 [![Go Reference](https://pkg.go.dev/badge/github.com/spring1843/go-dsa.svg)](https://pkg.go.dev/github.com/spring1843/go-dsa)
 
-Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed to serve as a dynamic, hands-on resource for learning and practicing data structures and algorithms in the Go programming language.
+Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed as a dynamic, hands-on resource for learning and practicing data structures and algorithms in the Go programming language.
 
 * Completely free, community-driven, and continuously evolving
 * Executes and comes with 100% test coverage, ensuring a high level of quality
@@ -28,7 +28,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Bubble Sort](./array/bubble_sort_test.go)
         * [Insertion Sort](./array/insertion_sort_test.go)
     * [Strings](./strings/README.md)
-        * [The longest Dictionary Word Containing Key](./strings/longest_dictionary_word_test.go)
+        * [The Longest Dictionary Word Containing Key](./strings/longest_dictionary_word_test.go)
         * [Look and Tell](./strings/look_and_tell_test.go)
         * [In Memory Database](./strings/in_memory_database_test.go)
         * [Number in English](./strings/number_in_english_test.go)
@@ -142,7 +142,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 
 All topics are discussed in README.md files in the corresponding directory. Each topic includes the following sections:
 
-* 💡 **Implementation**: Detailed explanation of how the data structure or algorithm can be implemented, including code examples in Go.
+* 💡 **Implementation**: Overview of implementing the data structure or algorithm in Go.
 * 📊 **Complexity**: Analysis of the time and space complexity of the data structure or algorithm.
-* 🎯 **Application**: Discussion of problems that are commonly solved using the data structure or algorithm.
+* 🎯 **Application**: Discuss problems commonly solved using the data structure or algorithm.
 * 📝 **Rehearsal**: Practice problems with links to tests that provide 100% coverage and example inputs and outputs.

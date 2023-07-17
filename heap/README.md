@@ -1,15 +1,15 @@
 # Heap
 
-Heaps are tree data structures that retain the minimum or maximum of the elements pushed into them. There are two types of heap: minimum and maximum heaps.
+Heaps are tree data structures that retain the minimum or maximum of the elements pushed into them. There are two types of heaps: minimum and maximum heaps.
 
 A heap must satisfy two conditions:
 
-1. The structure property requires that the heap be a complete binary search [tree](../tree), where each level is filled left to right, and all levels except the bottom are full.
+1. The structure property requires that the heap be a complete binary search [tree](../tree), where each level is filled from left to right, and all levels except the bottom are full.
 2. The heap property requires that the children of a node be larger than or equal to the parent node in a min heap and smaller than or equal to the parent in a max heap, meaning that the root is the minimum in a min heap and the maximum in a max heap.
 
-As a result, if all elements are pushed to the min or max heap and then popped one by one, a sorted list in ascending or descending order is attained. This sorting technique is known as [heap sort](./heap_sort_test.go) and it works O(n*Logn) time. Although there are many other sorting algorithms available, none are faster than O(n*Logn).
+As a result, if all elements are pushed to the min or max heap and then popped one by one, a sorted list in ascending or descending order is attained. This sorting technique known as [heap sort](./heap_sort_test.go) works in O(n*Logn) time. While other sorting algorithms are available, none are more efficient than O(n*Log n).
 
-When pushing an element to a heap, because of the structure property, the new element is always added to the first available position on the lowest level of the heap, filling from left to right. Then to maintain the heap property, if the newly inserted element is smaller than its parent in a min heap (larger in a max heap), the newly added element is percolate up by being swapped with its parent. The child and parents are swapped until the heap property is achieved.
+When pushing an element to a heap, because of the structure property, the new element is always added to the first available position on the lowest level of the heap, filling from left to right. Then to maintain the heap property, if the newly inserted element is smaller than its parent in a min heap (larger in a max heap), the newly added element is percolated up by being swapped with its parent. The child and parents are swapped until the heap property is achieved.
 
 ```ASCII
 [Figure 1] Minimum heap push operation
@@ -23,7 +23,7 @@ When pushing an element to a heap, because of the structure property, the new el
 	(A) Add 15		     	    (B) Add 5
 ```
 
-The pop operation in a heap starts by replacing the root with the rightmost leaf. Then the root is swapped with the smaller child in a min heap (and the larger child in a max heap). The root is then removed and the new root is percolated down until the heap property is achieved.
+The pop operation in a heap starts by replacing the root with the rightmost leaf. Then the root is swapped with the smaller child in a min heap (and the larger child in a max heap). The root is removed and the new root is percolated down until the heap property is achieved.
 
 ```ASCII
 [Figure 2] Minimum heap pop operation
@@ -41,7 +41,7 @@ An example implementation of this is provided as a [solution](./heap_sort.go) to
 
 ## Implementation
 
-The Go standard library includes an implementation of a heap in [container/heap](https://golang.org/pkg/container/heap/). Below is an example of a maximum heap implementation:
+The Go standard library includes an implementation of heap in [container/heap](https://golang.org/pkg/container/heap/). Below is an example of a maximum heap implementation:
 
 ```Go
 package main
@@ -77,7 +77,7 @@ func (m *maxHeap) Pop() interface{} {
 }
 ```
 
-To utilize a heap to store a particular type, certain methods such as len and less must be implemented for that type to conform to the heap interface. By default, the heap is a min heap, where each node is smaller than its children. However, the package provides the flexibility to define what "being less than" means. For instance, changing `m[i] > m[j]` to `m[i] < m[j]` would transform the heap into a minimum heap.
+To utilize a heap to store a particular type, certain methods such as len and less must be implemented for that type to conform to the heap interface. By default, the heap is a min heap, with each node smaller than its children. However, the package provides the flexibility to define what "being less than" means. For instance, changing `m[i] > m[j]` to `m[i] < m[j]` would transform the heap into a minimum heap.
 
 In Go, heaps are implemented with slices. The heap property is maintained such that the left child of the node at index `i` (where i is greater than or equal to 1) is always located at `2i`, and the right child is at `2i+1`. If the slice already contains elements before pushing, the heap must be initialized using `heap.Init(h Interface)` to establish the order.
 
