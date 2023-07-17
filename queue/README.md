@@ -2,13 +2,13 @@
 
 Queues are data structures that operate on the principle of First-In-First-Out (FIFO), enabling elements to be added to the rear of the queue through the enqueue operation and removed from the front of the queue through the dequeue operation.
 
-In the real world, queues are formed in situations where a first-come, first-served service is provided, such as at toll booths on highways.
+In the real world, queues are formed when a first-come, first-served service is provided, such as at highway toll booths.
 
-Another variation of queues is the double-ended queue, which allows for dequeuing from both ends, thereby facilitating both FIFO and LIFO (Last In, First Out) data structures.
+Another variation of queues is the double-ended queue, which allows for dequeuing from both ends, facilitating both FIFO and LIFO (Last In, First Out) data structures.
 
 ## Implementation
 
-Similar to [stacks](../stack), queues can be implemented using doubly [linked lists](../linkedlist/) or [arrays and slices](../array/). Here is a linked list implementation:
+Like [stacks](../stack), queues can be implemented using doubly [linked lists](../linkedlist/) or [arrays and slices](../array/). Here is a linked list implementation:
 
 ```Go
 package main
@@ -79,7 +79,7 @@ Enqueue and dequeue operations both perform in O(1) times.
 
 ## Application
 
-Queues are widely utilized in solving graph-related problems and managing capacity in various contexts, such as printers, where tasks are processed in the order of their arrival. They are also utilized in situations where a first-come-first-serve approach is necessary.
+Queues are widely utilized in solving graph-related problems and managing capacity in various contexts, such as printers, where tasks are processed in the order of arrival. They are also utilized in situations where a first-come-first-serve approach is necessary.
 
 ## Rehearsal
 

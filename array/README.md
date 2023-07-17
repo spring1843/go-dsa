@@ -6,9 +6,7 @@ To provide a real-world analogy, consider an array of athletes preparing for a s
 
 ## Implementation
 
-In the Go programming language, arrays are considered values rather than pointers and represent the entirety of the array. Whenever an array is passed to a function, a copy is created, resulting in additional memory usage. However, to avoid this issue, it is possible to pass a pointer to the array instead.
-
-To define an array in Go, it is possible to specify the array size using a constant. By using constants in this manner, it is no longer necessary to use the make function to create the array.
+In the Go programming language, arrays are considered values rather than pointers and represent the entirety of the array. Whenever an array is passed to a function, a copy is created, resulting in additional memory usage. To avoid this it is possible to pass a pointer to an array, or use slices instead. The size of the array is constant and it must be known at compile time, and there is no need to use the built-in `make` function when defining arrays.
 
 ```Go
 package main
@@ -22,9 +20,9 @@ func main() {
 }
 ```
 
-Although arrays are fundamental data structures in Go, their constant size can make them inflexible and difficult to use in situations where a variable size is required. To address this issue, Go provides [slices](https://blog.golang.org/slices-intro) which are an abstraction of arrays that offer more convenient access to sequential data typically stored in arrays.
+Although arrays are fundamental data structures in Go, their constant size can make them inflexible and difficult to use in situations where a variable size is required. To address this issue, Go provides [slices](https://blog.golang.org/slices-intro), an abstraction of arrays that offer more convenient access to sequential data typically stored in arrays. When a slice is passed to a function, the head of the slice is replaced but the slice still points to the same data, hence it is possible for the callee to modify the values of the slice and send them back to the caller.
 
-Slices enable the addition of values using the `append` function, which allows for dynamic slice resizing. Additionally, selectors of the format [low:high] can be used to select or manipulate data in the slice. By utilizing slices instead of arrays, Go programmers gain a more flexible and powerful tool to manage their data structures.
+Slices enable adding values using the `append` function, allowing dynamic resizing. Additionally, selectors of the format [low:high] can be used to select or manipulate data in the slice. By utilizing slices instead of arrays, Go programmers gain a more flexible and powerful tool to manage their data structures.
 
 ```Go
 package main
@@ -40,7 +38,7 @@ func main() {
 }
 ```
 
-The [make](https://golang.org/pkg/builtin/#make) function can be used to create a zeroed slice of a given length and capacity.
+The [make](https://golang.org/pkg/builtin/#make) function can create a zeroed slice of a given length and capacity.
 
 ```Go
 package main
@@ -78,7 +76,7 @@ Accessing an element within an array using an index has O(1) time complexity. Th
 
 While arrays are useful for certain tasks, searching an unsorted array can be a time-consuming O(n) operation. Since the target item could be located anywhere in the array, every element must be checked until the item is found. Due to this limitation, alternative data structures such as trees and hash tables are often more suitable for search operations.
 
-Addition and deletion operations are O(n) operations in Arrays. The process of removing an element can create an empty slot that must be eliminated by shifting the remaining items. Similarly, adding items to an array may require shifting existing items to create space for the added item. These inefficiencies can make alternative data structures, such as [trees](../tree) or [hash tables](../hashtable), more suitable for managing operations involving additions and deletions.
+Addition and deletion operations are O(n) operations in Arrays. Removing an element can create an empty slot that must be eliminated by shifting the remaining items. Similarly, adding items to an array may require shifting existing items to create space for the added item. These inefficiencies can make alternative data structures, such as [trees](../tree) or [hash tables](../hashtable), more suitable for managing operations involving additions and deletions.
 
 ## Application
 
