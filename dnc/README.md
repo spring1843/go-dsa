@@ -57,7 +57,7 @@ func binarySearchIterative(list []int, target int) int {
 }
 ```
 
-Go comes with a built-in a binary search function which returns the index of the first element satisfying a given condition. This function eliminates the need to manually implement the binary search algorithm.
+Go comes with a built-in binary search function that returns the index of the first element satisfying a given condition. This function eliminates the need to manually implement the binary search algorithm.
 
 ```Go
 package main
@@ -84,11 +84,11 @@ func search(list []int, target int) int {
 
 ## Complexity
 
-If used inappropriately, DNC algorithms can lead to an exponential number of unnecessary recursive calls, resulting in a time complexity of O(2^n). However, if an appropriate dividing strategy and a base case that can be solved directly are identified, DNC algorithms can be very effective. They have a time complexity as low as O(Log n) such as the case of binary search. As DNC algorithms are recursive, their complexity analysis is similar to that of [recursive](../recursion) algorithms.
+If used inappropriately, DNC algorithms can lead to an exponential number of unnecessary recursive calls, resulting in a time complexity of O(2^n). However, DNC algorithms can be very effective if an appropriate dividing strategy and a base case that can be solved directly are identified. They have a time complexity as low as O(Log n), such as in the case of binary search. As DNC algorithms are recursive, their complexity analysis is similar to [recursive](../recursion) algorithms.
 
 ## Application
 
-DNC algorithms are suitable for solving problems that can be divided into smaller sub-problems that can be solved in a similar way. Examples of such problems include sorting algorithms (e.g., merge sort, quicksort), searching algorithms (e.g., binary search), and matrix multiplication.
+DNC algorithms are suitable for solving problems that can be divided into smaller sub-problems that can be solved similarly. Examples of such problems include sorting algorithms (e.g., merge sort, quicksort), searching algorithms (e.g., binary search), and matrix multiplication.
 
 ## Rehearsal
 

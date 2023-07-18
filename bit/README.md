@@ -1,6 +1,6 @@
 # Bit Manipulation
 
-Bit manipulation or bitwise operations refers to the process of manipulating individual or groups of bits in a computer's memory using logical operations to solve a problem. CPUs with support for specialized bitwise instructions are designed to execute bit-level operations efficiently, including AND, OR, XOR, SHIFT, and other similar operations. As these instructions are implemented in hardware, they offer excellent performance and are widely used in high-performance computing applications.
+Bit manipulation or bitwise operations refers to manipulating individual or groups of bits in a computer's memory using logical operations to solve a problem. CPUs supporting specialized bitwise instructions are designed to execute bit-level operations efficiently, including AND, OR, XOR, SHIFT, and other similar operations. As these instructions are implemented in hardware, they offer excellent performance and are widely used in high-performance computing applications.
 
 ```ASCII
 [Figure 1] Truth tables and illustration of bit manipulation operations
@@ -97,11 +97,11 @@ Bit manipulation operations are characterized by a constant time complexity. Thi
 
 Bit manipulation techniques are widely utilized in diverse fields of computing, such as cryptography, data compression, network protocols, and databases, to name a few. Each bitwise operation has its own qualities that make it useful in different scenarios.
 
-AND extracts bit(s) from a larger number. For example, to check if a certain bit is set in a number, the number can be ANDed with a mask that has only that bit set to 1, and if the result is not 0, then that bit was set. Another application is to clear or reset certain bits in a number by ANDing with a mask that has those bits set to 0.
+AND extracts bit(s) from a larger number. For example, to check if a certain bit is set in a number, the number can be ANDed with a mask that has only that bit set to 1, and if the result is not 0, then that bit was set. Another application is to clear or reset certain bits in a number by ANDing with a mask with those bits set to 0.
 
-OR can be useful to set or turn on certain bits in a binary number. For example with a variable flag, which is a binary number representing various options, a particular flag can be set by ORing the variable with a binary number where only the corresponding bit for that flag is 1. This will turn on the flag in the variable without affecting other flags.
+OR can be useful to set or turn on certain bits in a binary number. For example with a variable flag, a binary number representing various options, a particular flag can be set by ORing the variable with a binary number where only the corresponding bit for that flag is 1. This will turn on the flag in the variable without affecting other flags.
 
-XOR can be used for encryption and decryption, as well as error detection and correction. It can also be used to swap two variables without using a temporary variable. Additionally, XOR can be used to solve problems related to finding unique elements in a list or array or to check whether two sets of data have any overlapping elements.
+XOR can be used for encryption, decryption, error detection, and correction. It can also be used to swap two variables without using a temporary variable. Additionally, XOR can be used to solve problems related to finding unique elements in a list or array or to check whether two data sets have overlapping elements.
 
 Negation can be used to invert a set of flags or find the two's complement of a number.
 
