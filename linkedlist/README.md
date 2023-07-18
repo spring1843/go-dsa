@@ -1,8 +1,8 @@
 # Linked List
 
-Linked lists are a collection of nodes, each of which is capable of storing at least one data element and is linked to the next node via a reference. One of the key advantages of linked lists over [arrays](../array) is their dynamic size, which allows for items to be added or removed without necessitating the resizing or shifting of other elements.
+Linked lists are a collection of nodes, each capable of storing at least one data element and linked to the next node via a reference. One of the key advantages of linked lists over [arrays](../array) is their dynamic size, which allows for items to be added or removed without necessitating the resizing or shifting of other elements.
 
-Two types of linked lists exist: singly linked lists, in which each node is linked only to the next node, and doubly linked lists lists, in which each node is connected to both the next and previous nodes.
+Two types of linked lists exist: singly linked lists, in which each node is linked only to the next node, and doubly linked lists, in which each node is connected to both the next and previous nodes.
 
 ## Implementation
 
@@ -12,7 +12,7 @@ When implementing linked lists, two key concepts come into play: the linked list
 * A reference to the next node
 * A reference to the previous node in doubly linked lists
 
-To create a linked list in Go, a node `struct` can be defined, and a pointer to the same structure can be used to link the node into the next one. For instance, a singly linked list with the data `1->2->3->4->5` can be created using the following example:
+A node `struct` can be defined to create a linked list in Go, and a pointer to the same structure can be used to link the node to the next one. For instance, a singly linked list with the data `1->2->3->4->5` can be created using the following example:
 
 ```Go
 package main
@@ -44,7 +44,7 @@ func addToFront(node *node) {
 }
 ```
 
-In a singly linked list, a pointer is typically stored for the first and last items. Adding items to the front or back of the list is a constant-time operation. However, deleting the last item can be challenging, as the last item's pointer needs to be updated to the second-to-last item. This is where having a reference to the last item in each node proves useful. In contrast, doubly linked lists maintain pointers to both the previous and next nodes, which makes deletion operations less expensive.
+A pointer is typically stored for the first and last items in a singly linked list. Adding items to the front or back of the list is a constant-time operation. However, deleting the last item can be challenging, as the last item's pointer needs to be updated to the second-to-last item. This is where referencing the last item in each node proves useful. In contrast, doubly linked lists maintain pointers to the previous and next nodes, making deletion operations less expensive.
 
 The Go standard library contains an implementation of [doubly linked lists](https://golang.org/pkg/container/list/). In the following example, numbers from 1 to 10 are added to the list. Even numbers are removed, and the resulting linked list containing odd numbers is printed.
 
@@ -81,11 +81,11 @@ func main() {
 
 Adding new items to the front or back of the linked list has the time complexity of O(1).
 
-Deleting the first item is also O(1). Deleting the last item in a singly linked list is O(n), because the node before the last node has to be found, and for that, every node must be visited. In a doubly linked list deleting the last item can be done in O(1) time, since nodes are connected to both previous and next nodes.
+Deleting the first item is also O(1). Deleting the last item in a singly linked list is O(n), because the node before the last node must be found, and for that, every node must be visited. Deleting the last item can be done in O(1) time in a doubly linked list since nodes are connected to the previous and next nodes.
 
 ## Application
 
-Linked lists can be useful where the order of items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items. Music players for example have play lists that play tracks in an order. At any given time, one track is playing while it is possible to change the current track with the previous or next ones.
+Linked lists can be useful where the order of items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items. Music players for example have playlists that play tracks in a predetermined order. At any given time, one track is playing while changing the current track with the previous or next ones is possible.
 
 ## Rehearsal
 

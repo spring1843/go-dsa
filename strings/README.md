@@ -1,6 +1,6 @@
 # String
 
-String is a ubiquitous data structure that is typically built-in data type in programming languages. However, beneath the surface, they are essentially arrays of characters that enable textual data storage and manipulation.
+A string is a ubiquitous data structure, typically a built-in data type in programming languages. However, beneath the surface, strings are essentially arrays of characters that enable textual data storage and manipulation.
 
 ## Implementation
 
@@ -13,7 +13,7 @@ In Go, strings are a data type. Behind the scenes strings are a slice of bytes. 
 * [Title](https://golang.org/pkg/strings/#Title), [ToLower](https://golang.org/pkg/strings/#ToLower), [ToUpper](https://golang.org/pkg/strings/#ToUpper)
 * [Trim](https://golang.org/pkg/strings/#Trim), [TrimSpace](https://golang.org/pkg/strings/#TrimSpace), [TrimSuffix](https://golang.org/pkg/strings/#TrimSuffix), [TrimPrefix](https://golang.org/pkg/strings/#TrimPrefix)
 
-When a string is iterated in Go using the `range` keyword, every element becomes a [rune](https://blog.golang.org/strings#TOC_5.) which is the same as `int32`. If the code being written works with many single character strings, it is a better option to define variables and function parameters as `rune`. The following code shows how to iterate through a string.
+When a string is iterated in Go using the `range` keyword, every element becomes a [rune](https://blog.golang.org/strings#TOC_5.) which is the same as `int32`. If the code being written works with many single-character strings, it is better to define variables and function parameters as `rune`. The following code shows how to iterate through a string.
 
 ```Go
 package main
@@ -41,7 +41,7 @@ Strings store words, characters, sentences, etc.
 
 ## Rehearsal
 
-* [The longest Dictionary Word Containing Key](./longest_dictionary_word_test.go), [Solution](./longest_dictionary_word.go)
+* [The Longest Dictionary Word Containing Key](./longest_dictionary_word_test.go), [Solution](./longest_dictionary_word.go)
 * [Look and Tell](./look_and_tell_test.go), [Solution](./look_and_tell.go)
 * [In Memory Database](./in_memory_database_test.go), [Solution](./in_memory_database.go)
 * [Number in English](./number_in_english_test.go), [Solution](./number_in_english.go)

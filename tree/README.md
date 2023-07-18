@@ -1,8 +1,8 @@
 # Trees
 
-A collection of zero or more nodes in which the root, a distinguished node, is connected to all subtrees via a directed edge. In the real world, trees are like real trees but upside down.
+A collection of zero or more nodes in which root, a distinguished node, is connected to all subtrees via a directed edge. In the real world, trees are like real trees but upside down.
 
-Traversing a tree means exploring every node in a tree and performing some work on it. Picking the right order in which nodes are explored is key in efficiently solving a problem. The main three ways of traversing a tree are shown in figure-1.
+Traversing a tree means exploring every node in a tree and performing some work on it. Picking the right order in which nodes are explored is key to efficiently solving a problem. The three main ways of traversing a tree are shown in Figure-1.
 
 ```ASCII
 [Figure 1] Tree traversals - Full Binary Search Tree Example
@@ -15,7 +15,7 @@ Traversing a tree means exploring every node in a tree and performing some work 
 1   3 5   7
 ```
 
-Tree traversal methods are named after the order in which the nodes are explored. For example, in Pre-Order traversal, the node is explored prior to its children and in post order traversal the node is explored after its children.
+Tree traversal methods are named after the order in which the nodes are explored. For example, in Pre-Order traversal, the node is explored before its children; in Post-Order traversal, the node is explored after its children.
 
 There are many types of trees. Some important tree types include:
 
@@ -24,7 +24,7 @@ There are many types of trees. Some important tree types include:
 * **Full Binary Tree**: Every non-leaf node has exactly two children
 
 ```ASCII
-[Figure 2] Important tree Concepts
+[Figure 2] Important Tree Concepts
 
      1		 4	    1        * 	  1 - Is it a binary tree?
     /|\		/ \	   /        / \	    2 - Is it a complete binary tree?
@@ -38,9 +38,9 @@ There are many types of trees. Some important tree types include:
 
 ## Binary Search Tree (BST)
 
-A Binary Search Tree (BST) is a type of sorted tree where, for every node n, the values of all nodes in its left subtree are less than n, and the values of all nodes in its right subtree are greater than n.
+A Binary Search Tree (BST) is a sorted tree where, for every node n, the values of all nodes in its left subtree are less than n, and the values of all nodes in its right subtree are greater than n.
 
-Performing an In-Order traversal of a binary search tree and outputting each explored node results in a sorted (In-Order) list of nodes. This is known as the tree sorting algorithm, which has a time complexity of O(NLogN). While there are other sorting algorithms available, none are more efficient than O(n*Log n).
+Performing an In-Order traversal of a binary search tree and outputting each explored node results in a sorted (In-Order) list of nodes. This is known as the tree sorting algorithm, which has a time complexity of O(NLogN).
 
 ### BST Complexity
 
@@ -66,7 +66,7 @@ Insertion and Search are done in O(K), where K is the length word length.
 
 ## Application
 
-Trees, such as Binary Search Trees (BSTs) offer O(Log n) time complexity for searches, which is superior to [linked lists](../linkedlist/)' and [array](../array/)'s linear access time. Trees are widely employed in search systems, and operating systems can represent file information using tree structures.
+Trees, such as Binary Search Trees (BSTs), offer O(Log n) time complexity for searches, which is superior to [linked lists](../linkedlist/)' and [array](../array/)'s linear access time. Trees are widely employed in search systems, and operating systems can represent file information using tree structures.
 
 ## Rehearsal
 
