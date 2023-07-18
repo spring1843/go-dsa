@@ -14,7 +14,7 @@ A graph is a collection of vertices connected through directed or undirected edg
     (A)	       (B)	 (C)  	      (D)
 ```
 
-Graph theory a branch of mathematics is dedicated to studying graphs. Here are some essential graph concepts to remember:
+Graph theory, a branch of mathematics, is dedicated to studying graphs. Here are some essential graph concepts to remember:
 
 * **Directed Acyclic Graph - DAG**: A directed graph with no cycles
 * **Connected Graph**: There is a path between any two vertices
@@ -323,7 +323,7 @@ Graph algorithms find extensive usage in addressing real-world challenges, inclu
 * [Iteratively Implement BFS and DFS](./iterative_traversal_test.go), [Solution](./iterative_traversal.go)
 * [Is Graph a DAG](./is_dag_test.go), [Solution](./is_dag.go)
 * [Topological Sort](./topological_sort_test.go), [Solution](./topological_sort.go)
-* [Employee Head Count](./employee_headcount_test.go), [Solution](./employee_headcount.go)
+* [Employee Headcount](./employee_headcount_test.go), [Solution](./employee_headcount.go)
 * [Remove Invalid Parentheses](./remove_invalid_parentheses_test.go), [Solution](./remove_invalid_parentheses.go)
 * [Cheapest Flights](./cheapest_flights_test.go), [Solution](./cheapest_flights.go)
 * [Word Ladder](./word_ladder_test.go), [Solution](./word_ladder.go)
