@@ -1,10 +1,10 @@
 # Greedy Algorithms
 
-The concept of greedy algorithms involves choosing a naive solution and continuously refining it rather than developing a sophisticated algorithm by beginning with what appears to be an easy win. In this approach, a local optimum is chosen, and the aim is to build upon it to ultimately arrive at the global optimum.
+The concept of greedy algorithms involves choosing a naive solution and continuously refining it rather than developing a sophisticated algorithm by beginning with what appears to be an easy win. This approach chooses a local optimum, aiming to build upon it to ultimately arrive at the global optimum.
 
-For example, consider someone kayaking to an island and discovering a treasure while a tsunami is imminent. To decide which pieces of treasure to take back, the greedy approach would involve selecting the most seemingly valuable items first, such as heavy pieces of gold or diamonds rather than small pieces of silver. However, this approach may result in a suboptimal solution if a valuable item, such as a small silver ring with a significant archeological value that makes it the most precious piece, is overlooked. This is similar to the knapsack problem solved in the rehearsals.
+For example, consider someone kayaking to an island and discovering a treasure while a tsunami is imminent. The greedy approach would involve selecting the most ostensibly valuable items first, such as heavy pieces of gold or diamonds rather than small pieces of silver, to decide which pieces of treasure to take back. However, if a valuable item, such as a small silver ring with a significant archeological value that makes it the most precious piece, is overlooked, this approach may result in a suboptimal solution. This is similar to the [knapsack](./knapsack_test.go) problem.
 
-Therefore, greed and greedy algorithms may not always produce optimal solutions if the local optimum does not equal the global optimum. However, they can be useful for approximating solutions in cases where exact answers are not required.
+Therefore, greed and greedy algorithms may not always produce optimal solutions if the local optimum does not equal the global optimum. However, they can be useful for approximating solutions where exact answers are not required.
 
 ## Implementation
 
@@ -25,7 +25,7 @@ The time complexity of a greedy algorithm depends on the specific problem being 
 
 ## Application
 
-Greedy algorithms can be applied to optimization problems where the aim is to optimize a specific objective function or maximize or minimize a certain value.
+Greedy algorithms can be applied to optimization problems in which the aim is to optimize a specific objective function or maximize or minimize a certain value.
 
 ## Rehearsal
 
