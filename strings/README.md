@@ -33,7 +33,7 @@ func main() {
 
 Strings have the same complexity as [arrays](../array/) and slices in Go.
 
-Unlike many other programming languages [regular expressions](https://golang.org/pkg/regexp/) are guaranteed to have O(n) time complexity in Go, allowing efficient string pattern matching.
+Unlike many other programming languages, [regular expressions](https://golang.org/pkg/regexp/) are guaranteed to have O(n) time complexity in Go, allowing efficient string pattern matching.
 
 ## Application
 

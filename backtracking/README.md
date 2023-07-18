@@ -15,7 +15,7 @@ Backtracking algorithms are typically implemented in these steps:
 
 ## Complexity
 
-The time complexity of backtracking algorithms may vary depending on the problem at hand. However they generally require iterating through possible alternatives and checking for validity at each step. Although backtracking may be the only feasible approach to certain problems, it does not always guarantee an optimal solution. Pruning, which involves eliminating known invalid options before iterating through the alternatives, is an effective technique to improve the time complexity of backtracking algorithms.
+The time complexity of backtracking algorithms may vary depending on the problem at hand. However, they generally require iterating through possible alternatives and checking for validity at each step. Although backtracking may be the only feasible approach to certain problems, it does not always guarantee an optimal solution. Pruning, which involves eliminating known invalid options before iterating through the alternatives, is an effective technique to improve the time complexity of backtracking algorithms.
 
 ## Application
 

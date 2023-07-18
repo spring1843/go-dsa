@@ -9,10 +9,10 @@ TestEmployeeHeadCount tests solution(s) with the following signature and problem
 
 	HeadCount(employeeID int) int
 
-Head count of a person in an organization is 1 + the number of all their reports
+Headcount of a person in an organization is 1 + the number of all their reports
 (direct and indirect). Given a list of employee IDs and their direct reports in each line like
 `1,4,5`, `5,7`, `4`, `7`. Where 1 has two direct reports (4 and 5); 5 has one report (7);
-4 and 5 have no reports; Return the head count of a given employee ID. For example head
+4 and 5 have no reports; Return the headcount of a given employee ID. For example head
 count of 7 is 1, and headcount of 1 is 4.
 */
 func TestEmployeeHeadCount(t *testing.T) {

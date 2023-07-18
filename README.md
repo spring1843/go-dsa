@@ -106,7 +106,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Iteratively Implement BFS and DFS](./graph/iterative_traversal_test.go)
         * [Is Graph a DAG](./graph/is_dag_test.go)
         * [Topological Sort](./graph/topological_sort_test.go)
-        * [Employee Head Count](./graph/employee_headcount_test.go)
+        * [Employee Headcount](./graph/employee_headcount_test.go)
         * [Remove Invalid Parentheses](./graph/remove_invalid_parentheses_test.go)
         * [Cheapest Flights](./graph/cheapest_flights_test.go)
         * [Word Ladder](./graph/word_ladder_test.go)
