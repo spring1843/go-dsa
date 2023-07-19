@@ -84,6 +84,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Climbing Stairs](./recursion/climbing_stairs_test.go)
         * [Exponentiation](./recursion/exponentiation_test.go)
         * [Regular Expressions Matching](./recursion/regular_expressions_test.go)
+        * [Expression Operators](./recursion/expression_operators_test.go)
     * [Divide and Conquer](./dnc//README.md)
         * [Binary Search](./dnc/binary_search_test.go)
         * [Square Root with Binary Search](./dnc/square_root_test.go)
