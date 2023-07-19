@@ -88,3 +88,4 @@ Queues are widely utilized in solving graph-related problems and managing capaci
 * [Is Binary Tree Symmetrical](./is_tree_symmetrical_test.go), [Solution](./is_tree_symmetrical.go)
 * [Generate Binary Numbers](./generate_binary_numbers_test.go), [Solution](./generate_binary_numbers.go)
 * [Find The Maximum Sub-array of Length K](./maximum_of_sub_arrays_test.go), [Solution](./maximum_of_sub_arrays.go)
+* [String Permutations](./string_permutations_test.go), [Solution](./string_permutations.go)

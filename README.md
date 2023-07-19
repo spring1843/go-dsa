@@ -55,6 +55,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Is Binary Tree Symmetrical](./queue/is_tree_symmetrical_test.go)
         * [Generate Binary Numbers](./queue/generate_binary_numbers_test.go)
         * [Find The Maximum Sub-array of Length K](./queue/maximum_of_sub_arrays_test.go)
+        * [String Permutations](./queue/string_permutations_test.go)
     * [Hash Tables](./hashtable/README.md)
         * [Find Missing Number](./hashtable/missing_number_test.go)
         * [List Elements Summing Up to K](./hashtable/sum_up_to_k_test.go)
