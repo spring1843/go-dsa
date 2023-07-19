@@ -95,6 +95,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Division without multiplication or division operators](./bit/division_without_operators_test.go)
         * [Middle without division](./bit/middle_without_division_test.go)
         * [Addition without using plus (+) or any other arithmetic operators](./bit/addition_without_operators_test.go)
+        * [Power of Two](./bit/is_power_of_two_test.go)
         * [Maximum without if conditions](./bit/max_function_without_conditions_test.go)
         * [Oddly Repeated Number](./bit/oddly_repeated_number_test.go)
     * [Backtracking](./backtracking//README.md)
