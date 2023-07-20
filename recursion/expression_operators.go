@@ -16,13 +16,11 @@ func expressionOperatorsHelper(list []int, current int, operators string, target
 		return ""
 	}
 
-	// Try with the + operator
 	result := expressionOperatorsHelper(list[1:], current+list[0], operators+"+", target)
 	if result != "" {
 		return result
 	}
 
-	// Try with the - operator
 	result = expressionOperatorsHelper(list[1:], current-list[0], operators+"-", target)
 	if result != "" {
 		return result
