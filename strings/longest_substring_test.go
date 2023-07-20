@@ -20,6 +20,7 @@ func TestLongestSubstrings(t *testing.T) {
 		{"a", ""}, // No occurrence of sequence of two characters
 		{"ab", "ab"},
 		{"abcc", "bcc"},
+		{"aabbc", "aabb"},
 		{"ada", "ada"},
 		{"dafff", "afff"},
 		{"assdeeeddfffha", "deeedd"},
