@@ -103,6 +103,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Permutations](./backtracking/permutations_test.go)
         * [Generate Parentheses](./backtracking/generate_parentheses_test.go)
         * [Phone Letter Combinations](./backtracking/phone_letter_combinations_test.go)
+        * [Maze](./backtracking/maze_test.go),
         * [Sudoku](./backtracking/sudoku_test.go)
         * [N Queens](./backtracking/n_queens_test.go)
     * [Graphs](./graph/README.md)
