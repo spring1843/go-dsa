@@ -1,5 +1,6 @@
 package recursion
 
+// ExpressionOperators solves the problem in O(2^n) time and O(n) space.
 func ExpressionOperators(list []int, target int) string {
 	if len(list) <= 1 {
 		return ""
