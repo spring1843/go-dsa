@@ -15,9 +15,9 @@ and finish coordinates in the same format, find a path from start to finish. ret
 a string of directions like `lrud` (left, right, up, down) to get a robot from
 start to finish.
 
-The robot can only move in the four left, right, up and down directions and not
+The robot can only move in the four left, right, down and up directions and not
 through walls. The robot does not know where the finish line is so it has to
-explore every cell from left to right and top to bottom to find it.
+explore every possible cell in the order of directions given.
 */
 func TestMaze(t *testing.T) {
 	tests := []struct {
@@ -33,6 +33,7 @@ func TestMaze(t *testing.T) {
 		{10, 10, [][2]int{}, [2]int{0, 0}, [2]int{0, 1}, "r"},
 		{5, 5, [][2]int{}, [2]int{0, 0}, [2]int{4, 4}, "rrrrdlllldrrrrdlllldrrrr"},
 		{5, 5, [][2]int{{1, 1}, {1, 2}, {1, 3}, {2, 3}, {3, 3}, {3, 4}}, [2]int{0, 0}, [2]int{2, 4}, "rrrrdd"},
+		{5, 5, [][2]int{{0, 0}, {0, 1}, {0, 2}, {0, 3}, {1, 3}, {2, 1}, {2, 2}, {2, 3}, {3, 1}, {4, 1}}, [2]int{4, 0}, [2]int{1, 2}, "uuurr"},
 		{5, 5, [][2]int{{1, 0}, {1, 1}, {1, 2}, {1, 3}, {3, 1}, {3, 2}, {3, 3}, {3, 4}}, [2]int{0, 0}, [2]int{4, 4}, "rrrrddllllddrrrr"},
 		{5, 5, [][2]int{{1, 0}, {1, 1}, {1, 4}, {1, 3}, {3, 1}, {3, 2}, {3, 3}, {3, 4}}, [2]int{0, 0}, [2]int{4, 4}, "rrddllddrrrr"},
 	}
