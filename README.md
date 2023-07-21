@@ -8,6 +8,7 @@
 
 Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed as a dynamic, hands-on resource for learning and practicing data structures and algorithms in the Go programming language.
 
+* At least six problems and solutions for each of the fourteen topics
 * Completely free, community-driven, and continuously evolving
 * Executes and comes with 100% test coverage, ensuring a high level of quality
 * Ability to use in your favorite IDE, editor, or web browser
@@ -122,11 +123,13 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Activity Selector](./greedy/activity_selector_test.go)
         * [Knapsack](./greedy/knapsack_test.go)
         * [Jump Game](./greedy/jump_game_test.go)
+        * [Maximum Number](./greedy/max_number_test.go)
         * [Task Scheduling](./greedy/task_scheduling_test.go)
     * [Dynamic Programming](./dp/README.md)
         * [Rod Cutting](./dp/rod_cutting_test.go)
         * [Sum Up to Number](./dp/sum_up_to_integer_test.go)
         * [House Robber](./dp/house_robber_test.go)
+        * [Interleaving String](./dp/interleaving_string_test.go)
         * [Minimum Deletion to Make a Palindrome](./dp/minimum_deletion_to_make_palindrome_test.go)
         * [Word Distance](./dp/word_distance_test.go)
 
