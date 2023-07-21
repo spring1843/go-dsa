@@ -10,9 +10,9 @@ TestMaxNumber tests solution(s) with the following signature and problem descrip
 
 	func MaxNumber(number1, number2 []int, n int) []int
 
-Given two numbers represented as list of integers, and an integer n, return the largest
-possible integer with n digits that can be constructed by merging digits from two numbers
-while respecting the order of digits in each number.
+Given two numbers represented as list of positive integers, and an integer n, return the
+largest possible integer with n digits that can be constructed by merging digits from two
+numbers while respecting the order of digits in each number.
 
 For example given {5, 4, 3, 2, 1}, {9, 8, 7, 6} and 9, it should return a 9 digit number
 {9, 8, 7, 6, 5, 4, 3, 2, 1}
