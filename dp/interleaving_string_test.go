@@ -30,6 +30,10 @@ func TestIsInterleavingString(t *testing.T) {
 		{"a", "bdc", "abdc", true},
 		{"a", "bdc", "abd", false},
 		{"a", "bdc", "abc", false},
+		{"bdc", "a", "abc", false},
+		{"bcd", "a", "abcd", true},
+		{"abcd", "a", "aabcd", true},
+		{"aaac", "aaab", "aaaaaabc", true},
 	}
 
 	for i, test := range tests {
