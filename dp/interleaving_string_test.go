@@ -13,9 +13,9 @@ Given three strings a,b, and input, return true if input is made by interleaving
 it contains all their characters while maintaining their order.
 
 Example:
-"a", "bcd", "abcd" would return true
-"a", "bdc", "abd" would return false, because c is missing
-"a", "bdc", "abc" would return false, because d is missing
+"a", "bcd", "abcd" would return true.
+"a", "bdc", "abd" would return false, because c is missing.
+"a", "bdc", "abc" would return false, because d is missing.
 */
 func TestIsInterleavingString(t *testing.T) {
 	tests := []struct {
