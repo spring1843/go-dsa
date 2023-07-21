@@ -122,6 +122,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Activity Selector](./greedy/activity_selector_test.go)
         * [Knapsack](./greedy/knapsack_test.go)
         * [Jump Game](./greedy/jump_game_test.go)
+        * [Maximum Number](./greedy/max_number_test.go)
         * [Task Scheduling](./greedy/task_scheduling_test.go)
     * [Dynamic Programming](./dp/README.md)
         * [Rod Cutting](./dp/rod_cutting_test.go)

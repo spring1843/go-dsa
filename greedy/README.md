@@ -29,8 +29,9 @@ Greedy algorithms can be applied to optimization problems in which the aim is to
 
 ## Rehearsal
 
-* [Maximum Stock Profit](max_stock_profit_test.go), [Solution](max_stock_profit.go)
-* [Activity Selector](activity_selector_test.go), [Solution](activity_selector.go)
-* [Knapsack](knapsack_test.go), [Solution](knapsack.go)
-* [Jump Game](jump_game_test.go), [Solution](jump_game.go)
-* [Task Scheduling](task_scheduling_test.go), [Solution](task_scheduling.go)
+* [Maximum Stock Profit](./max_stock_profit_test.go), [Solution](./max_stock_profit.go)
+* [Activity Selector](./activity_selector_test.go), [Solution](./activity_selector.go)
+* [Knapsack](./knapsack_test.go), [Solution](./knapsack.go)
+* [Jump Game](./jump_game_test.go), [Solution](./jump_game.go)
+* [Maximum Number](./max_number_test.go), [Solution](./max_number.go)
+* [Task Scheduling](./task_scheduling_test.go), [Solution](./task_scheduling.go)
