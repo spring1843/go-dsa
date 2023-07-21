@@ -15,7 +15,7 @@ largest possible integer with n digits that can be constructed by merging digits
 numbers while respecting the order of digits in each number.
 
 For example given {5, 4, 3, 2, 1}, {9, 8, 7, 6} and 9, it should return a 9 digit number
-{9, 8, 7, 6, 5, 4, 3, 2, 1}
+{9, 8, 7, 6, 5, 4, 3, 2, 1}.
 */
 func TestMaxNumber(t *testing.T) {
 	tests := []struct {
