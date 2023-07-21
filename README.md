@@ -129,6 +129,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Rod Cutting](./dp/rod_cutting_test.go)
         * [Sum Up to Number](./dp/sum_up_to_integer_test.go)
         * [House Robber](./dp/house_robber_test.go)
+        * [Interleaving String](./dp/interleaving_string_test.go)
         * [Minimum Deletion to Make a Palindrome](./dp/minimum_deletion_to_make_palindrome_test.go)
         * [Word Distance](./dp/word_distance_test.go)
 
