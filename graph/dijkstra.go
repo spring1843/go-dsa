@@ -19,6 +19,7 @@ type (
 	verticesHeap []*dijkstraVertex
 )
 
+// Dijkstra solves the problem in O(ElogV) time and O(V) space.
 func Dijkstra(graph []*dijkstraVertex, source *dijkstraVertex) {
 	for _, vertex := range graph {
 		vertex.distance = math.MaxInt

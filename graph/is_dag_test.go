@@ -6,10 +6,7 @@ import "testing"
 TestIsDAG tests solution(s) with the following signature and problem description:
 
 	Vertex struct {
-			// Val is the value of the vertex
 			Val int
-
-			// The edges that this Vertex is connected to
 			Edges []*Vertex
 	}
 	func IsDAG(graph []*Vertex) bool
