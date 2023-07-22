@@ -59,7 +59,6 @@ func TestDijkstra(t *testing.T) {
 			distances: []int{0, 1, 3, 4, 6, 10},
 		},
 	}
-
 	addEdges(tests)
 
 	for i, test := range tests {
@@ -71,6 +70,7 @@ func TestDijkstra(t *testing.T) {
 		}
 	}
 }
+
 func newGraph(edges int) []*dijkstraVertex {
 	graph := make([]*dijkstraVertex, edges)
 	for i := 0; i < edges; i++ {
