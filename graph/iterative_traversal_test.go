@@ -8,6 +8,10 @@ import (
 /*
 TestIterativeTraversal tests solution(s) with the following signature and problem description:
 
+	Vertex struct {
+			Val int
+			Edges []*Vertex
+	}
 	func IterativeTraversal(graph []*Vertex) ([]int, []int)
 
 Implement BFS and DFS on a graph without using recursion, and return the value of each vertex

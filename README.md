@@ -114,6 +114,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Employee Headcount](./graph/employee_headcount_test.go)
         * [Remove Invalid Parentheses](./graph/remove_invalid_parentheses_test.go)
         * [Cheapest Flights](./graph/cheapest_flights_test.go)
+        * [Dijkstra's Algorithm](./graph/dijkstra_test.go)
         * [Word Ladder](./graph/word_ladder_test.go)
         * [Network Delay Time](./graph/network_delay_time_test.go)
         * [Number of Islands](./graph/number_of_islands_test.go)

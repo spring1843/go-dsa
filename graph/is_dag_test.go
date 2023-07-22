@@ -5,6 +5,10 @@ import "testing"
 /*
 TestIsDAG tests solution(s) with the following signature and problem description:
 
+	Vertex struct {
+			Val int
+			Edges []*Vertex
+	}
 	func IsDAG(graph []*Vertex) bool
 
 Given a directed graph determine if it's a DAG or not. A directed acyclic graph (DAG)

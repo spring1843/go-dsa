@@ -5,11 +5,11 @@ A graph is a collection of vertices connected through directed or undirected edg
 ```ASCII
 [Figure 1] Graph Examples - Numbers, arrows, and numbers in brackets represent vertices, edges, and edge weights.
 
-     5		3     5	  3              6   	       1 - Is it a DAG?
+     5		3     5	  3              5   	       1 - Is it a DAG?
   ↗  ↑  ↖     ↗   ↘    ↖   ↘	      (4)  ↖ (1)	 2- Is it a connected graph?
  2 → 3 ← 4   2     4    4 ← 2      2 ─────→ 4        A 1 1
   ↖  ↑  ↗     ↖   ↙        ↗   (1) ↑ (2)   ↗ (1)     B 0 1
-     1		1         1        1 ──→ 5	     C 1 0
+     1		1         1        1 ──→ 3	     C 1 0
 						     D 1 1
     (A)	       (B)	 (C)  	      (D)
 ```
@@ -255,58 +255,7 @@ Discovery of a back edge in a DFS algorithm indicates a cyclic graph.
 
 ### Dijkstra's Algorithm
 
-A [greedy](../greedy) algorithm that uses BFS-like ideas and a minimum [heap](../heap) to solve single-source shortest path problems in edge-weighted directed graphs like (D) in _Figure 1_.
-
- ```Go
-package graph_test
-
-import "container/heap"
-
-type (
-    dijkstraVertex struct {
-        val int
-        distance int
-        discovered bool
-        edges map[]*dijkstraVertex
-    }
-    verticesHeap []*dijkstraVertex
-)
-
-func dijkstra(graph []*timedVertex) {
-    h := new(pointsHeap)
-	for _, vertex := range graph {
-		heap.Push(h, vertex)
-    }
-
-    s := make(map[*Vertex]struct{})
-    for h.Len() != 0 {
-        u := h.Pop().(*Vertex)
-        u.discovered = true
-
-        for _, v := range u.Edges {
-            if v.discovered {
-                continue
-            }
-
-            if v.distance + cvw < w.distance {
-                w.distance
-            }
-        }
-    }
-}
-
-func (p verticesHeap) Len() int            { return len(p) }
-func (p verticesHeap) Less(i, j int) bool  { return p[i].distance < p[j].distance }
-func (p verticesHeap) Swap(i, j int)       { p[i], p[j] = p[j], p[i] }
-func (p *verticesHeap) Push(x interface{}) { *p = append(*p, x.(*Vertex)) }
-
-func (p *pointsHeap) Pop() interface{} {
-	old := *p
-	tmp := old[len(old)-1]
-	*p = old[0 : len(old)-1]
-	return tmp
-}
-```
+A [greedy](../greedy) algorithm that uses BFS-like ideas and a minimum [heap](../heap) to solve single-source shortest path problems in edge-weighted directed graphs like finding the shortest path between 1 and 5 in graph (D) in _Figure 1_. The [Dijkstra's Algorithm](./dijkstra_test.go) rehearsal shows an implementation of it.
 
 ## Complexity
 
@@ -326,6 +275,7 @@ Graph algorithms find extensive usage in addressing real-world challenges, inclu
 * [Employee Headcount](./employee_headcount_test.go), [Solution](./employee_headcount.go)
 * [Remove Invalid Parentheses](./remove_invalid_parentheses_test.go), [Solution](./remove_invalid_parentheses.go)
 * [Cheapest Flights](./cheapest_flights_test.go), [Solution](./cheapest_flights.go)
+* [Dijkstra's Algorithm](./dijkstra_test.go), [Solution](./dijkstra.go)
 * [Word Ladder](./word_ladder_test.go), [Solution](./word_ladder.go)
 * [Network Delay Time](./network_delay_time_test.go), [Solution](./network_delay_time.go)
 * [Number of Islands](./number_of_islands_test.go), [Solution](./number_of_islands.go)
