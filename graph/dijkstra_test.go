@@ -7,6 +7,16 @@ import (
 /*
 TestDijkstra tests solution(s) with the following signature and problem description:
 
+	dijkstraVertex struct {
+		val        int
+		distance   int
+		discovered bool
+		edges      []*weightedEdge
+	}
+	weightedEdge struct {
+		edge   *dijkstraVertex
+		weight int
+	}
 	func Dijkstra(graph []*dijkstraVertex, source *dijkstraVertex)
 
 Implement Dijkstra's algorithm. Given a single sourced edge weighted graph, find the

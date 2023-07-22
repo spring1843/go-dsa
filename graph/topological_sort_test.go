@@ -15,6 +15,11 @@ var readmeGraphs = map[string][][]int{
 /*
 TestTopologicalSort tests solution(s) with the following signature and problem description:
 
+	type VertexWithIngress struct {
+		Val any
+		Edges []*VertexWithIngress
+		Ingress int
+	}
 	func TopologicalSort(graph []*VertexWithIngress) ([]int, error)
 
 In a DAG the topological order returns elements such that if there's a path from v(i) to
