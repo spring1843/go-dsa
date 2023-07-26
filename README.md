@@ -8,10 +8,10 @@
 
 Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed as a dynamic, hands-on resource for learning and practicing data structures and algorithms in the Go programming language.
 
-* At least six problems and solutions for each of the fourteen topics
-* Completely free, community-driven, and continuously evolving
-* Executes and comes with 100% test coverage, ensuring a high level of quality
-* Ability to use in your favorite IDE, editor, or web browser
+* More than one hundred rehearsal problems, at least six problems for each of the fifteen topics
+* Executable and comes with 100% test coverage, ensuring correctness and quality
+* Completely free, community-editable, and continuously evolving
+* Ability to study and practice in your favorite IDE, editor, or web browser
 * Pure Go, no third-party libraries, Guaranteed forward compatibility
 
 ## 📚 Table of Contents
@@ -75,6 +75,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Kth Largest Element](./heap/kth_largest_element_test.go)
         * [Merge Sorted Lists](./heap/merge_sorted_list_test.go)
         * [Median in a Stream](./heap/median_in_a_stream_test.go)
+        * [Regular Numbers](./heap/regular_numbers_test.go)
         * [Kth Closest Points to the Center](./heap/k_closest_points_to_origin_test.go)
         * [Sliding Maximum](./heap/sliding_maximum_test.go)
         * [Heap Sort](./heap/heap_sort_test.go)
