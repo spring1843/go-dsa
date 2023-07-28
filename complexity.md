@@ -117,7 +117,6 @@ The time complexity of O(n*Log n) is commonly observed when it is necessary to i
 * [Heap Sort](./heap/heap_sort.go)
 * [Knapsack](./greedy/knapsack.go)
 * [Find Anagrams](./hashtable/find_anagrams.go)
-* In order traversal of a [Binary Search Tree](./tree/README.md)
 
 ### Polynomial - O(n^2)
 

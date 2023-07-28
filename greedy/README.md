@@ -8,8 +8,6 @@ Therefore, greed and greedy algorithms may not always produce optimal solutions 
 
 ## Implementation
 
-The process for developing a greedy algorithm can be structured into six steps.
-
 The process for developing a greedy algorithm can be broken down into six steps:
 
 1. Identify the optimal problem structure.

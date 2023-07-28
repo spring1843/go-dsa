@@ -2,7 +2,7 @@
 
 Recursion is a computational technique that implements a [divide-and-conquer](../dnc) approach to problem-solving by breaking down a complex problem into smaller sub-problems. It consists of two components:
 
-* One or more base cases that provide output for simple inputs
+* One or more base cases that provide output for simple inputs and terminate recursion
 * A recursive case that combines the outputs obtained from recursive function calls to generate a solution for the original problem.
 
 Although recursions enhance code readability, they are usually inefficient and challenging to debug. Consequently, unless they provide a more efficient solution to a problem, such as in the case of [quicksort](../dnc/quick_sort_test.go), they are generally not preferred.

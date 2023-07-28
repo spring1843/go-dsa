@@ -64,8 +64,8 @@ func main() {
 	nums = nums[:len(nums)-1] // drop last element
 	nums = nums[1:]           // drop first element
 	nums = nums[1:]           // all elements from index 1 to the end
-	nums = nums[:2]           // all elements from index 0 to 2
-	nums = nums[1:2]          // the element from index 1 to 2
+	nums = nums[:2]           // all elements from index 0 to 1
+	nums = nums[1:2]          // the element at index 1
 	fmt.Println(nums)         // Prints [4]
 }
 ```

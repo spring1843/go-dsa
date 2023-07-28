@@ -88,11 +88,11 @@ When working with graphs, searching to solve problems is often necessary. The al
 * **Breadth First Search - BFS** used to find the shortest path
 * **Depth First Search - DFS** often a subroutine, in another algorithm. Used in maze traversal, cycle finding, and pathfinding
 
-Both BFS and DFS can be [implemented iteratively using a container (queue or stack)](./iterative_traversal_test.go).
+BFS can be implemented iteratively using a [queue](../queue/) and DFS can be implemented iteratively using a [stack](../stack/). This is demonstrated in the [iterative traversal](./iterative_traversal_test.go) rehearsal.
 
 #### Breadth First Search - BFS
 
-BFS is a non-recursive algorithm that employs a [queue](../queue) and is a generalization of [post-order traversal](../tree) in a tree. When provided with a graph G and a vertex V, BFS systematically explores all nodes in G that are reachable from V, as illustrated in the following example:
+BFS is a non-recursive algorithm that employs a [queue](../queue). When provided with a graph G and a vertex V, BFS systematically explores all nodes in G that are reachable from V, as illustrated in the following example:
 
 ```Go
 package main

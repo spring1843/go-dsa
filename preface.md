@@ -14,7 +14,7 @@ This collection became a valuable resource, and I sought to share its benefits w
 
 ## Choosing Go as the Language
 
-Go initially aimed to replace C and C++, an ambitious goal given that operating systems like Linux and Windows and programming languages like Java and Python are written in C and C++. Go has matured over the past decade into a robust and solid option, finding its niche particularly in systems engineering where reliability and performance are essential.
+Go initially aimed to be a successor for C++, an ambitious goal given that operating systems like Linux and Windows and programming languages like Java and Python are written in C and C++. Go has matured over the past decade into a robust and solid option, finding its niche particularly in systems engineering where reliability and performance are essential.
 
 Go is simple. This simplicity is evident in several aspects. The language features few [keywords](https://go.dev/ref/spec#Keywords) that programmers from any background would likely recognize. Its syntax is minimal, offering a single type of loop, and no brackets are needed for conditions in if or for statements. The Go standard library, written in Go and assembly language, is frequently used not only to understand the internals of Go but also to learn how to write idiomatic Go code. Go maintains backward compatibility for its standard API, and significant changes require approval from the three original authors, ensuring that the language does not become a "Frankenstein".
 

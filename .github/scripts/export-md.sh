@@ -8,6 +8,7 @@ source "${SCRIPT_DIR}/sections.sh"
 
 declare -a files=(
   README.md
+  preface.md
   complexity.md
 )
 files+=("${sections[@]/%//README.md}")
