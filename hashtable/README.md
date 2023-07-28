@@ -1,6 +1,6 @@
 # Hash Table
 
-Hash tables are a fundamental data structure that operates based on key-value pairs and enables constant-time operations for lookup, insertion, and deletion. Hash tables use immutable keys that can be strings or integers among other things. However, in more complex applications, a hashing function, and different collision resolution methods such as separate chaining, linear probing, quadratic probing, and double hashing, can be used to ensure efficient performance.
+Hash tables are a fundamental data structure that operates based on key-value pairs and enables constant-time operations for lookup, insertion, and deletion. Hash tables use immutable keys that can be strings or integers among other things. However, in more complex applications, a hashing function, and different collision resolution methods such as separate chaining, linear probing, quadratic probing, and double hashing, can be used.
 
 ## Implementation
 

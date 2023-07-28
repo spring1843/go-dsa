@@ -10,8 +10,8 @@ Traversing a tree means exploring every node in a tree and performing some work 
      4			Traversal Name		Order 		        Example
     / \
    /   \		In-Order                left,self,right		1,2,3,4,5,6,7
-  2     6		Pre-Order,DFS		self,left,right		4,2,1,3,6,5,7
- / \   / \		Post-Order,BFS		left,right,self		1,3,2,5,7,6,4
+  2     6		Pre-Order 		self,left,right		4,2,1,3,6,5,7
+ / \   / \		Post-Order		left,right,self		1,3,2,5,7,6,4
 1   3 5   7
 ```
 
