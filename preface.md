@@ -1,6 +1,6 @@
 # Preface
 
-## Purpose of the project
+## Purpose
 
 My passion for programming began at a young age, and my first encounter with solving a programming challenge at ten years old left me exhilarated. This excitement ignited a lifelong pursuit of coding. As I progressed to studying computer science at university, my goal was to delve into more profound and efficient coding techniques. Among the subjects that were offered, the ones that resonated most with this objective were Data Structures and Algorithms.
 
@@ -10,7 +10,7 @@ Today, Data Structures and Algorithms form the foundational knowledge in compute
 
 Learning Data Structures and Algorithms is a journey that demands extensive reading, contemplation, and practice. Furthermore, this subject is also susceptible to being easily forgotten over time. To tackle this challenge, I embarked on compiling concise notes and saving the problems I solved for my personal use.
 
-This collection became a valuable resource, and I sought to share its benefits with others. While contemplating publishing a book, I realized that offering a public code repository has several advantages. Primarily a code base unlike a book is executable and testable, therefore much less prone to errors. Moreover, a public code repository can be continually improved by the community whereas a book is fixed in time.
+This collection became a valuable resource, and I sought to share its benefits with others. While contemplating publishing a book, I realized that offering a public code repository has several advantages. Primarily a codebase unlike a book is executable and testable, therefore much less prone to errors. Moreover, a public code repository can be continually improved by the community whereas a book is fixed in time.
 
 ## Choosing Go as the Language
 
@@ -18,13 +18,22 @@ Go initially aimed to replace C and C++, an ambitious goal given that operating 
 
 Go is simple. This simplicity is evident in several aspects. The language features few [keywords](https://go.dev/ref/spec#Keywords) that programmers from any background would likely recognize. Its syntax is minimal, offering a single type of loop, and no brackets are needed for conditions in if or for statements. The Go standard library, written in Go and assembly language, is frequently used not only to understand the internals of Go but also to learn how to write idiomatic Go code. Go maintains backward compatibility for its standard API, and significant changes require approval from the three original authors, ensuring that the language does not become a "Frankenstein".
 
-Go is compiled into machine language for multiple operating systems. This eliminates the need to ship the code itself like Ruby or download a virtual machine like Java and runtime libraries like Node.JS, making it convenient for distribution and execution.
+Go is compiled into machine language for multiple operating systems. This eliminates the need to ship the code itself like Ruby or download a virtual machine like Java and runtime libraries like Node.js, making it convenient for distribution and execution.
 
 Go excels in handling concurrency, allowing seamless utilization of multiple CPU cores. While being faster than dynamic programming languages like Python, Go still maintains garbage collection for memory management which theoretically makes it slower than languages with no garbage collection like Rust.
 
 Being a strongly typed language, Go ensures code stability, while offering the modern conveniences found in modern dynamic scripting languages like Node.js.
 
-Go is a new language, and it comes with built-in tooling for testing, fuzzing, benchmarking, formatting, vetting, and package management, all of which are secondary or external additions to much older languages like C, C++ and Java.
+Go is a new language, and it comes with built-in tooling for testing, fuzzing, benchmarking, formatting, vetting, race detection, and package management, all of which are secondary or external additions to much older languages like C, C++ and Java. It also comes with built-in understanding of more modern concepts like code repositories.
+
+Go is well organized. Go is strict in how a Go project should be formatted and organized in terms of directories, and files. This makes all Go projects similar to each other and therefore easy to navigate.
+
+## Common Objections to Go
+
+1. Fast Development: Some developers initially find it slower to work with Go due to its unique syntax and conventions. However, once developers become familiar with the language and its ecosystem, Go allows for fast and efficient code writing. While it may require slightly more time to write code in a strongly typed and compiled language like Go, the trade-off is increased code stability and fewer issues in production.
+2. Too much error handling: Handling errors in Go is a deliberate design choice for ensuring program stability. Go developers invest time in ensuring their programs handle errors appropriately during execution. This practice leads to more robust and reliable code.
+3. No generics: This is no longer the case. Go has support for generics starting from version 1.18.
+4. Not suitable for limited environments: While Go is a general purpose programming language, it may not be suitable for all environments. For example, it may not be suitable for embedded systems without an operating system. Additionally, Go might not be the best choice for creating user interfaces in front-end web or mobile development. However, Go can be used to create WebAssembly and libraries for other languages.
 
 ## Target Audience
 
@@ -32,9 +41,22 @@ This resource is suitable for those with at least a beginner's understanding of 
 
 For individuals unfamiliar with Go, the [Tour of Go](https://go.dev/tour/welcome/1) is an excellent starting point. As for Data Structures and Algorithms, taking an instructor-led course is recommended for an introduction.
 
+## How to use
+
+* Read the README.md file of each subject.
+* Solve the rehearsal problems.
+* Read the problem description.
+* Copy the contents of each `*_test.go` file into [Go Playground](https://go.dev/play/) or your favorite development environment.
+* Change the first line from `package SOME_PACKAGE_NAME` to `package main`.
+* Look at the sample input in the `*_test.go` file.
+* Create a solution function by looking at the function signature in the test file.
+* Implement your own solution.
+* Review the provided solution and compare it to your own.
+* Come back and rehearse.
+
 ## Note on Problem Sources
 
-While I created a few rehearsal problems in this collection, the majority are well-known challenges found in multiple books and online resources. Due to their age and widespread use, pinpointing their origins can be challenging. The resources listed in the next section contain many of these problems, and even they do not mention the origin of these problems in many cases.
+While I created a few rehearsal problems in this collection, the majority are well-known challenges found in multiple books and online resources. Due to their age and widespread use, pinpointing their origins can be challenging. The additional resources listed next contain many of these problems, and even they do not mention the origin of these problems in many cases.
 
 ## Additional Resources
 
