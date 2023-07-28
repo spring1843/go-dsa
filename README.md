@@ -16,7 +16,8 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 
 ## 📚 Table of Contents
 
-* [Complexity Analysis](complexity.md)
+* [Preface](./preface.md)
+* [Complexity Analysis](./complexity.md)
 * Data Structures
     * [Arrays](./array/README.md)
         * [Reverse Array In-place](./array/reverse_inplace_test.go)
