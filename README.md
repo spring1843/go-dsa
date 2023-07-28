@@ -16,7 +16,8 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 
 ## 📚 Table of Contents
 
-* [Complexity Analysis](complexity.md)
+* [Preface](./preface.md)
+* [Complexity Analysis](./complexity.md)
 * Data Structures
     * [Arrays](./array/README.md)
         * [Reverse Array In-place](./array/reverse_inplace_test.go)
@@ -134,18 +135,6 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Interleaving String](./dp/interleaving_string_test.go)
         * [Minimum Deletion to Make a Palindrome](./dp/minimum_deletion_to_make_palindrome_test.go)
         * [Word Distance](./dp/word_distance_test.go)
-
-## 🛠️ How to use
-
-* Read the README.md file of each subject.
-* Solve the rehearsal problems.
-* Read the problem description.
-* Copy the contents of each `*_test.go` file into [Go Playground](https://go.dev/play/).
-* Change the first line from `package SOME_PACKAGE_NAME` to `package main`.
-* Look at the sample input in the `*_test.go` file.
-* Create a solution function by looking at the function signature in the test file.
-* Implement your own solution.
-* Review the provided solution and compare it to your own.
 
 ## 📋 Outline
 
