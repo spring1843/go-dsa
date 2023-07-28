@@ -33,7 +33,7 @@ Go is well organized. Go is strict in how a Go project should be formatted and o
 1. Fast Development: Some developers initially find it slower to work with Go due to its unique syntax and conventions. However, once developers become familiar with the language and its ecosystem, Go allows for fast and efficient code writing. While it may require slightly more time to write code in a strongly typed and compiled language like Go, the trade-off is increased code stability and fewer issues in production.
 2. Too much error handling: Handling errors in Go is a deliberate design choice for ensuring program stability. Go developers invest time in ensuring their programs handle errors appropriately during execution. This practice leads to more robust and reliable code.
 3. No generics: This is no longer the case. Go has support for generics starting from version 1.18.
-4. Not suitable for limited environments: While Go is a general purpose programming language, it may not be suitable for all environments. For example, it may not be suitable for embedded systems without an operating system. Additionally, Go might not be the best choice for creating user interfaces in front-end web or mobile development. However, Go can be used to create WebAssembly and libraries for other languages.
+4. Not suitable for limited environments: While Go is a general purpose programming language, it may not be suitable for all environments. For example, it may not be suitable for embedded systems without an operating system. Additionally, Go might not be the best choice for creating user interfaces in frontend web or mobile development. However, Go can be used to create WebAssembly and libraries for other languages.
 
 ## Target Audience
 
