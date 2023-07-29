@@ -32,6 +32,7 @@ issues:
         - wsl
         - dupl
         - dupword
+        - forbidgo
 
 linters:
   enable-all: true

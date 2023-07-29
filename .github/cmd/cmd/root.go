@@ -14,15 +14,11 @@ var rootCmd = &cobra.Command{
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 func Execute() {
+	rootCmd.AddCommand(countRehearsalsCommand)
+	rootCmd.AddCommand(exportMDCommand)
+
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)
 	}
-
 	rootCmd.AddCommand()
-}
-
-// Register adds subcommands to the root command
-func Register() {
-	rootCmd.AddCommand(countRehearsalsCommand)
-	rootCmd.AddCommand(exportMDCommand)
 }
