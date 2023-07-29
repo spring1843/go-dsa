@@ -27,6 +27,6 @@ var countRehearsalsCommand = &cobra.Command{
 			}
 			count += len(matches)
 		}
-		fmt.Println(count)
+		fmt.Printf("%d\n", count)
 	},
 }

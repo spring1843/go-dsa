@@ -33,7 +33,7 @@ var exportMDCommand = &cobra.Command{
 			if err != nil {
 				log.Fatalf("Error reading file: %s", err)
 			}
-			fmt.Println(string(content))
+			fmt.Printf("%s\n", string(content))
 		}
 	},
 }
