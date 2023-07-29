@@ -16,6 +16,7 @@ var rootCmd = &cobra.Command{
 func Execute() {
 	rootCmd.AddCommand(countRehearsalsCommand)
 	rootCmd.AddCommand(exportMDCommand)
+	rootCmd.AddCommand(randomChallengeCommand)
 
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)
