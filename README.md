@@ -13,6 +13,8 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 * Completely free, community-editable, and continuously evolving
 * Ability to study and practice in your favorite IDE, editor, or web browser
 
+[![Random Challenge](./.github/assets/random_challenge.svg)](https://go.dev/play/p/XEUhCnHtlYF)
+
 ## 📚 Table of Contents
 
 * [Preface](./preface.md)
