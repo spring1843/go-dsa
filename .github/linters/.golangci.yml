@@ -32,9 +32,13 @@ issues:
         - wsl
         - dupl
         - dupword
-
 linters:
   enable-all: true
   enable:
     - revive
     - misspell
+
+linters-settings:
+  forbidigo:
+    forbid:
+      - 'ioutil\.*'

@@ -12,7 +12,6 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
 * Executable and comes with 100% test coverage, ensuring correctness and quality
 * Completely free, community-editable, and continuously evolving
 * Ability to study and practice in your favorite IDE, editor, or web browser
-* Pure Go, no third-party libraries, Guaranteed forward compatibility
 
 ## 📚 Table of Contents
 
