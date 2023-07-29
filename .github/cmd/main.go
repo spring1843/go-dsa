@@ -1,5 +1,7 @@
 package main
 
+import "github.com/spring1843/go-dsa/.github/cmd/cmd"
+
 func main() {
-	println("Hello World")
+	cmd.Execute()
 }
