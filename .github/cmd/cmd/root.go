@@ -21,7 +21,8 @@ func Execute() {
 	rootCmd.AddCommand()
 }
 
-func init() {
+// Register adds subcommands to the root command
+func Register() {
 	rootCmd.AddCommand(countRehearsalsCommand)
 	rootCmd.AddCommand(exportMDCommand)
 }
