@@ -32,8 +32,10 @@ issues:
         - wsl
         - dupl
         - dupword
-        - forbidgo
-
+linters-settings:
+  forbidigo:
+    forbid:
+      - 'ioutil\.*'
 linters:
   enable-all: true
   enable:
