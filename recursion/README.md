@@ -63,5 +63,6 @@ Recursion finds practical application within a range of algorithms, including [D
 * [Palindrome](./is_palindrome_test.go), [Solution](./is_palindrome.go)
 * [Climbing Stairs](./climbing_stairs_test.go), [Solution](./climbing_stairs.go)
 * [Exponentiation](./exponentiation_test.go), [Solution](./exponentiation.go)
+* [Multiplication](./multiplication_test.go), [Solution](./multiplication.go)
 * [Regular Expressions Matching](./regular_expressions_test.go), [Solution](./regular_expressions.go)
 * [Expression Operators](./expression_operators_test.go), [Solution](./expression_operators.go)
