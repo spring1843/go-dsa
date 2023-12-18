@@ -17,22 +17,25 @@ func LookAndTell(depth int) []string {
 	}
 
 	for i := 1; i < depth; i++ {
-		output = append(output, tell(output[i-1]))
+		output = append(output, generateNext(output[i-1]))
 	}
 	return output
 }
 
-func tell(n string) string {
+// generateNext generates the next number in the sequence.
+func generateNext(n string) string {
 	var step, what string
 	var count, until int
 	for until < len(n) {
-		count, what, until = findHowMany(n, until)
+		count, what, until = countConsequtiveDigits(n, until)
 		step += strconv.Itoa(count) + what
 	}
 	return step
 }
 
-func findHowMany(n string, until int) (int, string, int) {
+// counts the consecutive occurrences of a digit in a string,from a given position
+// returning count, digit and the new position
+func countConsequtiveDigits(n string, until int) (int, string, int) {
 	last := ""
 	count := 0
 	for until < len(n) {
