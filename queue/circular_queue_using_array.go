@@ -17,13 +17,8 @@ var ErrQueueAtMaxCapacity = errors.New("queue is at max capacity")
 
 // NewCircularQueue returns a fixed size circular queue.
 func NewCircularQueue(size int) *CircularQueue {
-	circular := make([]int, size)
-	for i := range circular {
-		circular[i] = emptyValue
-	}
-
 	return &CircularQueue{
-		data:  circular,
+		data:  make([]int, size),
 		rear:  -1,
 		size:  0,
 		front: 0,
@@ -48,6 +43,10 @@ func (queue *CircularQueue) enqueue(n int) error {
 
 // dequeue solves the problem in O(1) time and O(1) space.
 func (queue *CircularQueue) dequeue() (int, error) {
+	if queue.isEmpty() { // Check if queue is empty
+		return emptyValue, ErrQueueEmpty
+	}
+
 	tmp := queue.data[queue.front]
 	queue.data[queue.front] = emptyValue
 	queue.front++
@@ -64,4 +63,8 @@ func (queue *CircularQueue) isFull() bool {
 
 func (queue *CircularQueue) capacity() int {
 	return len(queue.data)
+}
+
+func (queue *CircularQueue) isEmpty() bool {
+	return queue.front == (queue.rear+1)%queue.capacity()
 }
