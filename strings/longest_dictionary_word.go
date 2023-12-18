@@ -1,27 +1,29 @@
 package strings
 
+import "strings"
+
 // LongestDictionaryWordContainingKey solves the problem in O(n) time and O(1) space.
 func LongestDictionaryWordContainingKey(key string, dic []string) string {
-	keyNum := hash(key)
-	longest := ""
+	keyCharCount := make(map[rune]int)
+	for _, char := range key {
+		keyCharCount[char]++
+	}
 
+	var longest string
 	for _, word := range dic {
-		wordNum := hash(word)
-		if keyNum&wordNum == keyNum {
-			if len(longest) < len(word) {
-				longest = word
-			}
+		if containsAllChars(word, keyCharCount) && len(word) > len(longest) {
+			longest = word
 		}
 	}
 	return longest
 }
 
-// hash turns a string into a number
-// the output for "abc", "acb", "cba" and etc... are all the same.
-func hash(s string) rune {
-	var res rune
-	for _, w := range s {
-		res |= w
+// function to check if word contains all characters in the key 
+func containsAllChars(word string, keyCharCount map[rune]int) bool {
+	for char, count := range keyCharCount {
+		if strings.Count(word, string(char)) < count {
+			return false
+		}
 	}
-	return res
+	return true
 }
