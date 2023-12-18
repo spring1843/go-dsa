@@ -104,5 +104,5 @@ func howMany(num, level int) int {
 	if num < level {
 		return -1
 	}
-	return int(float64(num / level))
+	return num / level
 }
