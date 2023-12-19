@@ -33,8 +33,8 @@ func generateNext(n string) string {
 	return step
 }
 
-// counts the consecutive occurrences of a digit in a string,from a given position
-// returning count, digit and the new position
+// counts the consecutive occurrences of a digit in a string,from a given position.
+// returning count, digit and the new position.
 func countConsequtiveDigits(n string, until int) (int, string, int) {
 	last := ""
 	count := 0

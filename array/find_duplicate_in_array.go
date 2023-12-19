@@ -5,7 +5,7 @@ func FindDuplicate(list []int) int {
 	if len(list) == 0 {
 		return -1
 	}
-	
+
 	for _, item := range list {
 		itemIndex := item - 1
 		// Check for Invalid index if any, return -1 indicating an error.

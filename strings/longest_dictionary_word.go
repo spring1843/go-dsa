@@ -18,7 +18,7 @@ func LongestDictionaryWordContainingKey(key string, dic []string) string {
 	return longest
 }
 
-// function to check if word contains all characters in the key 
+// function to check if word contains all characters in the key.
 func containsAllChars(word string, keyCharCount map[rune]int) bool {
 	for char, count := range keyCharCount {
 		if strings.Count(word, string(char)) < count {
