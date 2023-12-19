@@ -60,7 +60,3 @@ func (queue *CircularQueue) isFull() bool {
 func (queue *CircularQueue) capacity() int {
 	return len(queue.data)
 }
-
-func (queue *CircularQueue) isEmpty() bool {
-	return queue.front == (queue.rear+1)%queue.capacity()
-}
