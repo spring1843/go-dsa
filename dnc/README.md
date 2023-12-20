@@ -17,19 +17,22 @@ import "fmt"
 
 func main() {
 	list := []int{1, 2, 3, 4, 5}
+	// Testing the recursive binary search
 	fmt.Println(binarySearchRecursive(list, 0, len(list), 5)) // Prints 4
+	// Testing the iterative binary search
 	fmt.Println(binarySearchIterative(list, 5))               // Prints 4
 }
 
+// binarySearchRecursive conducts a recursive binary search in 'list' within 'low' and 'high' bounds for 'target'.
 func binarySearchRecursive(list []int, low, high, target int) int {
 	if low > high {
-		return -1
+		return -1 // Base case: target not found
 	}
 
-	mid := (low + high) / 2
+	mid := (low + high) / 2 // Calculate the middle index
 
 	if list[mid] == target {
-		return mid
+		return mid // Target found
 	} else if list[mid] > target {
 		return binarySearchRecursive(list, low, mid-1, target)
 	} else {
@@ -37,23 +40,25 @@ func binarySearchRecursive(list []int, low, high, target int) int {
 	}
 }
 
+// binarySearchIterative performs an iterative binary search in 'list' for 'target'.
 func binarySearchIterative(list []int, target int) int {
 	low := 0
 	high := len(list) - 1
 
 	for low <= high {
-		mid := (low + high) / 2
+		mid := (low + high) / 2 // Calculate the middle index
+
 
 		if list[mid] < target {
-			low = mid + 1
+			low = mid + 1 // Adjust the low boundary
 		} else if list[mid] > target {
-			high = mid - 1
+			high = mid - 1 // Adjust the high boundary
 		} else {
-			return mid
+			return mid // Target found
 		}
 	}
 
-	return -1
+	return -1 // Target not found
 }
 ```
 
