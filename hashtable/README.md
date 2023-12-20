@@ -73,7 +73,7 @@ Hash tables provide O(1) time complexity for inserting, deletion, and searching 
 
 ## Application
 
-When there is no need to preserve the order of data, hash tables are used for fast O(1) reads and writes. This performance advantage makes hash tables more suitable than [Arrays](../arrays) and [Binary Search Trees](../tree).
+When there is no need to preserve the order of data, hash tables are used for fast O(1) reads and writes. This performance advantage makes hash tables more suitable than [Arrays](../array) and [Binary Search Trees](../tree).
 
 Compilers use hash tables to generate a symbol table to keep track of variable declarations.
 
@@ -84,4 +84,4 @@ Compilers use hash tables to generate a symbol table to keep track of variable d
 * [Fastest Way to Cut a Brick Wall](./cut_brick_wall_test.go), [Solution](./cut_brick_wall.go)
 * [Smallest Missing Positive Integer](./smallest_missing_positive_integer_test.go), [Solution](./smallest_missing_positive_integer.go)
 * [Find Anagrams](./find_anagrams_test.go), [Solution](./find_anagrams.go)
-* [Find Max Points on the Same Line](m./ax_points_on_line_test.go), [Solution](./max_points_on_line.go)
+* [Find Max Points on the Same Line](./max_points_on_line_test.go), [Solution](./max_points_on_line.go)
