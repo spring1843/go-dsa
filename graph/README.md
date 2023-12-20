@@ -279,4 +279,4 @@ Graph algorithms find extensive usage in addressing real-world challenges, inclu
 * [Word Ladder](./word_ladder_test.go), [Solution](./word_ladder.go)
 * [Network Delay Time](./network_delay_time_test.go), [Solution](./network_delay_time.go)
 * [Number of Islands](./number_of_islands_test.go), [Solution](./number_of_islands.go)
-* [Dependency Order](./dependency_order_test), [Solution](./dependency_order_test.go)
+* [Dependency Order](./dependency_order_test.go), [Solution](./dependency_order.go)
