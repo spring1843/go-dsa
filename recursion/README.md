@@ -43,19 +43,19 @@ When formulating recursive algorithms, it is essential to consider the following
 
 ## Complexity
 
-Recursions are often inefficient in both time and space complexity. The number of recursive calls required to solve a problem can grow exponentially (for example the Fibonacci implementation in the last section). In worst cases, such as [permutations](../backtracking/ permutations_test.go) they can also be O(n!).
+Recursions are often inefficient in both time and space complexity. The number of recursive calls required to solve a problem can grow exponentially (for example the Fibonacci implementation in the last section). In worst cases, such as [permutations](../backtracking/permutations_test.go) they can also be O(n!).
 
 There are a few different ways of determining the time complexity of recursive algorithms:
 
 1. Recurrence Relations: This approach involves defining a recurrence relation that expresses the algorithm's time complexity in terms of its sub-problems' time complexity. For example, for the recursive Fibonacci algorithm, the recurrence relation is T(n) = T(n-1) + T(n-2) + O(1), where T(n) represents the time complexity of the algorithm for an input of size n.
 2. Recursion Trees: This method involves drawing a tree to represent the algorithm's recursive calls. The algorithm's time complexity can be calculated by summing the work done at each level of the tree. For example, for the recursive factorial algorithm, each level of the tree represents a call to the function with a smaller input size, and the work done at each level is constant.
-3. Master Theorem: This approach is a formula for solving recurrence relations that have the form T(n) = aT(n/b) + f(n). The Master Theorem can be used to quickly determine the time complexity of some [Divide-and-conquer](../dnd) algorithms.
+3. Master Theorem: This approach is a formula for solving recurrence relations that have the form T(n) = aT(n/b) + f(n). The Master Theorem can be used to quickly determine the time complexity of some [Divide-and-conquer](../dnc) algorithms.
 
 The space complexity of recursive calls is affected by having to store a copy of the state and variables in the stack with each recursion.
 
 ## Application
 
-Recursion finds practical application within a range of algorithms, including [Dynamic Programming](../dp), [Graph](../graph), [Divide-and-conquer](../dnd), and [Backtracking](../backtracking). Typically, recursion is best suited to problems that exhibit sub-problems or require calculating the nth or first nth value in a series.
+Recursion finds practical application within a range of algorithms, including [Dynamic Programming](../dp), [Graph](../graph), [Divide-and-conquer](../dnc), and [Backtracking](../backtracking). Typically, recursion is best suited to problems that exhibit sub-problems or require calculating the nth or first nth value in a series.
 
 ## Rehearsal
 
