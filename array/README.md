@@ -1,12 +1,12 @@
 # Array
 
-Arrays are a basic and essential data structure in computer science. They consist of a fixed-size contiguous memory block and offer O(1) read and write time complexity. As a fundamental element of programming languages, arrays come built-in in their core.
+Arrays are a fundamental and essential data structure in computer science. They consist of a fixed-size contiguous memory block and offer O(1) read and write time complexity. As a fundamental element of programming languages, arrays come built-in with their core.
 
 To provide a real-world analogy, consider an array of athletes preparing for a sprinting match. Each athlete occupies a specific position within the array, typically denoted as 1, 2,…, n. While it is technically possible for each athlete to be in a different position, the positions generally carry some form of significance, such as alphabetical order or seniority within the sport.
 
 ## Implementation
 
-In the Go programming language, arrays are considered values rather than pointers and represent the entirety of the array. Whenever an array is passed to a function, a copy is created, resulting in additional memory usage. To avoid this it is possible to pass a pointer to an array, or use slices instead. The size of the array is constant and it must be known at compile time, and there is no need to use the built-in `make` function when defining arrays.
+In the Go programming language, arrays are considered values rather than pointers and represent the entirety of the array. Whenever an array is passed to a function, a copy is created, resulting in additional memory usage. To avoid this, it is possible to pass a pointer to an array, or use slices instead. The size of the array is constant and it must be known at compile time, and there is no need to use the built-in `make` function when defining arrays.
 
 ```Go
 package main
@@ -14,13 +14,16 @@ package main
 import "fmt"
 
 func main() {
+	// Declare an array with 2 int elements, defaulting to 0.
 	var nums1 [2]int
+	// Initialize an array with 3 int elements.
 	nums2 := [3]int{1, 2, 3}
+	// Print both arrays.
 	fmt.Println(nums1, nums2) // Prints [0 0] [1 2 3]
 }
 ```
 
-Although arrays are fundamental data structures in Go, their constant size can make them inflexible and difficult to use in situations where a variable size is required. To address this issue, Go provides [slices](https://blog.golang.org/slices-intro), an abstraction of arrays that offer more convenient access to sequential data typically stored in arrays. When a slice is passed to a function, the head of the slice is replaced but the slice still points to the same data, hence it is possible for the callee to modify the values of the slice and send them back to the caller.
+Although arrays are fundamental data structures in Go, their constant size can make them inflexible and difficult to use in situations where a variable size is required. To address this issue, Go provides [slices](https://blog.golang.org/slices-intro), an abstraction of arrays that offer more convenient access to sequential data typically stored in arrays. When a slice is passed to a function, only the slice header is passed, but it still references the same underlying array data, hence it is possible for the callee to modify the values of the slice and send them back to the caller.
 
 Slices enable adding values using the `append` function, allowing dynamic resizing. Additionally, selectors of the format [low:high] can be used to select or manipulate data in the slice. By utilizing slices instead of arrays, Go programmers gain a more flexible and powerful tool to manage their data structures.
 
@@ -30,10 +33,11 @@ package main
 import "fmt"
 
 func main() {
+	// Create a slice with elements 1, 2, 3.
 	nums := []int{1, 2, 3}
-	nums = append([]int{0}, nums...) // Add new element to the start
-	nums = append(nums, 4)           // Add new element to the end
-	nums = nums[:len(nums)-1]        // Removes last element
+	nums = append([]int{0}, nums...) // Add a new element to the start
+	nums = append(nums, 4)           // Add a new element to the end
+	nums = nums[:len(nums)-1]        // Removes the last element
 	fmt.Println(nums)                // Prints [0 1 2 3]
 }
 ```
@@ -60,12 +64,15 @@ package main
 import "fmt"
 
 func main() {
+    // Initialize a slice with 6 elements.
 	nums := []int{1, 2, 3, 4, 5, 6}
-	nums = nums[:len(nums)-1] // drop last element
-	nums = nums[1:]           // drop first element
-	nums = nums[1:]           // all elements from index 1 to the end
-	nums = nums[:2]           // all elements from index 0 to 1
-	nums = nums[1:2]          // the element at index 1
+    // Sequentially modify the slice.
+	nums = nums[:len(nums)-1] // Drop the last element
+	nums = nums[1:]           // Drop the first element
+	nums = nums[1:]           // Keep all elements from index 1 to the end
+	nums = nums[:2]           // Keep all elements up to (but not including) index 2
+	nums = nums[1:2]          // Keep only the element at index 1
+	// Print final slice.
 	fmt.Println(nums)         // Prints [4]
 }
 ```
