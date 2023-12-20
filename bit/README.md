@@ -28,15 +28,16 @@ func main() {
 	b := 0b010101
 	c := 0b010011
 
-	printBinary(a & c)    // 10           And
-	printBinary(a | b)    // 111111       Or
-	printBinary(a ^ b)    // 111111       Xor
-	printBinary(^c)       // -10100       Negation
-	printBinary(a << 2)   // 10101000     Left shift
-	printBinary(a >> 2)   // 1010         Right shift
-	printBinary(a ^ (^a)) // -1	    Xor with negate of self
+	printBinary(a & c)    // Prints "10" (Binary AND operation)
+	printBinary(a | b)    // Prints "111111" (Binary OR operation)
+	printBinary(a ^ b)    // Prints "111111" (Binary XOR operation)
+	printBinary(^c)       // Prints "-10100" (Binary Negation operation)
+	printBinary(a << 2)   // Prints "10101000" (Binary Left Shift operation)
+	printBinary(a >> 2)   // Prints "1010" (Binary Right Shift operation)
+	printBinary(a ^ (^a)) // Prints "-1" (XOR with its own negation)
 }
 
+// printBinary prints an int as its binary string using strconv.FormatInt.
 func printBinary(n int) {
 	fmt.Println(strconv.FormatInt(int64(n), 2))
 }
@@ -110,6 +111,6 @@ Negation can be used to invert a set of flags or find the two's complement of a 
 * [Division without multiplication or division operators](division_without_operators_test.go), [Solution](division_without_operators.go)
 * [Middle without division](middle_without_division_test.go), [Solution](middle_without_division.go)
 * [Addition without using plus (+) or any other arithmetic operators](addition_without_operators_test.go), [Solution](addition_without_operators.go)
-* [Power of Two](./is_power_of_two_test.go), [Solution](./is_power_of_two_test.go)
+* [Power of Two](./is_power_of_two_test.go), [Solution](./is_power_of_two.go)
 * [Maximum without if conditions](max_function_without_conditions_test.go), [Solution](max_function_without_conditions.go)
 * [Oddly Repeated Number](oddly_repeated_number_test.go), [Solution](oddly_repeated_number.go)
