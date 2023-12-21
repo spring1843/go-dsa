@@ -74,5 +74,5 @@ Trees, such as Binary Search Trees (BSTs), offer O(Log n) time complexity for se
 * [Evaluate A Binary Expression Tree](./evaluate_expression_test.go), [Solution](./evaluate_expression.go)
 * [Sorted Array to Balanced BST](./sorted_array_to_balanced_bsd_test.go), [Solution](./sorted_array_to_balanced_bsd.go)
 * [Traverse Binary Tree](./traverse_binary_tree_test.go), [Solution](./traverse_binary_tree.go)
-* [Reverse Binary Tree](./reverse_binary_tree_test.go), [Solution](./reverse_binary_tree_test.go)
+* [Reverse Binary Tree](./reverse_binary_tree_test.go), [Solution](./reverse_binary_tree.go)
 * [Implement Autocomplete](./auto_complete_test.go), [Solution](./auto_complete.go)

@@ -17,9 +17,7 @@ There are two general approaches for writing DP algorithms: top-down and bottom-
 
 In the top-down approach, a caching mechanism stores each sub-problem solution and prevents redundancy. This technique is also known as memoization.
 
-In the bottom-up approach, sub-problems are solved in order of size, with the smaller ones tackled first. Since all subsequent smaller sub-problems are already solved when addressing a particular problem, the result is calculated and stored.
-
-In the bottom-up approach, sub-problems are solved in order of size, with the smaller ones tackled first. The final result is calculated easily since all subsequent smaller sub-problems are already solved when addressing a particular problem.
+In the bottom-up approach, sub-problems are solved in order of size, with the smaller ones tackled first. Since all subsequent smaller sub-problems are already solved when addressing a particular problem, the result is calculated and stored. The final result is calculated easily since all subsequent smaller sub-problems are already solved when addressing a particular problem.
 
 ## Complexity
 
@@ -36,4 +34,4 @@ DP is well-suited for tackling complex problems, including logistics, game theor
 * [House Robber](./house_robber_test.go), [Solution](./house_robber.go).
 * [Interleaving String](./interleaving_string_test.go), [Solution](./interleaving_string.go)
 * [Minimum Deletion to Make a Palindrome](./minimum_deletion_to_make_palindrome_test.go), [Solution](./minimum_deletion_to_make_palindrome.go)
-* [Word Distance](./word_distance_test.go), [Solution](./word_distance.go.go)
+* [Word Distance](./word_distance_test.go), [Solution](./word_distance.go)
