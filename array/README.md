@@ -14,11 +14,8 @@ package main
 import "fmt"
 
 func main() {
-	// Declare an array with 2 int elements, defaulting to 0.
 	var nums1 [2]int
-	// Initialize an array with 3 int elements.
 	nums2 := [3]int{1, 2, 3}
-	// Print both arrays.
 	fmt.Println(nums1, nums2) // Prints [0 0] [1 2 3]
 }
 ```
@@ -66,13 +63,11 @@ import "fmt"
 func main() {
     // Initialize a slice with 6 elements.
 	nums := []int{1, 2, 3, 4, 5, 6}
-    // Sequentially modify the slice.
 	nums = nums[:len(nums)-1] // Drop the last element
 	nums = nums[1:]           // Drop the first element
 	nums = nums[1:]           // Keep all elements from index 1 to the end
 	nums = nums[:2]           // Keep all elements up to (but not including) index 2
 	nums = nums[1:2]          // Keep only the element at index 1
-	// Print final slice.
 	fmt.Println(nums)         // Prints [4]
 }
 ```
