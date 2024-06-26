@@ -1,8 +1,6 @@
 package dp
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestWordDistance tests solution(s) with the following signature and problem description:

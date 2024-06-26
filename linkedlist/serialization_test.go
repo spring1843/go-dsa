@@ -1,8 +1,6 @@
 package linkedlist
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestSerializeAndUnserializeLinkedList tests solution(s) with the following signature and problem description:

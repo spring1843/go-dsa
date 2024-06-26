@@ -1,8 +1,6 @@
 package linkedlist
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestJoinTwoSortedLinkedLists tests solution(s) with the following signature and problem description:

@@ -1,8 +1,6 @@
 package dnc
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestBinarySearch tests solution(s) with the following signature and problem description:

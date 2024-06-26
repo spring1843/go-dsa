@@ -1,8 +1,6 @@
 package heap
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestKthLargestElement tests solution(s) with the following signature and problem description:

@@ -1,8 +1,6 @@
 package graph
 
-import (
-	"testing"
-)
+import "testing"
 
 type dijkstraTestCase struct {
 	graph     []*dijkstraVertex

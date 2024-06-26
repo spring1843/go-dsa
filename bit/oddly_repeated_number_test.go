@@ -1,8 +1,6 @@
 package bit
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestOddlyRepeatedNumber tests solution(s) with the following signature and problem description:
