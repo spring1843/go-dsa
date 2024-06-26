@@ -1,8 +1,6 @@
 package array
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestFindDuplicate tests solution(s) with the following signature and problem description:

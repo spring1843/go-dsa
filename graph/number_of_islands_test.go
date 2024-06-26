@@ -1,8 +1,6 @@
 package graph
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestNumberOfIslands tests solution(s) with the following signature and problem description:

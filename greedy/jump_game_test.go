@@ -1,8 +1,6 @@
 package greedy
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestJumpGame tests solution(s) with the following signature and problem description:

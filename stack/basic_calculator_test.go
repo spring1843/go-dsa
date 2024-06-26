@@ -1,8 +1,6 @@
 package stack
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestBasicCalculator tests solution(s) with the following signature and problem description:

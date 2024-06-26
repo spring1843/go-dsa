@@ -1,8 +1,6 @@
 package stack
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestLongestValidParentheses tests solution(s) with the following signature and problem description:

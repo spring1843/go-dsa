@@ -1,8 +1,6 @@
 package strings
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestLongestSubstrings tests solution(s) with the following signature and problem description:

@@ -1,8 +1,6 @@
 package recursion
 
-import (
-	"testing"
-)
+import "testing"
 
 /*
 TestRegularExpressions tests solution(s) with the following signature and problem description:
