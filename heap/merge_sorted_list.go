@@ -46,7 +46,7 @@ func (pq priorityQueue) Less(i, j int) bool {
 	return pq[i].Val < pq[j].Val
 }
 
-func (pq *priorityQueue) Pop() interface{} {
+func (pq *priorityQueue) Pop() any {
 	old := *pq
 	n := len(old)
 	x := old[n-1]
@@ -54,7 +54,7 @@ func (pq *priorityQueue) Pop() interface{} {
 	return x
 }
 
-func (pq *priorityQueue) Push(x interface{}) {
+func (pq *priorityQueue) Push(x any) {
 	*pq = append(*pq, x.(*linkedlist.Node))
 }
 

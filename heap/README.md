@@ -64,12 +64,12 @@ func main() {
 
 }
 
-func (m maxHeap) Len() int            { return len(m) }
-func (m maxHeap) Less(i, j int) bool  { return m[i] > m[j] }
-func (m maxHeap) Swap(i, j int)       { m[i], m[j] = m[j], m[i] }
-func (m *maxHeap) Push(x interface{}) { *m = append(*m, x.(int)) }
+func (m maxHeap) Len() int           { return len(m) }
+func (m maxHeap) Less(i, j int) bool { return m[i] > m[j] }
+func (m maxHeap) Swap(i, j int)      { m[i], m[j] = m[j], m[i] }
+func (m *maxHeap) Push(x any)        { *m = append(*m, x.(int)) }
 
-func (m *maxHeap) Pop() interface{} {
+func (m *maxHeap) Pop() any {
 	old := *m
 	tmp := old[len(old)-1]
 	*m = old[0 : len(old)-1]

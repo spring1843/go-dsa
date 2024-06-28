@@ -37,12 +37,12 @@ func MaxSlidingWindow(numbers []int, k int) []int {
 	return output
 }
 
-func (m slidingWindow) Len() int            { return len(m) }
-func (m slidingWindow) Less(i, j int) bool  { return m[i] > m[j] }
-func (m slidingWindow) Swap(i, j int)       { m[i], m[j] = m[j], m[i] }
-func (m *slidingWindow) Push(x interface{}) { *m = append(*m, x.(int)) }
+func (m slidingWindow) Len() int           { return len(m) }
+func (m slidingWindow) Less(i, j int) bool { return m[i] > m[j] }
+func (m slidingWindow) Swap(i, j int)      { m[i], m[j] = m[j], m[i] }
+func (m *slidingWindow) Push(x any)        { *m = append(*m, x.(int)) }
 
-func (m *slidingWindow) Pop() interface{} {
+func (m *slidingWindow) Pop() any {
 	old := *m
 	tmp := old[len(old)-1]
 	*m = old[0 : len(old)-1]
