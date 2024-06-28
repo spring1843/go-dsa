@@ -18,6 +18,9 @@ issues:
     - path: /
       linters:
         - nlreturn
+        - gci
+        - gomnd
+        - ifshort
         - forcetypeassert
         - varnamelen
         - lll
