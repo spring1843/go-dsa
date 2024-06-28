@@ -2,7 +2,7 @@ package graph
 
 import (
 	"errors"
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -64,7 +64,7 @@ func TestTopologicalSort(t *testing.T) {
 			t.Fatalf("Failed test case #%d. Expected error %s did not occur", i, test.expectedErr)
 		}
 
-		if !reflect.DeepEqual(got, test.topologicalSort) {
+		if !slices.Equal(got, test.topologicalSort) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.topologicalSort, got)
 		}
 	}

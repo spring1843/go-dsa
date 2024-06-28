@@ -1,7 +1,7 @@
 package hashtable
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -25,7 +25,7 @@ func TestSumUpToK(t *testing.T) {
 
 	for i, test := range tests {
 		got := SumUpToK(test.numbers, test.k)
-		if !reflect.DeepEqual(got, test.indices) {
+		if !slices.Equal(got, test.indices) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.indices, got)
 		}
 	}

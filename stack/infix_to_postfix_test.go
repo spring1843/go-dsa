@@ -1,7 +1,7 @@
 package stack
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -29,7 +29,7 @@ func TestInfixToPostfix(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := InfixToPostfix(test.infix); !reflect.DeepEqual(got, test.postfix) {
+		if got := InfixToPostfix(test.infix); !slices.Equal(got, test.postfix) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.postfix, got)
 		}
 	}

@@ -1,7 +1,7 @@
 package greedy
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -29,7 +29,7 @@ func TestScheduleEvents(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := ScheduleEvents(test.events); !reflect.DeepEqual(got, test.schedule) {
+		if got := ScheduleEvents(test.events); !slices.Equal(got, test.schedule) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.schedule, got)
 		}
 	}

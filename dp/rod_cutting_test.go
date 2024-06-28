@@ -1,9 +1,6 @@
 package dp
 
-import (
-	"reflect"
-	"testing"
-)
+import "testing"
 
 /*
 TestRodCutting tests solution(s) with the following signature and problem description:
@@ -30,7 +27,7 @@ func TestRodCutting(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := CutRod(test.snacks, test.n); !reflect.DeepEqual(got, test.solution) {
+		if got := CutRod(test.snacks, test.n); got != test.solution {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.solution, got)
 		}
 	}

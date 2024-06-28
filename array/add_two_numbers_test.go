@@ -1,7 +1,7 @@
 package array
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -26,7 +26,7 @@ func TestAddTwoNumbers(t *testing.T) {
 		{[]int{9, 9, 9}, []int{9, 9, 9}, []int{1, 9, 9, 8}},
 	}
 	for i, test := range tests {
-		if got := AddTwoNumbers(test.num1, test.num2); !reflect.DeepEqual(got, test.sum) {
+		if got := AddTwoNumbers(test.num1, test.num2); !slices.Equal(got, test.sum) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.sum, got)
 		}
 	}

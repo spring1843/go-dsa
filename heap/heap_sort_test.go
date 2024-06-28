@@ -2,7 +2,7 @@ package heap
 
 import (
 	"math"
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -28,7 +28,7 @@ func TestSort(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := Sort(test.list); !reflect.DeepEqual(got, test.sorted) {
+		if got := Sort(test.list); !slices.Equal(got, test.sorted) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.sorted, got)
 		}
 	}

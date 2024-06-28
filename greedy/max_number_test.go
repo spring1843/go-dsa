@@ -1,7 +1,7 @@
 package greedy
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -39,7 +39,7 @@ func TestMaxNumber(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := MaxNumber(test.number1, test.number2, test.k); !reflect.DeepEqual(got, test.largestNumber) {
+		if got := MaxNumber(test.number1, test.number2, test.k); !slices.Equal(got, test.largestNumber) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.largestNumber, got)
 		}
 	}

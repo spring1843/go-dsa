@@ -1,7 +1,7 @@
 package dnc
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 	"time"
 )
@@ -43,7 +43,7 @@ func TestRateLimiter(t *testing.T) {
 			got = append(got, IsAllowed(test.limitPerSecond))
 		}
 
-		if !reflect.DeepEqual(got, test.want) {
+		if !slices.Equal(got, test.want) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.want, got)
 		}
 	}

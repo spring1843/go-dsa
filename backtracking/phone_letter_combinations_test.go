@@ -1,7 +1,7 @@
 package backtracking
 
 import (
-	"reflect"
+	"slices"
 	"sort"
 	"testing"
 )
@@ -33,7 +33,7 @@ func TestPhoneLetterCombinations(t *testing.T) {
 		if len(got) > 0 {
 			sort.Strings(got)
 		}
-		if !reflect.DeepEqual(test.combinations, got) {
+		if !slices.Equal(test.combinations, got) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.combinations, got)
 		}
 	}

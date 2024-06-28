@@ -1,7 +1,7 @@
 package backtracking
 
 import (
-	"reflect"
+	"slices"
 	"sort"
 	"testing"
 )
@@ -32,7 +32,7 @@ func TestGenerateParentheses(t *testing.T) {
 		if len(got) > 0 {
 			sort.Strings(got)
 		}
-		if !reflect.DeepEqual(test.validParentheses, got) {
+		if !slices.Equal(test.validParentheses, got) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.validParentheses, got)
 		}
 	}

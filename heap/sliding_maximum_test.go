@@ -2,7 +2,7 @@ package heap
 
 import (
 	"container/heap"
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -30,7 +30,7 @@ func TestMaxSlidingWindow(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := MaxSlidingWindow(test.numbers, test.k); !reflect.DeepEqual(got, test.maxSliding) {
+		if got := MaxSlidingWindow(test.numbers, test.k); !slices.Equal(got, test.maxSliding) {
 			t.Fatalf("Failed test case #%d. Want %d got %d", i, test.maxSliding, got)
 		}
 	}

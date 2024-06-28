@@ -1,7 +1,7 @@
 package queue
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -27,7 +27,7 @@ func TestStringPermutations(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := StringPermutations(test.input); !reflect.DeepEqual(got, test.permutations) {
+		if got := StringPermutations(test.input); !slices.Equal(got, test.permutations) {
 			t.Fatalf("Failed test #%d, Failed getting list of maximums. Want %#v got %#v", i, test.permutations, got)
 		}
 	}

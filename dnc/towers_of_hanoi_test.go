@@ -1,7 +1,7 @@
 package dnc
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -29,7 +29,7 @@ func TestTowerOfHanoi(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := TowerOfHanoi(test.n, test.start, test.end); !reflect.DeepEqual(got, test.moves) {
+		if got := TowerOfHanoi(test.n, test.start, test.end); !slices.Equal(got, test.moves) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.moves, got)
 		}
 	}

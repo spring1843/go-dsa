@@ -1,7 +1,7 @@
 package array
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -28,7 +28,7 @@ func TestInsertionSort(t *testing.T) {
 	}
 	for i, test := range tests {
 		InsertionSort(test.input)
-		if !reflect.DeepEqual(test.input, test.sorted) {
+		if !slices.Equal(test.input, test.sorted) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.sorted, test.input)
 		}
 	}

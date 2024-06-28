@@ -1,7 +1,7 @@
 package queue
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -30,7 +30,7 @@ func TestMaxOfKLengthSubArrays(t *testing.T) {
 		if err != nil {
 			t.Fatalf("Unexpected error occurred. Error : %s", err)
 		}
-		if !reflect.DeepEqual(got, test.maximums) {
+		if !slices.Equal(got, test.maximums) {
 			t.Fatalf("Failed test #%d, Failed getting list of maximums. Want %#v got %#v", i, test.maximums, got)
 		}
 	}

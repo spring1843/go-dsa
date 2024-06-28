@@ -1,7 +1,7 @@
 package graph
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -28,7 +28,7 @@ func TestRemoveInvalidParentheses(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := RemoveInvalidParentheses(test.input); !reflect.DeepEqual(got, test.outputs) {
+		if got := RemoveInvalidParentheses(test.input); !slices.Equal(got, test.outputs) {
 			t.Errorf("Failed test case #%d. Want %#v got %#v", i, test.outputs, got)
 		}
 	}
