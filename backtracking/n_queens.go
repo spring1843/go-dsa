@@ -22,7 +22,7 @@ func nQueensRecursive(row, n int, cols []int, output Chessboard) Chessboard {
 		output = append(output, append([]int{}, cols...))
 		return output
 	}
-	for col := 0; col < n; col++ {
+	for col := range n {
 		if isValidQueenPlacement(row, col, cols) {
 			cols[row] = col
 			output = nQueensRecursive(row+1, n, cols, output)
@@ -32,7 +32,7 @@ func nQueensRecursive(row, n int, cols []int, output Chessboard) Chessboard {
 }
 
 func isValidQueenPlacement(row, col int, cols []int) bool {
-	for i := 0; i < row; i++ {
+	for i := range row {
 		if col == cols[i] || col-row == cols[i]-i || col+row == cols[i]+i {
 			return false
 		}

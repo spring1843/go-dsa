@@ -22,7 +22,7 @@ func MaxSlidingWindow(numbers []int, k int) []int {
 	output = append(output, pq[0])
 
 	for i < len(numbers) {
-		for j := 0; j < k; j++ {
+		for j := range k {
 			if pq[j] == numbers[i-k] {
 				pq[j] = pq[len(pq)-1]
 				pq = pq[:len(pq)-1]

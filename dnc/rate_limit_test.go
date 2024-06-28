@@ -35,11 +35,11 @@ func TestRateLimiter(t *testing.T) {
 	for i, test := range tests {
 		rateLimitEvents = make([]int64, 0)
 		got := make([]bool, 0)
-		for i := 0; i < test.firstCallTimes; i++ {
+		for range test.firstCallTimes {
 			got = append(got, IsAllowed(test.limitPerSecond))
 		}
 		time.Sleep(time.Duration(test.sleep) * time.Second)
-		for i := 0; i < test.secondCallTimes; i++ {
+		for range test.secondCallTimes {
 			got = append(got, IsAllowed(test.limitPerSecond))
 		}
 

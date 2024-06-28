@@ -10,7 +10,7 @@ func DependencyOrder(graph []*VertexWithIngress) ([]*VertexWithIngress, error) {
 }
 
 func reverse(graph []*VertexWithIngress) []*VertexWithIngress {
-	for i := 0; i < len(graph)/2; i++ {
+	for i := range len(graph) / 2 {
 		graph[i], graph[len(graph)-1-i] = graph[len(graph)-1-i], graph[i]
 	}
 	return graph

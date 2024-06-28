@@ -27,7 +27,7 @@ func RemoveInvalidParentheses(input string) []string {
 				continue
 			}
 
-			for i := 0; i < len(input); i++ {
+			for i := range len(input) {
 				if !(string(input[i]) == "(" || string(input[i]) == ")") {
 					continue
 				}
@@ -46,7 +46,7 @@ func RemoveInvalidParentheses(input string) []string {
 
 func isValidParentheses(input string) bool {
 	count := 0
-	for i := 0; i < len(input); i++ {
+	for i := range len(input) {
 		if input[i] == '(' {
 			count++
 		} else if input[i] == ')' {

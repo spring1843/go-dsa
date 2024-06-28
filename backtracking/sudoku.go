@@ -3,7 +3,7 @@ package backtracking
 // Sudoku solves the problem in O(9^(n*n)) time and O(n*n) space.
 func Sudoku(board [][]int) bool {
 	for i := 0; i < len(board); i++ {
-		for j := 0; j < len(board[0]); j++ {
+		for j := range len(board[0]) {
 			if board[i][j] != 0 {
 				continue
 			}
@@ -24,7 +24,7 @@ func Sudoku(board [][]int) bool {
 }
 
 func isValidSudokuPlacement(board [][]int, row, col, value int) bool {
-	for i := 0; i < 9; i++ {
+	for i := range 9 {
 		if board[i][col] == value || board[row][i] == value || board[3*(row/3)+i/3][3*(col/3)+i%3] == value {
 			return false
 		}

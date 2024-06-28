@@ -24,7 +24,7 @@ func KClosestPointToOrigin(points [][]int, k int) [][]int {
 	}
 
 	output := make([][]int, k)
-	for i := 0; i < k; i++ {
+	for i := range k {
 		output[i] = heap.Pop(h).(*point).coordinates
 	}
 	return output

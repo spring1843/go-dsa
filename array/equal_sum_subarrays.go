@@ -20,7 +20,7 @@ func EqualSubArrays(list []int) [][]int {
 
 func findSplitPoint(list []int) int {
 	lSum := 0
-	for i := 0; i < len(list); i++ {
+	for i := range len(list) {
 		lSum += list[i]
 
 		rSum := 0

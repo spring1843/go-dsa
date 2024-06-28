@@ -9,7 +9,7 @@ func QuickSort(list []int) []int {
 	pivot := list[len(list)/2]
 
 	var less, equal, greater []int
-	for i := 0; i < len(list); i++ {
+	for i := range len(list) {
 		if list[i] == pivot {
 			equal = append(equal, list[i])
 		}

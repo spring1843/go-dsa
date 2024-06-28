@@ -107,6 +107,11 @@ func enqueueDequeueAndCheckValue(t *testing.T, queue *CircularQueue, testID int,
 
 func TestMultipleOperations(t *testing.T) {
 	queue := NewCircularQueue(3)
+
+	if _, err := queue.dequeue(); err == nil {
+		t.Fatal("Expected error for dequeue-ing an empty queue")
+	}
+
 	for i, queueOperation := range queueOperations {
 		switch queueOperation.operationType {
 		case operationTypeEnqueue:

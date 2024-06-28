@@ -20,7 +20,7 @@ func StringPermutations(input string) []string {
 			output = append(output, currentState.permutation)
 			continue
 		}
-		for i := 0; i < len(currentState.remaining); i++ {
+		for i := range len(currentState.remaining) {
 			nextPermutation := currentState.permutation + string(currentState.remaining[i])
 			nextRemaining := currentState.remaining[:i] + currentState.remaining[i+1:]
 			queue.PushBack(state{nextPermutation, nextRemaining})
