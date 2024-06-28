@@ -17,15 +17,11 @@ issues:
   exclude-rules:
     - path: /
       linters:
-        - nosnakecase
         - nlreturn
         - forcetypeassert
-        - ifshort
-        - scopelint
         - varnamelen
         - lll
         - testpackage
-        - gomnd
         - wsl
         - gochecknoglobals
         - paralleltest
@@ -34,9 +30,6 @@ issues:
         - dupword
 linters:
   enable-all: true
-  enable:
-    - revive
-    - misspell
 
 linters-settings:
   forbidigo:
