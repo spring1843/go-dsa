@@ -18,7 +18,7 @@ type (
 func (t *trie) AutoComplete(word string) []string {
 	output := []string{}
 	current := t.root
-	for i := 0; i < len(word); i++ {
+	for i := range len(word) {
 		index := word[i] - 'a'
 		if current.children[index] == nil {
 			return output
@@ -40,7 +40,7 @@ func newTrie(dict []string) *trie {
 
 func (t *trie) insert(word string) {
 	current := t.root
-	for i := 0; i < len(word); i++ {
+	for i := range len(word) {
 		index := word[i] - 'a'
 		if current.children[index] == nil {
 			current.children[index] = new(trieNode)
@@ -60,7 +60,7 @@ func (t *trieNode) readWords() []string {
 			words = append(words, parent)
 		}
 
-		for i := 0; i < alphabetSize; i++ {
+		for i := range alphabetSize {
 			if node.children[i] != nil {
 				bfsRecursive(node.children[i], parent+string(rune(i+'a')))
 			}

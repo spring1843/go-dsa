@@ -22,7 +22,7 @@ func MaxNumber(number1, number2 []int, n int) []int {
 func merge(a, b []int) []int {
 	output := make([]int, len(a)+len(b))
 	var i, j int
-	for k := 0; k < len(a)+len(b); k++ {
+	for k := range len(a) + len(b) {
 		if isGreater(a[i:], b[j:]) {
 			output[k] = a[i]
 			i++

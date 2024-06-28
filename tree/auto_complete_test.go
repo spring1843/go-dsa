@@ -1,7 +1,7 @@
 package tree
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -37,7 +37,7 @@ func TestAutoComplete(t *testing.T) {
 	for i, test := range tests {
 		trie := newTrie(test.dict)
 		got := trie.AutoComplete(test.input)
-		if !reflect.DeepEqual(got, test.suggestions) {
+		if !slices.Equal(got, test.suggestions) {
 			t.Fatalf("Failed test case #%d. Want %q got %q", i, test.suggestions, got)
 		}
 	}

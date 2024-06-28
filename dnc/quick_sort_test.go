@@ -1,7 +1,7 @@
 package dnc
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -27,7 +27,7 @@ func TestQuickSort(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := QuickSort(test.list); !reflect.DeepEqual(got, test.sorted) {
+		if got := QuickSort(test.list); !slices.Equal(got, test.sorted) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.sorted, got)
 		}
 	}

@@ -1,6 +1,6 @@
 module github.com/spring1843/go-dsa
 
-go 1.20
+go 1.22
 
 require github.com/spf13/cobra v1.7.0
 

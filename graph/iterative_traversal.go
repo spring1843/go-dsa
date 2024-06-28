@@ -12,7 +12,7 @@ type (
 	queue     struct{ collection []*Vertex }
 	stack     struct{ collection []*Vertex }
 	container interface {
-		Push(*Vertex)
+		Push(n *Vertex)
 		Pop() *Vertex
 		Len() int
 	}

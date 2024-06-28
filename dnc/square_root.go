@@ -23,7 +23,7 @@ func SquareRoot(number, precision int) float64 {
 	}
 
 	increment := 0.1
-	for i := 0; i < precision; i++ {
+	for range precision {
 		for ans*ans <= float64(number) {
 			ans += increment
 		}

@@ -1,7 +1,7 @@
 package graph
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -33,10 +33,10 @@ func TestIterativeTraversal(t *testing.T) {
 
 	for i, test := range tests {
 		bfs, dfs := IterativeTraversal(toGraph(test.graph))
-		if !reflect.DeepEqual(bfs, test.bfs) {
+		if !slices.Equal(bfs, test.bfs) {
 			t.Fatalf("Failed BFS test case #%d. Want %#v got %#v", i, test.bfs, bfs)
 		}
-		if !reflect.DeepEqual(dfs, test.dfs) {
+		if !slices.Equal(dfs, test.dfs) {
 			t.Fatalf("Failed DFS test case #%d. Want %#v got %#v", i, test.dfs, dfs)
 		}
 	}
@@ -58,7 +58,7 @@ func toGraph(graph [][]int) []*Vertex {
 	}
 
 	output := make([]*Vertex, len(graphMap))
-	for i := 0; i < len(graph); i++ {
+	for i := range len(graph) {
 		output[i] = graphMap[i+1]
 	}
 	return output

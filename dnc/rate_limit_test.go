@@ -1,7 +1,7 @@
 package dnc
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 	"time"
 )
@@ -35,15 +35,15 @@ func TestRateLimiter(t *testing.T) {
 	for i, test := range tests {
 		rateLimitEvents = make([]int64, 0)
 		got := make([]bool, 0)
-		for i := 0; i < test.firstCallTimes; i++ {
+		for range test.firstCallTimes {
 			got = append(got, IsAllowed(test.limitPerSecond))
 		}
 		time.Sleep(time.Duration(test.sleep) * time.Second)
-		for i := 0; i < test.secondCallTimes; i++ {
+		for range test.secondCallTimes {
 			got = append(got, IsAllowed(test.limitPerSecond))
 		}
 
-		if !reflect.DeepEqual(got, test.want) {
+		if !slices.Equal(got, test.want) {
 			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.want, got)
 		}
 	}

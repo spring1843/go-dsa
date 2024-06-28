@@ -1,7 +1,7 @@
 package array
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -27,7 +27,7 @@ func TestRotateKSteps(t *testing.T) {
 
 	for i, test := range tests {
 		RotateKSteps(test.list, test.steps)
-		if !reflect.DeepEqual(test.list, test.rotatedList) {
+		if !slices.Equal(test.list, test.rotatedList) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.rotatedList, test.list)
 		}
 	}

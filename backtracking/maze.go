@@ -26,7 +26,7 @@ func mazeRecursive(x, y int, path string, wallMap map[[2]int]bool, visited [][]b
 	}
 
 	visited[x][y] = true
-	for i := 0; i < 4; i++ {
+	for i := range 4 {
 		nx, ny := x+directions[i][0], y+directions[i][1]
 		if nx >= 0 && nx < len(visited) && ny >= 0 && ny < len(visited[0]) && !visited[nx][ny] && !wallMap[[2]int{nx, ny}] {
 			if result := mazeRecursive(nx, ny, path+directionLetter[i], wallMap, visited, finish); result != "" {

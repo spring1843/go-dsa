@@ -1,7 +1,7 @@
 package array
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -26,7 +26,7 @@ func TestProductOfAllOtherElements(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := ProductOfAllOtherElements(test.list); !reflect.DeepEqual(got, test.products) {
+		if got := ProductOfAllOtherElements(test.list); !slices.Equal(got, test.products) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.products, got)
 		}
 	}

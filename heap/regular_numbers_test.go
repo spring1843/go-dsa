@@ -1,7 +1,7 @@
 package heap
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -30,7 +30,7 @@ func TestRegularNumbers(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := RegularNumbers(test.n); !reflect.DeepEqual(got, test.regularNumbers) {
+		if got := RegularNumbers(test.n); !slices.Equal(got, test.regularNumbers) {
 			t.Fatalf("Failed test case #%d. Want %v got %d", i, test.regularNumbers, got)
 		}
 	}

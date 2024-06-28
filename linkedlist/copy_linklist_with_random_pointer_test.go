@@ -112,7 +112,7 @@ func unserializeRandomNode(stringRepresentation string) *RandomNode {
 
 	head := cur
 
-	for i := 0; i < len(broken); i++ {
+	for i := range len(broken) {
 		randomIndex := broken[i][strings.Index(broken[i], randomValueSeparator)+1:]
 		if randomIndex != noRandomLink {
 			cur.Random = nodes[atoi(randomIndex)-1]

@@ -68,11 +68,11 @@ func verticesAndEdges(edges [][3]int, k int) (map[int][][2]int, edgeMinHeap) {
 	return verticesMap, edgeHeap
 }
 
-func (e edgeMinHeap) Len() int            { return len(e) }
-func (e edgeMinHeap) Less(i, j int) bool  { return e[i][1] <= e[j][1] }
-func (e edgeMinHeap) Swap(i, j int)       { e[i], e[j] = e[j], e[i] }
-func (e *edgeMinHeap) Push(x interface{}) { *e = append(*e, x.([]int)) }
-func (e *edgeMinHeap) Pop() interface{} {
+func (e edgeMinHeap) Len() int           { return len(e) }
+func (e edgeMinHeap) Less(i, j int) bool { return e[i][1] <= e[j][1] }
+func (e edgeMinHeap) Swap(i, j int)      { e[i], e[j] = e[j], e[i] }
+func (e *edgeMinHeap) Push(x any)        { *e = append(*e, x.([]int)) }
+func (e *edgeMinHeap) Pop() any {
 	x := (*e)[len(*e)-1]
 	*e = (*e)[0 : len(*e)-1]
 	return x

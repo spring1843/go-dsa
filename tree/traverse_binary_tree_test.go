@@ -1,7 +1,7 @@
 package tree
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -33,13 +33,13 @@ func TestTraverseBinaryTree(t *testing.T) {
 	}
 	for i, test := range tests {
 		gotIn, gotPre, gotPost := TraverseBinaryTree(Unserialize(test.tree))
-		if !reflect.DeepEqual(gotIn, test.in) {
+		if !slices.Equal(gotIn, test.in) {
 			t.Fatalf("Failed in-order test case #%d.  Want %#v got %#v", i, test.in, gotIn)
 		}
-		if !reflect.DeepEqual(gotPre, test.pre) {
+		if !slices.Equal(gotPre, test.pre) {
 			t.Fatalf("Failed pre-order test case #%d. Want %#v got %#v", i, test.pre, gotPre)
 		}
-		if !reflect.DeepEqual(gotPost, test.post) {
+		if !slices.Equal(gotPost, test.post) {
 			t.Fatalf("Failed post-order test case #%d. Want %#v got %#v", i, test.post, gotPost)
 		}
 	}

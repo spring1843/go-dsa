@@ -1,7 +1,6 @@
 package backtracking
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -39,7 +38,7 @@ func TestMaze(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := Maze(test.m, test.n, test.walls, test.start, test.finish); !reflect.DeepEqual(test.moves, got) {
+		if got := Maze(test.m, test.n, test.walls, test.start, test.finish); test.moves != got {
 			t.Fatalf("Failed test case #%d. Want %s got %s", i, test.moves, got)
 		}
 	}

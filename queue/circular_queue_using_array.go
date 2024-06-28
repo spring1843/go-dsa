@@ -48,6 +48,9 @@ func (queue *CircularQueue) enqueue(n int) error {
 
 // dequeue solves the problem in O(1) time and O(1) space.
 func (queue *CircularQueue) dequeue() (int, error) {
+	if queue.size == 0 {
+		return 0, ErrQueueEmpty
+	}
 	tmp := queue.data[queue.front]
 	queue.data[queue.front] = emptyValue
 	queue.front++

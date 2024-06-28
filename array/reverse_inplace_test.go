@@ -1,7 +1,7 @@
 package array
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -31,7 +31,7 @@ func TestReverseInPlace(t *testing.T) {
 
 	for i, test := range tests {
 		ReverseInPlace(test.list, test.start, test.end)
-		if !reflect.DeepEqual(test.list, test.reversed) {
+		if !slices.Equal(test.list, test.reversed) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.reversed, test.list)
 		}
 	}

@@ -19,12 +19,12 @@ func EvaluateBinaryExpressionTree(node *stringBinaryTreeNode) (float64, error) {
 
 	left, err := EvaluateBinaryExpressionTree(node.left)
 	if err != nil {
-		return -1, fmt.Errorf("failed evaluating value of left node to %s. %s", node.val, err)
+		return -1, fmt.Errorf("failed evaluating value of left node to %s. %w", node.val, err)
 	}
 
 	right, err := EvaluateBinaryExpressionTree(node.right)
 	if err != nil {
-		return -1, fmt.Errorf("failed evaluating value of right node to %s. %s", node.val, err)
+		return -1, fmt.Errorf("failed evaluating value of right node to %s. %w", node.val, err)
 	}
 
 	switch node.val {
@@ -40,7 +40,7 @@ func EvaluateBinaryExpressionTree(node *stringBinaryTreeNode) (float64, error) {
 
 	val, err := strconv.ParseFloat(node.val, 64)
 	if err != nil {
-		return -1, fmt.Errorf("failed parsing value %s as float64. %s", node.val, err)
+		return -1, fmt.Errorf("failed parsing value %s as float64. %w", node.val, err)
 	}
 	return val, nil
 }
