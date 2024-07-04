@@ -75,7 +75,17 @@ func dequeue() (int, error) {
 
 ## Complexity
 
-Enqueue and dequeue operations both perform in O(1) times.
+Enqueue and dequeue operations both perform in O(1) times in the linked list implementation. In other traditional languages like C the linked list approach is considered to be faster than the slice approach because both enqueue and dequeue operations are O(n) due to the slice size change. In Go however slices are managed intelligently behind the scene and perform very well for just about all purposes.
+
+We can use Go's built in benchmarking tooling to see which implementation is faster. This is done in [slice_vs_linked_list_bench_test.go](./slice_vs_linked_list_bench_test.go). It can be executed by running `go test -bench=. -test.benchmem` in this directory. The output shows that the slice implementation is almost seven times faster.
+
+```
+pkg: github.com/spring1843/go-dsa/queue
+BenchmarkLinkedListQueue-8      17956176                83.73 ns/op           56 B/op          1 allocs/op
+BenchmarkSliceQueue-8           100000000               11.79 ns/op           45 B/op          0 allocs/op
+PASS
+ok      github.com/spring1843/go-dsa/queue      3.775s
+```
 
 ## Application
 
