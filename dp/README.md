@@ -15,6 +15,8 @@ If only the solution value is needed, step 4 may be omitted. Conversely, when th
 
 There are two general approaches for writing DP algorithms: top-down and bottom-up.
 
+### Top-Down
+
 The top-down approach starts with the final solution and breaks it down into smaller sub-problems. The final solution is found by calculating smaller sub-problems. A caching mechanism stores each sub-problem solution and prevents unnecessary re-calculations. This technique is also known as memoization.
 
 The performance of Fibonacci solution we introduced in [recursion](../recursion/README.md) can be significantly improved by memoization.
@@ -44,6 +46,8 @@ func fibonacci(n int) int {
 	return fibonacci(n-1) + fibonacci(n-2)
 }
 ```
+
+### Bottom-Up
 
 The bottom-up approach builds the solution iteratively from smaller sub-problems towards the final solution.
 
