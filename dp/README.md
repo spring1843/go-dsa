@@ -17,7 +17,7 @@ There are two general approaches for writing DP algorithms: top-down and bottom-
 
 The top-down approach starts with the final solution and breaks it down into smaller sub-problems. The final solution is found by calculating smaller sub-problems. A caching mechanism stores each sub-problem solution and prevents unnecessary re-calculations. This technique is also known as memoization.
 
-The performance of Fibonacci solution we introduced in [recursion](../recursion/README.md)can be significantly improved by memoization.
+The performance of Fibonacci solution we introduced in [recursion](../recursion/README.md) can be significantly improved by memoization.
 
 ```Go
 package main
