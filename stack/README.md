@@ -75,6 +75,8 @@ func pop() (int, error) {
 
 Push and pop operations in stacks are considered O(1) operations, making them highly efficient. Additionally, many machines have built-in stack instruction sets, further increasing their performance. Stacks' unique efficiency and usefulness have solidified their place as one of the most fundamental data structures, second only to [arrays](../array).
 
+Resizing the slice and item shifting maybe necessary in the slice implementation, hence traditionally this implementation is seen as O(n). As shown in the complexity of [queue](../queue/README.md) because of the intelligent ways Go resizes the slices this is not a problem and the slice implementation of both stack and queue will perform better than the linked list implementation.
+
 ## Application
 
 Stacks are helpful when LIFO operations are desired. Many [graph](../graph) problems are solved with stacks.
