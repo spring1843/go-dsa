@@ -7,7 +7,8 @@ TestFindDuplicate tests solution(s) with the following signature and problem des
 
 	FindDuplicate(list []int) int
 
-Given a list of integers (1,2,...,n), find a duplicate number in O(n) time.
+Given a list of n integers (3, 2, 1, 4, 5, 4,...,n) where each number is positive and smaller
+than n find the duplicate integer.
 */
 func TestFindDuplicate(t *testing.T) {
 	tests := []struct {
@@ -19,6 +20,8 @@ func TestFindDuplicate(t *testing.T) {
 		{[]int{1, 2, 3}, -1},
 		{[]int{1, 1, 2, 3}, 1},
 		{[]int{1, 2, 2, 3}, 2},
+		{[]int{1, 2, 3, 2, 4, 5}, 2},
+		{[]int{3, 2, 1, 4, 5, 4}, 4},
 	}
 
 	for i, test := range tests {
