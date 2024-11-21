@@ -82,7 +82,7 @@ Addition and deletion operations are O(n) operations in Arrays. Removing an elem
 
 ## Application
 
-Arrays are used wherever sequential data or more than one piece of data is needed. The fast read and write access to a given element makes arrays suitable for implementing other data structures such as [strings](../strings), [stacks](../stack), [queues](../queue), and [hash tables](../hashtable).
+Arrays are used wherever sequential data or more than one piece of data is needed. The fast read and write access to a given element makes arrays suitable for implementing over other data structures such as [strings](../strings), [stacks](../stack), [queues](../queue), and [hash tables](../hashtable).
 
 ## Rehearsal
 
