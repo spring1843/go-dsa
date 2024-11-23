@@ -1,7 +1,5 @@
 package array
 
-import "math"
-
 // AddTwoNumbers solves the problem in O(n) time and O(1) space.
 func AddTwoNumbers(num1, num2 []int) []int {
 	num1, num2 = equalizeLengths(num1, num2)
@@ -24,7 +22,10 @@ func AddTwoNumbers(num1, num2 []int) []int {
 }
 
 func equalizeLengths(num1, num2 []int) ([]int, []int) {
-	diff := int(math.Abs(float64(len(num2) - len(num1))))
+	diff := len(num2) - len(num1)
+	if diff < 0 { 
+		diff = diff * -1
+	}
 	zeros := make([]int, diff)
 	if len(num2) > len(num1) {
 		num1 = append(zeros, num1...)
