@@ -7,11 +7,24 @@ the change.
 
 -->
 
-# Fixes #N/A <!-- issue number if applicable-->
+# Fixes #N/A <!-- issue number if applicable -->
 
 ## What is being changed?
 
+<!--
+
+What describes the change you are making?
+
+-->
+
 ## Why is this a good idea?
+
+<!--
+
+Explain what is the advantage of merging your change? How does it
+make anything better?
+
+ -->
 
 ## PR Opener Check List
 
