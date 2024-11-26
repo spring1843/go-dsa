@@ -1,12 +1,11 @@
-<!-- Thank you for contributing ❤️ -->
+#Fixes #N/A <!-- issue number if applicable-->
 
-Fixes #N/A <!-- issue number if applicable-->
+## What is being changed?
 
-**What is being changed?**
+## Why is this a good idea?
 
-**Why is this a good idea?**
+## PR Opener Check List
 
-**PR Opener Check List**
 - [ ] Do lint checks pass?
 - [ ] Do all tests pass
 - [ ] Does code coverage stay at 100%?
