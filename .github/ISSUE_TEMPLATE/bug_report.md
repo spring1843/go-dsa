@@ -17,7 +17,7 @@ A clear and concise description of what you expected to happen.
 
 ## Running code examples
 
-If applicable, try to add executable code to and share the url to illustrate your point. e.g. <https://go.dev/play/p/UfJNprdqDJ6>.
+If applicable, try to add executable code to and share the URL to illustrate your point. e.g. <https://go.dev/play/p/UfJNprdqDJ6>.
 
 ## What effort have you taken to solve this problem?
 
