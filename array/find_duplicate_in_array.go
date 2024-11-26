@@ -18,3 +18,8 @@ func abs(a int) int {
 	}
 	return a
 }
+
+// Note: This solution uses Marking Technique
+// 	Pros: No extra space required.
+// 	Cons: Modifies the original list, Only works if the item value is between 0 and len(list)-1
+// A more general solution would be to use a set. But the space complexity will become O(n).
