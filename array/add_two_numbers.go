@@ -22,10 +22,7 @@ func AddTwoNumbers(num1, num2 []int) []int {
 }
 
 func equalizeLengths(num1, num2 []int) ([]int, []int) {
-	diff := len(num2) - len(num1)
-	if diff < 0 { 
-		diff = diff * -1
-	}
+	diff := absDiff(len(num1), len(num2))
 	zeros := make([]int, diff)
 	if len(num2) > len(num1) {
 		num1 = append(zeros, num1...)
@@ -33,4 +30,11 @@ func equalizeLengths(num1, num2 []int) ([]int, []int) {
 		num2 = append(zeros, num2...)
 	}
 	return num1, num2
+}
+
+func absDiff(a, b int) int {
+	if a > b {
+		return a - b
+	}
+	return b - a
 }
