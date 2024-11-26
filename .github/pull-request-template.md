@@ -1,12 +1,33 @@
-<!-- Thank you for contributing ❤️ -->
+<!--
 
-Fixes #N/A <!-- issue number if applicable-->
+Thank you for contributing ❤️
 
-**What is being changed?**
+Please fill out the details below to help the reviewers understand
+the change.
 
-**Why is this a good idea?**
+-->
 
-**PR Opener Check List**
+# Fixes #N/A <!-- issue number if applicable -->
+
+## What is being changed?
+
+<!--
+
+What describes the change you are making?
+
+-->
+
+## Why is this a good idea?
+
+<!--
+
+Explain what is the advantage of merging your change? How does it
+make anything better?
+
+ -->
+
+## PR Opener Check List
+
 - [ ] Do lint checks pass?
 - [ ] Do all tests pass
 - [ ] Does code coverage stay at 100%?
