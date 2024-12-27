@@ -28,7 +28,7 @@ newRehearsalEntry parses the rehearsal section of the README.md file that looks 
 */
 func newRehearsalEntry(input string) ([]rehearsalEntry, error) {
 	lines := strings.Split(input, "\n")
-	var entries []rehearsalEntry
+	entries := []rehearsalEntry{}
 	re := regexp.MustCompile(`\* \[([^\]]+)\]\(\.\/([^\)]+)\), \[Solution\]\(\.\/([^\)]+)\)`)
 
 	for _, line := range lines {
