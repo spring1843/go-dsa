@@ -6,6 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/spring1843/go-dsa/.github/cmd/pkg/problems"
+
 	"github.com/spf13/cobra"
 )
 
@@ -20,7 +22,7 @@ var countRehearsalsCommand = &cobra.Command{
 		}
 
 		count := 0
-		for _, section := range sections {
+		for _, section := range problems.OrderedSections {
 			matches, err := filepath.Glob(filepath.Join(dir, section, "*_test.go"))
 			if err != nil {
 				log.Fatalf("Error while globbing: %s", err)

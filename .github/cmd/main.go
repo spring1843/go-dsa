@@ -1,6 +1,6 @@
 package main
 
-import "github.com/spring1843/go-dsa/.github/cmd/cmd"
+import "github.com/spring1843/go-dsa/.github/cmd/pkg/cmd"
 
 func main() {
 	cmd.Execute()

@@ -23,9 +23,7 @@ Backtracking is widely used to solve board games and computers use it to select 
 
 ## Rehearsal
 
-## Permutations
-
-* [Permutations](./permutations_test.go),  [Solution](./permutations.go)
+* [Permutations](./permutations_test.go), [Solution](./permutations.go)
 * [Generate Parentheses](./generate_parentheses_test.go), [Solution](./generate_parentheses.go)
 * [Phone Letter Combinations](./phone_letter_combinations_test.go), [Solution](./phone_letter_combinations.go)
 * [Maze](./maze_test.go), [Solution](./maze.go)

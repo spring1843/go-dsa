@@ -92,9 +92,9 @@ DNC algorithms are suitable for solving problems that can be divided into smalle
 
 ## Rehearsal
 
-* [Binary Search](binary_search_test.go), [Solution](binary_search.go)
-* [Square Root with Binary Search](square_root_test.go), [Solution](square_root.go)
-* [Rate Limit](rate_limit_test.go), [Solution](rate_limit.go)
-* [Towers of Hanoi](towers_of_hanoi_test.go), [Solution](towers_of_hanoi.go)
-* [Merge Sort](merge_sort_test.go), [Solution](merge_sort.go)
-* [Quick Sort](quick_sort_test.go), [Solution](quick_sort.go)
+* [Binary Search](./binary_search_test.go), [Solution](./binary_search.go)
+* [Square Root with Binary Search](./square_root_test.go), [Solution](./square_root.go)
+* [Rate Limit](./rate_limit_test.go), [Solution](./rate_limit.go)
+* [Towers of Hanoi](./towers_of_hanoi_test.go), [Solution](./towers_of_hanoi.go)
+* [Merge Sort](./merge_sort_test.go), [Solution](./merge_sort.go)
+* [Quick Sort](./quick_sort_test.go), [Solution](./quick_sort.go)
