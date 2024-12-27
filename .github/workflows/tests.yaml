@@ -8,7 +8,7 @@ permissions:
   contents: read
 jobs:
   lint:
-    runs-on: alpine-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: reviewdog/action-misspell@v1
@@ -28,7 +28,7 @@ jobs:
           LOG_LEVEL: WARN
           VALIDATE_SHELL_SHFMT: false
   tests:
-    runs-on: alpine-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
