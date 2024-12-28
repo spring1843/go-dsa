@@ -27,4 +27,3 @@ jobs:
           VALIDATE_GITLEAKS: false
           LOG_LEVEL: WARN
           VALIDATE_SHELL_SHFMT: false
- 
