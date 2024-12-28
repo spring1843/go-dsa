@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@5
+      - uses: actions/setup-go@v5
       - run: make build
       - name: Create Release
         id: create_release
