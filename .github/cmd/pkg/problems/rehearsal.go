@@ -24,7 +24,7 @@ newRehearsalEntry parses the rehearsal section of the README.md file that looks 
 ## Rehearsal
 
 * [Some Name 1](./problem_test1.go), [Solution](./solution1.go)
-* [Some Name 2](./problem_test2.go), [Solution](./solution2.go)
+* [Some Name 2](./problem_test2.go), [Solution](./solution2.go).
 */
 func newRehearsalEntry(input string) ([]rehearsalEntry, error) {
 	lines := strings.Split(input, "\n")
