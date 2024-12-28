@@ -1,6 +1,7 @@
-package cmd
+package problems
 
-var sections = []string{
+// OrderedSections list of sections in go-dsa corresponding to directory names.
+var OrderedSections = []string{
 	"array",
 	"strings",
 	"linkedlist",

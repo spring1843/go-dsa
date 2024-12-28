@@ -3,3 +3,4 @@ profile.cov
 .pre-commit-config.yaml
 .vscode
 .idea
+bin

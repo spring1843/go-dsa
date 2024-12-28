@@ -6,6 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/spring1843/go-dsa/.github/cmd/pkg/problems"
+
 	"github.com/spf13/cobra"
 )
 
@@ -19,21 +21,26 @@ var exportMDCommand = &cobra.Command{
 			log.Fatalf("Error finding current directory: %s", err)
 		}
 
-		allFiles := []string{
+		nonSectionMDFiles := []string{
 			"README.md",
 			"preface.md",
 			"complexity.md",
 		}
-		for _, section := range sections {
-			allFiles = append(allFiles, filepath.Join(section, "README.md"))
-		}
 
-		for _, file := range allFiles {
+		for _, file := range nonSectionMDFiles {
 			content, err := os.ReadFile(filepath.Join(dir, file))
 			if err != nil {
 				log.Fatalf("Error reading file: %s", err)
 			}
 			fmt.Println(string(content))
+		}
+
+		for _, section := range problems.OrderedSections {
+			parsedSection, err := problems.ParseSection(dir, section)
+			if err != nil {
+				log.Fatalf("Error parsing section: %s", err)
+			}
+			fmt.Println(parsedSection)
 		}
 	},
 }

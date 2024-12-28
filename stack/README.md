@@ -90,4 +90,4 @@ During process execution, a portion of memory known as the "stack" is reserved t
 * [Infix to Postfix Conversion](./infix_to_postfix_test.go), [Solution](./infix_to_postfix.go)
 * [Evaluate Postfix](./evaluate_postfix_test.go), [Solution](./evaluate_postfix.go)
 * [Longest Valid Parentheses](./longest_valid_parentheses_test.go), [Solution](./longest_valid_parentheses.go)
-* [Basic Calculator](./basic_calculator_test.go), [Solution](basic_calculator.go)
+* [Basic Calculator](./basic_calculator_test.go), [Solution](./basic_calculator.go)

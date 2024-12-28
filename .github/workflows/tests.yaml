@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
-      - run: go test -v -coverprofile=profile.cov ./...
+      - run: make ci
       - uses: shogo82148/actions-goveralls@v1
         with:
           path-to-profile: profile.cov
