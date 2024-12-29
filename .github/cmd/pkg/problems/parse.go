@@ -61,7 +61,7 @@ func replaceRehearsal(input string, conf *ParseConf) (string, error) {
 	return rehearsalRegex.ReplaceAllString(input, replacement), nil
 }
 
-// ReplaceWithLiveLinks replaces the relative links in the input with links to the repo that work
+// ReplaceWithLiveLinks replaces the relative links in the input with links to the repo that work.
 func ReplaceWithLiveLinks(input, section string, conf *ParseConf) string {
 	repoBase := repoAddress + conf.Version
 	if conf.Version == "" {
