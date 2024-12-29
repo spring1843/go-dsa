@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"strings"
 )
 
 type ParseConf struct {
@@ -16,6 +17,11 @@ type ParseConf struct {
 	ReplaceWithLiveLinks   bool
 	Version                string
 }
+
+const (
+	repoAddress = "https://github.com/spring1843/go-dsa/tree/"
+	mainBranch  = "main"
+)
 
 var rehearsalRegex = regexp.MustCompile(`(?s)(## Rehearsal\n.*?)(\n##|\z)`)
 
@@ -28,6 +34,10 @@ func ParseSection(conf *ParseConf) (string, error) {
 	preparedContent, err := replaceRehearsal(string(content), conf)
 	if err != nil {
 		return "", fmt.Errorf("error replacing the rehearsal section in file: %w", err)
+	}
+
+	if conf.ReplaceWithLiveLinks {
+		preparedContent = ReplaceWithLiveLinks(preparedContent, conf.Section, conf)
 	}
 
 	return preparedContent, nil
@@ -49,4 +59,19 @@ func replaceRehearsal(input string, conf *ParseConf) (string, error) {
 	}
 	replacement := fmt.Sprintf("## Rehearsal\n%s", stringRehearsalEntries(conf, newRehearsals))
 	return rehearsalRegex.ReplaceAllString(input, replacement), nil
+}
+
+// ReplaceWithLiveLinks replaces the relative links in the input with links to the repo that work.
+func ReplaceWithLiveLinks(input, section string, conf *ParseConf) string {
+	repoBase := repoAddress + conf.Version
+	if conf.Version == "" {
+		repoBase = repoAddress + mainBranch
+	}
+
+	output := input
+	if section != "" {
+		output = strings.ReplaceAll(output, "](../", "]("+repoBase+"/")
+	}
+
+	return strings.ReplaceAll(output, "](./", "]("+repoBase+"/")
 }

@@ -2,7 +2,7 @@ all: build
 
 build:
 	mkdir -p ./bin
-	go run ./.github/cmd/main.go export-md > ./bin/go-dsa.md
+	go run "./.github/cmd/main.go" "export-md" "--version=$(VERSION)" > "./bin/go-dsa.md"
 
 test:
 	go test --race -v -coverprofile=profile.cov ./...

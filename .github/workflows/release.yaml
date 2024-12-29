@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
-      - run: make build
+      - run: make build VERSION=${{ github.ref }}
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
