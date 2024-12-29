@@ -27,22 +27,32 @@ var exportMDCommand = &cobra.Command{
 			"complexity.md",
 		}
 
+		conf := &problems.ParseConf{
+			Dir:                    dir,
+			ReplacePackageWithMain: cmd.Flag(replacePackageWithMainFlag).Value.String() == "true",
+			ReplaceWithLiveLinks:   cmd.Flag(replaceWithLiveLinksFlag).Value.String() == "true",
+			Version:                cmd.Flag(versionFlag).Value.String(),
+		}
+
 		for _, file := range nonSectionMDFiles {
 			content, err := os.ReadFile(filepath.Join(dir, file))
 			if err != nil {
 				log.Fatalf("Error reading file: %s", err)
 			}
-			fmt.Println(string(content))
+
+			contentStr := string(content)
+
+			if conf.ReplaceWithLiveLinks {
+				contentStr = problems.ReplaceWithLiveLinks(contentStr, "", conf)
+			}
+
+			fmt.Println(string(contentStr))
 		}
 
 		for _, section := range problems.OrderedSections {
-			parsedSection, err := problems.ParseSection(&problems.ParseConf{
-				Dir:                    dir,
-				Section:                section,
-				ReplacePackageWithMain: cmd.Flag(replacePackageWithMainFlag).Value.String() == "true",
-				ReplaceWithLiveLinks:   cmd.Flag(replaceWithLiveLinksFlag).Value.String() == "true",
-				Version:                cmd.Flag(versionFlag).Value.String(),
-			})
+			conf.Section = section
+
+			parsedSection, err := problems.ParseSection(conf)
 			if err != nil {
 				log.Fatalf("Error parsing section: %s", err)
 			}
