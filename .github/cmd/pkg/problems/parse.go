@@ -18,6 +18,11 @@ type ParseConf struct {
 	Version                string
 }
 
+const (
+	repoAddress = "https://github.com/spring1843/go-dsa/tree/"
+	mainBranch  = "main"
+)
+
 var rehearsalRegex = regexp.MustCompile(`(?s)(## Rehearsal\n.*?)(\n##|\z)`)
 
 func ParseSection(conf *ParseConf) (string, error) {
@@ -58,7 +63,10 @@ func replaceRehearsal(input string, conf *ParseConf) (string, error) {
 
 // ReplaceWithLiveLinks replaces the relative links in the input with links to the repo that work
 func ReplaceWithLiveLinks(input, section string, conf *ParseConf) string {
-	repoBase := "https://github.com/spring1843/go-dsa/tree/" + conf.Version
+	repoBase := repoAddress + conf.Version
+	if conf.Version == "" {
+		repoBase = repoAddress + mainBranch
+	}
 
 	output := input
 	if section != "" {
