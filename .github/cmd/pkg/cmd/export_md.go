@@ -36,7 +36,13 @@ var exportMDCommand = &cobra.Command{
 		}
 
 		for _, section := range problems.OrderedSections {
-			parsedSection, err := problems.ParseSection(dir, section)
+			parsedSection, err := problems.ParseSection(&problems.ParseConf{
+				Dir:                    dir,
+				Section:                section,
+				ReplacePackageWithMain: cmd.Flag(replacePackageWithMainFlag).Value.String() == "true",
+				ReplaceWithLiveLinks:   cmd.Flag(replaceWithLiveLinksFlag).Value.String() == "true",
+				Version:                cmd.Flag(versionFlag).Value.String(),
+			})
 			if err != nil {
 				log.Fatalf("Error parsing section: %s", err)
 			}
