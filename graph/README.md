@@ -175,7 +175,7 @@ For any vertex S that is reachable from V, the simple path in the BFS tree from 
 
 #### Depth First Search - DFS
 
-Depth First Search (DFS) is a graph traversal algorithm that explores a graph as far as possible along each branch before backtracking. When implemented iteratively, it uses a [stack](../stack) data structure, is [recursive](../recursion), and is a generalization of pre-order traversal in trees.
+Depth First Search (DFS) is a graph traversal algorithm that explores a graph as far as possible along each branch before [backtracking](../backtracking/). When implemented iteratively, it uses a [stack](../stack) data structure, is [recursive](../recursion), and is a generalization of pre-order traversal in trees.
 
 When given a graph G and a vertex S, DFS systematically discovers all nodes in G reachable from S. It is typically implemented using a driver that discovers the edges of the most recently discovered vertex V with unexplored edges. Once all of V's edges have been explored, the search [backtracks](../backtracking/) to explore all edges leaving the vertex from which V was discovered. This process continues until all the edges are discovered.
 
