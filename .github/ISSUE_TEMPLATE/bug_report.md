@@ -7,22 +7,10 @@ assignees: ''
 
 ---
 
-## Describe the problem
+## A clear and concise description of what the problem
 
-A clear and concise description of what the problem is.
-
-## Expected behavior
-
-A clear and concise description of what you expected to happen.
-
-## Running code examples
-
-If applicable, try to add executable code to and share the URL to illustrate your point. e.g. <https://go.dev/play/p/UfJNprdqDJ6>.
+## Any code examples?
 
 ## What effort have you taken to solve this problem?
 
-Describe what effort you have done so far to solve this challenge?
-
 ## Additional context
-
-Add any other context about the problem here.
