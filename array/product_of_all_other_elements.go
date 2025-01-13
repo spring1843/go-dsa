@@ -1,6 +1,6 @@
 package array
 
-// ProductOfAllOtherElements solves the problem in O(n) time and O(1) space.
+// ProductOfAllOtherElements solves the problem in O(n) time and O(n) space.
 func ProductOfAllOtherElements(list []int) []int {
 	if len(list) == 0 {
 		return list
