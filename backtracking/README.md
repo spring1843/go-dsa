@@ -51,6 +51,7 @@ func containsRecursive(text, pattern string, textIndex, patternIndex int) bool {
 To solve this problem using the backtracking technique:
 
 * Recursively iterate through each character of `text` at `textIndex` and compare it with the first character of the `pattern`:
+
     * If they match compare every remaining character in text with every remaining character in pattern and if they are all equal then success base case condition is satisfied.
     * If they are not equal then  increment the `textIndex` repeat
 
