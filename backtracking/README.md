@@ -60,6 +60,7 @@ The driver function `Contains` prepares the first call to the recursive function
 The recursive function `containsRecursive` then checks for base cases. If `patternIndex` equals the length of `pattern` it means every character of the pattern has been compared to a substring of text and they have all matched so the function returns true. If `textIndex`equals the length of `text` then all characters have been explored and the pattern has not been found so it returns false.
 
 Then it checks to see if the character at `textIndex` in `text` matches the character at `patternIndex` in `pattern`:
+
 * If they match it will recursively call the same function to check the remaining characters.
 * If they do not match it backtracks to the next character in text by recursively calling the same function with an incremented textIndex.
 
