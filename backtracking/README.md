@@ -11,36 +11,58 @@ Backtracking algorithms are typically implemented in these steps:
 1. Prune invalid approaches when possible.
 2. Generate a partial solution by iterating through available alternatives.
 3. Check the validity of the selected alternative according to the problem conditions and rules.
-4. Check for solution completion when required.
+4. Check base cases for solution completion when required.
 
 After finding a backtracking approach to a problem we can start coding by creating a driver function and a recursive function.
 
-The recursive function should receive as input the current state of the progress and uses it to checks for solution completion and to make the next incremental step by recursively calling itself. The recursive function should also have a way to communicate the solution back to the driver. The driver is responsible for making the first call to the recursive function and interpreting the final solution or failure in finding it back to the caller function. To illustrate this lets solve a problem that we will later solve more efficiently as one of the rehearsals in the [Dynamic Programming](../dp/) section.
-
-Sum Up to a Number: Given a set of integers and a positive integer n return true if there is a subset of numbers that can sum up to n and false otherwise. For example for {1,2,3,4,5} and n=10 it should return true because 2+3+5=10 and for n 50 it should return false because there is no subset that can be summed up to 50.
+The recursive function should receive current state of the progress as input and uses it to checks the base cases for solution completion and to make the next incremental step by recursively calling itself. The recursive function should also have a way to communicate the solution back to the driver. The driver is responsible for making the first call to the recursive function and interpreting the final solution or failure in finding it back to the caller function. Lets review an example to illustrate this process.
 
 ```Go
 package main
 
-func SumUpToNumber(numbers []int, n int) bool {
-	return sumpUpToNumberRecursive(numbers, n, 0)
+import "fmt"
+
+// Contains returns true if text contains pattern and false otherwise. For example:
+// Contains("abracadabra", "cad") returns true
+// Contains("abracadabra", "ra") returns true
+// Contains("abracadabra", "zebra") returns false
+func Contains(text, pattern string) bool {
+	return containsRecursive(text, pattern, 0, 0)
 }
 
-func sumpUpToNumberRecursive(numbers []int, n int, index int) bool {
-	if n == 0 {
-		return true
+func containsRecursive(text, pattern string, textIndex, patternIndex int) bool {
+	if patternIndex == len(pattern) {
+		return true 
 	}
-	if n < 0 || index == len(numbers) {
-		return false
+	if textIndex == len(text) {
+		return false 
 	}
-	return sumpUpToNumberRecursive(numbers, n-numbers[index], index+1) || // Include the number
-		sumpUpToNumberRecursive(numbers, n, index+1) // Exclude the number
+
+	if text[textIndex] == pattern[patternIndex] {
+		if containsRecursive(text, pattern, textIndex+1, patternIndex+1) {
+			return true
+		}
+	}
+
+	return containsRecursive(text, pattern, textIndex+1, 0)
 }
 ```
 
-The driver function `SumUpToNumber` prepares the first call to the recursive function by sending it all the input it has received and an index number which starts from 0.
+To solve this problem using the backtracking technique:
 
-The recursive function `sumpUpToNumberRecursive` then checks to see if we have reached a satisfying problem condition i.e. a final success or failure and returns it. Then it calls itself in two ways by checking to see if the sum can be achieved by including the value at current index or excluding it.
+* Recursively iterate through each character of `text` at `textIndex` and compare it with the first character of the `pattern`:
+    * If they match compare every remaining character in text with every remaining character in pattern and if they are all equal then success base case condition is satisfied.
+    * If they are not equal then  increment the `textIndex` repeat
+
+The driver function `Contains` prepares the first call to the recursive function by sending it all the inputs it has received and to index numbers as `textIndex` and `patternIndex` as 0.
+
+The recursive function `containsRecursive` then checks for base cases. If `patternIndex` equals the length of `pattern` it means every character of the pattern has been compared to a substring of text and they have all matched so the function returns true. If `textIndex `equals the length of `text` then all characters have been explored and the pattern has not been found so it returns false.
+
+Then it checks to see if the character at `textIndex` in `text` matches the character at `patternIndex` in `pattern`:
+* If they match it will recursively call the same function to check the remaining characters.
+* If they do not match it backtracks to the next character in text by recursively calling the same function with an incremented textIndex.
+
+For example for inputs `abracadabra` and `cad` it will check to see if `a` equals `c`, if it doesn't then it looks at the next character in text which is `b`. Since it does not match it will keep incrementing `textIndex` until it equals 4 at which point it will match `c`. Then it will check to see if text and pattern match at index 5 and 1. If they do then 6 and 2, and if they do since `cad` has three letters and we have found 3 matching elements we can conclude the text contains the pattern.
 
 ## Complexity
 
