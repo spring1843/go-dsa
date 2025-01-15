@@ -44,7 +44,7 @@ func addToFront(node *node) {
 }
 ```
 
-A pointer is typically stored for the first and last items in a singly linked list. Adding items to the front or back of the list is a constant-time operation. However, deleting the last item can be challenging, as the last item's pointer needs to be updated to the second-to-last item. This is where referencing the last item in each node proves useful. In contrast, doubly linked lists maintain pointers to the previous and next nodes, making deletion operations less expensive.
+A pointer is typically stored for the first and sometimes the last items in a singly linked list. Adding items to the front or back of the list is a constant-time operation. However, deleting the last item can be challenging, as the last item's pointer needs to be updated to the second-to-last item. This is where referencing the last item in each node proves useful. In contrast, doubly linked lists maintain pointers to the previous and next nodes, making deletion operations less expensive.
 
 The Go standard library contains an implementation of [doubly linked lists](https://golang.org/pkg/container/list/). In the following example, numbers from 1 to 10 are added to the list. Even numbers are removed, and the resulting linked list containing odd numbers is printed.
 
@@ -81,11 +81,11 @@ func main() {
 
 Adding new items to the front or back of the linked list has the time complexity of O(1).
 
-Deleting the first item is also O(1). Deleting the last item in a singly linked list is O(n), because the node before the last node must be found, and for that, every node must be visited. Deleting the last item can be done in O(1) time in a doubly linked list since nodes are connected to the previous and next nodes.
+Deleting the first item is also O(1). Deleting the last item in a singly linked list is O(n), because the node before the last node must be found, and for that, every node must be visited. Deleting the last item can be done in O(1) time in a doubly linked list since nodes are connected to the previous and next nodes, so we can simply find the node before the last node and remove its reference to the next node.
 
 ## Application
 
-Linked lists can be useful where the order of items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items. Music players for example have playlists that play tracks in a predetermined order. At any given time, one track is playing while changing the current track with the previous or next ones is possible.
+Linked lists can be useful where the order of items matters, especially if there is a need for flexible reordering of the items or having current, next, and previous items. For example music players are a good candidate to implement using linked lists because they have playlists that play tracks in a predetermined order. At any given time, one track is playing while changing the current track with the previous or next ones is possible.
 
 ## Rehearsal
 
@@ -94,4 +94,4 @@ Linked lists can be useful where the order of items matters, especially if there
 * [Join Two Sorted Linked Lists](./join_sorted_lists_test.go), [Solution](./join_sorted_lists.go)
 * [Keep Repetitions](./keep_repetitions_test.go), [Solution](./keep%20repetitions.go)
 * [Copy Linked List with Random Pointer](./copy_linklist_with_random_pointer_test.go), [Solution](./copy_linklist_with_random_pointer.go)
-* [Implement LRU Cache](./lru_cache_test.go), [Solution](./lru_cache.go)
+* [LRU Cache](./lru_cache_test.go), [Solution](./lru_cache.go)

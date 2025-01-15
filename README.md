@@ -44,7 +44,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Join Two Sorted Linked Lists](./linkedlist/join_sorted_lists_test.go)
         * [Keep Repetitions](./linkedlist/keep_repetitions_test.go)
         * [Copy Linked List with Random Pointer](./linkedlist/copy_linklist_with_random_pointer_test.go)
-        * [Implement LRU Cache](./linkedlist/lru_cache_test.go)
+        * [LRU Cache](./linkedlist/lru_cache_test.go)
     * [Stacks](./stack/README.md)
         * [Max Stack](./stack/max_stack_test.go)
         * [Balancing Symbols](./stack/balancing_symbols_test.go)

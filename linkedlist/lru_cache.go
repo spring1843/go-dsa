@@ -2,6 +2,8 @@ package linkedlist
 
 import (
 	"container/list"
+	"fmt"
+	"strings"
 )
 
 type (
@@ -49,4 +51,13 @@ func (cache *lruCache) put(key int, value int) {
 		delete(cache.elements, cache.list.Front().Value.(*element).key)
 		cache.list.Remove(cache.list.Front())
 	}
+}
+
+// String represents the cache as a string.
+func (cache *lruCache) String() string {
+	var pairs []string
+	for e := cache.list.Front(); e != nil; e = e.Next() {
+		pairs = append(pairs, fmt.Sprintf("%d:%d", e.Value.(*element).key, e.Value.(*element).value))
+	}
+	return strings.Join(pairs, ",")
 }

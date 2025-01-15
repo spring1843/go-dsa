@@ -15,10 +15,23 @@ const (
 /*
 TestCopyLinkedListWithRandomPointer tests solution(s) with the following signature and problem description:
 
+	type RandomNode struct {
+		Val int
+		Next *RandomNode
+		Random *RandomNode
+	}
+
 	func CopyLinkedListWithRandomPointer(head *RandomNode) *RandomNode
 
 Given a singly connected linked list in which each node may optionally be connected to another node in
 random order, return a deep copy of the linked list.
+
+A deep copy of a linked list is a new linked list with the same values as the original linked list in
+which each node is a new node with a new memory address.
+
+In the string representation below "1:nil->2:1->3:4->4:nil" is a linked list with 4 nodes:
+* Nodes 1,2,3,4 are sequentially connected to each other with the Next pointer
+* Node 2 is randomly connected to node 1, and node 3 is randomly connected to node 4
 */
 func TestCopyLinkedListWithRandomPointer(t *testing.T) {
 	tests := []struct {
@@ -33,7 +46,7 @@ func TestCopyLinkedListWithRandomPointer(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		list := unserializeRandomNode(test.list)
+		list := deserializeRandomNode(test.list)
 		deepCopy := CopyLinkedListWithRandomPointer(list)
 
 		if list != nil {
@@ -89,7 +102,7 @@ func indicesMap(node *RandomNode) map[*RandomNode]int {
 	return indices
 }
 
-func unserializeRandomNode(stringRepresentation string) *RandomNode {
+func deserializeRandomNode(stringRepresentation string) *RandomNode {
 	if stringRepresentation == "" {
 		return nil
 	}

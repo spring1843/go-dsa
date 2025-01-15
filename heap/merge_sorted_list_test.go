@@ -30,7 +30,7 @@ func TestMergeSortedLists(t *testing.T) {
 	for i, test := range tests {
 		nodes := []*linkedlist.Node{}
 		for _, sortedLinkedList := range test.sortedLinkedLists {
-			nodes = append(nodes, linkedlist.Unserialize(sortedLinkedList))
+			nodes = append(nodes, linkedlist.Deserialize(sortedLinkedList))
 		}
 		got := linkedlist.Serialize(MergeSortedLists(nodes))
 		if got != test.merged {

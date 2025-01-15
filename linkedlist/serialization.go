@@ -39,8 +39,8 @@ func Serialize(node *Node) string {
 	return strings.TrimSuffix(output, separator)
 }
 
-// Unserialize solves the problem in O(n) time and O(1) space.
-func Unserialize(stringRepresentation string) *Node {
+// Deserialize solves the problem in O(n) time and O(1) space.
+func Deserialize(stringRepresentation string) *Node {
 	if stringRepresentation == "" {
 		return nil
 	}
