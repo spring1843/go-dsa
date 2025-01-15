@@ -8,6 +8,8 @@ TestJoinTwoSortedLinkedLists tests solution(s) with the following signature and 
 	func JoinTwoSortedLinkedLists(l1, l2 *Node) *Node
 
 Given two sorted linked lists of integers, merge them into one sorted linked list.
+
+For example if given 1->4->6 and 2->3->5->7, the output should be 1->2->3->4->5->6->7.
 */
 func TestJoinTwoSortedLinkedLists(t *testing.T) {
 	tests := []struct {
@@ -26,7 +28,7 @@ func TestJoinTwoSortedLinkedLists(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got := Serialize(JoinTwoSortedLinkedLists(Unserialize(test.list1), Unserialize(test.list2)))
+		got := Serialize(JoinTwoSortedLinkedLists(Deserialize(test.list1), Deserialize(test.list2)))
 		if got != test.joined {
 			t.Fatalf("Failed test case #%d. Want %s got %s", i, test.joined, got)
 		}
