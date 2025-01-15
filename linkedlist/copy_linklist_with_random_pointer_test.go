@@ -30,8 +30,8 @@ A deep copy of a linked list is a new linked list with the same values as the or
 which each node is a new node with a new memory address.
 
 In the string representation below "1:nil->2:1->3:4->4:nil" is a linked list with 4 nodes:
-* Nodes 1,2,3,4 are sequentially connected to each other with the Next pointer
-* Node 2 is randomly connected to node 1, and node 3 is randomly connected to node 4
+* Nodes 1,2,3,4 are sequentially connected to each other with the Next pointer.
+* Node 2 is randomly connected to node 1, and node 3 is randomly connected to node 4.
 */
 func TestCopyLinkedListWithRandomPointer(t *testing.T) {
 	tests := []struct {
