@@ -23,9 +23,9 @@ To save memory space in an in-place implementation of Insertion Sort we do not c
 
 To sort {2,3,1} using Insertion Sort:
 1- Put 2 in the sorted list and {3,1} in the unsorted list.
-2- Compare 3 with 2 and do not swap since 2<3, add 3 to the sorted list so the sorted list is {2,3} and the unsorted list is {1}
-3- Compare 1 with 3, and swap since 1<3 so the sorted list is {2,1,3} and unsorted list is empty. Continue by comparing 1 and 2 and swapping since 1<2 so the list becomes {1,2,3}
-4- Since there are no elements left in the unsorted list, the list is sorted so return {1,2,3}
+2- Compare 3 with 2 and do not swap since 2<3, add 3 to the sorted list so the sorted list is {2,3} and the unsorted list is {1}.
+3- Compare 1 with 3, and swap since 1<3 so the sorted list is {2,1,3} and unsorted list is empty. Continue by comparing 1 and 2 and swapping since 1<2 so the list becomes {1,2,3}.
+4- Since there are no elements left in the unsorted list, the list is sorted so return {1,2,3}.
 */
 func TestInsertionSort(t *testing.T) {
 	tests := []struct {
