@@ -16,7 +16,7 @@ sub-array (sub-slice) of the input.
 For example given {1,2,3,4,5} and k=2, return {2,3,4,5} because:
 
 * Sub-arrays of the input with length 2 are {{1,2},{2,3},{3,4},{4,5}}
-* The maximum in each of the sub-arrays is {2,3,4,5}
+* The maximum in each of the sub-arrays is {2,3,4,5}.
 */
 func TestMaxOfKLengthSubArrays(t *testing.T) {
 	tests := []struct {
