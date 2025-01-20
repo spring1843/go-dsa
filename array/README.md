@@ -1,6 +1,6 @@
 # Array
 
-Arrays are a fundamental and essential data structure in computer science. They consist of a fixed-size contiguous memory block and offer O(1) read and write time complexity. As a fundamental element of programming languages, arrays come built-in with their core.
+Arrays are a fundamental and essential data structure in computer science. They consist of a fixed-size contiguous memory block and offer O(1) read and write time complexity. In Go Like most other programming languages arrays are a built-in data type.
 
 To provide a real-world analogy, consider an array of athletes preparing for a sprinting match. Each athlete occupies a specific position within the array, typically denoted as 1, 2,…, n. While it is technically possible for each athlete to be in a different position, the positions generally carry some form of significance, such as alphabetical order or seniority within the sport.
 
@@ -22,7 +22,7 @@ func main() {
 
 Although arrays are fundamental data structures in Go, their constant size can make them inflexible and difficult to use in situations where a variable size is required. To address this issue, Go provides [slices](https://blog.golang.org/slices-intro), an abstraction of arrays that offer more convenient access to sequential data typically stored in arrays. When a slice is passed to a function, only the slice header is passed, but it still references the same underlying array data, hence it is possible for the callee to modify the values of the slice and send them back to the caller.
 
-Slices enable adding values using the `append` function, allowing dynamic resizing. Additionally, selectors of the format [low:high] can be used to select or manipulate data in the slice. By utilizing slices instead of arrays, Go programmers gain a more flexible and powerful tool to manage their data structures.
+Slices enable adding values using the `append` function, allowing dynamic resizing. Additionally, selectors of the format [low:high] can be used to select or manipulate data in the slice. By utilizing slices instead of arrays, Go programmers benefit from a more flexible and powerful tool to manage their data structures.
 
 ```Go
 package main
