@@ -10,7 +10,7 @@ TestMaxOfKLengthSubArrays tests solution(s) with the following signature and pro
 
 	func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error)
 
-Given a slice of numbers and an integer k return a slice containing the maximum in each k-sized
+Given a slice of numbers and an integer k, return a slice containing the maximum in each k-sized
 sub-array (sub-slice) of the input.
 
 For example given {1,2,3,4,5} and k=2, return {2,3,4,5} because:

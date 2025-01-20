@@ -269,7 +269,7 @@ Graph algorithms find extensive usage in addressing real-world challenges, inclu
 
 ## Rehearsal
 
-* [Iteratively Implement BFS and DFS](./iterative_traversal_test.go), [Solution](./iterative_traversal.go)
+* [Iteratively BFS and DFS](./iterative_traversal_test.go), [Solution](./iterative_traversal.go)
 * [DAG Graphs](./is_dag_test.go), [Solution](./is_dag.go)
 * [Topological Sort](./topological_sort_test.go), [Solution](./topological_sort.go)
 * [Employee Headcount](./employee_headcount_test.go), [Solution](./employee_headcount.go)

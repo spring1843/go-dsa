@@ -112,7 +112,7 @@ Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is design
         * [Sudoku](./backtracking/sudoku_test.go)
         * [N Queens](./backtracking/n_queens_test.go)
     * [Graphs](./graph/README.md)
-        * [Iteratively Implement BFS and DFS](./graph/iterative_traversal_test.go)
+        * [Iteratively BFS and DFS](./graph/iterative_traversal_test.go)
         * [DAG Graphs](./graph/is_dag_test.go)
         * [Topological Sort](./graph/topological_sort_test.go)
         * [Employee Headcount](./graph/employee_headcount_test.go)
