@@ -1,7 +1,7 @@
 package array
 
-// AddTwoNumbers solves the problem in O(n) time and O(1) space.
-func AddTwoNumbers(num1, num2 []int) []int {
+// AddSliceOfTwoNumbers solves the problem in O(n) time and O(1) space.
+func AddSliceOfTwoNumbers(num1, num2 []int) []int {
 	num1, num2 = equalizeLengths(num1, num2)
 	carry := false
 	for i := len(num1) - 1; i > -1; i-- {

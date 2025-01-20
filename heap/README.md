@@ -99,4 +99,4 @@ Priority queues implemented as heaps are commonly used in job scheduling, for ex
 * [Median in a Stream](./median_in_a_stream_test.go), [Solution](./median_in_a_stream.go)
 * [Regular Numbers](./regular_numbers_test.go), [Solution](./regular_numbers.go)
 * [Kth Closest Points to the Center](./k_closest_points_to_origin_test.go), [Solution](./k_closest_points_to_origin.go)
-* [Sliding Maximum](./sliding_maximum_test.go), [Solution](./sliding_maximum.go)
+* [Sliding Max](./sliding_max_test.go), [Solution](./sliding_max.go)

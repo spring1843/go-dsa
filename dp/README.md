@@ -94,5 +94,5 @@ DP is well-suited for tackling complex problems, including logistics, game theor
 * [Sum Up to Number](./sum_up_to_integer_test.go), [Solution](./sum_up_to_integer.go)
 * [House Robber](./house_robber_test.go), [Solution](./house_robber.go).
 * [Interleaving String](./interleaving_string_test.go), [Solution](./interleaving_string.go)
-* [Minimum Deletion to Make a Palindrome](./minimum_deletion_to_make_palindrome_test.go), [Solution](./minimum_deletion_to_make_palindrome.go)
+* [Min Deletions to Make a Palindrome](./min_deletions_to_make_palindrome_test.go), [Solution](./min_deletions_to_make_palindrome.go)
 * [Word Distance](./word_distance_test.go), [Solution](./word_distance.go)

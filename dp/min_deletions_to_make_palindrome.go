@@ -1,7 +1,7 @@
 package dp
 
-// MinimumDeletionsToMakePalindrome solves the problem in O(n^2) time and O(n^2) space.
-func MinimumDeletionsToMakePalindrome(input string) int {
+// MinDeletionsToMakePalindrome solves the problem in O(n^2) time and O(n^2) space.
+func MinDeletionsToMakePalindrome(input string) int {
 	if len(input) <= 1 {
 		return 0
 	}
