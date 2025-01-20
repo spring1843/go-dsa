@@ -9,7 +9,7 @@ TestJoinTwoSortedLinkedLists tests solution(s) with the following signature and 
 
 Given two sorted linked lists of integers, merge them into one sorted linked list.
 
-For example if given 1->4->6 and 2->3->5->7, the output should be 1->2->3->4->5->6->7.
+For example given 1->4->6 and 2->3->5->7, return 1->2->3->4->5->6->7.
 */
 func TestJoinTwoSortedLinkedLists(t *testing.T) {
 	tests := []struct {

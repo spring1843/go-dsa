@@ -14,8 +14,9 @@ Given two numbers represented as list of positive integers, and an integer n, re
 largest possible integer with n digits that can be constructed by merging digits from two
 numbers while respecting the order of digits in each number.
 
-For example given {5, 4, 3, 2, 1}, {9, 8, 7, 6} and 9, it should return a 9 digit number
-{9, 8, 7, 6, 5, 4, 3, 2, 1}.
+For example given {5, 4, 3, 2, 1}, {9, 8, 7, 6} and 9, return
+{9, 8, 7, 6, 5, 4, 3, 2, 1} because it is the largest 9 digit combination of all elements
+of the two given slices.
 */
 func TestMaxNumber(t *testing.T) {
 	tests := []struct {

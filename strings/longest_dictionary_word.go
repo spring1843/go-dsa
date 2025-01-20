@@ -17,7 +17,7 @@ func LongestDictionaryWordContainingKey(key string, dic []string) string {
 }
 
 // hash turns a string into a number
-// the output for "abc", "acb", "cba" and etc... are all the same.
+// the output for "abc", "acb", "cba" and etc… are all the same.
 func hash(s string) rune {
 	var res rune
 	for _, w := range s {

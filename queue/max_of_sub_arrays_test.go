@@ -10,9 +10,13 @@ TestMaxOfKLengthSubArrays tests solution(s) with the following signature and pro
 
 	func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error)
 
-Given a set an array of numbers like {1,2,3,4,5} and a number k like 2 return the maximum in
-each k-lengthed sub array. e.g. {2,3,4,5} corresponding to the max in each set of the sub
-arrays {{1,2},{2,3},{3,4},{4,5}}.
+Given a slice of numbers and an integer k, return a slice containing the maximum in each k-sized
+sub-array (sub-slice) of the input.
+
+For example given {1,2,3,4,5} and k=2, return {2,3,4,5} because:
+
+* Sub-arrays of the input with length 2 are {{1,2},{2,3},{3,4},{4,5}}
+* The maximum in each of the sub-arrays is {2,3,4,5}.
 */
 func TestMaxOfKLengthSubArrays(t *testing.T) {
 	tests := []struct {

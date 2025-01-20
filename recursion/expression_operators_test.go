@@ -12,7 +12,7 @@ the result of the equation, return a string representing operators that can be i
 the operands to form the equation and yield the target result.
 Only + and - operators are allowed and the are assumed to have the same priority
 
-For example given {1,5,3} and 3, it should return +- because 1+5-3 = 3.
+For example given {1,5,3} and 3, return +- because 1+5-3 = 3.
 */
 func TestExpressionOperators(t *testing.T) {
 	tests := []struct {

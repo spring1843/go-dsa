@@ -6,7 +6,7 @@ import (
 )
 
 /*
-TestAutoComplete tests solution(s) with the following signature and problem description:
+TestAutocompletion tests solution(s) with the following signature and problem description:
 
 	func (t *trie) AutoComplete(word string) []string
 
@@ -14,7 +14,7 @@ Given a word like "car" and a dictionary like {"car","caravan","card","carpet","
 return autocomplete suggestions where the given word is the prefix of a dictionary word
 like {"avan","d","pet"}.
 */
-func TestAutoComplete(t *testing.T) {
+func TestAutocompletion(t *testing.T) {
 	tests := []struct {
 		input       string
 		dict        []string
@@ -36,7 +36,7 @@ func TestAutoComplete(t *testing.T) {
 
 	for i, test := range tests {
 		trie := newTrie(test.dict)
-		got := trie.AutoComplete(test.input)
+		got := trie.Autocompletion(test.input)
 		if !slices.Equal(got, test.suggestions) {
 			t.Fatalf("Failed test case #%d. Want %q got %q", i, test.suggestions, got)
 		}

@@ -14,8 +14,8 @@ type (
 	}
 )
 
-// AutoComplete solves the problem in O(n) time and O(n) space.
-func (t *trie) AutoComplete(word string) []string {
+// Autocompletion solves the problem in O(n) time and O(n) space.
+func (t *trie) Autocompletion(word string) []string {
 	output := []string{}
 	current := t.root
 	for i := range len(word) {

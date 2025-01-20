@@ -3,13 +3,13 @@ package bit
 import "testing"
 
 /*
-TestAdd tests solution(s) with the following signature and problem description:
+TestAdditionWithoutArithmeticOperators tests solution(s) with the following signature and problem description:
 
 	func Add(x, y int) int
 
-Add x by y, two integers without using the built-in + or any other arithmetic operators.
+Add x by y, two integers without using any arithmetic operators such as {+,-,/,*,++,--,+=,…}.
 */
-func TestAdd(t *testing.T) {
+func TestAdditionWithoutArithmeticOperators(t *testing.T) {
 	tests := []struct {
 		a, b int
 	}{
@@ -20,7 +20,7 @@ func TestAdd(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got := Add(test.a, test.b)
+		got := AdditionWithoutArithmeticOperators(test.a, test.b)
 		want := test.a + test.b
 		if got != want {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, want, got)
