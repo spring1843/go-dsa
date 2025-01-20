@@ -13,7 +13,7 @@ TestEqualSumSubArrays tests solution(s) with the following signature and problem
 Given an list of integers A, return two sub-arrays with equal sums without changing the
 order of the elements in the list.
 
-For example if given {1,7,3,5} return {1,7} and {3,5} because 1+7 = 3+5 = 8.
+For example given {1,7,3,5, return {1,7} and {3,5} because 1+7 = 3+5 = 8.
 */
 func TestEqualSumSubArrays(t *testing.T) {
 	tests := []struct {

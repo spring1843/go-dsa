@@ -12,10 +12,11 @@ TestRotateKSteps tests solution(s) with the following signature and problem desc
 
 Given an list of integers and a number k, rotate the array k times.
 
-For example if given {1,2,3} and 3, it should return {1,2,3} because.
-Slice after 1 rotation: {3,1,2}.
-Slice after 2 rotations: {2,3,1}.
-Slice after 3 rotations: {1,2,3}.
+For example given {1,2,3} and 3, return {1,2,3} because:
+
+After 1 rotation: {3,1,2}.
+After 2 rotations: {2,3,1}.
+After 3 rotations: {1,2,3}.
 */
 func TestRotateKSteps(t *testing.T) {
 	tests := []struct {

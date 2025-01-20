@@ -10,7 +10,7 @@ TestKeepRepetitions tests solution(s) with the following signature and problem d
 Given a linked list of sorted integers, create a copy of the list that contains one example of
 each repeated item.
 
-For example if the linked list is 1->1->4->4->6->6->7, the output should be 1->4->6 because
+For example given 1->1->4->4->6->6->7, return 1->4->6 because
 1,4,6 are items that are repeated in this list and 7 is not repeated.
 */
 func TestKeepRepetitions(t *testing.T) {
