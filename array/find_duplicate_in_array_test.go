@@ -7,8 +7,8 @@ TestFindDuplicate tests solution(s) with the following signature and problem des
 
 	FindDuplicate(list []int) int
 
-Given a list of n integers (3, 2, 1, 4, 5, 4,...,n) where each number is positive and smaller
-than n find the duplicate integer.
+Given an unsorted slice of n positive integers like {3,2,1,4,5,4,...,n} where each number is smaller
+than n and there is at most one duplicate, return the duplicate value like 4.
 */
 func TestFindDuplicate(t *testing.T) {
 	tests := []struct {

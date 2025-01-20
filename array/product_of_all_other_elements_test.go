@@ -12,6 +12,12 @@ TestProductOfAllOtherElements tests solution(s) with the following signature and
 
 Given an array of integers A, construct a new array B such that B[i] = product of all items
 in A except A[i] without using division in O(n) time.
+
+For example given {1,2,3,4} it should return {24,12,8,6} because:
+* 24=2*3*4.
+* 12=1*3*4.
+* 8=1*2*4.
+* 6=1*2*3.
 */
 func TestProductOfAllOtherElements(t *testing.T) {
 	tests := []struct {

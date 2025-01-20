@@ -11,7 +11,7 @@ TestZeroSumTriplets tests solution(s) with the following signature and problem d
 	ZeroSumTriplets(list []int) [][]int
 
 Given an array of numbers like {1, 2, -4, 6, 3} returns unique triplets from the numbers
-with sum that equals zero like {-4, 1, 3}.
+with sum that equals zero like {-4, 1, 3} because -4+1+3=0.
 */
 func TestZeroSumTriplets(t *testing.T) {
 	tests := []struct {
