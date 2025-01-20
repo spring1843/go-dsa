@@ -13,8 +13,9 @@ TestReverseInPlace tests solution(s) with the following signature and problem de
 Given a slice of integers, a start index, and an end index, reverse the integers in the in-place
 without using any extra memory.
 
-For example when given {1,2,3,4,5,6} and start=0, end=4, it should return {5,4,3,2,1,6}.
-Reverse of items from index 0 to 4 are {5,4,3,2,1} and the remaining items {6} remain unchanged, so
+For example given {1,2,3,4,5,6} and start of 0 and end of 4, it should return {5,4,3,2,1,6} because:
+
+Reverse of items from index 0 to 4 is {5,4,3,2,1} and the remaining item {6} remain unchanged, so
 the the resulting slice is {5,4,3,2,1,6}.
 */
 func TestReverseInPlace(t *testing.T) {
