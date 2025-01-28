@@ -38,7 +38,7 @@ func main() {
 }
 ```
 
-A very common tool to use for manipulating strings in Go is the `fmt.Sprtinf` function. This is specially useful when converting many values into a string.
+A very common tool to use for manipulating strings in Go is the `fmt.Sprintf` function. This is specially useful when converting many values into a string.
 
 ```Go
 package main
