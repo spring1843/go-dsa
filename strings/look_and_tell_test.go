@@ -7,8 +7,27 @@ TestFindDuplicate tests solution(s) with the following signature and problem des
 
 	func LookAndTell(depth int) []string
 
-Given a depth, return the output of look and tell an algorithm where each line reads the
-last line. For example "1" is read as "11" (one one), and "11" is read as "21" (two ones).
+Given a positive integer n, return the output of the Look and Tell algorithm until the nth depth.
+
+The Look and Tell algorithm starts by outputting 1 at first level, then at each subsequent level
+it reads the previous line by counting the number of times a digit is repeated and then writes
+the count and the digit.
+
+For example given 4, return:
+
+1
+11
+21
+1211
+
+Which reads:
+one
+one one
+two ones
+one two one one.
+
+The third output (two ones) reads the level before it which is 11. Two ones means repeat
+1 two times i.e. 11.
 */
 func TestFindDuplicate(t *testing.T) {
 	tests := []struct {
