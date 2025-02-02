@@ -9,6 +9,8 @@ TestLongestValidParentheses tests solution(s) with the following signature and p
 
 Given a string containing parentheses, find the length of the longest valid (well-formed)
 parentheses substring.
+
+For example given "(()", return 2 because the longest valid parentheses substring is "()".
 */
 func TestLongestValidParentheses(t *testing.T) {
 	tests := []struct {
