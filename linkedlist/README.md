@@ -44,7 +44,7 @@ func addToFront(node *node) {
 }
 ```
 
-A pointer is typically stored for the first and sometimes the last items in a singly linked list. Adding items to the front or back of the list is a constant-time operation. However, deleting the last item can be challenging, as the last item's pointer needs to be updated to the second-to-last item. This is where referencing the last item in each node proves useful. In contrast, doubly linked lists maintain pointers to the previous and next nodes, making deletion operations less expensive.
+A pointer is typically stored for the first (head) and sometimes the last (tail) items in a singly linked list. Adding items to the front or back of the list is a constant-time operation. However, deleting the last item can be challenging, as the last item's pointer needs to be updated to the second-to-last item. This is where referencing the last item in each node proves useful. In contrast, doubly linked lists maintain pointers to the previous and next nodes, making deletion operations less expensive.
 
 The Go standard library contains an implementation of [doubly linked lists](https://golang.org/pkg/container/list/). In the following example, numbers from 1 to 10 are added to the list. Even numbers are removed, and the resulting linked list containing odd numbers is printed.
 
