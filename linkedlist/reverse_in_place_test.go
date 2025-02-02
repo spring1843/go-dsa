@@ -12,7 +12,9 @@ TestReverseLinkedList tests solution(s) with the following signature and problem
 
 	func ReverseLinkedList(head *Node) *Node
 
-Reverse a linked list in place. For example given 1->2->3, return 3->2->1.
+Reverse a linked list in-place.
+
+For example given 1->2->3, return 3->2->1.
 */
 func TestReverseLinkedList(t *testing.T) {
 	tests := []struct {
