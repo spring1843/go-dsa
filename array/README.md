@@ -76,7 +76,7 @@ func main() {
 
 Accessing an element within an array using an index has O(1) time complexity. This means that regardless of the size of the array, read and write operations for a given element can be performed in constant time.
 
-While arrays are useful for certain tasks, searching an unsorted array can be a time-consuming O(n) operation. Since the target item could be located anywhere in the array, every element must be checked until the item is found. Due to this limitation, alternative data structures such as trees and hash tables are often more suitable for search operations.
+While arrays are useful for certain tasks, searching an unsorted array can be a time-consuming O(n) operation. Since the target item could be located anywhere in the array, every element must be checked until the item is found. Due to this limitation, alternative data structures such as [linked-lists](../linkedlist/), [trees](../tree/) and [hash tables](../hashtable/) are often more suitable for search operations.
 
 Addition and deletion operations are O(n) operations in Arrays. Removing an element can create an empty slot that must be eliminated by shifting the remaining items. Similarly, adding items to an array may require shifting existing items to create space for the added item. These inefficiencies can make alternative data structures, such as [trees](../tree) or [hash tables](../hashtable), more suitable for managing operations involving additions and deletions.
 
