@@ -1,6 +1,6 @@
 # Linked List
 
-Linked lists are a collection of nodes, each capable of storing at least one data element and linked to the next node via a reference. One of the key advantages of linked lists over [arrays](../array) is their dynamic size, which allows for items to be added or removed without necessitating the resizing or shifting of other elements.
+Linked lists are a collection of nodes, each capable of storing at least one data element and linked to the next node via a reference. One of the key advantages of linked lists over [arrays](../array) has traditionally been seen their dynamic size, which allows for items to be added or removed without necessitating the resizing or shifting of other elements. As shown in [queues](../queue/) with benchmarks this is different in Go due to clever slice sizing techniques used. In practice you can use slices in Go most of the time without a significant performance penalty.
 
 Two types of linked lists exist: singly linked lists, in which each node is linked only to the next node, and doubly linked lists, in which each node is connected to both the next and previous nodes.
 
