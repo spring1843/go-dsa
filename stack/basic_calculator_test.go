@@ -4,10 +4,13 @@ import "testing"
 
 /*
 TestBasicCalculator tests solution(s) with the following signature and problem description:
+
 func BasicCalculator(input string) (float64, error)
 
 Given an expression containing integers, parentheses and the four basic arithmetic operations
-like 1*2+3+4*5 calculate the expression into a numerical value like 25.
+{*,/,+,-} starting from the highest priority to lowest.
+
+For example given 1*2+3+4*5 return 25 because (4*5) + (1*2) + 3 = 25.
 */
 func TestBasicCalculator(t *testing.T) {
 	tests := []struct {

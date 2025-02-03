@@ -4,6 +4,24 @@ Stacks are data structures that operate on the Last-In-First-Out (LIFO) principl
 
 One way to visualize stacks is to think of a backpack where items are placed and later removed in reverse order, with the last item added to the bag being the first item removed.
 
+The following diagram shows the state of a stack of size 5 when numbers 1 to 4 are pushed to the stack and 4 numbers are popped from the stack. The outcome is reversion of the inserted numbers.
+
+```ASCII
+[Figure 1] Push 1,2,3,4 to a stack and then pop 4 times.
+
+┌───┐┌───┐┌───┐┌───┐┌───┐    ┌───┐┌───┐┌───┐┌───┐
+│   ││   ││   ││   ││   │    │   ││   ││   ││   │
+├───┤├───┤├───┤├───┤├───┤    ├───┤├───┤├───┤├───┤
+│   ││   ││   ││   ││ 4 │    │   ││   ││   ││   │
+├───┤├───┤├───┤├───┤├───┤    ├───┤├───┤├───┤├───┤
+│   ││   ││   ││ 3 ││ 3 │    │ 3 ││   ││   ││   │
+├───┤├───┤├───┤├───┤├───┤    ├───┤├───┤├───┤├───┤
+│   ││   ││ 2 ││ 2 ││ 2 │    │ 2 ││ 2 ││   ││   │
+├───┤├───┤├───┤├───┤├───┤    ├───┤├───┤├───┤├───┤
+│   ││ 1 ││ 1 ││ 1 ││ 1 │    │ 1 ││ 1 ││ 1 ││   │
+└───┘└───┘└───┘└───┘└───┘    └───┘└───┘└───┘└───┘
+```
+
 ## Implementation
 
 In Go, stacks can be implemented using doubly [linked lists](../linkedlist/) or [arrays and slices](../array/). Here is a linked list implementation:
@@ -75,13 +93,13 @@ func pop() (int, error) {
 
 Push and pop operations in stacks are considered O(1) operations, making them highly efficient. Additionally, many machines have built-in stack instruction sets, further increasing their performance. Stacks' unique efficiency and usefulness have solidified their place as one of the most fundamental data structures, second only to [arrays](../array).
 
-Resizing the slice and item shifting maybe necessary in the slice implementation, hence traditionally this implementation is seen as O(n). As shown in the complexity of [queue](../queue/README.md) because of the intelligent ways Go resizes the slices this is not a problem and the slice implementation of both stack and queue will perform better than the linked list implementation.
+Resizing the slice and item shifting maybe necessary in the slice implementation, hence traditionally this implementation is seen as O(n). As shown in the complexity of [queue](../queue/README.md) because of the intelligent ways Go resizes the slices this is not a problem and the slice implementation of both stack and queue in Go will perform better than the linked list implementation.
 
 ## Application
 
 Stacks are helpful when LIFO operations are desired. Many [graph](../graph) problems are solved with stacks.
 
-During process execution, a portion of memory known as the "stack" is reserved to hold stack frames. Whenever a function is called, relevant data such as parameters, local variables, and return values are stored within a frame to be accessed after the function has been completed. When an excessive number of function calls or an infinite recursive function are made, the computer's ability to store all of this information is exceeded. This results in the well-known stack overflow error.
+During process execution in operating systems, memory is divided into "stack" and "heap". The stack portion of the memory is used whenever a function is called. Relevant data such as parameters, local variables, and return values are stored within a frame in a stack to be popped after the function has been completed. When an excessive number of function calls or an infinite recursive function are made, the computer's ability to store all of this information is exceeded. This results in the well-known stack overflow error.
 
 ## Rehearsal
 

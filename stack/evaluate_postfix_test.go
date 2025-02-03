@@ -7,7 +7,16 @@ TestEvaluatePostfix tests solution(s) with the following signature and problem d
 
 	func EvaluatePostfixExpression(expression []string) (float64, error)
 
-Given a postfix expression like 1 2 3 + *, calculate the expression e.g. 5.
+Given a postfix expression calculate its the value.
+
+The postfix expression is a list of strings where each string is either an operator like
+arithmetic symbols or an operand that are numbers.
+
+To evaluate the postfix expression, we start scanning the expression from left to right.
+If the current element is an operator we apply the operand to the last two operands we read
+we then remove the operator and replace the two operands with the results of the operation.
+
+For example given 1 2 3 + *, return 5 because 1 * (2 + 3) = 5.
 */
 func TestEvaluatePostfix(t *testing.T) {
 	tests := []struct {

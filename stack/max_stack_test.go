@@ -12,6 +12,8 @@ TestMaxStack tests solution(s) with the following signature and problem descript
 	func (maxStack *MaxStack) Max() int
 
 Implement a stack that can return the max of element it contains.
+
+For example if we push {2,4,5} to the stack, max should return 5.
 */
 func TestMaxStack(t *testing.T) {
 	tests := []struct {
