@@ -10,8 +10,8 @@ TestLongestDictionaryWordContainingKey tests solution(s) with the following sign
 Given a key as string, and a slice of strings containing a dictionary of words, return the longest
 word that contains all letters of the key.
 
-For example given "cat" and {"rectify", "race", "archeology", "racoon"}, it should return "archeology",
-because "archeology" is the longest word in the given set that contains "c","a",and "t".
+For example given "car" and {"rectify", "race", "archeology", "racoon"}, it should return "archeology",
+because "archeology" is the longest word in the given set that contains "c","a",and "r".
 */
 func TestLongestDictionaryWordContainingKey(t *testing.T) {
 	tests := []struct {
