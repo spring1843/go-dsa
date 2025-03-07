@@ -6,6 +6,39 @@ In the real world, queues are formed when a first-come, first-served service is 
 
 Another variation of queues is the double-ended queue, which allows for dequeuing from both ends, facilitating both FIFO and LIFO (Last In, First Out) data structures.
 
+The following diagram shows the state of a queue of size 5 when numbers 1 to 4 are enqueued and then 4 enqueues happen. The outcome is 4 numbers extracted in the same order they were inserted.
+
+```ASCII
+[Figure 1] Enqueue 1,2,3,4 to a queue and then dequeue 4 times
+  ┌───┬───┬───┬───┬───┐
+  │   │   │   │   │   │
+  └───┴───┴───┴───┴───┘
+  ┌───┬───┬───┬───┬───┐
+  │ 1 │   │   │   │   │
+  └───┴───┴───┴───┴───┘
+  ┌───┬───┬───┬───┬───┐
+  │ 1 │ 2 │   │   │   │
+  └───┴───┴───┴───┴───┘
+  ┌───┬───┬───┬───┬───┐
+  │ 1 │ 2 │ 3 │   │   │
+  └───┴───┴───┴───┴───┘
+  ┌───┬───┬───┬───┬───┐
+  │ 1 │ 2 │ 3 │ 4 │   │
+  └───┴───┴───┴───┴───┘
+  ┌───┬───┬───┬───┬───┐
+  │ 2 │ 3 │ 4 │   │   │
+  └───┴───┴───┴───┴───┘
+  ┌───┬───┬───┬───┬───┐
+  │ 3 │ 4 │   │   │   │
+  └───┴───┴───┴───┴───┘
+  ┌───┬───┬───┬───┬───┐
+  │ 4 │   │   │   │   │
+  └───┴───┴───┴───┴───┘
+  ┌───┬───┬───┬───┬───┐
+  │   │   │   │   │   │
+  └───┴───┴───┴───┴───┘
+```
+
 ## Implementation
 
 Like [stacks](../stack), queues can be implemented using doubly [linked lists](../linkedlist/) or [arrays and slices](../array/). Here is a linked list implementation:
