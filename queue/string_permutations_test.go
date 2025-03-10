@@ -13,7 +13,7 @@ TestStringPermutations tests solution(s) with the following signature and proble
 Given a string return all possible permutations that can be made by rearranging the letters in the string
 using a queue.
 
-For example given "abc" return "abc,acb,bac,bca,cab,cba"
+For example given "abc" return "abc,acb,bac,bca,cab,cba".
 */
 func TestStringPermutations(t *testing.T) {
 	tests := []struct {
