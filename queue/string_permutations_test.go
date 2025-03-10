@@ -10,8 +10,10 @@ TestStringPermutations tests solution(s) with the following signature and proble
 
 	func StringPermutations(input string) []string
 
-Given a string like "abc", return all possible permutations like "abc,acb,bac,bca,cab,cba" using
-a queue.
+Given a string return all possible permutations that can be made by rearranging the letters in the string
+using a queue.
+
+For example given "abc" return "abc,acb,bac,bca,cab,cba".
 */
 func TestStringPermutations(t *testing.T) {
 	tests := []struct {

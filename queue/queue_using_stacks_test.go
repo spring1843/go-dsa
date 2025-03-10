@@ -12,7 +12,7 @@ TestQueueUsingStacks tests solution(s) with the following signature and problem 
 	(usingStacks *UsingStacks) enqueue(n int)
 	(usingStacks *UsingStacks) dequeue() int
 
-Implement a queue of integers using stacks.
+Implement a queue of integers using two stacks. The queue should support enqueue and dequeue operations.
 */
 func TestQueueUsingStacks(t *testing.T) {
 	tests := []struct {
