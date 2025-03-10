@@ -9,7 +9,7 @@ TestGenerateBinaryNumbers tests solution(s) with the following signature and pro
 
 Given a positive integer like n count from 0 to n in binary.
 
-For example given 3 return {"0", "1", "10", "11"}
+For example given 3 return {"0", "1", "10", "11"}.
 */
 func TestGenerateBinaryNumbers(t *testing.T) {
 	tests := []struct {
