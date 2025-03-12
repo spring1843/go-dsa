@@ -1,70 +1,54 @@
 package queue
 
-import "errors"
+import "math"
 
-// CircularQueue is a queue that is made using a circular array.
+const emptyValue = math.MinInt64
+
 type CircularQueue struct {
-	data  []int
-	size  int
-	front int
-	rear  int
+	data []int
+	size int
+	head int
+	tail int
 }
 
-const emptyValue = 0
-
-// ErrQueueAtMaxCapacity occurs when the queue is at max capacity.
-var ErrQueueAtMaxCapacity = errors.New("queue is at max capacity")
-
-// NewCircularQueue returns a fixed size circular queue.
 func NewCircularQueue(size int) *CircularQueue {
-	circular := make([]int, size)
-	for i := range circular {
-		circular[i] = emptyValue
+	data := make([]int, size)
+	for i := range data {
+		data[i] = emptyValue
 	}
-
 	return &CircularQueue{
-		data:  circular,
-		rear:  -1,
-		size:  0,
-		front: 0,
+		data: data,
+		size: size,
+		head: -1,
+		tail: 0,
 	}
 }
 
-// enqueue solves the problem in O(1) time and O(1) space.
-func (queue *CircularQueue) enqueue(n int) error {
-	if queue.isFull() {
-		return ErrQueueAtMaxCapacity
+func (queue *CircularQueue) enqueue(n int) {
+	queue.head = queue.nextCircularSlicePosition(queue.head)
+
+	if queue.data[queue.head] != emptyValue {
+		queue.tail = queue.nextCircularSlicePosition(queue.tail)
 	}
 
-	queue.rear++
-	if queue.rear == queue.capacity() {
-		queue.rear = 0
-	}
-
-	queue.data[queue.rear] = n
-	queue.size++
-	return nil
+	queue.data[queue.head] = n
 }
 
-// dequeue solves the problem in O(1) time and O(1) space.
 func (queue *CircularQueue) dequeue() (int, error) {
-	if queue.size == 0 {
+	if queue.data[queue.tail] == emptyValue {
 		return 0, ErrQueueEmpty
 	}
-	tmp := queue.data[queue.front]
-	queue.data[queue.front] = emptyValue
-	queue.front++
-	if queue.front == queue.capacity() {
-		queue.front = 0
+
+	output := queue.data[queue.tail]
+	queue.data[queue.tail] = emptyValue
+	queue.tail = queue.nextCircularSlicePosition(queue.tail)
+	return output, nil
+}
+
+func (queue *CircularQueue) nextCircularSlicePosition(value int) int {
+	value++
+	if value == queue.size {
+		return 0
 	}
-	queue.size--
-	return tmp, nil
-}
-
-func (queue *CircularQueue) isFull() bool {
-	return queue.size == queue.capacity()
-}
-
-func (queue *CircularQueue) capacity() int {
-	return len(queue.data)
+	return value
 }
