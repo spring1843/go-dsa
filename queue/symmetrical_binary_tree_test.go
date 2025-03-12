@@ -20,7 +20,7 @@ can draw a vertical line through the root and then the left subtree is the mirro
 		  /     \          /     \
 		 4       4        3       4
 		/ \     / \      / \     / \
-	       5   6   6   5    5   6   6   5
+               5   6   6   5    5   6   6   5
 
 For example given "2,4,4,5,6,6,5", shown in the symmetric tree above return true.
 Given "2,3,4,5,6,6,5", shown in the not symmetric tree above return false.
