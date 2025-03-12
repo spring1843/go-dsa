@@ -14,13 +14,13 @@ TestIsTreeSymmetrical tests solution(s) with the following signature and problem
 Given a binary tree return true of it is symmetric and false otherwise. A tree is symmetric if you
 can draw a vertical line through the root and then the left subtree is the mirror image of the right subtree.
 
-		 Symmetric       Not Symmetric
-		     2                2
-		   /   \            /   \
-		  /     \          /     \
-		 4       4        3       4
-		/ \     / \      / \     / \
-               5   6   6   5    5   6   6   5
+	  Symmetric       Not Symmetric
+	      2                2
+	    /   \            /   \
+	   /     \          /     \
+	  4       4        3       4
+	 / \     / \      / \     / \
+	5   6   6   5    5   6   6   5
 
 For example given "2,4,4,5,6,6,5", shown in the symmetric tree above return true.
 Given "2,3,4,5,6,6,5", shown in the not symmetric tree above return false.
