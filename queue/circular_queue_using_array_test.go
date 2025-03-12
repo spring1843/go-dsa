@@ -42,9 +42,7 @@ we should get 3 and 4.
 
 As shown in the above example the circular queue does not run out of capacity and still allows FIFO operations.
 */
-
 func TestCircularQueue(t *testing.T) {
-
 	type testRound struct {
 		enqueueStart int
 		enqueueEnd   int
