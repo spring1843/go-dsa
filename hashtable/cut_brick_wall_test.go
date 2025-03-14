@@ -7,9 +7,29 @@ TestCutBrickWall tests solution(s) with the following signature and problem desc
 
 	func CutBrickWall(wall [][]int) int
 
-Given a two dimensional array of numbers representing the length of each brick in each
-row of a wall, return the position at which we could do the least amount of cuts (by not
-having to cut the touch points where bricks meet).
+Given a two dimensional array of numbers representing the length of bricks of equal hight in each
+row of a wall, return the position at which we could do the least amount of cuts in order
+to have a rectangular wall.
+
+For example given {1, 2, 2}, {3, 2}, {2, 3}, return 3.
+
+	┌─────┬───────────┬───────────┐
+	│  1  │     2     │     2     │
+	├─────┴───────────┼───────────┤
+	│        3        │     2     │
+	├───────────┬─────┴───────────┤
+	│     2     │         3       │
+	└───────────┴─────────────────┘
+
+	┌─────┬───────────┐
+	│  1  │     2     │
+	├─────┴───────────┤
+	│        3        │
+	├───────────┬─────┤
+	│     2     │  1  │
+	└───────────┴─────┘
+
+We can have the above wall after cutting only one brick at position 2 row 3.
 */
 func TestCutBrickWall(t *testing.T) {
 	tests := []struct {

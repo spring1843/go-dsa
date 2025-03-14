@@ -1,6 +1,21 @@
 # Hash Table
 
-Hash tables are a fundamental data structure that operates based on key-value pairs and enables constant-time operations for lookup, insertion, and deletion. Hash tables use immutable keys that can be strings or integers among other things. However, in more complex applications, a hashing function, and different collision resolution methods such as separate chaining, linear probing, quadratic probing, and double hashing, can be used.
+Hash tables are a fundamental data structure that operates based on key-value pairs and enables constant-time operations for lookup, insertion, and deletion. Hash tables use immutable keys that can be strings or integers among other things. The following diagram shows a hash table that has integer keys and string values.
+
+```ASCII
+[Figure 1] Hash table with integer keys and string values
+ ┌─────┐       ┌─────┐
+ │  1  ├─────► │ foo │
+ └─────┘       └─────┘
+ ┌─────┐       ┌─────┐
+ │  2  ├─────► │ bar │
+ └─────┘       └─────┘
+ ┌─────┐       ┌─────┐
+ │  3  ├─────► │ baz │
+ └─────┘       └─────┘
+```
+
+A collision occurs if we attempt to assign "bar" at key 3 as key 3 already exists. In more complex applications to avoid key collisions, a hashing function, and different collision resolution methods such as separate chaining, linear probing, quadratic probing, and double hashing, can be used.
 
 ## Implementation
 
@@ -9,9 +24,7 @@ In Go, hash tables are implemented as maps, a built-in language data type. To de
 ```Go
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	numbers := make(map[string]int)
@@ -33,9 +46,7 @@ As shown below it is possible in Go to store variables as keys in a map. It is a
 ```Go
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type person struct {
 	name string
@@ -67,9 +78,11 @@ func isAllowed(person *person) {
 }
 ```
 
+In the above example the `struct{}` in `map[*person]struct{}` makes this map allocate no memory as value so it only contains keys. This can be useful to remove duplicates from a list or keep a list of allowed or disallowed items without spending extra memory.
+
 ## Complexity
 
-Hash tables provide O(1) time complexity for inserting, deletion, and searching operations.
+Hash tables provide O(1) time complexity for inserting, deletion, and searching operations. The space complexity of a hash table depends on what is being stored.
 
 ## Application
 

@@ -7,7 +7,10 @@ TestSmallestMissingPositiveInteger tests solution(s) with the following signatur
 
 	func SmallestMissingPositiveInteger(input []int) int
 
-Given a list of integers, return the smallest missing positive integer.
+Given a slice of integers, return the smallest missing positive integer.
+
+For example given {-9, 0, 1, 2, 3, 4, 5, 6} return 7 because -9 is not a positive integer and
+all numbers from 0 to 6 are present in the list.
 */
 func TestSmallestMissingPositiveInteger(t *testing.T) {
 	tests := []struct {

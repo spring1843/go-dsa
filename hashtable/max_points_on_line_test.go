@@ -7,8 +7,10 @@ TestMaxPointsOnALine tests solution(s) with the following signature and problem 
 
 	func MaxPointsOnALine(points [][]int) int
 
-Given multiple coordinates of points like {[1,1], [2,2], [3,3], [4,5]}, return the maximum
-number of points that are on the same line like 3.
+Given multiple coordinates of points like, return the maximum number of points that are on the same.
+
+For example given {[1,1], [2,2], [3,3], [4,5]} return 3 because the points [1,1], [2,2], [3,3] are on
+the same line.
 */
 func TestMaxPointsOnALine(t *testing.T) {
 	tests := []struct {
