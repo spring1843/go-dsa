@@ -10,7 +10,9 @@ TestSumUpToK tests solution(s) with the following signature and problem descript
 
 	func SumUpToK(numbers []int, k int) []int
 
-Given a list, output the indices of the first two elements that sum up to K.
+Given a slice of integers, output the indices of the first two elements that sum up to K.
+
+For example given {1, 2, 3, 4} and K = 5, return {1, 2} because 2 + 3 = 5.
 */
 func TestSumUpToK(t *testing.T) {
 	tests := []struct {
