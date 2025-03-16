@@ -5,8 +5,9 @@ import "testing"
 /*
 TestReverseBinaryTree tests solution(s) with the following signature and problem description:
 
-			func ReverseBinaryTree(root *BinaryTreeNode) *BinaryTreeNode
+	func ReverseBinaryTree(root *BinaryTreeNode) *BinaryTreeNode
 
+Given a binary tree, reverse it.
 
 	     1
 	   /   \
@@ -14,13 +15,15 @@ TestReverseBinaryTree tests solution(s) with the following signature and problem
 	 / \   / \
 	4   5 6   7
 
-Reverse a binary search tree, the above tree should become:
+For example given the above tree, return:
 
 	     1
 	   /   \
 	  3     2
 	 / \   / \
 	7   6 5   4
+
+Each tree is represented as a string by "1,2,3,4,5,6,7" and "1,3,2,7,6,5,4" respectively.
 */
 func TestReverseBinaryTree(t *testing.T) {
 	tests := []struct {
@@ -34,7 +37,7 @@ func TestReverseBinaryTree(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := Serialize(ReverseBinaryTree(Unserialize(test.tree))); got != test.reversed {
+		if got := Serialize(ReverseBinaryTree(Deserialize(test.tree))); got != test.reversed {
 			t.Fatalf("Failed test case #%d. Want %s got %s", i, test.reversed, got)
 		}
 	}

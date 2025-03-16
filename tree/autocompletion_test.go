@@ -10,9 +10,11 @@ TestAutocompletion tests solution(s) with the following signature and problem de
 
 	func (t *trie) AutoComplete(word string) []string
 
-Given a word like "car" and a dictionary like {"car","caravan","card","carpet","cap","ca"},
-return autocomplete suggestions where the given word is the prefix of a dictionary word
-like {"avan","d","pet"}.
+Given a dictionary of words and a word, return autocomplete suggestions from the dictionary that
+start with the given word.
+
+For example given {"car","caravan","card","carpet","cap","ca"}, and the word "car", return
+{"avan","d","pet"} because they are all words that start with "car".
 */
 func TestAutocompletion(t *testing.T) {
 	tests := []struct {
@@ -32,6 +34,7 @@ func TestAutocompletion(t *testing.T) {
 		{"ab", []string{"abc", "abcc", "abccd", "abd", "abe"}, []string{"c", "cc", "ccd", "d", "e"}},
 		{"ab", []string{"abc", "abcc", "abcd", "abd", "abe"}, []string{"c", "cc", "cd", "d", "e"}},
 		{"ab", []string{"abc", "abcd", "abd", "abcc", "abe"}, []string{"c", "cc", "cd", "d", "e"}},
+		{"car", []string{"car", "caravan", "card", "carpet", "cap", "ca"}, []string{"avan", "d", "pet"}},
 	}
 
 	for i, test := range tests {

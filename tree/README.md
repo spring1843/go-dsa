@@ -15,7 +15,7 @@ Traversing a tree means exploring every node in a tree and performing some work 
 1   3 5   7
 ```
 
-Tree traversal methods are named after the order in which the nodes are explored. For example, in Pre-Order traversal, the node is explored before its children; in Post-Order traversal, the node is explored after its children.
+Tree traversal methods are named after the order in which the nodes are explored. For example, in Pre-Order traversal, the node is explored before its children; in Post-Order traversal, the node is explored after its children. Children are always traversed from left to right.
 
 There are many types of trees. Some important tree types include:
 
@@ -29,7 +29,7 @@ There are many types of trees. Some important tree types include:
      1		 4	    1        * 	  1 - Is it a binary tree?
     /|\		/ \	   /        / \	    2 - Is it a complete binary tree?
    / | \       /   \	  2        /   \      3 - Is it a full binary tree?
-  2  5  6     2     6	 / \	  *     +
+  2  5  6     2     6	 / \	  *     +         1 2 3
  / \   / \     \   /	3   4    / \   / \	A 0 0 0
 3   4 7   8  	3 5	    	5   5 2   2	B 1 0 0
 						C 1 1 0
@@ -48,7 +48,7 @@ The time complexity of operations such as Search, Deletion, Insertion, and findi
 
 ## AVL - Height Balanced BST
 
-A height-balanced binary search tree has a height of O(Log n), and its left and right subtrees of all nodes have equal heights.
+An AVL tree is a height-balanced binary search tree has a height of O(Log n), and its left and right subtrees of all nodes have equal heights. AVL stands for the name of the people who came up with the idea.
 
 To maintain balance after an insertion, a single rotation is needed if the insertion is on the outer side, either left-left or right-right, while a double rotation is required if the insertion is on the inner side, either left-right or right-left.
 
@@ -66,7 +66,7 @@ Insertion and Search are done in O(K), where K is the length word length.
 
 ## Application
 
-Trees, such as Binary Search Trees (BSTs), offer O(Log n) time complexity for searches, which is superior to [linked lists](../linkedlist/)' and [array](../array/)'s linear access time. Trees are widely employed in search systems, and operating systems can represent file information using tree structures.
+Trees, such as Binary Search Trees (BSTs), offer O(Log n) time complexity for searches, which is superior to [linked lists](../linkedlist/)' and [array](../array/)'s linear access time. Trees are widely employed in search systems. Operating systems can represent file information using tree structures.
 
 ## Rehearsal
 

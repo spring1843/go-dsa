@@ -54,8 +54,8 @@ func Serialize(root *BinaryTreeNode) string {
 	return result
 }
 
-// Unserialize unserializes a given string into a binary tree in O(n) time and O(n) space.
-func Unserialize(s string) *BinaryTreeNode {
+// Deserialize a string into a binary tree in O(n) time and O(n) space.
+func Deserialize(s string) *BinaryTreeNode {
 	if s == "" {
 		return nil
 	}
