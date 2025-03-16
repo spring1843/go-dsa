@@ -10,8 +10,17 @@ TestEvaluateBinaryExpressionTree tests solution(s) with the following signature 
 
 	func EvaluateBinaryExpressionTree(node *stringBinaryTreeNode) (float64, error)
 
-Given an expression binary tree like (D) in _Figure2_ evaluate it to a float64 like 100 allowing four
-arithmetic operations.
+Given an expression binary tree that contains integers and the four basic arithmetic operations, return
+the resulting evaluation of the expression.
+
+		   *
+		  / \
+		 /   \
+		*     +
+	   / \   / \
+	  5   5 2   2
+
+For example given "*,*,+,5,5,2,2" representing the above tree return 100 because (5 * 5) * (2 + 2) = 100.
 */
 func TestEvaluateBinaryExpressionTree(t *testing.T) {
 	tests := []struct {

@@ -42,7 +42,7 @@ func TestIsTreeSymmetrical(t *testing.T) {
 		{"2,4,4,5,6,6,5", true},
 	}
 	for i, test := range tests {
-		got, err := IsTreeSymmetrical(tree.Unserialize(test.tree))
+		got, err := IsTreeSymmetrical(tree.Deserialize(test.tree))
 		if err != nil {
 			t.Fatalf("Failed test case #%d. Unexpected error %s", i, err)
 		}

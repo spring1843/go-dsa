@@ -5,9 +5,23 @@ import "testing"
 /*
 TestBalancedBinarySearchTree tests solution(s) with the following signature and problem description:
 
+	type BinaryTreeNode struct {
+		Val int
+		Left *BinaryTreeNode
+		Right *BinaryTreeNode
+	}
 	func BalancedBinarySearchTree(sorted []int) *BinaryTreeNode
 
-Given a sorted array of integers like {1,2,3,4,5} return the root to a balanced BST.
+Given a sorted slice of integers like return a string representing the integers as a Balanced Binary Tree (BST).
+
+	     3
+	    / \
+	   /   \
+	  2     4
+	 /       \
+	1         5
+
+For example given return a *BinaryTreeNode that is the root element of the above tree.
 */
 func TestBalancedBinarySearchTree(t *testing.T) {
 	tests := []struct {
