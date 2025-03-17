@@ -12,7 +12,17 @@ TestRegularNumbers tests solution(s) with the following signature and problem de
 
 Regular numbers are numbers whose only prime divisors are 2, 3, and 5.
 For example 24 is a regular number because it can be factored into 2^3 * 3^1 * 5^0.
-Given a positive integer n, write a function that returns the first n regular numbers.
+
+Given a positive integer n, return first n regular numbers.
+
+For example given n=4:
+
+	1 = 2^0
+	2 = 2^1
+	3 = 3^1
+	4 = 2^2
+
+So the first 3 regular numbers are {1, 2, 3, 4}.
 */
 func TestRegularNumbers(t *testing.T) {
 	tests := []struct {

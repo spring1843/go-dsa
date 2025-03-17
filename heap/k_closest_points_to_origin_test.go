@@ -11,6 +11,8 @@ TestKClosestPointToOrigin tests solution(s) with the following signature and pro
 	func KClosestPointToOrigin(points [][]int, k int) [][]int
 
 Given coordination of a point on an x,y axis and an integer k, return k closest points to the origin.
+
+For example given {1,1}, {2,2}, {3,3}, {4,4} and k=2, return {1,1}, {2,2}.
 */
 func TestKClosestPointToOrigin(t *testing.T) {
 	tests := []struct {

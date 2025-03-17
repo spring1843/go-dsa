@@ -14,27 +14,27 @@ When pushing an element to a heap, because of the structure property, the new el
 ```ASCII
 [Figure 1] Minimum heap push operation
 
-  20	    20		  15			 15		15		5
- /  \	   /  \		 /  \			/  \	      	/  \	      /   \
-25  30	  25  30  	20  30	               20  30	      5   30	    15     30
-         /	       /      	              /  \	     / \           /  \
-        15	      25	             25   5	   25  20	 25    20
+  20	    20	     20          15			 15		 15		5
+ /  \	   /  \	    /  \        /  \			/  \	      	/  \	      /   \
+25  30	  25  30   15  30      20  30	               20  30	      5   30	    15     30
+         /	      /	      /      	              /  \	     / \           /  \
+        15	     25	     25                      25   5	   25  20	 25    20
 										
-	(A) Add 15		     	    (B) Add 5
+	(A) Push 15		     	    (B) Push 5
 ```
 
-The pop operation in a heap starts by replacing the root with the rightmost leaf. Then the root is swapped with the smaller child in a min heap (and the larger child in a max heap). The root is removed and the new root is percolated down until the heap property is achieved.
+The pop operation in a heap starts by taking the root out and replacing its value with the rightmost leaf. Then the new root is swapped with the smaller child in a min heap (and the larger child in a max heap). The root is removed and the new root is percolated down until the heap property is achieved.
 
 ```ASCII
 [Figure 2] Minimum heap pop operation
 
-       5	    20	       15		  25	   20		  30
-     /   \	   /  \	      /  \		 /  \	  /  \		 /
-    15   30	  15  30     20  30		20  30   25  30		25
+        5	    20	       15		  25	   20		  30
+      /   \	   /  \	      /  \		 /  \	  /  \		 /
+    15    30	  15  30     20  30		20  30   25  30		25
    /  \		 /	    /
   25  20	25	   25
 
-	(A) Remove				(B) Remove		(C) Remove
+	       (A) Pop				    (B) Pop		(C) Pop
 ```
 
 An example implementation of this is provided as a [solution](./heap_sort.go) to the [heap sort](./heap_sort_test.go) rehearsal.
@@ -59,9 +59,8 @@ func main() {
 		heap.Push(h, i)
 	}
 	for i := 1; i <= 10; i++ {
-		fmt.Println(heap.Pop(h))
+		fmt.Println(heap.Pop(h)) // Prints 10,9,8,...1
 	}
-
 }
 
 func (m maxHeap) Len() int           { return len(m) }
@@ -77,7 +76,7 @@ func (m *maxHeap) Pop() any {
 }
 ```
 
-To utilize a heap to store a particular type, certain methods such as len and less must be implemented for that type to conform to the heap interface. By default, the heap is a min heap, with each node smaller than its children. However, the package provides the flexibility to define what "being less than" means. For instance, changing `m[i] > m[j]` to `m[i] < m[j]` would transform the heap into a minimum heap.
+To utilize a heap to store a particular type, certain methods such as len and less must be implemented for that type to conform to the heap interface. The package provides the flexibility to define what "being less than" means. For instance in the above example to changing `m[i] > m[j]` to `m[i] < m[j]` would transform the heap into a max heap.
 
 In Go, heaps are implemented with slices. The heap property is maintained such that the left child of the node at index `i` (where i is greater than or equal to 1) is always located at `2i`, and the right child is at `2i+1`. If the slice already contains elements before pushing, the heap must be initialized using `heap.Init(h Interface)` to establish the order.
 

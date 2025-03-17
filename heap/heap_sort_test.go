@@ -11,7 +11,12 @@ TestSort tests solution(s) with the following signature and problem description:
 
 	func HeapSort(list []int) []int
 
-Given a list of integers like {3,1,2}, return a sorted set like {1,2,3} using Heap Sort.
+Given a slice of integers, return a sorted slice using Heap Sort.
+
+For example given {3,1,2}, return {1,2,3}.
+
+Heap sort works by inserting all items to a heap and then popping them one by. As heap returns the minimum
+element with each pop the outcome is a sorted list of items..
 */
 func TestSort(t *testing.T) {
 	tests := []struct {
