@@ -11,8 +11,9 @@ TestMergeSortedLists tests solution(s) with the following signature and problem 
 
 	func MergeSortedLists(lists []*linkedlist.Node) *linkedlist.Node
 
-Given multiple sorted linked lists like {1->2, 1->3->4, 4->5}, join them into one
-like 1->1->2->3->4->4->5.
+Given multiple sorted linked lists, join them together into one sorted linked list.
+
+For example given {1->2, 1->3->4, 4->5} return 1->1->2->3->4->4->5.
 */
 func TestMergeSortedLists(t *testing.T) {
 	tests := []struct {
