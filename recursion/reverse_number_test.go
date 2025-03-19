@@ -7,8 +7,9 @@ TestReverseDigits tests solution(s) with the following signature and problem des
 
 	func ReverseDigits(n int) int
 
-Given an integer like 321 return a reversed number using recursion where the same digits
-are repeated in the reverse order like 321.
+Given an integer reverse the order of the digits.
+
+For example given 123 return 321.
 */
 func TestReverseDigits(t *testing.T) {
 	tests := []struct {
@@ -19,6 +20,7 @@ func TestReverseDigits(t *testing.T) {
 		{12, 21},
 		{112, 211},
 		{110, 11},
+		{123, 321},
 	}
 
 	for i, test := range tests {

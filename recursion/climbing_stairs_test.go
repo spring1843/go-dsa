@@ -9,6 +9,19 @@ TestClimbingStairs tests solution(s) with the following signature and problem de
 
 Given n the number of steps, return in how many ways you can climb these stairs if you are
 only able to climb 1 or 2 steps at a time.
+
+For example given 5 we can climb the stairs in the following ways:
+
+	1, 1, 1, 1, 1
+	1, 1, 1, 2
+	1, 1, 2, 1
+	1, 2, 1, 1
+	2, 1, 1, 1
+	2, 2, 1,
+	1, 2, 2,
+	2, 1, 2,
+
+So the algorithm should return 8.
 */
 func TestClimbingStairs(t *testing.T) {
 	tests := []struct {

@@ -9,6 +9,8 @@ TestMultiplication tests solution(s) with the following signature and problem de
 
 Given two integers, return their product using recursion and without using the
 multiplication operator.
+
+For example given 2 and 3 return 6.
 */
 func TestMultiplication(t *testing.T) {
 	tests := []struct {
