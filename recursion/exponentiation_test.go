@@ -8,6 +8,8 @@ TestPowerOf tests solution(s) with the following signature and problem descripti
 	func PowerOf(x, n int) int
 
 Given x and n, return x raised to the power of n in an efficient manner.
+
+For example given x=2 and n=3 the algorithm should return 8.
 */
 func TestPowerOf(t *testing.T) {
 	tests := []struct {

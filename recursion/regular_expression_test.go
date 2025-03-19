@@ -13,6 +13,9 @@ Given an input and a regular expression pattern where
 	`*` denotes to zero or more of the proceeding characters
 
 Write a recursive function to return true if the input matches the pattern and false otherwise.
+
+For example given input `aa` and pattern `a*` the algorithm should return true, but given the same
+pattern and "ba" it should return false.
 */
 func TestRegularExpressions(t *testing.T) {
 	tests := []struct {
@@ -27,6 +30,7 @@ func TestRegularExpressions(t *testing.T) {
 		{"aa", "*", false},
 		{"aa", "*a", false},
 		{"aa", "a*", true},
+		{"ba", "a*", false},
 		{"aa", ".", false},
 		{"ab", ".", false},
 		{"ad", "d", false},
