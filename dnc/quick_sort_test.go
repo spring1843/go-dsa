@@ -10,7 +10,17 @@ TestQuickSort tests solution(s) with the following signature and problem descrip
 
 	func QuickSort(list []int) []int
 
-Given a list of integers like {3,1,2}, return a sorted set like {1,2,3} using Quick Sort.
+Given a slice of integers like, return a sorted slice of integers using quick sort.
+
+Quick sort works by selecting a 'pivot' element from the array and partitioning
+the other elements into two sub-arrays, according to whether they are less than
+or greater than the pivot. The sub-arrays are then sorted recursively. The
+base case of the recursion is an array of size 0 or 1, which is always sorted.
+
+For example given {3,1,2}, return a {1,2,3}. The quick sort algorithm would first
+choose a pivot element, say 2. It would then partition the array into two
+sub-arrays: {1} and {3}. It would then recursively sort the two sub-arrays
+and combine them with the pivot element to produce the final sorted.
 */
 func TestQuickSort(t *testing.T) {
 	tests := []struct {

@@ -7,13 +7,15 @@ TestBinarySearch tests solution(s) with the following signature and problem desc
 
 	func BinarySearch(list []int, search int) int
 
-Given a sorted set of integers like {1,2,3,4,6}, and a target int like 4 find its
-position in the set like 3 using Binary Search.
+Given a sorted slice of integers like and a target int find the position of the target in the
+slice.
 
 In Binary Search we start with the middle element of the set and compare it with
 the target. If the target is greater than the middle element we search the right
 half of the set, otherwise we search the left half of the set. We repeat this
 process until we find the target or we exhaust the set.
+
+For example given {1,2,3,4,6} and 4 as a target, return 3 because 4 is at index 3.
 */
 func TestBinarySearch(t *testing.T) {
 	tests := []struct {

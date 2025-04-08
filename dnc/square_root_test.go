@@ -12,6 +12,8 @@ TestSquareRoot tests solution(s) with the following signature and problem descri
 
 Given a number and precision, return the square root of the number using the binary
 search algorithm.
+
+For example given 9 and 3, it should return 3.
 */
 func TestSquareRoot(t *testing.T) {
 	tests := []struct {

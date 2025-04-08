@@ -10,10 +10,16 @@ TestTowerOfHanoi tests solution(s) with the following signature and problem desc
 
 	func TowerOfHanoi(n, start, end int) [][2]int
 
-Given n, number of disks, and start and end tower, return the moves it takes to move all
-disks from start to end tower. The disks are stacked on top of each other with the
+Given n, number of disks, and start and end tower, return the number of moves it takes to
+move all disks from start to end tower. The disks are stacked on top of each other with the
 lightest being on top and heaviest being in the bottom. A heavier disk cannot be placed
 on a lighter disk. You can move one disk at a time.
+
+For example given 2 disks, start of 1 and end of 3 return {1, 2}, {1, 3}, {2, 3}.
+The first move is to move the top disk from tower 1 to tower 2.
+The second move is to move the top disk from tower 1 to tower 3.
+The final move is to move the top disk from 2 to 3.
+By the end all disks are moved from tower 1 to tower 3.
 */
 func TestTowerOfHanoi(t *testing.T) {
 	tests := []struct {
