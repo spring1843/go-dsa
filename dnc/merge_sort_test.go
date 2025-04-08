@@ -10,7 +10,17 @@ TestMergeSort tests solution(s) with the following signature and problem descrip
 
 	func MergeSort(list []int) []int
 
-Given a list of integers like {3,1,2}, return a sorted set like {1,2,3} using Merge Sort.
+Given a slice of integers, return a sorted slice using Merge Sort.
+
+Merge sort is a divide and conquer algorithm that works by dividing the
+input array into two halves, recursively sorting each half, and then merging
+the two sorted halves back together. The merge step is where the actual
+sorting takes place.
+
+For example given {3,1,2}, return {1,2,3}. The merge sort algorithm would first
+divide the array into two halves: {3} and {1,2}. It would then it would divide {1,2}
+into {1} and {2}. Finally, it would merge the two halves back together
+into a single sorted array: {1,2,3}.
 */
 func TestMergeSort(t *testing.T) {
 	tests := []struct {
