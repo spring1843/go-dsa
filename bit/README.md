@@ -50,9 +50,7 @@ Left shifting can be viewed as a multiplication operation by 2 raised to the pow
 ```Go
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	fmt.Println(1 << 5)  // Prints 32. 1 * 2^5 = 32
