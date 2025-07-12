@@ -7,7 +7,9 @@ TestDivision tests solution(s) with the following signature and problem descript
 
 	func Divide(x, y int) int
 
-Divide x by y, two integers without using the built-in `/` or `*` operators.
+Given two integers, divide them without using the built-in `/` or `*` operators.
+
+For example given 20 and 4 return 5.
 */
 func TestDivision(t *testing.T) {
 	tests := []struct {

@@ -7,7 +7,9 @@ TestIsPowerOfTwo tests solution(s) with the following signature and problem desc
 
 	func IsPowerOfTwo(input int) bool
 
-Using bit manipulation, return true if a given number like 2 and false otherwise.
+Using bit manipulation, return true if a given number is a power of 2 and false otherwise.
+
+For example given 20 return false. Given 256 return true because 2 ^ 8 = 256.
 */
 func TestIsPowerOfTwo(t *testing.T) {
 	tests := []struct {

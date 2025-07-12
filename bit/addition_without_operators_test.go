@@ -7,7 +7,9 @@ TestAdditionWithoutArithmeticOperators tests solution(s) with the following sign
 
 	func Add(x, y int) int
 
-Add x by y, two integers without using any arithmetic operators such as {+,-,/,*,++,--,+=,…}.
+Given two integers add them without using any arithmetic operators such as {+,-,/,*,++,--,+=,…}.
+
+For example given 2 and 3 return 5.
 */
 func TestAdditionWithoutArithmeticOperators(t *testing.T) {
 	tests := []struct {

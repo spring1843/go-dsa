@@ -14,6 +14,9 @@ TestRateLimiter tests solution(s) with the following signature and problem descr
 Given a number of allowed requests calls per second (calls/time) write an IsAllowed
 function which returns false if the request should be rate limited because it exceeds the
 limit and true if the request should be allowed.
+
+For example given limit of 2 requests per second, if 3 requests are made in the first second
+two calls to IsAllowed would return true and the third would return false.
 */
 func TestRateLimiter(t *testing.T) {
 	tests := []struct {
