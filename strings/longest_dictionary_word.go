@@ -16,12 +16,12 @@ func LongestDictionaryWordContainingKey(key string, dic []string) string {
 	return longest
 }
 
-// hash turns a string into a number
-// the output for "abc", "acb", "cba" and etc… are all the same.
-func hash(s string) rune {
-	var res rune
-	for _, w := range s {
-		res |= w
+// hash turns a string into a number representing a bitmask of characters
+// the output for "abc", "acb", "cba", "aabc", "aaabbcc" and etc… are all the same.
+func hash(input string) int64 {
+	var res int64
+	for _, char := range input {
+		res |= 1 << (char - 'a')
 	}
 	return res
 }
