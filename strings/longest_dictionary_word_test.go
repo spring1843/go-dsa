@@ -21,6 +21,8 @@ func TestLongestDictionaryWordContainingKey(t *testing.T) {
 	}{
 		{"a", []string{}, ""},
 		{"a", []string{"c"}, ""},
+		{"ab", []string{"cd"}, ""},
+		{"ab", []string{"acd"}, ""},
 		{"", []string{"abc"}, "abc"},
 		{"a", []string{"a", "b", "c"}, "a"},
 		{"a", []string{"a", "ba", "c", "cc"}, "ba"},
