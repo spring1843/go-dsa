@@ -6,7 +6,9 @@
 [![Coverage Report](https://coveralls.io/repos/github/spring1843/go-dsa/badge.svg?branch=main)](https://coveralls.io/github/spring1843/go-dsa?branch=main)
 [![Go Reference](https://pkg.go.dev/badge/github.com/spring1843/go-dsa.svg)](https://pkg.go.dev/github.com/spring1843/go-dsa)
 
-![](.github/assets/go-dsa-logo-350x350.png)
+<p align="center">
+  <img src=".github/assets/go-dsa-logo-350x350.png" alt="Go-DSA"/>
+</p>
 
 Welcome to **Data Structures and Algorithms in Go**! 🎉 This project is designed as a dynamic, hands-on resource for learning and practicing data structures and algorithms in the Go programming language.
 
