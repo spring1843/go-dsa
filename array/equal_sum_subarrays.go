@@ -1,6 +1,6 @@
 package array
 
-// EqualSubArrays solves the problem in O(n^2) time and O(1) space.
+// EqualSubArrays solves the problem in O(n) time and O(1) space.
 func EqualSubArrays(list []int) [][]int {
 	output := make([][]int, 0)
 	if len(list) < 2 {
@@ -19,14 +19,15 @@ func EqualSubArrays(list []int) [][]int {
 }
 
 func findSplitPoint(list []int) int {
-	lSum := 0
-	for i := range len(list) {
-		lSum += list[i]
+	lSum, rSum := 0, 0
 
-		rSum := 0
-		for j := i + 1; j < len(list); j++ {
-			rSum += list[j]
-		}
+	for _, n := range list {
+		rSum += n
+	}
+
+	for i, n := range list {
+		lSum += n
+		rSum -= n
 
 		if lSum == rSum {
 			return i + 1

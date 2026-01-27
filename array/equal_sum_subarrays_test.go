@@ -10,8 +10,8 @@ TestEqualSumSubArrays tests solution(s) with the following signature and problem
 
 	func EqualSubArrays(list []int) [][]int
 
-Given an list of integers A, return two sub-arrays with equal sums without changing the
-order of the elements in the list.
+Given an list of integers A, return two sub-arrays with equal sums that are a partition of the
+original list, without changing the order of the elements in the list.
 
 For example given {1,7,3,5}, return {1,7} and {3,5} because 1+7 = 3+5 = 8.
 */
