@@ -28,7 +28,7 @@ func toInfix(input string) []string {
 
 	for _, r := range input {
 		char := string(r)
-		if _, ok := operands[char]; ok {
+		if _, ok := operators[char]; ok {
 			if len(curNum) > 0 {
 				infix = append(infix, curNum)
 				curNum = ""
