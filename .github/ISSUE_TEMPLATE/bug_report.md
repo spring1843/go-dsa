@@ -9,7 +9,7 @@ assignees: ''
 
 ## A clear and concise description of what the problem
 
-## Any code examples?
+## Code examples if applicable
 
 ## What effort have you taken to solve this problem?
 
