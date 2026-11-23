@@ -13,7 +13,7 @@ The postfix expression is a list of strings where each string is either an opera
 arithmetic symbols or an operand that are numbers.
 
 To evaluate the postfix expression, we start scanning the expression from left to right.
-If the current element is an operator we apply the operand to the last two operands we read
+If the current element is an operator we apply the operator to the last two operands we read
 we then remove the operator and replace the two operands with the results of the operation.
 
 For example given 1 2 3 + *, return 5 because 1 * (2 + 3) = 5.

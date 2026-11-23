@@ -9,7 +9,7 @@ import (
 func EvaluatePostfixExpression(expression []string) (float64, error) {
 	stack := new(evaluation)
 	for _, element := range expression {
-		if _, ok := operands[element]; !ok {
+		if _, ok := operators[element]; !ok {
 			if err := stack.pushString(element); err != nil {
 				return -1, err
 			}
