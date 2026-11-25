@@ -11,7 +11,7 @@ func CheapestFlights(flights [][]int, cityCount, source, destination, maxStops i
 	)
 
 	findMinDFS = func(vertex, distance, depth int) {
-		if depth > maxStops {
+		if depth > maxStops+1 {
 			return
 		}
 		if vertex == destination && distance < cheapest {
