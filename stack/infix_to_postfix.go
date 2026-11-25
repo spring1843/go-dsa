@@ -5,11 +5,13 @@ const (
 	closeParenthesis = ")"
 )
 
+// operators maps each operator to its precedence: * and / bind tighter than
+// + and -, and operators of equal precedence are applied left to right.
 var operators = map[string]int{
-	"*": 1,
+	"*": 2,
 	"/": 2,
-	"+": 3,
-	"-": 4,
+	"+": 1,
+	"-": 1,
 }
 
 type operatorStack struct {
@@ -35,18 +37,30 @@ func InfixToPostfix(infix []string) []string {
 			continue
 		}
 
-		if len(stack.stack) > 0 && operators[element] > operators[stack.stack[len(stack.stack)-1]] {
+		if element == openParenthesis {
 			stack.push(element)
 			continue
 		}
 
-		stack.push(element)
+		output = stack.pushOperator(element, output)
 	}
 
 	for len(stack.stack) > 0 {
 		output = append(output, stack.pop())
 	}
 
+	return output
+}
+
+// pushOperator pops the operators that bind at least as tightly as operator
+// onto output, then pushes operator. A higher precedence applies first, and an
+// equal one is to the left, so it applies first too. An open parenthesis has
+// no precedence and stops the popping.
+func (s *operatorStack) pushOperator(operator string, output []string) []string {
+	for len(s.stack) > 0 && operators[s.stack[len(s.stack)-1]] >= operators[operator] {
+		output = append(output, s.pop())
+	}
+	s.push(operator)
 	return output
 }
 

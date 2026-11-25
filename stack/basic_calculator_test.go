@@ -8,7 +8,8 @@ TestBasicCalculator tests solution(s) with the following signature and problem d
 func BasicCalculator(input string) (float64, error)
 
 Given an expression containing integers, parentheses and the four basic arithmetic operations
-{*,/,+,-} starting from the highest priority to lowest.
+{*,/,+,-}, where * and / take precedence over + and -, and operators of equal precedence are
+evaluated from left to right.
 
 For example given 1*2+3+4*5 return 25 because (4*5) + (1*2) + 3 = 25.
 */
@@ -29,6 +30,12 @@ func TestBasicCalculator(t *testing.T) {
 		{"1*(2+3+(4*5))", false, 25},
 		{"1*(2+3)+(4*5)", false, 25},
 		{"5.10/2", false, 2.55},
+		{"2*3+4", false, 10},
+		{"2+3*4", false, 14},
+		{"8-3-2", false, 3},
+		{"8/4/2", false, 1},
+		{"1*2+3+4*5", false, 25},
+		{"8/2*4", false, 16},
 	}
 
 	for i, test := range tests {
