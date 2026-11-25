@@ -5,9 +5,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/spring1843/go-dsa/.github/cmd/pkg/problems"
-
 	"github.com/spf13/cobra"
+
+	"github.com/spring1843/go-dsa/.github/cmd/pkg/problems"
 )
 
 var countRehearsalsCommand = &cobra.Command{

@@ -1,7 +1,6 @@
 package strings
 
 import (
-	"errors"
 	"strings"
 )
 
@@ -14,12 +13,10 @@ var (
 		`i`: true,
 		`u`: true,
 	}
-	// ErrPopStack is returned when the stack is empty.
-	ErrPopStack = errors.New("can not Pop on an empty stack")
 )
 
 // ReverseVowels solves the problem in O(n) time and O(n) space.
-func ReverseVowels(str string) (string, error) {
+func ReverseVowels(str string) string {
 	stack = []string{}
 	var reversed strings.Builder
 	for _, r := range str {
@@ -34,7 +31,7 @@ func ReverseVowels(str string) (string, error) {
 		}
 		reversed.WriteRune(r)
 	}
-	return reversed.String(), nil
+	return reversed.String()
 }
 
 func push(v string) {

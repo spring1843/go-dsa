@@ -4,8 +4,6 @@ run:
 linters:
   default: all
   disable:
-    - dupl
-    - dupword
     # Deprecated, replaced by exhaustruct_v5 and gomodguard_v2 which are enabled.
     - exhaustruct
     - gomodguard
@@ -25,6 +23,41 @@ linters:
     # container/heap types conventionally mix value and pointer receivers.
     - recvcheck
   settings:
+    errcheck:
+      check-blank: true
+    gocritic:
+      enabled-tags:
+        - diagnostic
+        - style
+        - performance
+        - opinionated
+        - experimental
+      disabled-checks:
+        - unnamedResult
+    godoclint:
+      default: basic
+      options:
+        start-with-name:
+          include-unexported: true
+    govet:
+      enable-all: true
+      disable:
+        # Field order is chosen for readability.
+        - fieldalignment
+    nolintlint:
+      require-explanation: true
+      require-specific: true
+    staticcheck:
+      checks:
+        - all
+        # Package comments are not required.
+        - -ST1000
+    unparam:
+      check-exported: true
+    dupword:
+      ignore:
+        # Spoken digits in the Look and Tell problem.
+        - one
     depguard:
       rules:
         main:
@@ -37,9 +70,10 @@ linters:
         - pattern: ioutil\.*
   exclusions:
     rules:
-      # Test inputs are easier to read when they are not constants.
+      # Test inputs are easier to read when they are repeated and not constants.
       - path: _test\.go
         linters:
+          - dupl
           - goconst
       # cobra commands only set the few fields they need.
       - text: cobra\.Command is missing fields
@@ -50,6 +84,16 @@ linters:
           - revive
 formatters:
   enable:
+    - gci
     - gofmt
     - gofumpt
     - goimports
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+        - localmodule
+    gofumpt:
+      extra:
+        group-params: true

@@ -9,7 +9,7 @@ import (
 var ErrQueueEmpty = errors.New("empty queue")
 
 // MaxOfKLengthSubArrays solves the problem in O(n) time and O(k) space.
-func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error) {
+func MaxOfKLengthSubArrays(numbers []int, k int) []int {
 	output := []int{}
 	queue := list.New()
 	for i := range k {
@@ -34,5 +34,5 @@ func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error) {
 	}
 
 	output = append(output, numbers[queue.Front().Value.(int)])
-	return output, nil
+	return output
 }

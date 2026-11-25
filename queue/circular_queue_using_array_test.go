@@ -69,8 +69,8 @@ func TestCircularQueue(t *testing.T) {
 		queue := NewCircularQueue(test.size)
 
 		for j, testRound := range test.testRounds {
-			for i := testRound.enqueueStart; i <= testRound.enqueueEnd; i++ {
-				queue.enqueue(i)
+			for n := testRound.enqueueStart; n <= testRound.enqueueEnd; n++ {
+				queue.enqueue(n)
 			}
 
 			for want := testRound.dequeueStart; want <= testRound.dequeueEnd; want++ {

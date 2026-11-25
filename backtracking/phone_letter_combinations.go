@@ -14,7 +14,7 @@ var phone = map[byte]string{
 // PhoneLetterCombinations solves the problem in O(3^n) time and O(3^n) space.
 func PhoneLetterCombinations(digits string) []string {
 	combinations := []string{}
-	if len(digits) > 0 {
+	if digits != "" {
 		phoneLetterCombinationsRecursive(digits, "", &combinations)
 	}
 	return combinations

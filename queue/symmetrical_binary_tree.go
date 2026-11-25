@@ -9,9 +9,9 @@ type queue struct {
 }
 
 // IsTreeSymmetrical solves the problem in O(n) time and O(n) space.
-func IsTreeSymmetrical(root *tree.BinaryTreeNode) (bool, error) {
+func IsTreeSymmetrical(root *tree.BinaryTreeNode) bool {
 	if root == nil {
-		return false, nil
+		return false
 	}
 	q1 := new(queue)
 	q2 := new(queue)
@@ -24,7 +24,7 @@ func IsTreeSymmetrical(root *tree.BinaryTreeNode) (bool, error) {
 		tmp2 := q2.dequeue()
 
 		if !areMirrored(tmp1, tmp2) {
-			return false, nil
+			return false
 		}
 
 		if tmp1.Left != nil {
@@ -37,7 +37,7 @@ func IsTreeSymmetrical(root *tree.BinaryTreeNode) (bool, error) {
 			q2.enqueue(tmp2.Left)
 		}
 	}
-	return true, nil
+	return true
 }
 
 // areMirrored returns true if the nodes have the same value and their children mirror each other.

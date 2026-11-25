@@ -29,7 +29,7 @@ func toInfix(input string) []string {
 	for _, r := range input {
 		char := string(r)
 		if _, ok := operators[char]; ok {
-			if len(curNum) > 0 {
+			if curNum != "" {
 				infix = append(infix, curNum)
 				curNum = ""
 			}
@@ -38,7 +38,7 @@ func toInfix(input string) []string {
 		}
 
 		if char == openParenthesis || char == closeParenthesis {
-			if len(curNum) > 0 {
+			if curNum != "" {
 				infix = append(infix, curNum)
 				curNum = ""
 			}
@@ -48,7 +48,7 @@ func toInfix(input string) []string {
 		curNum += char
 	}
 
-	if len(curNum) > 0 {
+	if curNum != "" {
 		infix = append(infix, curNum)
 	}
 
