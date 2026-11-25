@@ -16,14 +16,14 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
+	"math/rand/v2"
 )
 
 var rehearsals = `
 	challengeCodeSuffix = `
 
 func main() {
-	fmt.Println(rehearsals[rand.Intn(len(rehearsals))])
+	fmt.Println(rehearsals[rand.IntN(len(rehearsals))])
 }
 `
 	challengeURLPrefix = "https://github.com/spring1843/go-dsa/blob/master"

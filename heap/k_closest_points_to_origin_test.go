@@ -1,7 +1,7 @@
 package heap
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -29,7 +29,7 @@ func TestKClosestPointToOrigin(t *testing.T) {
 
 	for i, test := range tests {
 		got := KClosestPointToOrigin(test.points, test.k)
-		if !reflect.DeepEqual(got, test.kthClosest) {
+		if !slices.EqualFunc(got, test.kthClosest, slices.Equal) {
 			t.Fatalf("Failed test case #%d. Want %d got %d", i, test.kthClosest, got)
 		}
 	}

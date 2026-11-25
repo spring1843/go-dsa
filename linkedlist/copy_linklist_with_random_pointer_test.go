@@ -125,8 +125,8 @@ func deserializeRandomNode(stringRepresentation string) *RandomNode {
 
 	head := cur
 
-	for i := range len(broken) {
-		randomIndex := broken[i][strings.Index(broken[i], randomValueSeparator)+1:]
+	for _, element := range broken {
+		randomIndex := element[strings.Index(element, randomValueSeparator)+1:]
 		if randomIndex != noRandomLink {
 			cur.Random = nodes[atoi(randomIndex)-1]
 		}

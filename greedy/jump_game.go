@@ -6,11 +6,11 @@ func JumpGame(jumps []int) bool {
 		return true
 	}
 	maxReachableDistance := 0
-	for i := range len(jumps) {
+	for i, jump := range jumps {
 		if i > maxReachableDistance {
 			break
 		}
-		maxReachableDistance = max(maxReachableDistance, i+jumps[i])
+		maxReachableDistance = max(maxReachableDistance, i+jump)
 	}
 	return maxReachableDistance >= len(jumps)-1
 }

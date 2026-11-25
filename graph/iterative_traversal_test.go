@@ -58,7 +58,7 @@ func toGraph(graph [][]int) []*Vertex {
 	}
 
 	output := make([]*Vertex, len(graphMap))
-	for i := range len(graph) {
+	for i := range graph {
 		output[i] = graphMap[i+1]
 	}
 	return output

@@ -1,7 +1,7 @@
 package array
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -30,7 +30,7 @@ func TestZeroSumTriplets(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := ZeroSumTriplets(test.list); !reflect.DeepEqual(got, test.triplets) {
+		if got := ZeroSumTriplets(test.list); !slices.EqualFunc(got, test.triplets, slices.Equal) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.triplets, got)
 		}
 	}

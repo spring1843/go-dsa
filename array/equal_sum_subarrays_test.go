@@ -1,7 +1,7 @@
 package array
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -32,7 +32,7 @@ func TestEqualSumSubArrays(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := EqualSubArrays(test.list); !reflect.DeepEqual(got, test.subArrays) {
+		if got := EqualSubArrays(test.list); !slices.EqualFunc(got, test.subArrays, slices.Equal) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.subArrays, got)
 		}
 	}

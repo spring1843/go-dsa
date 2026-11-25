@@ -1,7 +1,7 @@
 package backtracking
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -25,7 +25,7 @@ func TestPermutations(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := Permutations(test.nums); !reflect.DeepEqual(test.permutations, got) {
+		if got := Permutations(test.nums); !slices.EqualFunc(test.permutations, got, slices.Equal) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.permutations, got)
 		}
 	}

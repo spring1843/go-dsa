@@ -1,7 +1,7 @@
 package hashtable
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -28,7 +28,7 @@ func TestFindAnagrams(t *testing.T) {
 
 	for i, test := range tests {
 		got := FindAnagrams(test.words)
-		if !reflect.DeepEqual(got, test.anagrams) {
+		if !slices.EqualFunc(got, test.anagrams, slices.Equal) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.anagrams, got)
 		}
 	}

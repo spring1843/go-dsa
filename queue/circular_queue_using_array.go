@@ -1,6 +1,9 @@
 package queue
 
-import "math"
+import (
+	"math"
+	"slices"
+)
 
 const emptyValue = math.MinInt64
 
@@ -12,12 +15,8 @@ type CircularQueue struct {
 }
 
 func NewCircularQueue(size int) *CircularQueue {
-	data := make([]int, size)
-	for i := range data {
-		data[i] = emptyValue
-	}
 	return &CircularQueue{
-		data: data,
+		data: slices.Repeat([]int{emptyValue}, size),
 		size: size,
 		head: -1,
 		tail: 0,

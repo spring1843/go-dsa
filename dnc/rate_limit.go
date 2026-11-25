@@ -22,14 +22,15 @@ func IsAllowed(limitPerSecond int) bool {
 	return true
 }
 
-// removeOldRateLimitEvents uses binary search to remove events older than 1 second.
+// removeOldRateLimitEvents uses binary search to remove events that are at least 1 second old.
 func removeOldRateLimitEvents(now int64) {
 	if len(rateLimitEvents) == 0 {
 		return
 	}
 
 	cutoff := now - nanoSecond
-	idx, _ := slices.BinarySearch(rateLimitEvents, cutoff)
+	// An event that is exactly one second old no longer counts.
+	idx, _ := slices.BinarySearch(rateLimitEvents, cutoff+1)
 
 	rateLimitEvents = rateLimitEvents[idx:]
 }
