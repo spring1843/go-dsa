@@ -1,10 +1,13 @@
 package strings
 
 import (
+	"maps"
 	"strings"
 )
 
-var dbs []map[string]string
+// dbs is the database stack. The last entry is the active database: the transaction
+// opened by BEGIN, or the committed database when no transaction is open.
+var dbs = []map[string]string{{}}
 
 // RunDBCommand solves the problem in O(1) time and O(n) space.
 func RunDBCommand(cmd string) string {
@@ -56,8 +59,7 @@ func unset(key string) {
 }
 
 func begin() {
-	clonedDB := make(map[string]string)
-	dbs = append(dbs, clonedDB)
+	dbs = append(dbs, maps.Clone(dbs[len(dbs)-1]))
 }
 
 func rollback() {
