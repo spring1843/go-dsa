@@ -19,7 +19,7 @@ func WordDistance(input1, input2 string) int {
 	return dp[len(input1)][len(input2)]
 }
 
-func createDP(input2 string, input1 string) [][]int {
+func createDP(input2, input1 string) [][]int {
 	dp := make([][]int, len(input1)+1)
 
 	for i := range dp {

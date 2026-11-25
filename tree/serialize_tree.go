@@ -1,6 +1,7 @@
 package tree
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -39,8 +40,7 @@ func Serialize(root *BinaryTreeNode) string {
 			result = result + nilNode + delimiter
 		} else {
 			result = result + strconv.Itoa(node.Val) + delimiter
-			queue = append(queue, node.Left)
-			queue = append(queue, node.Right)
+			queue = append(queue, node.Left, node.Right)
 		}
 	}
 
@@ -54,21 +54,16 @@ func Serialize(root *BinaryTreeNode) string {
 	return result
 }
 
-// Deserialize a string into a binary tree in O(n) time and O(n) space.
+// Deserialize a string into a binary tree in O(n) time and O(n) space. It returns nil if the
+// string contains a value that is not an integer.
 func Deserialize(s string) *BinaryTreeNode {
 	if s == "" {
 		return nil
 	}
 
-	nodes := []*BinaryTreeNode{}
-
-	for node := range strings.SplitSeq(s, delimiter) {
-		if node == nilNode {
-			nodes = append(nodes, nil)
-		} else {
-			Value, _ := strconv.Atoi(node)
-			nodes = append(nodes, &BinaryTreeNode{Val: Value, Left: nil, Right: nil})
-		}
+	nodes, err := parseNodes(s)
+	if err != nil {
+		return nil
 	}
 
 	i := 1
@@ -95,4 +90,22 @@ func Deserialize(s string) *BinaryTreeNode {
 	}
 
 	return nodes[0]
+}
+
+func parseNodes(s string) ([]*BinaryTreeNode, error) {
+	nodes := []*BinaryTreeNode{}
+
+	for node := range strings.SplitSeq(s, delimiter) {
+		if node == nilNode {
+			nodes = append(nodes, nil)
+			continue
+		}
+		value, err := strconv.Atoi(node)
+		if err != nil {
+			return nil, fmt.Errorf("failed parsing node %q: %w", node, err)
+		}
+		nodes = append(nodes, &BinaryTreeNode{Val: value, Left: nil, Right: nil})
+	}
+
+	return nodes, nil
 }

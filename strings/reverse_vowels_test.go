@@ -5,7 +5,7 @@ import "testing"
 /*
 TestReverseVowels tests solution(s) with the following signature and problem description:
 
-	func ReverseVowels(str string) (string, error)
+	func ReverseVowels(str string) string
 
 Given a string, return the same string while reversing the vowels {"a", "e", "i", "o", "u"}
 appear in it.
@@ -25,10 +25,7 @@ func TestReverseVowels(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got, err := ReverseVowels(test.word)
-		if err != nil {
-			t.Fatalf("Failed test case #%d. Unexpected Error. Error: %s", i, err)
-		}
+		got := ReverseVowels(test.word)
 		if got != test.reversed {
 			t.Fatalf("Failed test case #%d. Want %q got %q", i, test.reversed, got)
 		}

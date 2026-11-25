@@ -43,3 +43,9 @@ func TestSerializeAndUnserializeBinaryTree(t *testing.T) {
 		}
 	}
 }
+
+func TestDeserializeInvalidValue(t *testing.T) {
+	if got := Deserialize("1,a"); got != nil {
+		t.Fatalf("Want nil got %#v", got)
+	}
+}

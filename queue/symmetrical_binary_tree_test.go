@@ -9,7 +9,7 @@ import (
 /*
 TestIsTreeSymmetrical tests solution(s) with the following signature and problem description:
 
-	func IsTreeSymmetrical(root *tree.BinaryTreeNode) (bool, error)
+	func IsTreeSymmetrical(root *tree.BinaryTreeNode) bool
 
 Given a binary tree return true of it is symmetric and false otherwise. A tree is symmetric if you
 can draw a vertical line through the root and then the left subtree is the mirror image of the right subtree.
@@ -42,10 +42,7 @@ func TestIsTreeSymmetrical(t *testing.T) {
 		{"2,4,4,5,6,6,5", true},
 	}
 	for i, test := range tests {
-		got, err := IsTreeSymmetrical(tree.Deserialize(test.tree))
-		if err != nil {
-			t.Fatalf("Failed test case #%d. Unexpected error %s", i, err)
-		}
+		got := IsTreeSymmetrical(tree.Deserialize(test.tree))
 		if got != test.isSymmetric {
 			t.Fatalf("Failed test case #%d. Want %t got %t", i, test.isSymmetric, got)
 		}

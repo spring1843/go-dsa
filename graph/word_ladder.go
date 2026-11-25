@@ -29,7 +29,7 @@ func WordLadder(start, end string, dic []string) int {
 	return bfsMinTransformation(start, end)
 }
 
-func bfsMinTransformation(beginWord string, endWord string) int {
+func bfsMinTransformation(beginWord, endWord string) int {
 	shortest := 0
 	distance := 0
 	source := graph[beginWord]

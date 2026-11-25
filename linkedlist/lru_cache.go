@@ -46,7 +46,7 @@ func (cache *lruCache) get(key int) int {
 }
 
 // put solves the problem in O(1) time and O(n) space.
-func (cache *lruCache) put(key int, value int) {
+func (cache *lruCache) put(key, value int) {
 	if v, ok := cache.elements[key]; ok {
 		v.Value.(*element).value = value
 		cache.list.MoveToBack(v)

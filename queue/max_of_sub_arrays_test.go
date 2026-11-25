@@ -8,7 +8,7 @@ import (
 /*
 TestMaxOfKLengthSubArrays tests solution(s) with the following signature and problem description:
 
-	func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error)
+	func MaxOfKLengthSubArrays(numbers []int, k int) []int
 
 Given a slice of integers and an integer k, return a slice containing the maximum in each k-sized
 sub-array (sub-slice) of the input.
@@ -30,10 +30,7 @@ func TestMaxOfKLengthSubArrays(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got, err := MaxOfKLengthSubArrays(test.list, test.k)
-		if err != nil {
-			t.Fatalf("Unexpected error occurred. Error : %s", err)
-		}
+		got := MaxOfKLengthSubArrays(test.list, test.k)
 		if !slices.Equal(got, test.maximums) {
 			t.Fatalf("Failed test #%d, Failed getting list of maximums. Want %#v got %#v", i, test.maximums, got)
 		}

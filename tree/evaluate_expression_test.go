@@ -87,8 +87,7 @@ func serializeStringBinaryTree(root *stringBinaryTreeNode) string {
 			result = result + nilNode + delimiter
 		} else {
 			result = result + node.val + delimiter
-			queue = append(queue, node.left)
-			queue = append(queue, node.right)
+			queue = append(queue, node.left, node.right)
 		}
 	}
 

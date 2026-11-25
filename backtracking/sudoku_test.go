@@ -29,7 +29,8 @@ func TestSudoku(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if Sudoku(test.board); !slices.EqualFunc(test.solution, test.board, slices.Equal) {
+		Sudoku(test.board)
+		if !slices.EqualFunc(test.solution, test.board, slices.Equal) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.solution, test.board)
 		}
 	}
