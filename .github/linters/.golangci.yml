@@ -6,6 +6,9 @@ linters:
   disable:
     - dupl
     - dupword
+    # Deprecated, replaced by exhaustruct_v5 and gomodguard_v2 which are enabled.
+    - exhaustruct
+    - gomodguard
     - forcetypeassert
     - gochecknoglobals
     - lll
@@ -41,7 +44,6 @@ linters:
       # cobra commands only set the few fields they need.
       - text: cobra\.Command is missing fields
         linters:
-          - exhaustruct
           - exhaustruct_v5
       - text: package-comments
         linters:

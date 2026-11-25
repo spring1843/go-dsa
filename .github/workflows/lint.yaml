@@ -41,6 +41,14 @@ jobs:
           VALIDATE_GITLEAKS: false
           LOG_LEVEL: WARN
           VALIDATE_SHELL_SHFMT: false
+          # Prettier formats this repository. Biome and Black overlap with Prettier, ESLint,
+          # Stylelint and Ruff.
+          VALIDATE_BIOME_FORMAT: false
+          VALIDATE_BIOME_LINT: false
+          VALIDATE_PYTHON_BLACK: false
+          # This repository does not enforce a commit message convention.
+          VALIDATE_GIT_COMMITLINT: false
+          ENABLE_GITHUB_ACTIONS_STEP_SUMMARY: false
           # These need write permissions that this workflow does not have.
           MULTI_STATUS: false
           ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: false
