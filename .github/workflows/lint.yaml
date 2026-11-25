@@ -31,8 +31,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JSCPD: false
-          # The golangci-lint step above covers Go modules. The golangci-lint 2.13.2 bundled
-          # with super-linter v9.0.0 can not type check Go 1.27.
+          # Go is linted by the golangci-lint step above. Super-linter's GO check only supports
+          # Go files that are all in one directory, and its GO_MODULES check uses golangci-lint
+          # 2.13.2 which can not type check Go 1.27.
+          VALIDATE_GO: false
           VALIDATE_GO_MODULES: false
           MARKDOWN_CONFIG_FILE: .markdownlint.yml
           YAML_CONFIG_FILE: .yamllint.yml
