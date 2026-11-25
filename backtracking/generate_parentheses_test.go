@@ -2,7 +2,6 @@ package backtracking
 
 import (
 	"slices"
-	"sort"
 	"testing"
 )
 
@@ -30,7 +29,7 @@ func TestGenerateParentheses(t *testing.T) {
 	for i, test := range tests {
 		got := GenerateParentheses(test.n)
 		if len(got) > 0 {
-			sort.Strings(got)
+			slices.Sort(got)
 		}
 		if !slices.Equal(test.validParentheses, got) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.validParentheses, got)

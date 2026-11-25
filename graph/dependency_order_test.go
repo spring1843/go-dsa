@@ -79,9 +79,9 @@ func TestDependencyOrder(t *testing.T) {
 func toDependencyGraph(input string) []*VertexWithIngress {
 	graph := []*VertexWithIngress{}
 	graphMap := make(map[string]*VertexWithIngress)
-	for _, line := range strings.Split(input, lineBreak) {
+	for line := range strings.SplitSeq(input, lineBreak) {
 		firstElement := ""
-		for _, element := range strings.Split(line, delimiter) {
+		for element := range strings.SplitSeq(line, delimiter) {
 			if _, ok := graphMap[element]; !ok {
 				vertex := &VertexWithIngress{Val: element, Edges: []*VertexWithIngress{}}
 				graphMap[element] = vertex

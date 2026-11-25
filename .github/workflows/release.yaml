@@ -14,7 +14,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7.1.0
+        with:
+          go-version-file: go.mod
       - run: make build VERSION=${{ github.ref }}
       - name: Create Release
         id: create_release

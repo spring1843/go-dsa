@@ -1,6 +1,9 @@
 package strings
 
-import "errors"
+import (
+	"errors"
+	"strings"
+)
 
 var (
 	stack  []string
@@ -18,7 +21,7 @@ var (
 // ReverseVowels solves the problem in O(n) time and O(n) space.
 func ReverseVowels(str string) (string, error) {
 	stack = []string{}
-	reversed := ""
+	var reversed strings.Builder
 	for _, r := range str {
 		if _, ok := vowels[string(r)]; ok {
 			push(string(r))
@@ -26,12 +29,12 @@ func ReverseVowels(str string) (string, error) {
 	}
 	for _, r := range str {
 		if _, ok := vowels[string(r)]; ok {
-			reversed += pop()
+			reversed.WriteString(pop())
 			continue
 		}
-		reversed += string(r)
+		reversed.WriteRune(r)
 	}
-	return reversed, nil
+	return reversed.String(), nil
 }
 
 func push(v string) {

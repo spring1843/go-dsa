@@ -1,6 +1,6 @@
 module github.com/spring1843/go-dsa
 
-go 1.22
+go 1.27.4
 
 require (
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect

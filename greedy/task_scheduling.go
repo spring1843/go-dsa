@@ -1,6 +1,9 @@
 package greedy
 
-import "sort"
+import (
+	"cmp"
+	"slices"
+)
 
 // Event represents an event to be scheduled.
 type Event struct {
@@ -11,8 +14,8 @@ type Event struct {
 
 // ScheduleEvents Solves the problem in O(n*Log n) time and O(1) space.
 func ScheduleEvents(events []Event) []Event {
-	sort.Slice(events, func(i, j int) bool {
-		return events[i].EndTime < events[j].EndTime
+	slices.SortFunc(events, func(a, b Event) int {
+		return cmp.Compare(a.EndTime, b.EndTime)
 	})
 
 	var schedule []Event

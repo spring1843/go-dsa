@@ -1,5 +1,7 @@
 package backtracking
 
+import "slices"
+
 const (
 	empty = iota
 	queen
@@ -19,7 +21,7 @@ func nQueensRecursive(row, n int, cols []int, output Chessboard) Chessboard {
 		return output
 	}
 	if row == n {
-		output = append(output, append([]int{}, cols...))
+		output = append(output, slices.Clone(cols))
 		return output
 	}
 	for col := range n {

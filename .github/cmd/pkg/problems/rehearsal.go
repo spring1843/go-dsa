@@ -54,32 +54,32 @@ func newRehearsalEntry(input string) ([]rehearsalEntry, error) {
 }
 
 func stringRehearsalEntries(conf *ParseConf, entries []rehearsalEntry) string {
-	output := ""
+	var output strings.Builder
 	for _, entry := range entries {
-		output += fmt.Sprintf("\n### %s\n", entry.Name)
+		fmt.Fprintf(&output, "\n### %s\n", entry.Name)
 
 		testFileContent, err := goFileFilters(filepath.Join(conf.Dir, conf.Section, entry.TestFileName), conf)
 		if err != nil {
-			output += fmt.Sprintf("Error reading test file: %s\n", err)
+			fmt.Fprintf(&output, "Error reading test file: %s\n", err)
 			continue
 		}
-		output += "\n```GO\n" + string(testFileContent) + "\n```\n"
+		output.WriteString("\n```GO\n" + string(testFileContent) + "\n```\n")
 	}
 
-	output += "\n## Rehearsal Solutions\n"
+	output.WriteString("\n## Rehearsal Solutions\n")
 
 	for _, entry := range entries {
-		output += fmt.Sprintf("\n### %s\n", entry.Name)
+		fmt.Fprintf(&output, "\n### %s\n", entry.Name)
 
 		testFileContent, err := goFileFilters(filepath.Join(conf.Dir, conf.Section, entry.SolutionFileName), conf)
 		if err != nil {
-			output += fmt.Sprintf("Error reading test file: %s\n", err)
+			fmt.Fprintf(&output, "Error reading test file: %s\n", err)
 			continue
 		}
-		output += "\n```GO\n" + string(testFileContent) + "\n```\n"
+		output.WriteString("\n```GO\n" + string(testFileContent) + "\n```\n")
 	}
 
-	return output
+	return output.String()
 }
 
 func goFileFilters(filePath string, conf *ParseConf) (string, error) {

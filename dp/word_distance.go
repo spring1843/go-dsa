@@ -9,9 +9,10 @@ func WordDistance(input1, input2 string) int {
 				dp[i][j] = dp[i-1][j-1]
 			} else {
 				dp[i][j] = 1 + min(
-					dp[i-1][j], // delete
-					min(dp[i][j-1], // insert
-						dp[i-1][j-1])) // edit
+					dp[i-1][j],   // delete
+					dp[i][j-1],   // insert
+					dp[i-1][j-1], // edit
+				)
 			}
 		}
 	}
@@ -34,11 +35,4 @@ func createDP(input2 string, input1 string) [][]int {
 	}
 
 	return dp
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
 }

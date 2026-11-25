@@ -1,5 +1,7 @@
 package strings
 
+import "strings"
+
 type romanNumeral struct {
 	value  int
 	symbol string
@@ -23,15 +25,15 @@ var romanNumerals = []romanNumeral{
 
 // IntToRoman solves the problem in O(n) time and O(n) space.
 func IntToRoman(input int) string {
-	roman := ""
+	var roman strings.Builder
 	for input > 0 {
 		for _, romanNumeral := range romanNumerals {
 			if input >= romanNumeral.value {
-				roman += romanNumeral.symbol
+				roman.WriteString(romanNumeral.symbol)
 				input -= romanNumeral.value
 				break
 			}
 		}
 	}
-	return roman
+	return roman.String()
 }

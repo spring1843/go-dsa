@@ -58,7 +58,7 @@ func TestInMemoryDictionary(t *testing.T) {
 		allOutputs := ""
 		dbs = make([]map[string]string, 0)
 		dbs = append(dbs, make(map[string]string))
-		for _, cmd := range strings.Split(test.input, "\n") {
+		for cmd := range strings.SplitSeq(test.input, "\n") {
 			output := RunDBCommand(cmd)
 			if output != "" {
 				allOutputs += " " + output

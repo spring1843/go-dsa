@@ -1,7 +1,7 @@
 package dnc
 
 import (
-	"sort"
+	"slices"
 	"time"
 )
 
@@ -29,9 +29,7 @@ func removeOldRateLimitEvents(now int64) {
 	}
 
 	cutoff := now - nanoSecond
-	idx := sort.Search(len(rateLimitEvents), func(i int) bool {
-		return rateLimitEvents[i] >= cutoff
-	})
+	idx, _ := slices.BinarySearch(rateLimitEvents, cutoff)
 
 	rateLimitEvents = rateLimitEvents[idx:]
 }

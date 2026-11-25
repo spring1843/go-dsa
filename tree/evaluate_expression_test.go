@@ -109,7 +109,7 @@ func unserializeStringBinaryTree(s string) *stringBinaryTreeNode {
 
 	nodes := []*stringBinaryTreeNode{}
 
-	for _, node := range strings.Split(s, delimiter) {
+	for node := range strings.SplitSeq(s, delimiter) {
 		if node == nilNode {
 			nodes = append(nodes, nil)
 		} else {

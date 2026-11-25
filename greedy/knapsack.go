@@ -1,6 +1,9 @@
 package greedy
 
-import "sort"
+import (
+	"cmp"
+	"slices"
+)
 
 // KnapsackItem is an item with a weight and value that can be put in a knapsack.
 type KnapsackItem struct {
@@ -10,8 +13,8 @@ type KnapsackItem struct {
 
 // Knapsack solves the problem in O(n*Log n) time and O(1) space.
 func Knapsack(items []KnapsackItem, capacity int) int {
-	sort.Slice(items, func(i, j int) bool {
-		return items[i].Value/items[i].Weight > items[j].Value/items[j].Weight
+	slices.SortFunc(items, func(a, b KnapsackItem) int {
+		return cmp.Compare(b.Value/b.Weight, a.Value/a.Weight)
 	})
 
 	var maxValue int

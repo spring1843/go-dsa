@@ -16,20 +16,20 @@ type (
 
 func BenchmarkLinkedListQueue(b *testing.B) {
 	q := newLinkedListQueue()
-	for n := 0; n < b.N; n++ {
+	for n := range b.N {
 		q.enqueue(n)
 	}
-	for n := 0; n < b.N; n++ {
+	for range b.N {
 		q.dequeue()
 	}
 }
 
 func BenchmarkSliceQueue(b *testing.B) {
 	q := sliceQueue{}
-	for n := 0; n < b.N; n++ {
+	for n := range b.N {
 		q.enqueue(n)
 	}
-	for n := 0; n < b.N; n++ {
+	for range b.N {
 		q.dequeue()
 	}
 }

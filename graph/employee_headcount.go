@@ -43,9 +43,9 @@ func headCountBFS(graph map[int][]int, employeeID int) int {
 // toGraphOfEmployees creates a map of employees and their direct reports.
 func toGraphOfEmployees(data string) (map[int][]int, error) {
 	output := make(map[int][]int)
-	for _, line := range strings.Split(data, lineSeparator) {
+	for line := range strings.SplitSeq(data, lineSeparator) {
 		broken := make([]int, 0)
-		for _, item := range strings.Split(line, numberSeparator) {
+		for item := range strings.SplitSeq(line, numberSeparator) {
 			n, err := strconv.Atoi(item)
 			if err != nil {
 				return nil, errInvalidInteger
