@@ -32,10 +32,10 @@ func Contains(text, pattern string) bool {
 
 func containsRecursive(text, pattern string, textIndex, patternIndex int) bool {
 	if patternIndex == len(pattern) {
-		return true 
+		return true
 	}
 	if textIndex == len(text) {
-		return false 
+		return false
 	}
 
 	if text[textIndex] == pattern[patternIndex] {
@@ -50,10 +50,10 @@ func containsRecursive(text, pattern string, textIndex, patternIndex int) bool {
 
 To solve this problem using the backtracking technique:
 
-* Recursively iterate through each character of `text` at `textIndex` and compare it with the first character of the `pattern`:
+- Recursively iterate through each character of `text` at `textIndex` and compare it with the first character of the `pattern`:
 
-    * If they match compare every remaining character in text with every remaining character in pattern and if they are all equal then success base case condition is satisfied.
-    * If they are not equal then  increment the `textIndex` repeat
+  - If they match compare every remaining character in text with every remaining character in pattern and if they are all equal then success base case condition is satisfied.
+  - If they are not equal then increment the `textIndex` repeat
 
 The driver function `Contains` prepares the first call to the recursive function by sending it all the inputs it has received and to index numbers as `textIndex` and `patternIndex` as 0.
 
@@ -61,8 +61,8 @@ The recursive function `containsRecursive` then checks for base cases. If `patte
 
 Then it checks to see if the character at `textIndex` in `text` matches the character at `patternIndex` in `pattern`:
 
-* If they match it will recursively call the same function to check the remaining characters.
-* If they do not match it backtracks to the next character in text by recursively calling the same function with an incremented textIndex.
+- If they match it will recursively call the same function to check the remaining characters.
+- If they do not match it backtracks to the next character in text by recursively calling the same function with an incremented textIndex.
 
 For example for inputs `abracadabra` and `cad` it will check to see if `a` equals `c`, if it doesn't then it looks at the next character in text which is `b`. Since it does not match it will keep incrementing `textIndex` until it equals 4 at which point it will match `c`. Then it will check to see if text and pattern match at index 5 and 1. If they do then 6 and 2, and if they do since `cad` has three letters and we have found 3 matching elements we can conclude the text contains the pattern.
 
@@ -74,13 +74,13 @@ The time complexity of backtracking algorithms may vary depending on the problem
 
 ## Application
 
-Computers use backtracking in board games to select their next moves. The technique is also applied to graphs and trees through the use of [Depth First Search](../graph/graph#depth-first-search---dfs). It also has applications in object detection in image processing.
+Computers use backtracking in board games to select their next moves. The technique is also applied to graphs and trees through the use of [Depth First Search](../graph/README.md#depth-first-search---dfs). It also has applications in object detection in image processing.
 
 ## Rehearsal
 
-* [Permutations](./permutations_test.go), [Solution](./permutations.go)
-* [Generate Parentheses](./generate_parentheses_test.go), [Solution](./generate_parentheses.go)
-* [Phone Letter Combinations](./phone_letter_combinations_test.go), [Solution](./phone_letter_combinations.go)
-* [Maze](./maze_test.go), [Solution](./maze.go)
-* [Sudoku](./sudoku_test.go), [Solution](./sudoku.go)
-* [N Queens](./n_queens_test.go), [Solution](./n_queens.go)
+- [Permutations](./permutations_test.go), [Solution](./permutations.go)
+- [Generate Parentheses](./generate_parentheses_test.go), [Solution](./generate_parentheses.go)
+- [Phone Letter Combinations](./phone_letter_combinations_test.go), [Solution](./phone_letter_combinations.go)
+- [Maze](./maze_test.go), [Solution](./maze.go)
+- [Sudoku](./sudoku_test.go), [Solution](./sudoku.go)
+- [N Queens](./n_queens_test.go), [Solution](./n_queens.go)

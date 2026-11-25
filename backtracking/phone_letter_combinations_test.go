@@ -2,7 +2,6 @@ package backtracking
 
 import (
 	"slices"
-	"sort"
 	"testing"
 )
 
@@ -31,7 +30,7 @@ func TestPhoneLetterCombinations(t *testing.T) {
 	for i, test := range tests {
 		got := PhoneLetterCombinations(test.digits)
 		if len(got) > 0 {
-			sort.Strings(got)
+			slices.Sort(got)
 		}
 		if !slices.Equal(test.combinations, got) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.combinations, got)

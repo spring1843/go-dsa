@@ -38,10 +38,3 @@ func (maxStack *MaxStack) Pop() (int, error) {
 	maxStack.stack2 = maxStack.stack2[0 : len(maxStack.stack2)-1]
 	return tmp, nil
 }
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}

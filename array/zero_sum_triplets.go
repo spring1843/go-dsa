@@ -1,6 +1,6 @@
 package array
 
-import "sort"
+import "slices"
 
 // ZeroSumTriplets solves the problem in O(n^2) time and O(1) space.
 func ZeroSumTriplets(list []int) [][]int {
@@ -9,7 +9,7 @@ func ZeroSumTriplets(list []int) [][]int {
 		return output
 	}
 
-	sort.Ints(list)
+	slices.Sort(list)
 	for i, n := range list {
 		if i > 0 && n == list[i-1] {
 			continue

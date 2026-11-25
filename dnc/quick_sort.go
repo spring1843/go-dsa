@@ -1,5 +1,7 @@
 package dnc
 
+import "slices"
+
 // QuickSort solves the problem in O(n*Log n) time and O(n) space.
 func QuickSort(list []int) []int {
 	if len(list) <= 1 {
@@ -9,17 +11,17 @@ func QuickSort(list []int) []int {
 	pivot := list[len(list)/2]
 
 	var less, equal, greater []int
-	for i := range len(list) {
-		if list[i] == pivot {
-			equal = append(equal, list[i])
+	for _, value := range list {
+		if value == pivot {
+			equal = append(equal, value)
 		}
-		if list[i] < pivot {
-			less = append(less, list[i])
+		if value < pivot {
+			less = append(less, value)
 		}
-		if list[i] > pivot {
-			greater = append(greater, list[i])
+		if value > pivot {
+			greater = append(greater, value)
 		}
 	}
 
-	return append(append(QuickSort(less), equal...), QuickSort(greater)...)
+	return slices.Concat(QuickSort(less), equal, QuickSort(greater))
 }

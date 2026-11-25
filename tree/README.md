@@ -19,9 +19,9 @@ Tree traversal methods are named after the order in which the nodes are explored
 
 There are many types of trees. Some important tree types include:
 
-* **Binary Tree**: Every node can have no more than two children
-* **Complete Binary Tree**: Each level is filled left to right, and all levels except the bottom are full
-* **Full Binary Tree**: Every non-leaf node has exactly two children
+- **Binary Tree**: Every node can have no more than two children
+- **Complete Binary Tree**: Each level is filled left to right, and all levels except the bottom are full
+- **Full Binary Tree**: Every non-leaf node has exactly two children
 
 ```ASCII
 [Figure 2] Important Tree Concepts
@@ -70,9 +70,9 @@ Trees, such as Binary Search Trees (BSTs), offer O(Log n) time complexity for se
 
 ## Rehearsal
 
-* [Serialize Binary Tree](./serialize_tree_test.go), [Solution](./serialize_tree.go)
-* [Evaluate A Binary Expression Tree](./evaluate_expression_test.go), [Solution](./evaluate_expression.go)
-* [Sorted Array to Balanced BST](./sorted_array_to_balanced_bsd_test.go), [Solution](./sorted_array_to_balanced_bsd.go)
-* [Traverse Binary Tree](./traverse_binary_tree_test.go), [Solution](./traverse_binary_tree.go)
-* [Reverse Binary Tree](./reverse_binary_tree_test.go), [Solution](./reverse_binary_tree.go)
-* [Autocompletion](./autocompletion_test.go), [Solution](./autocompletion.go)
+- [Serialize Binary Tree](./serialize_tree_test.go), [Solution](./serialize_tree.go)
+- [Evaluate A Binary Expression Tree](./evaluate_expression_test.go), [Solution](./evaluate_expression.go)
+- [Sorted Array to Balanced BST](./sorted_array_to_balanced_bsd_test.go), [Solution](./sorted_array_to_balanced_bsd.go)
+- [Traverse Binary Tree](./traverse_binary_tree_test.go), [Solution](./traverse_binary_tree.go)
+- [Reverse Binary Tree](./reverse_binary_tree_test.go), [Solution](./reverse_binary_tree.go)
+- [Autocompletion](./autocompletion_test.go), [Solution](./autocompletion.go)

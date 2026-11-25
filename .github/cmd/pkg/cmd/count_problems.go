@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"path/filepath"
@@ -15,7 +14,7 @@ var countRehearsalsCommand = &cobra.Command{
 	Use:   "count-rehearsals",
 	Short: "Counts the number of rehearsals",
 	Long:  "Iteratively counts the number of rehearsals for each section.",
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(cmd *cobra.Command, _ []string) {
 		dir, err := os.Getwd()
 		if err != nil {
 			log.Fatalf("Error finding current directory: %s", err)
@@ -29,6 +28,6 @@ var countRehearsalsCommand = &cobra.Command{
 			}
 			count += len(matches)
 		}
-		fmt.Println(count)
+		cmd.Println(count)
 	},
 }

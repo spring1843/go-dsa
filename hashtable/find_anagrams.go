@@ -1,8 +1,6 @@
 package hashtable
 
-import "sort"
-
-type sortRunes []rune
+import "slices"
 
 // FindAnagrams solves the problem in O(n*Log n) time and O(n) space.
 func FindAnagrams(words []string) [][]string {
@@ -16,7 +14,7 @@ func FindAnagrams(words []string) [][]string {
 
 func sortLetters(word string) string {
 	r := []rune(word)
-	sort.Sort(sortRunes(r))
+	slices.Sort(r)
 	return string(r)
 }
 
@@ -28,16 +26,4 @@ func toStrings(anagrams map[string][]string) [][]string {
 		}
 	}
 	return output
-}
-
-func (s sortRunes) Less(i, j int) bool {
-	return s[i] < s[j]
-}
-
-func (s sortRunes) Swap(i, j int) {
-	s[i], s[j] = s[j], s[i]
-}
-
-func (s sortRunes) Len() int {
-	return len(s)
 }

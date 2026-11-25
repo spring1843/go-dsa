@@ -1,7 +1,7 @@
 package backtracking
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -29,7 +29,7 @@ func TestSudoku(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if Sudoku(test.board); !reflect.DeepEqual(test.solution, test.board) {
+		if Sudoku(test.board); !slices.EqualFunc(test.solution, test.board, slices.Equal) {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.solution, test.board)
 		}
 	}

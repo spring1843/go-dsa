@@ -10,7 +10,7 @@ TestLongestDictionaryWordContainingKey tests solution(s) with the following sign
 Given a key as string, and a slice of strings containing a dictionary of words, return the longest
 word that contains all letters of the key. Input will only contain lowercase letters a-z.
 
-For example given "car" and {"rectify", "race", "archeology", "racoon"}, it should return "archeology",
+For example given "car" and {"rectify", "race", "archeology", "raccoon"}, it should return "archeology",
 because "archeology" is the longest word in the given set that contains "c","a",and "r".
 */
 func TestLongestDictionaryWordContainingKey(t *testing.T) {
@@ -29,7 +29,7 @@ func TestLongestDictionaryWordContainingKey(t *testing.T) {
 		{"a", []string{"a", "baa", "c"}, "baa"},
 		{"abc", []string{"abc", "aabc", "aabbcc", "bbccaaccbbaa"}, "bbccaaccbbaa"},
 		{"abc", []string{"abc", "abcdefghijklmn", "abcdefghijkl", "abcdef", "abcijkl"}, "abcdefghijklmn"},
-		{"car", []string{"rectify", "race", "archeology", "racoon"}, "archeology"},
+		{"car", []string{"rectify", "race", "archeology", "raccoon"}, "archeology"},
 	}
 
 	for i, test := range tests {

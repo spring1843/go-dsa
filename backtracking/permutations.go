@@ -1,5 +1,7 @@
 package backtracking
 
+import "slices"
+
 // Permutations solves the problem in O(n!) time and O(n) space.
 func Permutations(input []int) [][]int {
 	permutations := make([][]int, 0)
@@ -10,12 +12,12 @@ func Permutations(input []int) [][]int {
 func permutationsRecursive(input []int, start int, permutations *[][]int) {
 	end := len(input) - 1
 	if start == end {
-		*permutations = append(*permutations, append([]int{}, input...))
+		*permutations = append(*permutations, slices.Clone(input))
 		return
 	}
 	for i := start; i <= end; i++ {
-		(input)[i], (input)[start] = (input)[start], (input)[i]
+		input[i], input[start] = input[start], input[i]
 		permutationsRecursive(input, start+1, permutations)
-		(input)[i], (input)[start] = (input)[start], (input)[i]
+		input[i], input[start] = input[start], input[i]
 	}
 }

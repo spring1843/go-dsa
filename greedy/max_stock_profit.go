@@ -9,13 +9,8 @@ func MaxStockProfit(prices []int) int {
 	minStockPrice := prices[0]
 
 	for _, price := range prices {
-		profit := price - minStockPrice
-		if profit > maxProfit {
-			maxProfit = profit
-		}
-		if price < minStockPrice {
-			minStockPrice = price
-		}
+		maxProfit = max(maxProfit, price-minStockPrice)
+		minStockPrice = min(minStockPrice, price)
 	}
 	return maxProfit
 }

@@ -3,6 +3,7 @@ package dnc
 import (
 	"slices"
 	"testing"
+	"testing/synctest"
 	"time"
 )
 
@@ -35,19 +36,22 @@ func TestRateLimiter(t *testing.T) {
 		{10, 100, 1, 100, []bool{true, true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false}},
 	}
 
-	for i, test := range tests {
-		rateLimitEvents = make([]int64, 0)
-		got := make([]bool, 0)
-		for range test.firstCallTimes {
-			got = append(got, IsAllowed(test.limitPerSecond))
-		}
-		time.Sleep(time.Duration(test.sleep) * time.Second)
-		for range test.secondCallTimes {
-			got = append(got, IsAllowed(test.limitPerSecond))
-		}
+	// synctest uses a fake clock so that sleeping is instant and exact.
+	synctest.Test(t, func(t *testing.T) {
+		for i, test := range tests {
+			rateLimitEvents = make([]int64, 0)
+			got := make([]bool, 0)
+			for range test.firstCallTimes {
+				got = append(got, IsAllowed(test.limitPerSecond))
+			}
+			time.Sleep(time.Duration(test.sleep) * time.Second)
+			for range test.secondCallTimes {
+				got = append(got, IsAllowed(test.limitPerSecond))
+			}
 
-		if !slices.Equal(got, test.want) {
-			t.Fatalf("Failed test case #%d. Want %v got %v", i, test.want, got)
+			if !slices.Equal(got, test.want) {
+				t.Fatalf("Failed test case #%d. Want %v got %v", i, test.want, got)
+			}
 		}
-	}
+	})
 }

@@ -54,7 +54,7 @@ func (evaluation *evaluation) pop() (float64, error) {
 func (evaluation *evaluation) pushString(operand string) error {
 	f, err := strconv.ParseFloat(operand, 64)
 	if err != nil {
-		return fmt.Errorf("failed converting from float to string, %s", err)
+		return fmt.Errorf("failed converting from string to float, %w", err)
 	}
 	evaluation.push(f)
 	return nil

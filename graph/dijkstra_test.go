@@ -72,7 +72,7 @@ func TestDijkstra(t *testing.T) {
 func newGraph(edges int) []*dijkstraVertex {
 	graph := make([]*dijkstraVertex, edges)
 	for i := range edges {
-		graph[i] = &dijkstraVertex{val: i}
+		graph[i] = &dijkstraVertex{val: i, distance: 0, discovered: false, edges: nil}
 	}
 	return graph
 }

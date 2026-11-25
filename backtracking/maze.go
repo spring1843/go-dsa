@@ -28,11 +28,16 @@ func mazeRecursive(x, y int, path string, wallMap map[[2]int]bool, visited [][]b
 	visited[x][y] = true
 	for i := range 4 {
 		nx, ny := x+directions[i][0], y+directions[i][1]
-		if nx >= 0 && nx < len(visited) && ny >= 0 && ny < len(visited[0]) && !visited[nx][ny] && !wallMap[[2]int{nx, ny}] {
+		if canVisit(nx, ny, wallMap, visited) {
 			if result := mazeRecursive(nx, ny, path+directionLetter[i], wallMap, visited, finish); result != "" {
 				return result
 			}
 		}
 	}
 	return ""
+}
+
+func canVisit(x, y int, wallMap map[[2]int]bool, visited [][]bool) bool {
+	inBounds := x >= 0 && x < len(visited) && y >= 0 && y < len(visited[0])
+	return inBounds && !visited[x][y] && !wallMap[[2]int{x, y}]
 }

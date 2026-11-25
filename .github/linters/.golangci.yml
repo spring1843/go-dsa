@@ -1,40 +1,55 @@
-issues:
-  include:
-    - EXC0001
-    - EXC0002
-    - EXC0003
-    - EXC0004
-    - EXC0005
-    - EXC0006
-    - EXC0007
-    - EXC0008
-    - EXC0009
-    - EXC0010
-    - EXC0011
-    - EXC0012
-    - EXC0013
-    - EXC0014
-  exclude-rules:
-    - path: /
-      linters:
-        - nlreturn
-        - gci
-        - gomnd
-        - ifshort
-        - forcetypeassert
-        - varnamelen
-        - lll
-        - testpackage
-        - wsl
-        - gochecknoglobals
-        - paralleltest
-        - wsl
-        - dupl
-        - dupword
+version: "2"
+run:
+  relative-path-mode: gomod
 linters:
-  enable-all: true
-
-linters-settings:
-  forbidigo:
-    forbid:
-      - 'ioutil\.*'
+  default: all
+  disable:
+    - dupl
+    - dupword
+    # Deprecated, replaced by exhaustruct_v5 and gomodguard_v2 which are enabled.
+    - exhaustruct
+    - gomodguard
+    - forcetypeassert
+    - gochecknoglobals
+    - lll
+    - mnd
+    - nlreturn
+    - paralleltest
+    - testpackage
+    - varnamelen
+    - wsl
+    # Replacement for wsl.
+    - wsl_v5
+    # Inline error handling is idiomatic Go.
+    - noinlineerr
+    # container/heap types conventionally mix value and pointer receivers.
+    - recvcheck
+  settings:
+    depguard:
+      rules:
+        main:
+          allow:
+            - $gostd
+            - github.com/spring1843/go-dsa
+            - github.com/spf13/cobra
+    forbidigo:
+      forbid:
+        - pattern: ioutil\.*
+  exclusions:
+    rules:
+      # Test inputs are easier to read when they are not constants.
+      - path: _test\.go
+        linters:
+          - goconst
+      # cobra commands only set the few fields they need.
+      - text: cobra\.Command is missing fields
+        linters:
+          - exhaustruct_v5
+      - text: package-comments
+        linters:
+          - revive
+formatters:
+  enable:
+    - gofmt
+    - gofumpt
+    - goimports

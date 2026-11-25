@@ -5,19 +5,19 @@ func BinarySearch(list []int, search int) int {
 	return binarySearchRecursive(list, 0, len(list), search)
 }
 
-func binarySearchRecursive(list []int, min, max, search int) int {
-	if min == max {
+func binarySearchRecursive(list []int, low, high, search int) int {
+	if low == high {
 		return -1
 	}
 
-	mid := ((max - min) / 2) + min
+	mid := ((high - low) / 2) + low
 	if list[mid] == search {
 		return mid
 	}
 
 	if list[mid] > search {
-		return binarySearchRecursive(list, min, mid, search)
+		return binarySearchRecursive(list, low, mid, search)
 	}
 
-	return binarySearchRecursive(list, mid+1, max, search)
+	return binarySearchRecursive(list, mid+1, high, search)
 }

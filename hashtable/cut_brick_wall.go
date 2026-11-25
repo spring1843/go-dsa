@@ -3,7 +3,7 @@ package hashtable
 // CutBrickWall runs in O(n) time and O(n) space.
 func CutBrickWall(wall [][]int) int {
 	cuts := make(map[int]int)
-	var max, position int
+	var maxCuts, position int
 	for _, row := range wall {
 		length := 0
 		for i, brick := range row {
@@ -12,8 +12,8 @@ func CutBrickWall(wall [][]int) int {
 			}
 			length += brick
 			cuts[length]++
-			if cuts[length] > max {
-				max = cuts[length]
+			if cuts[length] > maxCuts {
+				maxCuts = cuts[length]
 				position = length
 			}
 		}

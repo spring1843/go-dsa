@@ -40,10 +40,3 @@ func calculateSlope(a, b []int) float64 {
 	}
 	return float64(a[1]-b[1]) / float64(a[0]-b[0])
 }
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}

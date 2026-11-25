@@ -19,7 +19,7 @@ When pushing an element to a heap, because of the structure property, the new el
 25  30	  25  30   15  30      20  30	               20  30	      5   30	    15     30
          /	      /	      /      	              /  \	     / \           /  \
         15	     25	     25                      25   5	   25  20	 25    20
-										
+
 	(A) Push 15		     	    (B) Push 5
 ```
 
@@ -92,10 +92,10 @@ Priority queues implemented as heaps are commonly used in job scheduling, for ex
 
 ## Rehearsal
 
-* [Heap Sort](./heap_sort_test.go), [Solution](./heap_sort.go)
-* [Kth Largest Element](./kth_largest_element_test.go), [Solution](./kth_largest_element.go)
-* [Merge Sorted Lists](./merge_sorted_list_test.go), [Solution](./merge_sorted_list.go)
-* [Median in a Stream](./median_in_a_stream_test.go), [Solution](./median_in_a_stream.go)
-* [Regular Numbers](./regular_numbers_test.go), [Solution](./regular_numbers.go)
-* [Kth Closest Points to the Center](./k_closest_points_to_origin_test.go), [Solution](./k_closest_points_to_origin.go)
-* [Sliding Max](./sliding_max_test.go), [Solution](./sliding_max.go)
+- [Heap Sort](./heap_sort_test.go), [Solution](./heap_sort.go)
+- [Kth Largest Element](./kth_largest_element_test.go), [Solution](./kth_largest_element.go)
+- [Merge Sorted Lists](./merge_sorted_list_test.go), [Solution](./merge_sorted_list.go)
+- [Median in a Stream](./median_in_a_stream_test.go), [Solution](./median_in_a_stream.go)
+- [Regular Numbers](./regular_numbers_test.go), [Solution](./regular_numbers.go)
+- [Kth Closest Points to the Center](./k_closest_points_to_origin_test.go), [Solution](./k_closest_points_to_origin.go)
+- [Sliding Max](./sliding_max_test.go), [Solution](./sliding_max.go)

@@ -17,10 +17,3 @@ func CutRod(prices []int, n int) int {
 	}
 	return revenues[n]
 }
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}

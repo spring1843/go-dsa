@@ -9,12 +9,8 @@ func MissingNumber(numbers []int) int {
 	minNumber := numbers[0]
 	seen := make(map[int]struct{})
 	for _, number := range numbers {
-		if number > maxNumber {
-			maxNumber = number
-		}
-		if number < minNumber {
-			minNumber = number
-		}
+		maxNumber = max(maxNumber, number)
+		minNumber = min(minNumber, number)
 		seen[number] = struct{}{}
 	}
 

@@ -1,6 +1,7 @@
 package linkedlist
 
 import (
+	"slices"
 	"strconv"
 	"strings"
 )
@@ -30,13 +31,14 @@ func Serialize(node *Node) string {
 		return ""
 	}
 
-	output := strconv.Itoa(node.Val) + separator
+	var output strings.Builder
+	output.WriteString(strconv.Itoa(node.Val) + separator)
 	for node.Next != nil {
 		node = node.Next
-		output += strconv.Itoa(node.Val) + separator
+		output.WriteString(strconv.Itoa(node.Val) + separator)
 	}
 
-	return strings.TrimSuffix(output, separator)
+	return strings.TrimSuffix(output.String(), separator)
 }
 
 // Deserialize solves the problem in O(n) time and O(1) space.
@@ -47,9 +49,9 @@ func Deserialize(stringRepresentation string) *Node {
 	var cur, last *Node
 	broken := strings.Split(stringRepresentation, separator)
 
-	for i := len(broken) - 1; i >= 0; i-- {
+	for _, b := range slices.Backward(broken) {
 		last = cur
-		cur = NewNode(atoi(broken[i]))
+		cur = NewNode(atoi(b))
 		if last != nil {
 			cur.Next = last
 		}

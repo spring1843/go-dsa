@@ -1,5 +1,7 @@
 package array
 
+import "slices"
+
 // AddSliceOfTwoNumbers solves the problem in O(n) time and O(1) space.
 func AddSliceOfTwoNumbers(num1, num2 []int) []int {
 	num1, num2 = equalizeLengths(num1, num2)
@@ -25,9 +27,9 @@ func equalizeLengths(num1, num2 []int) ([]int, []int) {
 	diff := absDiff(len(num1), len(num2))
 	zeros := make([]int, diff)
 	if len(num2) > len(num1) {
-		num1 = append(zeros, num1...)
+		num1 = slices.Concat(zeros, num1)
 	} else if len(num1) > len(num2) {
-		num2 = append(zeros, num2...)
+		num2 = slices.Concat(zeros, num2)
 	}
 	return num1, num2
 }

@@ -1,7 +1,9 @@
 package problems
 
 import (
+	"errors"
 	"fmt"
+	"io/fs"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -14,7 +16,9 @@ type rehearsalEntry struct {
 	SolutionFileName string
 }
 
-var rehearsalLinkPattern = regexp.MustCompile(`\* \[([^\]]+)\]\(\.\/([^\)]+)\), \[Solution\]\(\.\/([^\)]+)\)`)
+var errInvalidLine = errors.New("invalid line format")
+
+var rehearsalLinkPattern = regexp.MustCompile(`[*-] \[([^\]]+)\]\(\.\/([^\)]+)\), \[Solution\]\(\.\/([^\)]+)\)`)
 
 func (r *rehearsalEntry) String() string {
 	return fmt.Sprintf("### %s\n", r.Name)
@@ -39,7 +43,7 @@ func newRehearsalEntry(input string) ([]rehearsalEntry, error) {
 		}
 		matches := rehearsalLinkPattern.FindStringSubmatch(line)
 		if len(matches) != 4 {
-			return nil, fmt.Errorf("invalid line format: %s, %d", line, len(matches))
+			return nil, fmt.Errorf("%w: %s, %d", errInvalidLine, line, len(matches))
 		}
 
 		entry := rehearsalEntry{
@@ -53,39 +57,37 @@ func newRehearsalEntry(input string) ([]rehearsalEntry, error) {
 	return entries, nil
 }
 
-func stringRehearsalEntries(conf *ParseConf, entries []rehearsalEntry) string {
-	output := ""
+func stringRehearsalEntries(conf *ParseConf, entries []rehearsalEntry) (string, error) {
+	var output strings.Builder
 	for _, entry := range entries {
-		output += fmt.Sprintf("\n### %s\n", entry.Name)
+		fmt.Fprintf(&output, "\n### %s\n", entry.Name)
 
-		testFileContent, err := goFileFilters(filepath.Join(conf.Dir, conf.Section, entry.TestFileName), conf)
+		testFileContent, err := goFileFilters(entry.TestFileName, conf)
 		if err != nil {
-			output += fmt.Sprintf("Error reading test file: %s\n", err)
-			continue
+			return "", fmt.Errorf("error exporting test file for %q: %w", entry.Name, err)
 		}
-		output += "\n```GO\n" + string(testFileContent) + "\n```\n"
+		output.WriteString("\n```GO\n" + testFileContent + "\n```\n")
 	}
 
-	output += "\n## Rehearsal Solutions\n"
+	output.WriteString("\n## Rehearsal Solutions\n")
 
 	for _, entry := range entries {
-		output += fmt.Sprintf("\n### %s\n", entry.Name)
+		fmt.Fprintf(&output, "\n### %s\n", entry.Name)
 
-		testFileContent, err := goFileFilters(filepath.Join(conf.Dir, conf.Section, entry.SolutionFileName), conf)
+		solutionFileContent, err := goFileFilters(entry.SolutionFileName, conf)
 		if err != nil {
-			output += fmt.Sprintf("Error reading test file: %s\n", err)
-			continue
+			return "", fmt.Errorf("error exporting solution file for %q: %w", entry.Name, err)
 		}
-		output += "\n```GO\n" + string(testFileContent) + "\n```\n"
+		output.WriteString("\n```GO\n" + solutionFileContent + "\n```\n")
 	}
 
-	return output
+	return output.String(), nil
 }
 
-func goFileFilters(filePath string, conf *ParseConf) (string, error) {
-	fileContent, err := os.ReadFile(filePath)
+func goFileFilters(fileName string, conf *ParseConf) (string, error) {
+	fileContent, err := fs.ReadFile(os.DirFS(filepath.Join(conf.Dir, conf.Section)), fileName)
 	if err != nil {
-		return "", fmt.Errorf("error reading solution file [%s]: %s", filePath, err)
+		return "", fmt.Errorf("error reading file [%s]: %w", fileName, err)
 	}
 
 	fileContentStr := string(fileContent)

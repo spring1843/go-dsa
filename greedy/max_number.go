@@ -55,10 +55,3 @@ func maximumNumberInSequence(input []int, k int) []int {
 	}
 	return stack
 }
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}

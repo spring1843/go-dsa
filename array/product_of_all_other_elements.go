@@ -15,7 +15,7 @@ func ProductOfAllOtherElements(list []int) []int {
 	}
 
 	product = list[0]
-	for i := 0; i < len(list); i++ {
+	for i := range list {
 		if i == 0 {
 			list[i] = right[1]
 			continue

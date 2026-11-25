@@ -43,16 +43,16 @@ For individuals unfamiliar with Go, the [Tour of Go](https://go.dev/tour/welcome
 
 ## How to use
 
-* Read the README.md file of each subject.
-* Solve the rehearsal problems.
-* Read the problem description.
-* Copy the contents of each `*_test.go` file into [Go Playground](https://go.dev/play/) or your favorite development environment.
-* Change the first line from `package SOME_PACKAGE_NAME` to `package main`.
-* Look at the sample input in the `*_test.go` file.
-* Create a solution function by looking at the function signature in the test file.
-* Implement your own solution.
-* Review the provided solution and compare it to your own.
-* Come back and rehearse.
+- Read the README.md file of each subject.
+- Solve the rehearsal problems.
+- Read the problem description.
+- Copy the contents of each `*_test.go` file into [Go Playground](https://go.dev/play/) or your favorite development environment.
+- Change the first line from `package SOME_PACKAGE_NAME` to `package main`.
+- Look at the sample input in the `*_test.go` file.
+- Create a solution function by looking at the function signature in the test file.
+- Implement your own solution.
+- Review the provided solution and compare it to your own.
+- Come back and rehearse.
 
 ## Note on Problem Sources
 
@@ -60,8 +60,8 @@ While I created a few rehearsal problems in this collection, the majority are we
 
 ## Additional Resources
 
-* [Introduction to Algorithms](https://amzn.to/3q6S4TK)
-* [Data Structures and Algorithm Analysis in Java.](https://amzn.to/3DugGsP)
-* [The Big Book of Coding Interviews in Python](https://amzn.to/3rC0ToT)
-* [Daily Coding Problem](https://amzn.to/3OvDjmH)
-* [LeetCode](https://leetcode.com/)
+- [Introduction to Algorithms](https://amzn.to/3q6S4TK)
+- [Data Structures and Algorithm Analysis in Java.](https://amzn.to/3DugGsP)
+- [The Big Book of Coding Interviews in Python](https://amzn.to/3rC0ToT)
+- [Daily Coding Problem](https://amzn.to/3OvDjmH)
+- [LeetCode](https://leetcode.com/)

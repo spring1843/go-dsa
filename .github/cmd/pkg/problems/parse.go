@@ -3,6 +3,7 @@ package problems
 import (
 	"errors"
 	"fmt"
+	"io/fs"
 	"log"
 	"os"
 	"path/filepath"
@@ -10,6 +11,7 @@ import (
 	"strings"
 )
 
+// ParseConf configures how sections are parsed.
 type ParseConf struct {
 	Dir                    string
 	Section                string
@@ -23,10 +25,13 @@ const (
 	mainBranch  = "main"
 )
 
+var errNoRehearsalSection = errors.New("no rehearsal section found")
+
 var rehearsalRegex = regexp.MustCompile(`(?s)(## Rehearsal\n.*?)(\n##|\z)`)
 
+// ParseSection returns the README.md of a section with its rehearsal links replaced with code.
 func ParseSection(conf *ParseConf) (string, error) {
-	content, err := os.ReadFile(filepath.Join(conf.Dir, conf.Section, "README.md"))
+	content, err := fs.ReadFile(os.DirFS(filepath.Join(conf.Dir, conf.Section)), "README.md")
 	if err != nil {
 		return "", fmt.Errorf("error reading file: %w", err)
 	}
@@ -46,7 +51,7 @@ func ParseSection(conf *ParseConf) (string, error) {
 func replaceRehearsal(input string, conf *ParseConf) (string, error) {
 	match := rehearsalRegex.FindStringSubmatch(input)
 	if match == nil {
-		return "", errors.New("no rehearsal section found")
+		return "", errNoRehearsalSection
 	}
 
 	rehearsalContent := match[1]
@@ -57,8 +62,13 @@ func replaceRehearsal(input string, conf *ParseConf) (string, error) {
 	if len(newRehearsals) == 0 {
 		log.Printf("no rehearsals found %s, %s", conf.Section, rehearsalContent)
 	}
-	replacement := fmt.Sprintf("## Rehearsal\n%s", stringRehearsalEntries(conf, newRehearsals))
-	return rehearsalRegex.ReplaceAllString(input, replacement), nil
+	entries, err := stringRehearsalEntries(conf, newRehearsals)
+	if err != nil {
+		return "", fmt.Errorf("error exporting rehearsal entries: %w", err)
+	}
+
+	// The replacement contains code, so it must be literal to avoid expanding text like $1 as a regex group.
+	return rehearsalRegex.ReplaceAllLiteralString(input, "## Rehearsal\n"+entries), nil
 }
 
 // ReplaceWithLiveLinks replaces the relative links in the input with links to the repo that work.
@@ -69,9 +79,11 @@ func ReplaceWithLiveLinks(input, section string, conf *ParseConf) string {
 	}
 
 	output := input
+	currentDir := repoBase + "/"
 	if section != "" {
 		output = strings.ReplaceAll(output, "](../", "]("+repoBase+"/")
+		currentDir += section + "/"
 	}
 
-	return strings.ReplaceAll(output, "](./", "]("+repoBase+"/")
+	return strings.ReplaceAll(output, "](./", "]("+currentDir)
 }

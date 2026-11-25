@@ -8,9 +8,7 @@ func SmallestMissingPositiveInteger(input []int) int {
 	exist := make(map[int]struct{})
 	largest := input[0]
 	for _, number := range input {
-		if number > largest {
-			largest = number
-		}
+		largest = max(largest, number)
 		exist[number] = struct{}{}
 	}
 	if largest < 0 {
