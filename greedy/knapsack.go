@@ -14,7 +14,7 @@ type KnapsackItem struct {
 // Knapsack solves the problem in O(n*Log n) time and O(1) space.
 func Knapsack(items []KnapsackItem, capacity int) int {
 	slices.SortFunc(items, func(a, b KnapsackItem) int {
-		return cmp.Compare(b.Value/b.Weight, a.Value/a.Weight)
+		return cmp.Compare(b.Value*a.Weight, a.Value*b.Weight)
 	})
 
 	var maxValue int
