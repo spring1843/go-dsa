@@ -87,7 +87,7 @@ Constant time complexity represents the most efficient scenario for an algorithm
 * Push and Pop in a [stack](./stack/README.md)
 * Find the minimum or maximum in a [heap](./heap/README.md)
 * Remove the last element of a [doubly linked list](./linkedlist/README.md)
-* [Max without conditions](./bit/max_function_without_conditions.go)
+* [Max without conditions](./bit/max_without_comparison_operators.go)
 
 ### Logarithmic - O(Log n)
 

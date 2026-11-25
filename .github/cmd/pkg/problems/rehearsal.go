@@ -53,17 +53,16 @@ func newRehearsalEntry(input string) ([]rehearsalEntry, error) {
 	return entries, nil
 }
 
-func stringRehearsalEntries(conf *ParseConf, entries []rehearsalEntry) string {
+func stringRehearsalEntries(conf *ParseConf, entries []rehearsalEntry) (string, error) {
 	var output strings.Builder
 	for _, entry := range entries {
 		fmt.Fprintf(&output, "\n### %s\n", entry.Name)
 
 		testFileContent, err := goFileFilters(filepath.Join(conf.Dir, conf.Section, entry.TestFileName), conf)
 		if err != nil {
-			fmt.Fprintf(&output, "Error reading test file: %s\n", err)
-			continue
+			return "", fmt.Errorf("error exporting test file for %q: %w", entry.Name, err)
 		}
-		output.WriteString("\n```GO\n" + string(testFileContent) + "\n```\n")
+		output.WriteString("\n```GO\n" + testFileContent + "\n```\n")
 	}
 
 	output.WriteString("\n## Rehearsal Solutions\n")
@@ -71,21 +70,20 @@ func stringRehearsalEntries(conf *ParseConf, entries []rehearsalEntry) string {
 	for _, entry := range entries {
 		fmt.Fprintf(&output, "\n### %s\n", entry.Name)
 
-		testFileContent, err := goFileFilters(filepath.Join(conf.Dir, conf.Section, entry.SolutionFileName), conf)
+		solutionFileContent, err := goFileFilters(filepath.Join(conf.Dir, conf.Section, entry.SolutionFileName), conf)
 		if err != nil {
-			fmt.Fprintf(&output, "Error reading test file: %s\n", err)
-			continue
+			return "", fmt.Errorf("error exporting solution file for %q: %w", entry.Name, err)
 		}
-		output.WriteString("\n```GO\n" + string(testFileContent) + "\n```\n")
+		output.WriteString("\n```GO\n" + solutionFileContent + "\n```\n")
 	}
 
-	return output.String()
+	return output.String(), nil
 }
 
 func goFileFilters(filePath string, conf *ParseConf) (string, error) {
 	fileContent, err := os.ReadFile(filePath)
 	if err != nil {
-		return "", fmt.Errorf("error reading solution file [%s]: %s", filePath, err)
+		return "", fmt.Errorf("error reading file [%s]: %w", filePath, err)
 	}
 
 	fileContentStr := string(fileContent)

@@ -57,8 +57,13 @@ func replaceRehearsal(input string, conf *ParseConf) (string, error) {
 	if len(newRehearsals) == 0 {
 		log.Printf("no rehearsals found %s, %s", conf.Section, rehearsalContent)
 	}
-	replacement := fmt.Sprintf("## Rehearsal\n%s", stringRehearsalEntries(conf, newRehearsals))
-	return rehearsalRegex.ReplaceAllString(input, replacement), nil
+	entries, err := stringRehearsalEntries(conf, newRehearsals)
+	if err != nil {
+		return "", fmt.Errorf("error exporting rehearsal entries: %w", err)
+	}
+
+	// The replacement contains code, so it must be literal to avoid expanding text like $1 as a regex group.
+	return rehearsalRegex.ReplaceAllLiteralString(input, "## Rehearsal\n"+entries), nil
 }
 
 // ReplaceWithLiveLinks replaces the relative links in the input with links to the repo that work.
@@ -69,9 +74,11 @@ func ReplaceWithLiveLinks(input, section string, conf *ParseConf) string {
 	}
 
 	output := input
+	currentDir := repoBase + "/"
 	if section != "" {
 		output = strings.ReplaceAll(output, "](../", "]("+repoBase+"/")
+		currentDir += section + "/"
 	}
 
-	return strings.ReplaceAll(output, "](./", "]("+repoBase+"/")
+	return strings.ReplaceAll(output, "](./", "]("+currentDir)
 }

@@ -74,7 +74,7 @@ The time complexity of backtracking algorithms may vary depending on the problem
 
 ## Application
 
-Computers use backtracking in board games to select their next moves. The technique is also applied to graphs and trees through the use of [Depth First Search](../graph/graph#depth-first-search---dfs). It also has applications in object detection in image processing.
+Computers use backtracking in board games to select their next moves. The technique is also applied to graphs and trees through the use of [Depth First Search](../graph/README.md#depth-first-search---dfs). It also has applications in object detection in image processing.
 
 ## Rehearsal
 
