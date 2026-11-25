@@ -74,7 +74,7 @@ func toGraphWithIngress(graph [][]int) []*VertexWithIngress {
 	graphMap := make(map[int]*VertexWithIngress)
 
 	for i := range graph {
-		graphMap[i+1] = &VertexWithIngress{Val: i + 1, Edges: []*VertexWithIngress{}}
+		graphMap[i+1] = &VertexWithIngress{Val: i + 1, Edges: []*VertexWithIngress{}, Ingress: 0}
 	}
 
 	for i, v := range graph {

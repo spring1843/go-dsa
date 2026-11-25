@@ -16,7 +16,7 @@ const (
 func NetworkDelayTime(n, k int, edges [][3]int) int {
 	var (
 		verticesMap, edgesHeap = verticesAndEdges(edges, k)
-		max                    = math.MinInt64
+		delay                  = math.MinInt64
 		cost                   = make(map[int]int)
 	)
 	cost[k] = 0
@@ -26,30 +26,18 @@ func NetworkDelayTime(n, k int, edges [][3]int) int {
 			continue
 		}
 		cost[edge[edgeDestination]] = edge[edgeCost]
-		if max < edge[edgeCost] {
-			max = edge[edgeCost]
-		}
+		delay = max(delay, edge[edgeCost])
 		if len(cost) == n {
 			break
 		}
 		for _, vertex := range verticesMap[edge[edgeDestination]] {
-			i := 0
-			for i < len(edgesHeap) && edgesHeap[i][0] != vertex[vertexSource] {
-				i++
-			}
-			if i == len(edgesHeap) {
-				heap.Push(&edgesHeap, []int{vertex[vertexSource], vertex[vertexDestination] + cost[edge[edgeDestination]]})
-			}
-			if edgesHeap[i][edgeCost] < vertex[vertexDestination]+cost[edge[edgeDestination]] {
-				edgesHeap[i][edgeCost] = vertex[vertexDestination] + cost[edge[edgeDestination]]
-				heap.Fix(&edgesHeap, i)
-			}
+			edgesHeap.update(vertex[vertexSource], vertex[vertexDestination]+cost[edge[edgeDestination]])
 		}
 	}
 	if len(cost) < n {
 		return -1
 	}
-	return max
+	return delay
 }
 
 // verticesAndEdges takes edges, and returns
@@ -76,4 +64,19 @@ func (e *edgeMinHeap) Pop() any {
 	x := (*e)[len(*e)-1]
 	*e = (*e)[0 : len(*e)-1]
 	return x
+}
+
+// update adds an edge to the heap, or updates the cost of the edge to the same destination.
+func (e *edgeMinHeap) update(destination, cost int) {
+	i := 0
+	for i < len(*e) && (*e)[i][edgeDestination] != destination {
+		i++
+	}
+	if i == len(*e) {
+		heap.Push(e, []int{destination, cost})
+	}
+	if (*e)[i][edgeCost] < cost {
+		(*e)[i][edgeCost] = cost
+		heap.Fix(e, i)
+	}
 }

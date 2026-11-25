@@ -12,8 +12,7 @@ var ErrQueueEmpty = errors.New("empty queue")
 func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error) {
 	output := []int{}
 	queue := list.New()
-	var i int
-	for i = 0; i < k; i++ {
+	for i := range k {
 		for queue.Len() != 0 && numbers[i] >= numbers[queue.Back().Value.(int)] {
 			queue.Remove(queue.Back())
 		}
@@ -21,7 +20,7 @@ func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error) {
 		queue.PushBack(i)
 	}
 
-	for i < len(numbers) {
+	for i := k; i < len(numbers); i++ {
 		output = append(output, numbers[queue.Front().Value.(int)])
 		for queue.Len() != 0 && queue.Front().Value.(int) <= i-k {
 			queue.Remove(queue.Front())
@@ -32,7 +31,6 @@ func MaxOfKLengthSubArrays(numbers []int, k int) ([]int, error) {
 		}
 
 		queue.PushBack(i)
-		i++
 	}
 
 	output = append(output, numbers[queue.Front().Value.(int)])

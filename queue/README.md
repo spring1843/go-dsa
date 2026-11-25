@@ -126,9 +126,9 @@ Queues are widely utilized in solving graph-related problems and managing capaci
 
 ## Rehearsal
 
-* [Queue Using Stacks](./queue_using_stacks_test.go), [Solution](./queue_using_stacks.go)
-* [Circular Queue Array](./circular_queue_using_array_test.go), [Solution](./circular_queue_using_array.go)
-* [Symmetrical Binary Tree](./symmetrical_binary_tree_test.go), [Solution](./symmetrical_binary_tree.go)
-* [Generate Binary Numbers](./generate_binary_numbers_test.go), [Solution](./generate_binary_numbers.go)
-* [Max Sub-array of size K](./max_of_sub_arrays_test.go), [Solution](./max_of_sub_arrays.go)
-* [String Permutations](./string_permutations_test.go), [Solution](./string_permutations.go)
+- [Queue Using Stacks](./queue_using_stacks_test.go), [Solution](./queue_using_stacks.go)
+- [Circular Queue Array](./circular_queue_using_array_test.go), [Solution](./circular_queue_using_array.go)
+- [Symmetrical Binary Tree](./symmetrical_binary_tree_test.go), [Solution](./symmetrical_binary_tree.go)
+- [Generate Binary Numbers](./generate_binary_numbers_test.go), [Solution](./generate_binary_numbers.go)
+- [Max Sub-array of size K](./max_of_sub_arrays_test.go), [Solution](./max_of_sub_arrays.go)
+- [String Permutations](./string_permutations_test.go), [Solution](./string_permutations.go)

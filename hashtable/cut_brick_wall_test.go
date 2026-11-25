@@ -7,7 +7,7 @@ TestCutBrickWall tests solution(s) with the following signature and problem desc
 
 	func CutBrickWall(wall [][]int) int
 
-Given a two dimensional array of numbers representing the length of bricks of equal hight in each
+Given a two dimensional array of numbers representing the length of bricks of equal height in each
 row of a wall, return the position at which we could do the least amount of cuts in order
 to have a rectangular wall.
 

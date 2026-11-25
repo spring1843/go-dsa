@@ -7,6 +7,7 @@ import (
 
 const emptyValue = math.MinInt64
 
+// CircularQueue is a fixed size queue that overwrites its oldest element when it is full.
 type CircularQueue struct {
 	data []int
 	size int
@@ -14,6 +15,7 @@ type CircularQueue struct {
 	tail int
 }
 
+// NewCircularQueue returns an empty circular queue with the given size.
 func NewCircularQueue(size int) *CircularQueue {
 	return &CircularQueue{
 		data: slices.Repeat([]int{emptyValue}, size),

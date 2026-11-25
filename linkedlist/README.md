@@ -8,9 +8,9 @@ Two types of linked lists exist: singly linked lists, in which each node is link
 
 When implementing linked lists, two key concepts come into play: the linked list itself, which includes references to the head and tail nodes, and the individual nodes which hold:
 
-* At least one piece of data, such as name or number
-* A reference to the next node
-* A reference to the previous node in doubly linked lists
+- At least one piece of data, such as name or number
+- A reference to the next node
+- A reference to the previous node in doubly linked lists
 
 A node `struct` can be defined to create a linked list in Go, and a pointer to the same structure can be used to link the node to the next one. For instance, a singly linked list with the data `1->2->3->4->5` can be created using the following example:
 
@@ -89,9 +89,9 @@ Linked lists can be useful where the order of items matters, especially if there
 
 ## Rehearsal
 
-* [Linked List Serialization](./serialization_test.go), [Solution](./serialization.go)
-* [Reverse Linked List In-place](./reverse_in_place_test.go), [Solution](./reverse_in_place.go)
-* [Join Two Sorted Linked Lists](./join_sorted_lists_test.go), [Solution](./join_sorted_lists.go)
-* [Keep Repetitions](./keep_repetitions_test.go), [Solution](./keep_repetitions.go)
-* [Copy Linked List with Random Pointer](./copy_linklist_with_random_pointer_test.go), [Solution](./copy_linklist_with_random_pointer.go)
-* [LRU Cache](./lru_cache_test.go), [Solution](./lru_cache.go)
+- [Linked List Serialization](./serialization_test.go), [Solution](./serialization.go)
+- [Reverse Linked List In-place](./reverse_in_place_test.go), [Solution](./reverse_in_place.go)
+- [Join Two Sorted Linked Lists](./join_sorted_lists_test.go), [Solution](./join_sorted_lists.go)
+- [Keep Repetitions](./keep_repetitions_test.go), [Solution](./keep_repetitions.go)
+- [Copy Linked List with Random Pointer](./copy_linklist_with_random_pointer_test.go), [Solution](./copy_linklist_with_random_pointer.go)
+- [LRU Cache](./lru_cache_test.go), [Solution](./lru_cache.go)

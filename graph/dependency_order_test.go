@@ -50,13 +50,11 @@ func TestDependencyOrder(t *testing.T) {
 
 	for i, test := range tests {
 		orderedGraph, err := DependencyOrder(toDependencyGraph(test.input))
-		got := ""
+		var output strings.Builder
 		for i := range orderedGraph {
-			got += orderedGraph[i].Val.(string) + delimiter
+			output.WriteString(orderedGraph[i].Val.(string) + delimiter)
 		}
-		if len(orderedGraph) > 0 {
-			got = strings.TrimSuffix(got, delimiter)
-		}
+		got := strings.TrimSuffix(output.String(), delimiter)
 
 		if err != nil {
 			if test.expectedErr == nil {
@@ -83,7 +81,7 @@ func toDependencyGraph(input string) []*VertexWithIngress {
 		firstElement := ""
 		for element := range strings.SplitSeq(line, delimiter) {
 			if _, ok := graphMap[element]; !ok {
-				vertex := &VertexWithIngress{Val: element, Edges: []*VertexWithIngress{}}
+				vertex := &VertexWithIngress{Val: element, Edges: []*VertexWithIngress{}, Ingress: 0}
 				graphMap[element] = vertex
 				graph = append(graph, vertex)
 			}

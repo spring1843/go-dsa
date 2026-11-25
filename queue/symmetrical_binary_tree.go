@@ -23,8 +23,7 @@ func IsTreeSymmetrical(root *tree.BinaryTreeNode) (bool, error) {
 		tmp1 := q1.dequeue()
 		tmp2 := q2.dequeue()
 
-		unsymmetrical := tmp1.Val != tmp2.Val || tmp1.Left != nil && tmp2.Right == nil || tmp1.Left == nil && tmp2.Right != nil || tmp1.Right != nil && tmp2.Left == nil || tmp1.Right == nil && tmp2.Left != nil
-		if unsymmetrical {
+		if !areMirrored(tmp1, tmp2) {
 			return false, nil
 		}
 
@@ -39,6 +38,11 @@ func IsTreeSymmetrical(root *tree.BinaryTreeNode) (bool, error) {
 		}
 	}
 	return true, nil
+}
+
+// areMirrored returns true if the nodes have the same value and their children mirror each other.
+func areMirrored(a, b *tree.BinaryTreeNode) bool {
+	return a.Val == b.Val && (a.Left == nil) == (b.Right == nil) && (a.Right == nil) == (b.Left == nil)
 }
 
 func (q *queue) len() int                         { return len(q.data) }

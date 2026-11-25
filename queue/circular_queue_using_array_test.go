@@ -1,6 +1,9 @@
 package queue
 
-import "testing"
+import (
+	"errors"
+	"testing"
+)
 
 /*
 TestCircularQueue tests solution(s) with the following signature and problem description:
@@ -73,7 +76,7 @@ func TestCircularQueue(t *testing.T) {
 			for want := testRound.dequeueStart; want <= testRound.dequeueEnd; want++ {
 				got, err := queue.dequeue()
 				if err != nil {
-					if err != testRound.expectedErr {
+					if !errors.Is(err, testRound.expectedErr) {
 						t.Fatalf("Failed test case #%d round #%d. Unexpected error %s", i, j, err)
 					}
 					break

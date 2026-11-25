@@ -50,9 +50,9 @@ func TestCopyLinkedListWithRandomPointer(t *testing.T) {
 		deepCopy := CopyLinkedListWithRandomPointer(list)
 
 		if list != nil {
-			list.Random = &RandomNode{Val: math.MinInt64, Next: nil}
+			list.Random = &RandomNode{Val: math.MinInt64, Next: nil, Random: nil}
 			if deepCopy.Random != nil && deepCopy.Random.Val == math.MinInt64 {
-				t.Fatal("Not a deep copy. Changing the value in the original list, changed the value in whats expected to be a deep copy")
+				t.Fatal("Not a deep copy. Changing the value in the original list, changed the value in what's expected to be a deep copy")
 			}
 		}
 
@@ -81,13 +81,14 @@ func serializeRandomNode(node *RandomNode) string {
 		return output
 	}
 
-	output := outputNode(node)
+	var output strings.Builder
+	output.WriteString(outputNode(node))
 	for node.Next != nil {
 		node = node.Next
-		output += outputNode(node)
+		output.WriteString(outputNode(node))
 	}
 
-	return strings.TrimSuffix(output, separator)
+	return strings.TrimSuffix(output.String(), separator)
 }
 
 func indicesMap(node *RandomNode) map[*RandomNode]int {
@@ -114,8 +115,9 @@ func deserializeRandomNode(stringRepresentation string) *RandomNode {
 		last = cur
 		val := broken[i][0:strings.Index(broken[i], randomValueSeparator)]
 		cur = &RandomNode{
-			Val:  atoi(val),
-			Next: nil,
+			Val:    atoi(val),
+			Next:   nil,
+			Random: nil,
 		}
 		if last != nil {
 			cur.Next = last

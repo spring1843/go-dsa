@@ -31,7 +31,7 @@ func TestNewRehearsalEntry(t *testing.T) {
 
 func TestParseSection(t *testing.T) {
 	const (
-		readme   = "# Example\n\n## Rehearsal\n\n* [Example](./example_test.go), [Solution](./example.go)\n"
+		readme   = "# Example\n\n## Rehearsal\n\n- [Example](./example_test.go), [Solution](./example.go)\n"
 		testFile = "package example\n\n// A 1 inch rod is $1.\n"
 		solution = "package example\n\nfunc Example() {}\n"
 	)
@@ -51,7 +51,7 @@ func TestParseSection(t *testing.T) {
 		}
 	}
 
-	conf := &ParseConf{Dir: dir, Section: "example"}
+	conf := newParseConf(dir, "example", "")
 	got, err := ParseSection(conf)
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
@@ -82,8 +82,18 @@ func TestReplaceWithLiveLinks(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if got := ReplaceWithLiveLinks(test.input, test.section, &ParseConf{Version: test.version}); got != test.want {
+		if got := ReplaceWithLiveLinks(test.input, test.section, newParseConf("", "", test.version)); got != test.want {
 			t.Fatalf("Failed test case #%d. Want %q got %q", i, test.want, got)
 		}
+	}
+}
+
+func newParseConf(dir, section, version string) *ParseConf {
+	return &ParseConf{
+		Dir:                    dir,
+		Section:                section,
+		ReplacePackageWithMain: false,
+		ReplaceWithLiveLinks:   false,
+		Version:                version,
 	}
 }

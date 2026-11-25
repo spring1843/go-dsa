@@ -10,22 +10,35 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
           persist-credentials: false
-      - uses: reviewdog/action-misspell@v1
+      - uses: actions/setup-go@d8cbb8045d7f43706b9177cceb36c1f91a6644d5 # v7.1.0
+        with:
+          go-version-file: go.mod
+      - uses: golangci/golangci-lint-action@ba0d7d2ec06a0ea1cb5fa41b2e4a3ab91d21278a # v9.3.0
+        with:
+          version: v2.15.0
+          args: --config=.github/linters/.golangci.yml ./... ./.github/cmd/...
+      - uses: reviewdog/action-misspell@ebdfc4655a67997a255a63b9e4b71abf32c98e6b # v1.31.1
         with:
           github_token: ${{ secrets.github_token }}
           locale: "US"
-      - uses: super-linter/super-linter@v9.0.0
+      - uses: super-linter/super-linter@2da136927bd4a73596db63044b504547c62cb854 # v9.0.0
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: true
           VALIDATE_JSCPD: false
+          # The golangci-lint step above covers Go modules. The golangci-lint 2.13.2 bundled
+          # with super-linter v9.0.0 can not type check Go 1.27.
+          VALIDATE_GO_MODULES: false
           MARKDOWN_CONFIG_FILE: .markdownlint.yml
           YAML_CONFIG_FILE: .yamllint.yml
           VALIDATE_GITLEAKS: false
           LOG_LEVEL: WARN
           VALIDATE_SHELL_SHFMT: false
+          # These need write permissions that this workflow does not have.
+          MULTI_STATUS: false
+          ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: false

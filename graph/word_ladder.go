@@ -16,7 +16,7 @@ func WordLadder(start, end string, dic []string) int {
 
 	graph[start] = &vertex{word: start, edges: nil, distance: 0}
 	for _, w := range dic {
-		graph[w] = &vertex{word: w}
+		graph[w] = &vertex{word: w, edges: nil, distance: 0}
 	}
 
 	for w1 := range graph {
@@ -30,7 +30,7 @@ func WordLadder(start, end string, dic []string) int {
 }
 
 func bfsMinTransformation(beginWord string, endWord string) int {
-	min := 0
+	shortest := 0
 	distance := 0
 	source := graph[beginWord]
 	seen := make(map[*vertex]struct{})
@@ -46,13 +46,13 @@ func bfsMinTransformation(beginWord string, endWord string) int {
 			}
 			v.distance = distance
 			seen[v] = struct{}{}
-			if v.word == endWord && (v.distance < min || min == 0) {
-				min = v.distance
+			if v.word == endWord && (v.distance < shortest || shortest == 0) {
+				shortest = v.distance
 			}
 			queue.PushBack(v)
 		}
 	}
-	return min
+	return shortest
 }
 
 func isDifferentByOneLetter(a, b string) bool {

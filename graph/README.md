@@ -16,16 +16,16 @@ A graph is a collection of vertices connected through directed or undirected edg
 
 Graph theory, a branch of mathematics, is dedicated to studying graphs. Here are some essential graph concepts to remember:
 
-* **Directed Acyclic Graph - DAG**: A directed graph with no cycles
-* **Connected Graph**: There is a path between any two vertices
-* **Minimum Spanning Tree**: Subset of edges in an undirected, edge-weighted, and connected graph that connects all the vertices at the lowest cost
+- **Directed Acyclic Graph - DAG**: A directed graph with no cycles
+- **Connected Graph**: There is a path between any two vertices
+- **Minimum Spanning Tree**: Subset of edges in an undirected, edge-weighted, and connected graph that connects all the vertices at the lowest cost
 
 ## Implementation
 
 Graphs are commonly represented using an adjacency matrix or an adjacency list.
 
-* **Adjacency Matrix**: Faster lookup times and more suitable for dense graphs
-* **Adjacency List**: More space efficient, suitable for graphs with fewer edges
+- **Adjacency Matrix**: Faster lookup times and more suitable for dense graphs
+- **Adjacency List**: More space efficient, suitable for graphs with fewer edges
 
 ```Go
 package main
@@ -85,8 +85,8 @@ func main() {
 
 When working with graphs, searching to solve problems is often necessary. The algorithm's effectiveness depends on the order in which the graph is searched. Two commonly used search methods are:
 
-* **Breadth First Search - BFS** used to find the shortest path
-* **Depth First Search - DFS** often a subroutine, in another algorithm. Used in maze traversal, cycle finding, and pathfinding
+- **Breadth First Search - BFS** used to find the shortest path
+- **Depth First Search - DFS** often a subroutine, in another algorithm. Used in maze traversal, cycle finding, and pathfinding
 
 BFS can be implemented iteratively using a [queue](../queue/) and DFS can be implemented iteratively using a [stack](../stack/). This is demonstrated in the [iterative traversal](./iterative_traversal_test.go) rehearsal.
 
@@ -167,9 +167,9 @@ func makeGraph() []*vertexWithDistance {
 }
 ```
 
-* Vertices at distance K are discovered before those at distance K + 1
-* The shortest distance (i.e., the smallest number of edges) from the source vertex to each reachable vertex is computed
-* A BFS tree with root V containing all reachable vertices is produced
+- Vertices at distance K are discovered before those at distance K + 1
+- The shortest distance (i.e., the smallest number of edges) from the source vertex to each reachable vertex is computed
+- A BFS tree with root V containing all reachable vertices is produced
 
 For any vertex S that is reachable from V, the simple path in the BFS tree from V to S corresponds to the _shortest_ path (minimum number of edges) from V to S in G.
 
@@ -240,16 +240,16 @@ func makeGraph() []*timedVertex {
 }
 ```
 
-* Sets the status of edges at the time of discovery and at the time exploring is finished
-* Produces a depth-first forest comprising several depth-first trees
-* Generates a well-formed parentheses structure, where the discovery of a vertex V is represented with (V and finishing discovering it is represented with V). For instance, applying DFS on graph (A) in _Figure 1_ would result in the output `(1(2(3(5))4()))`.
+- Sets the status of edges at the time of discovery and at the time exploring is finished
+- Produces a depth-first forest comprising several depth-first trees
+- Generates a well-formed parentheses structure, where the discovery of a vertex V is represented with (V and finishing discovering it is represented with V). For instance, applying DFS on graph (A) in _Figure 1_ would result in the output `(1(2(3(5))4()))`.
 
 DFS is capable of categorizing edges (u,v) into four types:
 
-* Tree Edge: v is discovered by exploring edge (u,v), all green edges
-* Back edge: v is an ancestor of u, 6 to 2.
-* Forward edge: v is a decedent of u, 1 to 8
-* Cross edge: all other edges, 5 to 4
+- Tree Edge: v is discovered by exploring edge (u,v), all green edges
+- Back edge: v is an ancestor of u, 6 to 2.
+- Forward edge: v is a decedent of u, 1 to 8
+- Cross edge: all other edges, 5 to 4
 
 Discovery of a back edge in a DFS algorithm indicates a cyclic graph.
 
@@ -269,14 +269,14 @@ Graph algorithms find extensive usage in addressing real-world challenges, inclu
 
 ## Rehearsal
 
-* [Iteratively BFS and DFS](./iterative_traversal_test.go), [Solution](./iterative_traversal.go)
-* [DAG Graphs](./is_dag_test.go), [Solution](./is_dag.go)
-* [Topological Sort](./topological_sort_test.go), [Solution](./topological_sort.go)
-* [Employee Headcount](./employee_headcount_test.go), [Solution](./employee_headcount.go)
-* [Remove Invalid Parentheses](./remove_invalid_parentheses_test.go), [Solution](./remove_invalid_parentheses.go)
-* [Cheapest Flights](./cheapest_flights_test.go), [Solution](./cheapest_flights.go)
-* [Dijkstra's Algorithm](./dijkstra_test.go), [Solution](./dijkstra.go)
-* [Word Ladder](./word_ladder_test.go), [Solution](./word_ladder.go)
-* [Network Delay Time](./network_delay_time_test.go), [Solution](./network_delay_time.go)
-* [Number of Islands](./number_of_islands_test.go), [Solution](./number_of_islands.go)
-* [Dependency Order](./dependency_order_test.go), [Solution](./dependency_order.go)
+- [Iteratively BFS and DFS](./iterative_traversal_test.go), [Solution](./iterative_traversal.go)
+- [DAG Graphs](./is_dag_test.go), [Solution](./is_dag.go)
+- [Topological Sort](./topological_sort_test.go), [Solution](./topological_sort.go)
+- [Employee Headcount](./employee_headcount_test.go), [Solution](./employee_headcount.go)
+- [Remove Invalid Parentheses](./remove_invalid_parentheses_test.go), [Solution](./remove_invalid_parentheses.go)
+- [Cheapest Flights](./cheapest_flights_test.go), [Solution](./cheapest_flights.go)
+- [Dijkstra's Algorithm](./dijkstra_test.go), [Solution](./dijkstra.go)
+- [Word Ladder](./word_ladder_test.go), [Solution](./word_ladder.go)
+- [Network Delay Time](./network_delay_time_test.go), [Solution](./network_delay_time.go)
+- [Number of Islands](./number_of_islands_test.go), [Solution](./number_of_islands.go)
+- [Dependency Order](./dependency_order_test.go), [Solution](./dependency_order.go)

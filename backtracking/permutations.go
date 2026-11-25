@@ -16,8 +16,8 @@ func permutationsRecursive(input []int, start int, permutations *[][]int) {
 		return
 	}
 	for i := start; i <= end; i++ {
-		(input)[i], (input)[start] = (input)[start], (input)[i]
+		input[i], input[start] = input[start], input[i]
 		permutationsRecursive(input, start+1, permutations)
-		(input)[i], (input)[start] = (input)[start], (input)[i]
+		input[i], input[start] = input[start], input[i]
 	}
 }

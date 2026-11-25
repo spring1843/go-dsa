@@ -1,6 +1,6 @@
 package bit
 
 // MiddleWithoutDivision solves the problem in O(1) time and O(1) space.
-func MiddleWithoutDivision(min, max int) int {
-	return (min + max) >> 1
+func MiddleWithoutDivision(low, high int) int {
+	return (low + high) >> 1
 }

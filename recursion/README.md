@@ -2,8 +2,8 @@
 
 Recursion is a computational technique that implements a [divide-and-conquer](../dnc) approach to problem-solving by breaking down a complex problem into smaller sub-problems. It consists of two components:
 
-* One or more base cases that provide output for simple inputs and terminate recursion
-* A recursive case that combines the outputs obtained from recursive function calls to generate a solution for the original problem
+- One or more base cases that provide output for simple inputs and terminate recursion
+- A recursive case that combines the outputs obtained from recursive function calls to generate a solution for the original problem
 
 Although recursions enhance code readability, they are usually inefficient and challenging to debug. Consequently, unless they provide a more efficient solution to a problem, such as in the case of [quicksort](../dnc/quick_sort_test.go), they are generally not preferred.
 
@@ -57,10 +57,10 @@ Recursion finds practical application within a range of algorithms, including [D
 
 ## Rehearsal
 
-* [Reverse an integer recursively](./reverse_number_test.go), [Solution](./reverse_number.go)
-* [Palindrome](./is_palindrome_test.go), [Solution](./is_palindrome.go)
-* [Climbing Stairs](./climbing_stairs_test.go), [Solution](./climbing_stairs.go)
-* [Exponentiation](./exponentiation_test.go), [Solution](./exponentiation.go)
-* [Multiplication](./multiplication_test.go), [Solution](./multiplication.go)
-* [Regular Expression Matching](./regular_expression_test.go), [Solution](./regular_expression.go)
-* [Expression Operators](./expression_operators_test.go), [Solution](./expression_operators.go)
+- [Reverse an integer recursively](./reverse_number_test.go), [Solution](./reverse_number.go)
+- [Palindrome](./is_palindrome_test.go), [Solution](./is_palindrome.go)
+- [Climbing Stairs](./climbing_stairs_test.go), [Solution](./climbing_stairs.go)
+- [Exponentiation](./exponentiation_test.go), [Solution](./exponentiation.go)
+- [Multiplication](./multiplication_test.go), [Solution](./multiplication.go)
+- [Regular Expression Matching](./regular_expression_test.go), [Solution](./regular_expression.go)
+- [Expression Operators](./expression_operators_test.go), [Solution](./expression_operators.go)

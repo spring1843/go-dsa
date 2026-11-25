@@ -55,16 +55,15 @@ func TestInMemoryDictionary(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		allOutputs := ""
-		dbs = make([]map[string]string, 0)
-		dbs = append(dbs, make(map[string]string))
+		outputs := []string{}
+		dbs = []map[string]string{{}}
 		for cmd := range strings.SplitSeq(test.input, "\n") {
 			output := RunDBCommand(cmd)
 			if output != "" {
-				allOutputs += " " + output
+				outputs = append(outputs, output)
 			}
 		}
-		allOutputs = allOutputs[1:]
+		allOutputs := strings.Join(outputs, " ")
 
 		if allOutputs != test.allOutputs {
 			t.Fatalf("Failed test case #%d. Want %s got %s", i, test.allOutputs, allOutputs)

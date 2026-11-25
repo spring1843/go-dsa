@@ -20,6 +20,8 @@ var rootCmd = &cobra.Command{
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 func Execute() {
+	rootCmd.SetOut(os.Stdout)
+
 	rootCmd.AddCommand(countRehearsalsCommand)
 
 	exportMDCommand.Flags().Bool(replacePackageWithMainFlag, true, "renames all packages in all Go files to use the main package")

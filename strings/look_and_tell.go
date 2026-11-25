@@ -2,6 +2,7 @@ package strings
 
 import (
 	"strconv"
+	"strings"
 )
 
 // LookAndTell solves the problem in O(n) time and O(n) space.
@@ -23,13 +24,14 @@ func LookAndTell(depth int) []string {
 }
 
 func tell(n string) string {
-	var step, what string
+	var step strings.Builder
+	var what string
 	var count, until int
 	for until < len(n) {
 		count, what, until = findHowMany(n, until)
-		step += strconv.Itoa(count) + what
+		step.WriteString(strconv.Itoa(count) + what)
 	}
-	return step
+	return step.String()
 }
 
 func findHowMany(n string, until int) (int, string, int) {

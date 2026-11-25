@@ -106,9 +106,9 @@ Negation can be used to invert a set of flags or find the two's complement of a 
 
 ## Rehearsal
 
-* [Division Without Multiplication or Division Operators](./division_without_operators_test.go), [Solution](./division_without_operators.go)
-* [Middle Without Division](./middle_without_division_test.go), [Solution](./middle_without_division.go)
-* [Addition Without Arithmetic Operators](./addition_without_operators_test.go), [Solution](./addition_without_operators.go)
-* [Power of Two](./is_power_of_two_test.go), [Solution](./is_power_of_two.go)
-* [Max Without Comparison Operators](./max_without_comparison_operators_test.go), [Solution](./max_without_comparison_operators.go)
-* [Oddly Repeated Number](./oddly_repeated_number_test.go), [Solution](./oddly_repeated_number.go)
+- [Division Without Multiplication or Division Operators](./division_without_operators_test.go), [Solution](./division_without_operators.go)
+- [Middle Without Division](./middle_without_division_test.go), [Solution](./middle_without_division.go)
+- [Addition Without Arithmetic Operators](./addition_without_operators_test.go), [Solution](./addition_without_operators.go)
+- [Power of Two](./is_power_of_two_test.go), [Solution](./is_power_of_two.go)
+- [Max Without Comparison Operators](./max_without_comparison_operators_test.go), [Solution](./max_without_comparison_operators.go)
+- [Oddly Repeated Number](./oddly_repeated_number_test.go), [Solution](./oddly_repeated_number.go)

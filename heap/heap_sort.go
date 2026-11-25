@@ -41,7 +41,9 @@ func NewMinHeap() *MinHeap {
 // Push inserts a new value into the heap.
 func (m *MinHeap) Push(value int) {
 	vertex := &Vertex{
-		Val: value,
+		Val:   value,
+		Left:  nil,
+		Right: nil,
 	}
 	m.Data = append(m.Data, vertex)
 	m.percolateUp(len(m.Data) - 1)

@@ -7,9 +7,10 @@ func BalancedBinarySearchTree(sorted []int) *BinaryTreeNode {
 	}
 
 	mid := len(sorted) / 2
-	root := &BinaryTreeNode{Val: sorted[mid]}
-	root.Left = BalancedBinarySearchTree(sorted[:mid])
-	root.Right = BalancedBinarySearchTree(sorted[mid+1:])
 
-	return root
+	return &BinaryTreeNode{
+		Val:   sorted[mid],
+		Left:  BalancedBinarySearchTree(sorted[:mid]),
+		Right: BalancedBinarySearchTree(sorted[mid+1:]),
+	}
 }

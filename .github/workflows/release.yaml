@@ -3,7 +3,10 @@ name: Release
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
+
+permissions:
+  contents: read
 
 jobs:
   release:
@@ -13,32 +16,28 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v7.0.1
-      - uses: actions/setup-go@v7.1.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@d8cbb8045d7f43706b9177cceb36c1f91a6644d5 # v7.1.0
         with:
           go-version-file: go.mod
-      - run: make build VERSION=${{ github.ref }}
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
+          cache: false
+      - run: make build
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: ${{ contains(github.ref, '-') }} # Set to true if it's a pre-release tag
-          body: |
+          VERSION: ${{ github.ref }}
+      - name: Create Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NOTES: |
             ## Changes in this release:
 
             * Add your release notes here.
-
-      - name: Upload Release Assets
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./bin/go-dsa.md
-          asset_name: go-dsa.md
-          asset_content_type: text/markdown; charset=UTF-8
+          PRERELEASE: ${{ contains(github.ref, '-') }} # true if it's a pre-release tag
+        run: >-
+          gh release create "$GITHUB_REF_NAME" ./bin/go-dsa.md
+          --verify-tag
+          --title "Release $GITHUB_REF_NAME"
+          --notes "$NOTES"
+          --prerelease="$PRERELEASE"

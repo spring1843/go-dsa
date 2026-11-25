@@ -2,7 +2,6 @@ package queue
 
 import (
 	"container/list"
-	"errors"
 	"testing"
 )
 
@@ -20,7 +19,9 @@ func BenchmarkLinkedListQueue(b *testing.B) {
 		q.enqueue(n)
 	}
 	for range b.N {
-		q.dequeue()
+		if _, err := q.dequeue(); err != nil {
+			b.Fatal(err)
+		}
 	}
 }
 
@@ -30,7 +31,9 @@ func BenchmarkSliceQueue(b *testing.B) {
 		q.enqueue(n)
 	}
 	for range b.N {
-		q.dequeue()
+		if _, err := q.dequeue(); err != nil {
+			b.Fatal(err)
+		}
 	}
 }
 
@@ -40,7 +43,7 @@ func (q *sliceQueue) enqueue(val int) {
 
 func (q *sliceQueue) dequeue() (int, error) {
 	if len(*q) == 0 {
-		return 0, errors.New("queue is empty")
+		return 0, ErrQueueEmpty
 	}
 	value := (*q)[0]
 	*q = (*q)[1:]
@@ -57,7 +60,7 @@ func (q *linkedListQueue) enqueue(val int) {
 
 func (q *linkedListQueue) dequeue() (int, error) {
 	if q.items.Len() == 0 {
-		return 0, errors.New("queue is empty")
+		return 0, ErrQueueEmpty
 	}
 	return q.items.Remove(q.items.Front()).(int), nil
 }
