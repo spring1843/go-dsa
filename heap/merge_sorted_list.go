@@ -33,7 +33,7 @@ func MergeSortedLists(lists []*linkedlist.Node) *linkedlist.Node {
 		}
 	}
 
-	return dummy.Next
+	return tmp.Next
 }
 
 func (pq priorityQueue) Len() int { return len(pq) }
