@@ -11,7 +11,7 @@ func MaxPointsOnALine(points [][]int) int {
 	maxPoints := 1
 	for i, point := range points {
 		samePoint := 0
-		localMax := 1
+		localMax := 0
 		slopeCount := make(map[float64]int)
 		for j := i + 1; j < len(points); j++ {
 			if isSame(point, points[j]) {
@@ -36,7 +36,7 @@ func calculateSlope(a, b []int) float64 {
 		return math.MaxFloat64
 	}
 	if a[1] == b[1] {
-		return 1
+		return 0
 	}
 	return float64(a[1]-b[1]) / float64(a[0]-b[0])
 }
