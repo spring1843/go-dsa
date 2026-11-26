@@ -1,9 +1,6 @@
 package graph
 
-import (
-	"container/heap"
-	"math"
-)
+import "container/heap"
 
 type edgeMinHeap [][]int
 
@@ -16,7 +13,7 @@ const (
 func NetworkDelayTime(n, k int, edges [][3]int) int {
 	var (
 		verticesMap, edgesHeap = verticesAndEdges(edges, k)
-		delay                  = math.MinInt64
+		delay                  = 0
 		cost                   = make(map[int]int)
 	)
 	cost[k] = 0
@@ -74,8 +71,9 @@ func (e *edgeMinHeap) update(destination, cost int) {
 	}
 	if i == len(*e) {
 		heap.Push(e, []int{destination, cost})
+		return
 	}
-	if (*e)[i][edgeCost] < cost {
+	if cost < (*e)[i][edgeCost] {
 		(*e)[i][edgeCost] = cost
 		heap.Fix(e, i)
 	}
