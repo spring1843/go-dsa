@@ -24,6 +24,7 @@ func TestEvaluatePostfix(t *testing.T) {
 		expectErr bool
 		outcome   float64
 	}{
+		{[]string{}, true, -1},
 		{[]string{""}, true, -1},
 		{[]string{"+"}, true, -1},
 		{[]string{"A", "B", "+"}, true, -1},
@@ -42,6 +43,10 @@ func TestEvaluatePostfix(t *testing.T) {
 		got, err := EvaluatePostfixExpression(test.postfix)
 		if err != nil && !test.expectErr {
 			t.Fatalf("Did not expect an error. Error : %s", err)
+		}
+
+		if err == nil && test.expectErr {
+			t.Fatalf("Failed test case #%d. Expected an error", i)
 		}
 
 		if got != test.outcome {

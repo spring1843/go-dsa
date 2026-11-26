@@ -1,6 +1,9 @@
 package stack
 
-import "testing"
+import (
+	"errors"
+	"testing"
+)
 
 /*
 TestBasicCalculator tests solution(s) with the following signature and problem description:
@@ -29,6 +32,9 @@ func TestBasicCalculator(t *testing.T) {
 		{"1*(2+3+(4*5))", false, 25},
 		{"1*(2+3)+(4*5)", false, 25},
 		{"5.10/2", false, 2.55},
+		{"(1+2)", false, 3},
+		{"((2))", false, 2},
+		{"()", true, -1},
 	}
 
 	for i, test := range tests {
@@ -37,8 +43,34 @@ func TestBasicCalculator(t *testing.T) {
 			t.Fatalf("Failed test case #%d. Did not expect an error. Error : %s", i, err)
 		}
 
+		if err == nil && test.expectErr {
+			t.Fatalf("Failed test case #%d. Expected an error", i)
+		}
+
 		if got != test.outcome {
 			t.Fatalf("Failed test case #%d. Want %#v got %#v", i, test.outcome, got)
+		}
+	}
+}
+
+func TestBasicCalculatorImbalancedParentheses(t *testing.T) {
+	tests := []string{
+		"1+2)",
+		"(1+2",
+		")1+2(",
+		"(1+2))",
+		"((1+2)",
+		"1*(2+3))+(4",
+	}
+
+	for i, expression := range tests {
+		got, err := BasicCalculator(expression)
+		if !errors.Is(err, ErrImbalancedParentheses) {
+			t.Fatalf("Failed test case #%d %q. Want error %v got %v", i, expression, ErrImbalancedParentheses, err)
+		}
+
+		if got != -1 {
+			t.Fatalf("Failed test case #%d %q. Want -1 got %#v", i, expression, got)
 		}
 	}
 }

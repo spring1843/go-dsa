@@ -39,7 +39,7 @@ func EvaluatePostfixExpression(expression []string) (float64, error) {
 		}
 		stack.push(result)
 	}
-	return stack.stack[len(stack.stack)-1], nil
+	return stack.pop()
 }
 
 func (evaluation *evaluation) pop() (float64, error) {
