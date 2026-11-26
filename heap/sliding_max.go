@@ -24,8 +24,7 @@ func MaxSlidingWindow(numbers []int, k int) []int {
 	for i < len(numbers) {
 		for j := range k {
 			if pq[j] == numbers[i-k] {
-				pq[j] = pq[len(pq)-1]
-				pq = pq[:len(pq)-1]
+				heap.Remove(&pq, j)
 				break
 			}
 		}
