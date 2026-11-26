@@ -21,8 +21,8 @@ func MergeSortedLists(lists []*linkedlist.Node) *linkedlist.Node {
 		heap.Push(pq, item)
 	}
 
-	dummy := &linkedlist.Node{Val: 0, Next: nil}
-	cur := dummy
+	tmp := &linkedlist.Node{Val: 0, Next: nil}
+	cur := tmp
 	for pq.Len() > 0 {
 		node := heap.Pop(pq).(*linkedlist.Node)
 		cur.Next = node
