@@ -1,10 +1,11 @@
 package strings
 
 import (
+	"maps"
 	"strings"
 )
 
-var dbs []map[string]string
+var dbs = []map[string]string{}
 
 // RunDBCommand solves the problem in O(1) time and O(n) space.
 func RunDBCommand(cmd string) string {
@@ -29,13 +30,11 @@ func RunDBCommand(cmd string) string {
 }
 
 func set(key, value string) {
-	db := dbs[len(dbs)-1]
-	db[key] = value
+	dbs[len(dbs)-1][key] = value
 }
 
 func get(key string) string {
-	db := dbs[len(dbs)-1]
-	v, ok := db[key]
+	v, ok := dbs[len(dbs)-1][key]
 	if !ok {
 		return "nil"
 	}
@@ -43,21 +42,18 @@ func get(key string) string {
 }
 
 func exists(key string) string {
-	db := dbs[len(dbs)-1]
-	if _, ok := db[key]; !ok {
+	if _, ok := dbs[len(dbs)-1][key]; !ok {
 		return "false"
 	}
 	return "true"
 }
 
 func unset(key string) {
-	db := dbs[len(dbs)-1]
-	delete(db, key)
+	delete(dbs[len(dbs)-1], key)
 }
 
 func begin() {
-	clonedDB := make(map[string]string)
-	dbs = append(dbs, clonedDB)
+	dbs = append(dbs, maps.Clone(dbs[len(dbs)-1]))
 }
 
 func rollback() {

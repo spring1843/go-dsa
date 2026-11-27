@@ -21,14 +21,10 @@ func MergeSortedLists(lists []*linkedlist.Node) *linkedlist.Node {
 		heap.Push(pq, item)
 	}
 
-	var head, cur *linkedlist.Node
+	tmp := &linkedlist.Node{Val: 0, Next: nil}
+	cur := tmp
 	for pq.Len() > 0 {
 		node := heap.Pop(pq).(*linkedlist.Node)
-		if cur == nil {
-			cur = node
-			head = cur
-			continue
-		}
 		cur.Next = node
 		cur = cur.Next
 
@@ -37,7 +33,7 @@ func MergeSortedLists(lists []*linkedlist.Node) *linkedlist.Node {
 		}
 	}
 
-	return head
+	return tmp.Next
 }
 
 func (pq priorityQueue) Len() int { return len(pq) }
