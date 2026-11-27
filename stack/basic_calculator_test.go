@@ -8,10 +8,10 @@ TestBasicCalculator tests solution(s) with the following signature and problem d
 func BasicCalculator(input string) (float64, error)
 
 Given an expression containing integers, parentheses and the four basic arithmetic operations
-{*,/,+,-}, where * and / take precedence over + and -, and operators of equal precedence are
-evaluated from left to right.
+in this order {*,/,+,-}, starting from the highest priority to the lowest.
 
-For example given 1*2+3+4*5 return 25 because (4*5) + (1*2) + 3 = 25.
+For example given 1*2+3+4*5 return 25 because (4*5) + (1*2) + 3 = 25. Because * has a higher
+priority than +, the expression is evaluated as 1*(2+3+(4*5)) = 25.
 */
 func TestBasicCalculator(t *testing.T) {
 	tests := []struct {
