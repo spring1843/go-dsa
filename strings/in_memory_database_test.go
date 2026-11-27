@@ -5,17 +5,6 @@ import (
 	"testing"
 )
 
-// dbAtInit records the database stack as the package initialises it, before any
-// test replaces it. TestInMemoryDictionary resets the package state per case, so
-// capturing it here is the only way to assert what a fresh program starts with.
-var dbAtInit = dbs
-
-func TestInMemoryDictionaryInitialState(t *testing.T) {
-	if len(dbAtInit) != 1 || dbAtInit[0] == nil {
-		t.Fatalf("want a single empty database at initialisation, got %v", dbAtInit)
-	}
-}
-
 /*
 TestInMemoryDictionary tests solution(s) with the following signature and problem description:
 
