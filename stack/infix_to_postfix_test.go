@@ -16,7 +16,7 @@ operations and parentheses.
 Infix expression is how humans typically write arithmetic expressions like 1*2+3+4*5 which
 is equivalent of (1*2) + 3 + (4*5).
 
-For example given 1*2+3+4*5, return 1 2 * 3 + 4 5 * which both evaluate to 25.
+For example given 1*2+3+4*5, return 1 2 * 3 + 4 5 * + which both evaluate to 25.
 */
 func TestInfixToPostfix(t *testing.T) {
 	tests := []struct {
@@ -25,12 +25,16 @@ func TestInfixToPostfix(t *testing.T) {
 	}{
 		{[]string{""}, []string{""}},
 		{[]string{"a", "+", "b"}, []string{"a", "b", "+"}},
-		{[]string{"a", "-", "b", "+", "c"}, []string{"a", "b", "c", "+", "-"}},
+		{[]string{"a", "-", "b", "+", "c"}, []string{"a", "b", "-", "c", "+"}},
 		{[]string{"a", "-", "(", "b", "+", "c", ")"}, []string{"a", "b", "c", "+", "-"}},
-		{[]string{"a", "+", "b", "-", "c"}, []string{"a", "b", "c", "-", "+"}},
+		{[]string{"a", "+", "b", "-", "c"}, []string{"a", "b", "+", "c", "-"}},
 		{[]string{"a", "/", "b"}, []string{"a", "b", "/"}},
-		{[]string{"1", "*", "2", "+", "3", "+", "4", "*", "5"}, []string{"1", "2", "3", "4", "5", "*", "+", "+", "*"}},
-		{[]string{"1", "*", "(", "2", "+", "3", ")", "+", "4", "*", "5"}, []string{"1", "2", "3", "+", "4", "5", "*", "+", "*"}},
+		{[]string{"a", "*", "b", "+", "c"}, []string{"a", "b", "*", "c", "+"}},
+		{[]string{"a", "+", "b", "*", "c"}, []string{"a", "b", "c", "*", "+"}},
+		{[]string{"a", "/", "b", "/", "c"}, []string{"a", "b", "/", "c", "/"}},
+		{[]string{"a", "*", "b", "/", "c"}, []string{"a", "b", "*", "c", "/"}},
+		{[]string{"1", "*", "2", "+", "3", "+", "4", "*", "5"}, []string{"1", "2", "*", "3", "+", "4", "5", "*", "+"}},
+		{[]string{"1", "*", "(", "2", "+", "3", ")", "+", "4", "*", "5"}, []string{"1", "2", "3", "+", "*", "4", "5", "*", "+"}},
 	}
 
 	for i, test := range tests {
