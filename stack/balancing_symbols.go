@@ -6,6 +6,7 @@ var (
 		'(': ')',
 		'{': '}',
 	}
+	closers = invertMap(symbols)
 
 	// stack retains the opener symbols e.g. [({.
 	stack []rune
@@ -20,6 +21,10 @@ func IsExpressionBalanced(s string) bool {
 	for _, c := range s {
 		if _, ok := symbols[c]; ok {
 			push(c)
+			continue
+		}
+
+		if _, ok := closers[c]; !ok {
 			continue
 		}
 
@@ -44,4 +49,12 @@ func pop() rune {
 	tmp := stack[len(stack)-1]
 	stack = stack[:len(stack)-1]
 	return tmp
+}
+
+func invertMap(m map[rune]rune) map[rune]rune {
+	inverted := make(map[rune]rune, len(m))
+	for key, value := range m {
+		inverted[value] = key
+	}
+	return inverted
 }
