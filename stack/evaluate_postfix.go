@@ -30,23 +30,28 @@ func EvaluatePostfixExpression(expression []string) (float64, error) {
 			return -1, err
 		}
 
-		var result float64
-		switch element {
-		case "+":
-			result = op1 + op2
-		case "-":
-			result = op1 - op2
-		case "*":
-			result = op1 * op2
-		case "/":
-			if op2 == 0 {
-				return -1, ErrDivisionByZero
-			}
-			result = op1 / op2
+		result, err := calculate(element, op1, op2)
+		if err != nil {
+			return -1, err
 		}
 		stack.push(result)
 	}
 	return stack.pop()
+}
+
+func calculate(operator string, op1, op2 float64) (float64, error) {
+	switch operator {
+	case "+":
+		return op1 + op2, nil
+	case "-":
+		return op1 - op2, nil
+	case "*":
+		return op1 * op2, nil
+	}
+	if op2 == 0 {
+		return -1, ErrDivisionByZero
+	}
+	return op1 / op2, nil
 }
 
 func (evaluation *evaluation) pop() (float64, error) {
