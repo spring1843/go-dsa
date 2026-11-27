@@ -1,9 +1,13 @@
 package stack
 
 import (
+	"errors"
 	"fmt"
 	"strconv"
 )
+
+// ErrDivisionByZero occurs when an expression divides by zero.
+var ErrDivisionByZero = errors.New("division by zero")
 
 // EvaluatePostfixExpression solves the problem in O(n) time and O(n) space.
 func EvaluatePostfixExpression(expression []string) (float64, error) {
@@ -35,6 +39,9 @@ func EvaluatePostfixExpression(expression []string) (float64, error) {
 		case "*":
 			result = op1 * op2
 		case "/":
+			if op2 == 0 {
+				return -1, ErrDivisionByZero
+			}
 			result = op1 / op2
 		}
 		stack.push(result)
