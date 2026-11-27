@@ -52,6 +52,9 @@ func TestInMemoryDictionary(t *testing.T) {
 		{"BEGIN\nSET A 1\nCOMMIT\nBEGIN\nSET A 2\nROLLBACK\nGET A", "1"},
 		{"SET A 1\nGET A\nBEGIN\nSET A 2\nGET A\nBEGIN\nUNSET A\nGET A\nCOMMIT\nROLLBACK\nGET A", "1 2 nil 1"},
 		{"SET A 2\nGET A\nBEGIN\nSET A 1\nGET A\nCOMMIT\nGET A\nBEGIN\nSET A 2\nGET A\nROLLBACK\nGET A", "2 1 1 2 1"},
+		{"SET A 1\nBEGIN\nGET A\nSET C 3\nCOMMIT\nGET A\nGET C", "1 1 3"},
+		{"SET A 1\nSET B 2\nBEGIN\nSET A 3\nCOMMIT\nGET A\nGET B", "3 2"},
+		{"SET A 1\nSET B 2\nBEGIN\nUNSET A\nCOMMIT\nGET A\nGET B", "nil 2"},
 	}
 
 	for i, test := range tests {
