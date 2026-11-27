@@ -23,7 +23,19 @@ func TestBasicCalculator(t *testing.T) {
 		outcome    float64
 	}{
 		{"", true, -1},
+		{"1/0", true, -1},
+		{"5.10/2", false, 2.55},
+		{"2*3+4", false, 10},
+		{"2+3*4", false, 14},
+		{"8-3-2", false, 3},
+		{"8/4/2", false, 1},
+		{"1*2+3+4*5", false, 25},
+		{"8/2*4", false, 16},
+		{"(1+2)", false, 3},
+		{"((2))", false, 2},
+		{"()", true, -1},
 		{"1++", true, -1},
+		{"(1+2", true, -1},
 		{"1+2", false, 3},
 		{"1*(2+3)", false, 5},
 		{"1+2+3", false, 6},
@@ -32,19 +44,16 @@ func TestBasicCalculator(t *testing.T) {
 		{"3-9/3", false, 0},
 		{"1*(2+3+(4*5))", false, 25},
 		{"1*(2+3)+(4*5)", false, 25},
-		{"5.10/2", false, 2.55},
-		{"2*3+4", false, 10},
-		{"2+3*4", false, 14},
-		{"8-3-2", false, 3},
-		{"8/4/2", false, 1},
-		{"1*2+3+4*5", false, 25},
-		{"8/2*4", false, 16},
 	}
 
 	for i, test := range tests {
 		got, err := BasicCalculator(test.expression)
 		if err != nil && !test.expectErr {
 			t.Fatalf("Failed test case #%d. Did not expect an error. Error : %s", i, err)
+		}
+
+		if err == nil && test.expectErr {
+			t.Fatalf("Failed test case #%d. Expected an error", i)
 		}
 
 		if got != test.outcome {

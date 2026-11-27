@@ -13,7 +13,7 @@ var ErrImbalancedParentheses = errors.New("expression has imbalanced parentheses
 
 // BasicCalculator solves the problem in O(n) time and O(n) space.
 func BasicCalculator(input string) (float64, error) {
-	if IsExpressionBalanced(input) {
+	if !IsExpressionBalanced(input) {
 		return -1, ErrImbalancedParentheses
 	}
 

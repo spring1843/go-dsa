@@ -7,7 +7,8 @@ TestIsExpressionBalanced tests solution(s) with the following signature and prob
 
 	func IsExpressionBalanced(s string) bool
 
-Given a set of symbols including []{}(), determine if the input is balanced or not.
+Given a set of symbols including []{}(), determine if the input is balanced or not. Characters
+other than these symbols are ignored.
 
 For example {{(}} is not balanced because there is no closing `)` while {{()}} is balanced.
 */
@@ -28,6 +29,15 @@ func TestIsExpressionBalanced(t *testing.T) {
 		{"({[])", false},
 		{"(({[]))", false},
 		{")({[])", false},
+		{"1+2", true},
+		{"(1+2)", true},
+		{"a[b]{c}", true},
+		{"1+2)", false},
+		{"(1+2", false},
+		{")1+2(", false},
+		{"(1+2))", false},
+		{"((1+2)", false},
+		{"1*(2+3))+(4", false},
 	}
 
 	for i, test := range tests {
