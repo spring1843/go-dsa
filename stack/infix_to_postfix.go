@@ -3,17 +3,20 @@ package stack
 const (
 	openParenthesis  = "("
 	closeParenthesis = ")"
-)
 
-var operators = map[string]int{
-	"*": 1,
-	"/": 2,
-	"+": 3,
-	"-": 4,
-}
+	higherPrecedence = 2
+	lowerPrecedence  = 1
+)
 
 type operatorStack struct {
 	stack []string
+}
+
+var operators = map[string]int{
+	"*": higherPrecedence,
+	"/": higherPrecedence,
+	"+": lowerPrecedence,
+	"-": lowerPrecedence,
 }
 
 // InfixToPostfix solves the problem in O(n) time and O(n) space.
@@ -35,18 +38,26 @@ func InfixToPostfix(infix []string) []string {
 			continue
 		}
 
-		if len(stack.stack) > 0 && operators[element] > operators[stack.stack[len(stack.stack)-1]] {
+		if element == openParenthesis {
 			stack.push(element)
 			continue
 		}
 
-		stack.push(element)
+		output = stack.pushOperator(element, output)
 	}
 
 	for len(stack.stack) > 0 {
 		output = append(output, stack.pop())
 	}
 
+	return output
+}
+
+func (s *operatorStack) pushOperator(operator string, output []string) []string {
+	for len(s.stack) > 0 && operators[s.stack[len(s.stack)-1]] >= operators[operator] {
+		output = append(output, s.pop())
+	}
+	s.push(operator)
 	return output
 }
 
