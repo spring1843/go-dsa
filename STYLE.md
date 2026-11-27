@@ -5,7 +5,7 @@ This guide describes how code, tests, and docs in this repository are written. N
 ## Files and packages
 
 - Each problem has a solution in `topic/name.go` and its tests in `topic/name_test.go`, in the same package. For example [array/reverse_inplace.go](./array/reverse_inplace.go) and [array/reverse_inplace_test.go](./array/reverse_inplace_test.go).
-- File names are `snake_case`. Function and type names are `CamelCase` and describe the problem, such as `NetworkDelayTime` or `IntToRoman`.
+- Filenames are `snake_case`. Function and type names are `CamelCase` and describe the problem, such as `NetworkDelayTime` or `IntToRoman`.
 - A solution can be unexported when the tests are its only caller, such as `put` and `get` in [linkedlist/lru_cache.go](./linkedlist/lru_cache.go).
 - Use the standard library only.
 
@@ -18,6 +18,7 @@ This guide describes how code, tests, and docs in this repository are written. N
   ```
 
   Write complexity as `O(1)`, `O(n)`, `O(Log n)`, `O(n*Log n)`, `O(n^2)`, `O(2^n)`, or `O(n!)`, and use other letters such as `k`, `V`, or `E` when they describe the input better.
+
 - Every other exported type, function, method, variable, and struct field has a doc comment of one short sentence that starts with its name.
 - Errors are package variables with a doc comment that says when they occur:
 
@@ -28,14 +29,14 @@ This guide describes how code, tests, and docs in this repository are written. N
 
 - Unexported helpers usually have no doc comment. Add one only when the name does not say what the helper does. It starts with the helper's name.
 - Do not add comments inside function bodies. Add one only when a careful reader would get the code wrong without it, as in [dnc/rate_limit.go](./dnc/rate_limit.go).
-- Do not leave commented out code, TODOs, or notes about the change you made.
+- Do not leave commented out code, reminders of unfinished work, or notes about the change you made.
 
 ## Code
 
 - Keep functions short. Return early for empty or trivial input, then handle the general case.
-- Prefer what the standard library and the language already provide: the builtin `min` and `max`, `slices`, `maps`, `cmp`, `strings.Builder`, `strings.SplitSeq`, and `for i := range n`. Write `any`, not `interface{}`.
+- Prefer what the standard library and the language already provide: the built-in `min` and `max`, `slices`, `maps`, `cmp`, `strings.Builder`, `strings.SplitSeq`, and `for i := range n`. Write `any`, not `interface{}`.
 - Reuse the types, helpers, and constants that already exist in the package before adding new ones.
-- Give variables names that say what they hold, such as `maxValue`, `revenues`, or `queue`. Use `i`, `j`, and `k` for indexes and loop counters only.
+- Give variables names that say what they hold, such as `maxValue`, `revenues`, or `queue`. Use `i`, `j`, and `k` for indices and loop counters only.
 - Use `var name T` for a zero value that a loop fills in, and `:=` everywhere else.
 - Group related constants and unexported types in `const (...)` and `type (...)` blocks. Use `iota` for enumerations.
 - Use `make` with a size or capacity when it is known.
@@ -49,7 +50,7 @@ This guide describes how code, tests, and docs in this repository are written. N
   func (m *minHeap) Push(x any)        { *m = append(*m, x.(int)) }
   ```
 
-- Use blank lines only to separate steps of an algorithm.
+- Use empty lines only to separate steps of an algorithm.
 - Formatting and import order are enforced by `gofumpt` and `gci`. Run `make fmt` and do not format code by hand.
 
 ## Tests
@@ -71,6 +72,7 @@ This guide describes how code, tests, and docs in this repository are written. N
   ```
 
   Indent the signature and any ASCII diagram with a tab. Write the problem as a short paragraph followed by one example that starts with "For example given".
+
 - Tests are tables of anonymous structs with positional values. Name the fields after what they hold, such as `edges`, `numberOfNodes`, or `shortestPath`, and not `want` or `expected`. Name an error field `expectedErr`.
 - Order cases from the simplest, such as empty input, to the most complex.
 - Loop over the table with `for i, test := range tests` and stop at the first failure:
@@ -85,13 +87,13 @@ This guide describes how code, tests, and docs in this repository are written. N
 - Put test helpers at the bottom of the test file as unexported functions.
 - Do not use `t.Run`, `t.Parallel`, or third party test libraries.
 
-## READMEs
+## Topic `README.md` files
 
 Each topic directory has a `README.md` that teaches the topic and lists its problems. The exporter in [.github/cmd](./.github/cmd) turns these files into a book, so parts of the structure below are required for it to work.
 
 ### Sections
 
-A topic README has a title and four standard sections, in this order:
+A topic `README.md` has a title and four standard sections, in this order:
 
 ```md
 # Stack
@@ -128,7 +130,7 @@ The title is in Title Case, and the first link is the test file because the test
 
 ### Figures
 
-Draw figures as text in a code block marked `ASCII`. The first line is a numbered caption, followed by a blank line:
+Draw figures as text in a code block marked `ASCII`. The first line is a numbered caption, followed by an empty line:
 
 ```ASCII
 [Figure 1] Push 1,2,3,4 to a stack and then pop 4 times.
@@ -138,7 +140,7 @@ Draw figures as text in a code block marked `ASCII`. The first line is a numbere
 └───┘└───┘
 ```
 
-Number figures from 1 in each README, and refer to them in the text as _Figure 1_. Tests can refer to them too, as in [graph/topological_sort_test.go](./graph/topological_sort_test.go).
+Number figures from 1 in each `README.md`, and refer to them in the text as _Figure 1_. Tests can refer to them too, as in [graph/topological_sort_test.go](./graph/topological_sort_test.go).
 
 ### Code examples
 

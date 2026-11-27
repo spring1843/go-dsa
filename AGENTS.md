@@ -18,7 +18,7 @@ Read [STYLE.md](./STYLE.md) before you write code, tests, or docs. All style rul
 
 ## Tests
 
-- Every bug fix adds a test case that fails before the fix and passes after it. Say in the pull request how it failed.
+- Every bugfix adds a test case that fails before the fix and passes after it. Say in the pull request how it failed.
 - Do not change an expected value in an existing test to make the code pass. If the value is wrong, explain why in the pull request.
 - Keep test coverage at 100%. Check the package you changed with `go test -cover ./topic/`, which must report `coverage: 100.0% of statements`. If it does not, `make test` writes `profile.cov`, and `go tool cover -func=profile.cov | grep -v '100.0%'` lists the functions that are not fully covered.
 
@@ -47,5 +47,5 @@ golangci-lint run --config=.github/linters/.golangci.yml ./... ./.github/cmd/...
 
 Add a problem only when a maintainer has agreed to it in an issue. Link it in two places, because the `.github/cmd` exporter reads them:
 
-- the `## Rehearsal` section of the topic README, as `- [Title](./name_test.go), [Solution](./name.go)`
+- the `## Rehearsal` section of the topic `README.md`, as `- [Title](./name_test.go), [Solution](./name.go)`
 - the table of contents in the root [README.md](./README.md)

@@ -11,8 +11,8 @@ Open an issue with the [problem report template](./.github/ISSUE_TEMPLATE/bug_re
 1. Fork the repository and create a branch.
 2. Keep the change as small as possible, and leave code that the issue does not mention as it is.
 3. Follow [STYLE.md](./STYLE.md) for code, tests, and docs.
-4. For a bug fix, add a test case that fails before the fix.
-5. For a new problem, link it in the `## Rehearsal` section of the topic README and in the table of contents of the root [README.md](./README.md).
+4. For a bugfix, add a test case that fails before the fix.
+5. For a new problem, link it in the `## Rehearsal` section of the topic `README.md` and in the table of contents of the root [README.md](./README.md).
 
 ## Run the checks
 
