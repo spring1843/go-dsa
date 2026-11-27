@@ -8,12 +8,12 @@ TestBasicCalculator tests solution(s) with the following signature and problem d
 func BasicCalculator(input string) (float64, error)
 
 Given an expression containing integers, parentheses and the four basic arithmetic operations
-{*,/,+,-}, evaluate it. * and / have the same priority, which is higher than the priority of
-+ and -, and + and - have the same priority. Operators with the same priority are evaluated
+{*,/,+,-}, evaluate it. * and / have the same precedence, which is higher than the precedence of
++ and -, and + and - have the same precedence. Operators with the same precedence are evaluated
 from left to right.
 
-For example given 2+3*4 return 14 because * has a higher priority than +, so 2+(3*4) = 14.
-Given 8/2*4 return 16 because / and * have the same priority and / is on the left, so
+For example given 2+3*4 return 14 because * has a higher precedence than +, so 2+(3*4) = 14.
+Given 8/2*4 return 16 because / and * have the same precedence and / is on the left, so
 (8/2)*4 = 16. Given 8-3-2 return 3 because (8-3)-2 = 3.
 */
 func TestBasicCalculator(t *testing.T) {
